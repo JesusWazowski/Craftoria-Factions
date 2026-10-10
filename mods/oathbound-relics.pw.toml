@@ -1,0 +1,13 @@
+name = "Oathbound Relics"
+filename = "oathboundrelics-2.1.0-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5954c5bd1bfec81654cb737ca517b29ec469a3c7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8922228
+project-id = 1503076

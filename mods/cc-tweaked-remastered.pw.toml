@@ -1,0 +1,13 @@
+name = "CC: Tweaked (Unofficial)"
+filename = "cc-tweaked-1.21.1-forge-1.117.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "aaf6233b23e1ff01ed286824ba359aaa5eed0918"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8005487
+project-id = 1527866
