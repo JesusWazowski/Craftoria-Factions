@@ -1,13 +1,13 @@
 name = "Cyclops Core"
-filename = "cyclopscore-1.21.1-neoforge-1.29.0-950.jar"
+filename = "cyclopscore-1.21.1-neoforge-1.30.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "16693cad039ce1211a1c4d0680b65f60c0fe99a0"
+hash = "1eab17f360da5c8523d984e51351ee35d7573699"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7734724
+file-id = 8859263
 project-id = 232758

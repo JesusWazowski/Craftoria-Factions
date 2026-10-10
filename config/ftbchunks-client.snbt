@@ -138,38 +138,38 @@
 		# Default: true
 		entity_heads: true
 		entity_icon: {
-			"minecraft:horse": true
-			"aquaculture:piranha": false
 			"aquaculture:perch": false
-			"aquaculture:tambaqui": false
-			"minecraft:chicken": true
-			"creeperoverhaul:cave_creeper": true
-			"minecraft:zombie": true
-			"minecraft:creeper": true
-			"irons_spellbooks:necromancer": true
-			"vinery:mule": true
-			"minecraft:spider": true
-			"creeperoverhaul:bamboo_creeper": true
-			"minecraft:bat": true
-			"minecraft:axolotl": true
-			"minecraft:parrot": true
-			"minecraft:zombie_villager": true
-			"minecraft:fox": true
-			"ars_nouveau:starbuncle": true
-			"artifacts:mimic": true
-			"minecraft:enderman": true
-			"minecraft:sheep": false
-			"duckling:duck": true
 			"minecraft:glow_squid": true
-			"minecraft:pig": true
-			"vinery:wandering_winemaker": true
 			"minecraft:squid": true
-			"creeperoverhaul:dripstone_creeper": true
-			"minecraft:skeleton": true
-			"minecraft:cow": true
-			"aquaculture:arrau_turtle": false
+			"minecraft:chicken": true
+			"minecraft:zombie_villager": true
+			"artifacts:mimic": true
 			"aquaculture:bluegill": false
+			"creeperoverhaul:dripstone_creeper": true
+			"creeperoverhaul:bamboo_creeper": true
+			"minecraft:axolotl": true
+			"aquaculture:piranha": false
 			"minecraft:witch": true
+			"minecraft:cow": true
+			"minecraft:bat": true
+			"minecraft:spider": true
+			"vinery:mule": true
+			"minecraft:parrot": true
+			"minecraft:horse": true
+			"minecraft:sheep": false
+			"vinery:wandering_winemaker": true
+			"minecraft:fox": true
+			"creeperoverhaul:cave_creeper": true
+			"aquaculture:arrau_turtle": false
+			"ars_nouveau:starbuncle": true
+			"minecraft:pig": true
+			"duckling:duck": true
+			"irons_spellbooks:necromancer": true
+			"minecraft:enderman": true
+			"aquaculture:tambaqui": false
+			"minecraft:skeleton": true
+			"minecraft:creeper": true
+			"minecraft:zombie": true
 		}
 		
 		# Minimap font scaling (values not a multiple of 0.5 may look bad)

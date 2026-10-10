@@ -29,6 +29,25 @@ ServerEvents.tags('item', e => {
 
     /^sophisticated(storage|backpacks):.*(shulker|barrel|chest|backpack)/,
     '@sophisticatedstorageinmotion',
+    'sophisticatedbackpacks:smelting_upgrade',
+    'sophisticatedbackpacks:auto_smelting_upgrade',
+    'sophisticatedbackpacks:smoking_upgrade',
+    'sophisticatedbackpacks:auto_smoking_upgrade',
+    'sophisticatedbackpacks:blasting_upgrade',
+    'sophisticatedbackpacks:auto_blasting_upgrade',
+    'sophisticatedbackpacks:crafting_upgrade',
+    'sophisticatedbackpacks:stonecutter_upgrade',
+    'sophisticatedbackpacks:tank_upgrade',
+    'sophisticatedbackpacks:anvil_upgrade',
+    'sophisticatedbackpacks:smithing_upgrade',
+    'sophisticatedbackpacks:chipped/botanist_workbench_upgrade',
+    'sophisticatedbackpacks:chipped/glassblower_upgrade',
+    'sophisticatedbackpacks:chipped/carpenters_table_upgrade',
+    'sophisticatedbackpacks:chipped/loom_table_upgrade',
+    'sophisticatedbackpacks:chipped/mason_table_upgrade',
+    'sophisticatedbackpacks:chipped/alchemy_bench_upgrade',
+    'sophisticatedbackpacks:chipped/tinkering_table_upgrade',
+    'sophisticatedbackpacks:battery_upgrade',
 
     '#create:packages',
     /^create:.*_contraption/,
@@ -44,6 +63,8 @@ ServerEvents.tags('item', e => {
     '#supplementaries:presents',
     '#supplementaries:trapped_presents',
     'supplementaries:jar',
+
+    'refurbished_furniture:package',
   ];
 
   /**
@@ -139,7 +160,11 @@ ServerEvents.tags('item', e => {
 
     'replication:matter_tank',
 
-    'xycraft_machines:foil'
+    'xycraft_machines:foil',
+
+    'apothic_enchanting:flimsy_ender_lead',
+    'apothic_enchanting:ender_lead',
+    'apothic_enchanting:occult_ender_lead',
   ].concat(replicatorBlacklist);
 
   /**

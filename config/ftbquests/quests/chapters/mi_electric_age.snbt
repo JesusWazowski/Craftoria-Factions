@@ -1,22 +1,861 @@
 {
 	autofocus_id: "779C3C6B89AD2526"
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "none"
+	default_quest_size: 1.75d
 	filename: "mi_electric_age"
 	group: "066C799B2F5452CD"
 	icon: {
 		id: "modern_industrialization:motor"
 	}
 	id: "53A9F74C4BFE02D2"
-	images: [{
-		height: 2.25d
-		image: "modern_industrialization:block/machines/steam_turbine/overlay_front_active"
-		rotation: 0.0d
-		width: 2.25d
-		x: -3.1999999999999993d
-		y: 1.5999999999999996d
-	}]
-	order_index: 5
+	images: [
+		{
+			height: 1.0d
+			id: "6DF062BE5D5B6675"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -4.300000000000001d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "17DD8B033EAC016C"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -3.450000000000003d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "7C8A0F89F9489C68"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.6000000000000014d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "63B6FF827E0F46E5"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.75d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "0C2DC825118831D8"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -0.8999999999999986d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "10A3BE8AE7C9C141"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -0.05000000000000071d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "09980FA9CADA2712"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 0.7999999999999972d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "7CD88D5EA842C4DA"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 1.6499999999999986d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "14E0C6ACAE3DE160"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 2.5d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "505FAD24449C9C29"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.3500000000000014d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "4DDF313E1EEF4C7D"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 4.199999999999999d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "49994434341CE491"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -5.149999999999999d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "78BDE5E337106A06"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.049999999999997d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "60969762CFE4E0C8"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.850000000000001d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "244E686783114286"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.0d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "56F19A755FBAA73D"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -8.55d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "2F20DC3757D6DCDF"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.699999999999999d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "7D882DE0443236E3"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -9.399999999999999d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "5932558BEA24A8AD"
+			image: "extended_industrialization:block/electrum_tesla_winding_end"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "482800112ED34BDE"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: -5.149999999999999d
+		}
+		{
+			height: 1.0d
+			id: "4A8637C61CFF92EC"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: -4.300000000000001d
+		}
+		{
+			height: 1.0d
+			id: "4341B2245765E56F"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: -3.4499999999999993d
+		}
+		{
+			height: 1.0d
+			id: "459951E140FB3FFD"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: -2.5999999999999996d
+		}
+		{
+			height: 1.0d
+			id: "69EC180E77B1A3BD"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: -1.75d
+		}
+		{
+			height: 1.0d
+			id: "079C919E5BDCEB14"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: -0.9000000000000004d
+		}
+		{
+			height: 1.0d
+			id: "263A99156F8DB98C"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: -0.05000000000000071d
+		}
+		{
+			height: 1.0d
+			id: "023F705D7244A26D"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: 1.6499999999999986d
+		}
+		{
+			height: 1.0d
+			id: "4EB2C11A30E57CDA"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: 2.5d
+		}
+		{
+			height: 1.0d
+			id: "05FD5763F256D783"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: 0.7999999999999989d
+		}
+		{
+			height: 1.0d
+			id: "06CD1A7508262007"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: 3.3500000000000014d
+		}
+		{
+			height: 1.0d
+			id: "363DC042846BCB95"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: 4.199999999999999d
+		}
+		{
+			height: 1.0d
+			id: "2C936567978E84B5"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: 5.050000000000001d
+		}
+		{
+			height: 1.0d
+			id: "622FE80B5C7DC5BE"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.899999999999999d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "52613061FCF5EED8"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 6.75d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "1FFD01026CA380AA"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 7.600000000000001d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "2A455D4100A26D4B"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 8.450000000000003d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "2433ABBDCDEC3DA0"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 9.299999999999997d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "6C2806D75209DEA3"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: -5.149999999999999d
+		}
+		{
+			height: 1.0d
+			id: "7AEAE1E4C00B5C04"
+			image: "extended_industrialization:block/electrum_tesla_winding_end"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: -6.0d
+		}
+		{
+			height: 1.0d
+			id: "1E8053682614E450"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: -4.300000000000001d
+		}
+		{
+			height: 1.0d
+			id: "58294C888DA25DA2"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: -3.4499999999999993d
+		}
+		{
+			height: 1.0d
+			id: "3505DB283B15B439"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: -2.5999999999999996d
+		}
+		{
+			height: 1.0d
+			id: "10C365787590ED3E"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: -1.75d
+		}
+		{
+			height: 1.0d
+			id: "4F17068F164A9410"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: -0.9000000000000004d
+		}
+		{
+			height: 1.0d
+			id: "4B713CC488566878"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: -0.05000000000000071d
+		}
+		{
+			height: 1.0d
+			id: "5FF7B47918BEE5EA"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: 0.8000000000000007d
+		}
+		{
+			height: 1.0d
+			id: "0494B4836DDB6A40"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: 1.6500000000000004d
+		}
+		{
+			height: 1.0d
+			id: "363038C2B817A812"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: 2.5d
+		}
+		{
+			height: 1.0d
+			id: "3FBECB2FF5DAF778"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: 3.3500000000000014d
+		}
+		{
+			height: 1.0d
+			id: "4E871682F12629E3"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: 5.0d
+		}
+		{
+			height: 1.0d
+			id: "7AC3E3EAC7EE46C6"
+			image: "extended_industrialization:block/casings/electrum_tesla/6"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: 4.199999999999999d
+		}
+		{
+			height: 1.0d
+			id: "39BF1C79CA2A7088"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -9.399999999999999d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "66A29074F134ED95"
+			image: "extended_industrialization:block/electrum_tesla_winding_end"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 10.149999999999999d
+			y: 5.85d
+		}
+		{
+			height: 1.0d
+			id: "34CD4A864587A5F3"
+			image: "extended_industrialization:block/electrum_tesla_winding_end"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -10.25d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "67D370001669262F"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -8.55d
+			y: 5.85d
+		}
+		{
+			height: 1.0d
+			id: "0AE40D7671A9C9C9"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -7.700000000000003d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "480CF6DA15651772"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.850000000000001d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "45E8E554DE04E2C8"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -6.0d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "4AF4C0A40CDFE062"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -5.150000000000002d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "25F60D4E0205C706"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -4.300000000000001d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "429B0027149EC81F"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -3.450000000000003d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "1AFEE391CFD1608D"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.6000000000000014d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "0B9A39045B683CAE"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.75d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "479E3BF1342601C3"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -0.9000000000000021d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "7E08A71FE083D959"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: -0.05000000000000426d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "7841C03AE936149B"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 0.7999999999999972d
+			y: 5.85d
+		}
+		{
+			height: 1.0d
+			id: "765CDFE977B6E400"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 1.6499999999999986d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "066285A6D240EF82"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 2.5d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "7AB81D0A99D97689"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 3.349999999999998d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "7768642A6B6262F7"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 4.199999999999996d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "052C0F87B1B973F6"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.049999999999997d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "41EB66E1CD8B48E0"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 5.899999999999999d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "5D82DEA57E989254"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 6.75d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "02BC7A6AA72D3830"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 7.600000000000001d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "28BFD34F35D3B935"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 8.449999999999996d
+			y: 5.850000000000001d
+		}
+		{
+			height: 1.0d
+			id: "36E02FF49391A881"
+			image: "extended_industrialization:block/casings/electrum_tesla/7"
+			order: 800
+			rotation: 0.0d
+			width: 1.0d
+			x: 9.299999999999997d
+			y: 5.850000000000001d
+		}
+		{
+			click_action: "open_quest:53A9F74C4BFE02D2"
+			color: 16755200
+			height: 1.5d
+			id: "7B3BD48B62BB1999"
+			image: "modern_industrialization:textures/gui/milogo.png"
+			order: 2020
+			rotation: 0.0d
+			width: 1.5d
+			x: 9.0d
+			y: 4.75d
+		}
+		{
+			alpha: 128
+			click_action: "open_quest:2D12E0E71DEC99E9"
+			height: 1.5d
+			id: "0A308872ACACCEFD"
+			image: "modern_industrialization:textures/gui/milogo.png"
+			order: 2000
+			rotation: 0.0d
+			width: 1.5d
+			x: 9.5d
+			y: 5.25d
+		}
+		{
+			alpha: 128
+			click_action: "open_quest:587D73D979FA9D28"
+			color: 16733695
+			height: 1.5d
+			id: "4A89FC793B2287A4"
+			image: "modern_industrialization:textures/gui/milogo.png"
+			order: 2010
+			rotation: 0.0d
+			width: 1.5d
+			x: 8.5d
+			y: 4.25d
+		}
+		{
+			alpha: 128
+			color: 16577756
+			height: 1.5d
+			id: "17381AD2D09A081D"
+			image: "ftbquests:textures/shapes/square/outline.png"
+			order: 2011
+			rotation: 0.0d
+			width: 1.5d
+			x: 8.5d
+			y: 4.25d
+		}
+		{
+			color: 15393739
+			height: 1.5d
+			id: "45ADA702D6250F45"
+			image: "ftbquests:textures/shapes/square/outline.png"
+			order: 2021
+			rotation: 0.0d
+			width: 1.5d
+			x: 9.0d
+			y: 4.75d
+		}
+		{
+			alpha: 128
+			color: 16577756
+			height: 1.5d
+			id: "601F967EE09CF867"
+			image: "ftbquests:textures/shapes/square/outline.png"
+			order: 2001
+			rotation: 0.0d
+			width: 1.5d
+			x: 9.5d
+			y: 5.25d
+		}
+		{
+			color: 16733695
+			dev: 1b
+			height: 1.0d
+			id: "789F3DB2DD9C9EAF"
+			image: "ftbquests:textures/shapes/circle/shape.png"
+			order: 2000
+			rotation: 0.0d
+			width: 1.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
@@ -36,8 +875,8 @@
 				item: { count: 1, id: "modern_industrialization:advanced_large_steam_boiler" }
 				type: "item"
 			}]
-			x: 4.300000000000001d
-			y: 4.6d
+			x: 0.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["24A4F1AA0BFFE867"]
@@ -56,8 +895,8 @@
 				item: { count: 1, id: "modern_industrialization:aluminum_ingot" }
 				type: "item"
 			}]
-			x: 0.3000000000000007d
-			y: -0.40000000000000036d
+			x: -2.25d
+			y: -1.5d
 		}
 		{
 			dependencies: ["6F57A2A5AA6E3F49"]
@@ -77,8 +916,8 @@
 				item: { count: 1, id: "modern_industrialization:aluminum_drill" }
 				type: "item"
 			}]
-			x: 6.300000000000001d
-			y: -3.4000000000000004d
+			x: 0.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -102,8 +941,8 @@
 				item: { count: 1, id: "modern_industrialization:assembler" }
 				type: "item"
 			}]
-			x: -5.199999999999999d
-			y: -4.9d
+			x: -5.0d
+			y: -4.75d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -133,8 +972,8 @@
 				item: { count: 1, id: "modern_industrialization:centrifuge" }
 				type: "item"
 			}]
-			x: 6.300000000000001d
-			y: 2.5999999999999996d
+			x: 2.0d
+			y: -2.25d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -152,8 +991,8 @@
 				item: { count: 1, id: "modern_industrialization:chemical_reactor" }
 				type: "item"
 			}]
-			x: 6.300000000000001d
-			y: 0.5999999999999996d
+			x: 3.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -171,8 +1010,8 @@
 				item: { count: 1, id: "modern_industrialization:conveyor" }
 				type: "item"
 			}]
-			x: -2.1999999999999993d
-			y: -1.9000000000000004d
+			x: -6.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["176524D0E4475298"]
@@ -202,8 +1041,8 @@
 					type: "item"
 				}
 			]
-			x: 7.800000000000001d
-			y: -3.4000000000000004d
+			x: 6.75d
+			y: -5.0d
 		}
 		{
 			dependencies: ["176524D0E4475298"]
@@ -221,8 +1060,8 @@
 				item: { count: 1, id: "modern_industrialization:mv_diesel_generator" }
 				type: "item"
 			}]
-			x: 9.3d
-			y: -3.4000000000000004d
+			x: 5.75d
+			y: -3.0d
 		}
 		{
 			dependencies: ["42D6CC67AB29D7DA"]
@@ -257,8 +1096,8 @@
 					type: "item"
 				}
 			]
-			x: 14.3d
-			y: -3.4000000000000004d
+			x: 4.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["6F57A2A5AA6E3F49"]
@@ -276,8 +1115,8 @@
 				item: { count: 1, id: "modern_industrialization:distillery" }
 				type: "item"
 			}]
-			x: 9.3d
-			y: -1.9000000000000004d
+			x: 6.75d
+			y: -3.75d
 		}
 		{
 			dependencies: ["163BCEEEE08F3898"]
@@ -322,8 +1161,8 @@
 					type: "item"
 				}
 			]
-			x: 0.3000000000000007d
-			y: 1.5999999999999996d
+			x: -2.25d
+			y: 0.0d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -376,8 +1215,8 @@
 					type: "item"
 				}
 			]
-			x: 3.3000000000000007d
-			y: -0.40000000000000036d
+			x: -1.25d
+			y: -3.0d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -396,8 +1235,8 @@
 				item: { count: 1, id: "modern_industrialization:electrolyzer" }
 				type: "item"
 			}]
-			x: 6.300000000000001d
-			y: 4.1d
+			x: 1.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -411,13 +1250,14 @@
 				}
 				type: "item"
 			}]
+			size: 3.0d
 			tasks: [{
 				id: "7362F9DA1D85580D"
 				item: { count: 1, id: "modern_industrialization:tin_cable" }
 				type: "item"
 			}]
-			x: -4.199999999999999d
-			y: 3.5999999999999996d
+			x: -5.0d
+			y: 1.25d
 		}
 		{
 			dependencies: ["5C8D7BD3DA61109F"]
@@ -437,8 +1277,8 @@
 				item: { count: 1, id: "modern_industrialization:gold_drill" }
 				type: "item"
 			}]
-			x: 2.8000000000000007d
-			y: -2.4000000000000004d
+			x: -2.5d
+			y: -3.75d
 		}
 		{
 			dependencies: ["42D6CC67AB29D7DA"]
@@ -491,8 +1331,8 @@
 					type: "item"
 				}
 			]
-			x: 15.3d
-			y: -3.4000000000000004d
+			x: 4.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -511,8 +1351,8 @@
 				item: { count: 1, id: "modern_industrialization:advanced_machine_hull" }
 				type: "item"
 			}]
-			x: 6.300000000000001d
-			y: -0.40000000000000036d
+			x: 2.25d
+			y: 3.0d
 		}
 		{
 			dependencies: ["42D6CC67AB29D7DA"]
@@ -530,8 +1370,8 @@
 				item: { count: 1, id: "modern_industrialization:hv_diesel_generator" }
 				type: "item"
 			}]
-			x: 13.3d
-			y: -3.4000000000000004d
+			x: 7.875d
+			y: 1.125d
 		}
 		{
 			dependencies: ["42D6CC67AB29D7DA"]
@@ -560,11 +1400,10 @@
 				item: { count: 1, id: "modern_industrialization:hv_steam_turbine" }
 				type: "item"
 			}]
-			x: 12.3d
-			y: -3.4000000000000004d
+			x: 7.875d
+			y: -1.125d
 		}
 		{
-			dependencies: ["6EBFFFB567687A1E"]
 			id: "41D1344A31FEA6DF"
 			rewards: [{
 				count: 8
@@ -581,8 +1420,8 @@
 				item: { count: 1, id: "modern_industrialization:kanthal_coil" }
 				type: "item"
 			}]
-			x: 14.3d
-			y: 5.6d
+			x: 9.0d
+			y: 1.875d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -624,8 +1463,8 @@
 					type: "item"
 				}
 			]
-			x: -3.1999999999999993d
-			y: 3.0999999999999996d
+			x: -7.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["24A4F1AA0BFFE867"]
@@ -643,8 +1482,8 @@
 				item: { count: 1, id: "modern_industrialization:lv_energy_input_hatch" }
 				type: "item"
 			}]
-			x: 0.3000000000000007d
-			y: 3.5999999999999996d
+			x: -2.25d
+			y: 1.5d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -654,8 +1493,8 @@
 				item: { count: 1, id: "modern_industrialization:lv_steam_turbine" }
 				type: "item"
 			}]
-			x: -3.1999999999999993d
-			y: 1.5999999999999996d
+			x: -6.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -673,8 +1512,8 @@
 				item: { count: 1, id: "modern_industrialization:basic_machine_hull" }
 				type: "item"
 			}]
-			x: -5.199999999999999d
-			y: -1.9000000000000004d
+			x: -5.0d
+			y: -1.25d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -692,8 +1531,8 @@
 				item: { count: 1, id: "modern_industrialization:motor" }
 				type: "item"
 			}]
-			x: -6.699999999999999d
-			y: -1.9000000000000004d
+			x: -8.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["091C2772ED417247"]
@@ -722,8 +1561,8 @@
 				item: { count: 1, id: "modern_industrialization:mv_steam_turbine" }
 				type: "item"
 			}]
-			x: 7.800000000000001d
-			y: -0.40000000000000036d
+			x: 2.25d
+			y: 4.5d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -764,8 +1603,8 @@
 					type: "item"
 				}
 			]
-			x: 6.300000000000001d
-			y: -1.9000000000000004d
+			x: 0.0d
+			y: -3.75d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -783,8 +1622,8 @@
 				item: { count: 1, id: "modern_industrialization:piston" }
 				type: "item"
 			}]
-			x: -8.2d
-			y: -1.9000000000000004d
+			x: -9.0d
+			y: -4.75d
 		}
 		{
 			dependencies: ["5DD99224F29419C1"]
@@ -803,8 +1642,8 @@
 				item: { count: 1, id: "modern_industrialization:polarizer" }
 				type: "item"
 			}]
-			x: -1.1999999999999993d
-			y: 1.5999999999999996d
+			x: -4.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -821,13 +1660,14 @@
 				}
 				type: "item"
 			}]
+			size: 2.0d
 			tasks: [{
 				id: "76868EA5343769A3"
 				item: { count: 1, id: "modern_industrialization:processing_unit" }
 				type: "item"
 			}]
-			x: 14.3d
-			y: 1.5999999999999996d
+			x: 9.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -845,8 +1685,8 @@
 				item: { count: 1, id: "modern_industrialization:robot_arm" }
 				type: "item"
 			}]
-			x: -3.6999999999999993d
-			y: -1.9000000000000004d
+			x: -7.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["54BF53CB70636C3F"]
@@ -876,15 +1716,11 @@
 				item: { count: 1, id: "modern_industrialization:stainless_steel_ingot" }
 				type: "item"
 			}]
-			x: 9.3d
-			y: 5.6d
+			x: 4.5d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"141E3D92CBA9F1B3"
-				"6EBFFFB567687A1E"
-				"42D6CC67AB29D7DA"
-			]
+			dependencies: ["42D6CC67AB29D7DA"]
 			id: "2BC64E1EB1BCE14D"
 			rewards: [{
 				count: 4
@@ -901,8 +1737,8 @@
 				item: { count: 1, id: "modern_industrialization:stainless_steel_drill" }
 				type: "item"
 			}]
-			x: 9.3d
-			y: 2.5999999999999996d
+			x: 5.625d
+			y: -1.125d
 		}
 		{
 			dependencies: ["5C8D7BD3DA61109F"]
@@ -922,19 +1758,18 @@
 				item: { count: 1, id: "modern_industrialization:steel_drill" }
 				type: "item"
 			}]
-			x: 3.8000000000000007d
-			y: -2.4000000000000004d
+			x: -1.25d
+			y: -4.5d
 		}
 		{
-			dependencies: ["6EF133E0EC49BC33"]
 			id: "779C3C6B89AD2526"
 			tasks: [{
 				id: "7D1EA23BA0951BB7"
 				item: { count: 1, id: "modern_industrialization:analog_circuit" }
 				type: "item"
 			}]
-			x: -5.199999999999999d
-			y: 1.5999999999999996d
+			x: -9.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -951,13 +1786,14 @@
 				}
 				type: "item"
 			}]
+			size: 2.0d
 			tasks: [{
 				id: "770DEC35121FB0C3"
 				item: { count: 1, id: "modern_industrialization:digital_circuit" }
 				type: "item"
 			}]
-			x: 14.3d
-			y: -1.9000000000000004d
+			x: 6.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["24A4F1AA0BFFE867"]
@@ -970,13 +1806,14 @@
 				}
 				type: "item"
 			}]
+			size: 2.0d
 			tasks: [{
 				id: "2B21010CF732C9C1"
 				item: { count: 1, id: "modern_industrialization:electronic_circuit" }
 				type: "item"
 			}]
-			x: 3.3000000000000007d
-			y: 1.5999999999999996d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["176524D0E4475298"]
@@ -995,8 +1832,8 @@
 				item: { count: 1, id: "modern_industrialization:advanced_upgrade" }
 				type: "item"
 			}]
-			x: 10.8d
-			y: -3.4000000000000004d
+			x: 8.0d
+			y: -4.75d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -1023,8 +1860,8 @@
 					type: "item"
 				}
 			]
-			x: 6.300000000000001d
-			y: 5.6d
+			x: 2.25d
+			y: 0.0d
 		}
 		{
 			dependencies: ["163BCEEEE08F3898"]
@@ -1041,8 +1878,8 @@
 					type: "item"
 				}
 			]
-			x: -1.1999999999999993d
-			y: 3.5999999999999996d
+			x: -3.5d
+			y: -1.25d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -1088,8 +1925,8 @@
 					type: "item"
 				}
 			]
-			x: -7.199999999999999d
-			y: 3.0999999999999996d
+			x: -9.0d
+			y: 4.75d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -1108,8 +1945,8 @@
 				item: { count: 1, id: "extended_industrialization:lv_solar_panel" }
 				type: "item"
 			}]
-			x: -6.199999999999999d
-			y: 3.5999999999999996d
+			x: -8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["6EBFFFB567687A1E"]
@@ -1135,8 +1972,8 @@
 					type: "item"
 				}
 			]
-			x: 11.252380952381035d
-			y: 4.67142857142859d
+			x: 4.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["42D6CC67AB29D7DA"]
@@ -1178,8 +2015,8 @@
 					type: "item"
 				}
 			]
-			x: 16.3d
-			y: -3.4000000000000004d
+			x: 4.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["2B4BFD88DF1A934D"]
@@ -1198,8 +2035,8 @@
 				item: { count: 1, id: "extended_industrialization:universal_transformer" }
 				type: "item"
 			}]
-			x: 0.3000000000000007d
-			y: -2.4000000000000004d
+			x: -3.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -1218,8 +2055,8 @@
 				item: { count: 1, id: "extended_industrialization:machine_chainer" }
 				type: "item"
 			}]
-			x: 3.3000000000000007d
-			y: 4.6d
+			x: -2.25d
+			y: 3.375d
 		}
 		{
 			dependencies: ["176524D0E4475298"]
@@ -1255,8 +2092,8 @@
 					type: "item"
 				}
 			]
-			x: 11.704761904761956d
-			y: -0.9714285714285626d
+			x: 8.75d
+			y: -3.75d
 		}
 		{
 			dependencies: ["163BCEEEE08F3898"]
@@ -1267,8 +2104,8 @@
 				item: { count: 1, id: "modern_industrialization:basic_upgrade" }
 				type: "item"
 			}]
-			x: -1.1999999999999993d
-			y: -0.40000000000000036d
+			x: -3.5d
+			y: 1.25d
 		}
 		{
 			dependencies: ["779C3C6B89AD2526"]
@@ -1278,8 +2115,8 @@
 				item: { count: 1, id: "modern_industrialization:redstone_control_module" }
 				type: "item"
 			}]
-			x: -5.199999999999999d
-			y: 4.1d
+			x: -6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -1289,8 +2126,8 @@
 				item: { count: 1, id: "modern_industrialization:overdrive_module" }
 				type: "item"
 			}]
-			x: 6.300000000000001d
-			y: 1.5999999999999996d
+			x: 2.25d
+			y: 1.5d
 		}
 		{
 			dependencies: ["20A093E5684D2E30"]
@@ -1319,8 +2156,8 @@
 				item: { count: 1, id: "industrialization_overdrive:pyrolyse_oven" }
 				type: "item"
 			}]
-			x: 2.3000000000000007d
-			y: 4.6d
+			x: -1.125d
+			y: 4.125d
 		}
 		{
 			dependencies: ["29D05998ADC8ACF5"]
@@ -1338,8 +2175,8 @@
 				item: { count: 1, id: "modern_industrialization:highly_advanced_upgrade" }
 				type: "item"
 			}]
-			x: 15.8d
-			y: 1.6d
+			x: 9.0d
+			y: -1.875d
 		}
 	]
 }

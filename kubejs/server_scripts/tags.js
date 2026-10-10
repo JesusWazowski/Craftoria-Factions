@@ -4,13 +4,17 @@ ServerEvents.tags('item', e => {
   e.add('c:storage_blocks/fluix', 'ae2:fluix_block');
   e.add('c:storage_blocks/charged_redstone', 'appflux:charged_redstone_block');
 
-  e.add('almostunified:hide', ['artifacts:eternal_steak', 'artifacts:everlasting_beef']);
+  e.add('almostunified:hide', [
+    globalItemRemovals,
+    'artifacts:eternal_steak',
+    'artifacts:everlasting_beef',
+  ]);
 
   e.remove('c:storage_blocks/silicon', 'extendedae:silicon_block');
 
   // Crops & Seeds
   e.add('c:seeds/cabbage', ['farmersdelight:cabbage_seeds', 'dumplings_delight:chinese_cabbage_seeds']);
-  e.add('c:seeds/tomato', 'farmersdelight:tomato_seeds');
+  e.add('c:seeds/tomato', ['farmersdelight:tomato_seeds', 'farm_and_charm:tomato_seeds']);
   e.add('c:seeds/eggplant', 'dumplings_delight:eggplant_seeds');
   e.add('c:crops/garlic', 'dumplings_delight:garlic');
   e.add('c:crops/green_onion', 'dumplings_delight:greenonion');
@@ -105,6 +109,14 @@ ServerEvents.tags('item', e => {
 
   e.remove('minecraft:axes', ['hazennstuff:skyuscorcher']);
 
+  // Artifacts
+  e.remove('artifacts:artifacts', ['artifacts:everlasting_beef', 'artifacts:eternal_steak']);
+  e.remove('reliquified_artifacts:mimic_loot', ['artifacts:everlasting_beef', 'artifacts:eternal_steak']);
+  e.remove('reliquified_artifacts:mimificable', ['artifacts:everlasting_beef', 'artifacts:eternal_steak']);
+
+  // Portable Brazier Blacklist
+  e.add('ars_controle:ritual_blacklist', ['ars_nouveau:ritual_flight']);
+
   /**
    * @param {string[]} tags
    * @param {$Ingredient_|$Ingredient_[]} item
@@ -151,6 +163,10 @@ ServerEvents.tags('item', e => {
   e.remove('curios:cosmetic', 'hazennstuff:ears_a');
 
   e.add('hazennstuff:wisewood_logs', '#hazennstuff:blocks/wisewood_logs');
+
+  // Silver
+  e.add('c:ores/silver', 'mekanism:silver_ore');
+  e.add('c:ores/silver', 'mekanism:deepslate_silver_ore');
 });
 
 ServerEvents.tags('block', e => {
@@ -228,7 +244,7 @@ ServerEvents.tags('block', e => {
     'replication:matter_network_pipe',
     /^simplemagnets:(basic|advanced)_demagnetization_coil$/,
     '@moderndynamics',
-    '@trashcans'
+    '@trashcans',
   ]);
 
   e.add('justdirethings:tick_speed_deny', [
@@ -256,8 +272,14 @@ ServerEvents.tags('block', e => {
   ];
 
   immuneTags.forEach(tag => {
-    e.add(tag, ['yigd:grave'])
+    e.add(tag, ['yigd:grave']);
   });
+
+  e.remove('sfm:anvil_disenchanting', ['minecraft:obsidian', 'minecraft:crying_obsidian']);
+
+  // Silver
+  e.add('c:ores/silver', 'mekanism:silver_ore');
+  e.add('c:ores/silver', 'mekanism:deepslate_silver_ore');
 });
 
 ServerEvents.tags('fluid', e => {
@@ -270,39 +292,83 @@ ServerEvents.tags('fluid', e => {
 });
 
 ServerEvents.tags('entity_type', e => {
-  e.add('craftoria:mob_blacklist', ['artifacts:mimic', 'minecraft:warden', '#c:bosses', /^occultism:(?!possessed).*$/, '#neoforge:bosses']);
+  e.add('craftoria:mob_capture_blacklist', [
+    'ars_nouveau:dummy',
+    '#c:bosses',
+    '#neoforge:bosses',
+    '@create',
+    /package/,
+    '@pneumaticcraft',
+  ]);
 
-  e.add('ftbchunks:entity_interact_whitelist', ['minecraft:villager', 'minecraft:wandering_trader']);
+  e.add('craftoria:mob_duplication_blacklist', [
+    'mekanism:robit',
+    'ars_nouveau:dummy',
+    'ars_nouveau:animated_block',
+    'artifacts:mimic',
+    '#c:bosses',
+    /^occultism:(?!possessed).*$/,
+    '#neoforge:bosses',
+    '@create',
+    /package/,
+    '@pneumaticcraft',
+  ]);
 
-  e.add('justdirethings:creature_catcher_deny', ['ars_nouveau:dummy']);
-  e.add('apothic_spawners:blacklisted_from_spawners', ['#craftoria:mob_blacklist']);
-  e.add('mob_grinding_utils:no_swab', '#craftoria:mob_blacklist');
+  e.add('ftbchunks:entity_interact_whitelist',
+    [
+      'minecraft:villager',
+      'minecraft:wandering_trader',
+      'immersive_aircraft:airship',
+      'immersive_aircraft:cargo_airship',
+      'immersive_aircraft:warship',
+      'immersive_aircraft:biplane',
+      'immersive_aircraft:gyrodyne',
+      'immersive_aircraft:quadrocopter',
+      'immersive_aircraft:bamboo_hopper',
+    ]);
+
+  e.add('justdirethings:creature_catcher_deny', ['#craftoria:mob_capture_blacklist']);
+  e.add('apothic_spawners:blacklisted_from_spawners', ['#craftoria:mob_duplication_blacklist']);
+  e.add('mob_grinding_utils:no_swab', '#craftoria:mob_duplication_blacklist');
   e.add('industrialforegoing:mob_crusher_blacklist', ['#c:bosses', '#neoforge:bosses']);
-  e.add('industrialforegoing:mob_duplicator_blacklist', '#craftoria:mob_blacklist');
-  e.add('justdirethings:paradox_deny', ['occultism:foliot', 'mekanism:robit', 'ars_nouveau:animated_block', '@create']);
+  e.add('industrialforegoing:mob_duplicator_blacklist', '#craftoria:mob_duplication_blacklist');
+  e.add('justdirethings:paradox_deny', ['#craftoria:mob_duplication_blacklist']);
+  e.add('occultism:soul_shattered_deny_list', ['#craftoria:mob_duplication_blacklist']);
 });
 
 ServerEvents.tags('enchantment', e => {
 
   // Minecraft Enchantment tags
   e.add('minecraft:exclusive_set/damage', [
-    'deeperdarker:sculk_smite'
+    'deeperdarker:sculk_smite',
   ]);
 
   e.add('minecraft:non_treasure', [
     'deeperdarker:sculk_smite',
     'deeperdarker:volume',
-    'deeperdarker:reverberation'
+    'deeperdarker:reverberation',
   ]);
 
   // Common Enchantment tags
   e.add('c:weapon_damage_enhancements', [
-    'deeperdarker:sculk_smite'
+    'deeperdarker:sculk_smite',
   ]);
 
   // Deeper and Darker Enchantment Tags (not yet in mod update but will be)
   e.add('deeperdarker:resonarium_excludes', [
-    'minecraft:fire_protection'
+    'minecraft:fire_protection',
   ]);
 
+});
+
+ServerEvents.tags('mob_effect', e => {
+  e.add('craftoria:mob_effects', /.*/); // For Collapsible Groups
+});
+
+ServerEvents.tags('worldgen/biome', e => {
+  e.add('craftoria:biomes', /.*/); // For Collapsible Groups
+});
+
+ServerEvents.tags('mekanism:chemical', e => {
+  e.add('craftoria:chemicals', /.*/); // For Collapsible Groups
 });

@@ -2,7 +2,6 @@
 RecipeViewerEvents.removeEntries('item', event => {
   /** @type {Special.Item[]} */
   let hideItems = [
-    /rubinated_nether:bronze/,
   ];
 
   hideItems.forEach(item => {
@@ -31,6 +30,8 @@ RecipeViewerEvents.removeEntriesCompletely('item', event => {
     event.remove(item.id);
   });
 
+  event.remove(['megacells:bulk_cell_component', 'bigger_ae2:quantum_cell_component']);
+
   event.remove(Ingredient.of('@displaydelight').except(['displaydelight:food_plate', 'displaydelight:small_food_plate']));
 });
 
@@ -39,6 +40,8 @@ RecipeViewerEvents.removeCategories(e => {
     'chisel:chisel_recipes_category',
     'modern_industrialization:replicator_1',
     'ftbquests:loot_crate',
-    'create_dragons_plus:ending' // Currently always errors out when trying to display, will unhide when fixed
+    'mekmm:replicator',
+    'mekmm:fluid_replicator',
+    'mekmm:chemical_replicator',
   ]);
 });
