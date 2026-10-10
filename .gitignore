@@ -39,11 +39,15 @@ Server Test/
 knownkeys.txt
 automation/secrets.ps1
 automation/exports
+automation/*-verification.log
 .curseclient
 
 /mods/*.jar
+!/mods/apothic-nerf-1.21.1-neo.jar
+!/mods/framedblocksplus-0.1.1.jar
 /mods/.index
 /resourcepacks/*.zip
+!/resourcepacks/Craftoria Chinese Translation Resource.zip
 /resourcepacks/*/
 /shaderpacks/*.zip
 /shaderpacks/*/

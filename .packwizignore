@@ -10,13 +10,19 @@
 
 !/version_info.json
 
+# Exclude the local testing launcher
+/serve-pack.bat
+
 # Exclude non-packwiz files from mods
 /mods/*.jar
+!/mods/apothic-nerf-1.21.1-neo.jar
+!/mods/framedblocksplus-0.1.1.jar
 /mods/.index
 /mods/*/
 
 # Exclude non-packwiz files from resourcepacks
 /resourcepacks/*.zip
+!/resourcepacks/Craftoria Chinese Translation Resource.zip
 /resourcepacks/*/
 
 # Exclude non-packwiz files from shaderpacks
