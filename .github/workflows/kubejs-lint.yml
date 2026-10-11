@@ -32,6 +32,10 @@ jobs:
       - name: Verify KubeJS lint
         run: npx eslint .
 
+      - name: Verify faction session policies
+        working-directory: .
+        run: node --test automation/tests/session-lock.test.cjs
+
       - name: Commit and push fixes
         working-directory: .
         run: |
