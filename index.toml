@@ -185,6 +185,10 @@ file = "config/actuallyadditions-common.toml"
 hash = "f97c61d4cad6050e77ac8e865dae63aaf83e69ed33669adebe81741fa4108949"
 
 [[files]]
+file = "config/adachirei_nui-client.toml"
+hash = "faf72936e60c38cde5f1c62c33fb23b51b081e762ba5fb18ca9e9ede7c18c3dc"
+
+[[files]]
 file = "config/advanced_ae-client.toml"
 hash = "ef9264673ca264bfa9207db1497f05dd4c6d42d8890f3e652e2bfbf0f2a125e1"
 
@@ -3053,10 +3057,6 @@ file = "config/betterwitchhuts-neoforge-1_21.toml"
 hash = "b78cccad5e036fc43fcf0fc3f17da81b993c3985cbff54dad2053f6ebe007de5"
 
 [[files]]
-file = "config/bhmenu-client.toml"
-hash = "7798eaf45eb9306fd8ad2c4e8de728a11edf033692ff2c74fb21010c7e6bf03e"
-
-[[files]]
 file = "config/biomeswevegone/misc.json"
 hash = "cbfac13949317e4e49f95e9cf16a7d9cb36d6d4b873eadf2329bae57bc3ff742"
 
@@ -3966,7 +3966,7 @@ hash = "39b39f151577d20cb826df6882c2bbe870b61927098fc4133ec91bca104cc3a6"
 
 [[files]]
 file = "config/desiredservers/desiredservers.json"
-hash = "ae6962b77beb639c161692afe545924f8cfcb72a17b1af46f05eb1b3ebd7d88c"
+hash = "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
 
 [[files]]
 file = "config/displaydelight-common.toml"
@@ -4195,338 +4195,6 @@ hash = "448ca319c3089e4d56825670405d2254bc990ec27af3df19b083cbeb3d43eee8"
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
 hash = "a61a61c8cfbb9fcf4b98a37a0b2212cd7436ae21e2de4337105c3350f761f764"
-
-[[files]]
-file = "config/fancymenu/animation_controller_states.json"
-hash = "e692d8fc0b62557ff9331e2475d3d66985d43f5b678843824b4917e261185640"
-
-[[files]]
-file = "config/fancymenu/assets/Craftoria Logo.png"
-hash = "1ef138d689e8e68bda5866904ef44bf61ef0e062a62e0bf18ba3c90efab7d286"
-
-[[files]]
-file = "config/fancymenu/assets/UNUSED button.png"
-hash = "d58c73ed4b671f9e0248f90d73ba9d40b79f1cf8eb4a554ccff2bf920ead1f03"
-
-[[files]]
-file = "config/fancymenu/assets/UNUSED button_hovered.png"
-hash = "fa18b73b70cb9cbdf1ca7cb0d8183cc4e1911efe160c1c46dc53c13cbee1b331"
-
-[[files]]
-file = "config/fancymenu/assets/UNUSED button_template.png"
-hash = "2be579a28aa160f858a2b38b23764a349da94e1e69dabfe2b8ce875e035cb847"
-
-[[files]]
-file = "config/fancymenu/assets/background.png"
-hash = "114f3a38eb1b1731255aaeb79ba484bfd6b30bab964387154091abe48fb48282"
-
-[[files]]
-file = "config/fancymenu/assets/button.png"
-hash = "feeb37bd7a5a70cca23ca0759c164e0c7dd09f4bfdcc0684b3b919f25ececf08"
-
-[[files]]
-file = "config/fancymenu/assets/button_disabled.png"
-hash = "40214bdf73a9e9d56603f2bc0701c9a4034f639721700958680fb8250a19dfde"
-
-[[files]]
-file = "config/fancymenu/assets/button_hovered.png"
-hash = "9b0c789660fbc2923dae0bf8be5f53f73aead4071a7cad23a2bb54ab080b16c0"
-
-[[files]]
-file = "config/fancymenu/assets/config.png"
-hash = "c15d44cb5b27e176d39ab5416805b88570cde020ee7036c6580d3c80b0fef00b"
-
-[[files]]
-file = "config/fancymenu/assets/config_hovered.png"
-hash = "6f463e7ce7ad1ead3a3359488ad76b531b19e6b3f2d052cee61ffd7af4a1189d"
-
-[[files]]
-file = "config/fancymenu/assets/craftoria_16x16.png"
-hash = "b0dd632a57287bf261185fde530d917a6311c3810038066810439e57cc073f3f"
-
-[[files]]
-file = "config/fancymenu/assets/craftoria_32x32.png"
-hash = "b26acc56a9efe6cb51f9c620c7d8a4d6e8aaa5eb4f9b0fa1b2813c45f3035e2b"
-
-[[files]]
-file = "config/fancymenu/assets/discord.png"
-hash = "520cc3085975186ed15a257268a890be13e0b8395390e93aeab9915f62d0dac5"
-
-[[files]]
-file = "config/fancymenu/assets/discord_hovered.png"
-hash = "8d8e138a6e6770648fb1de8d13e37ed68b4bbdbf4dfce7ae8afa4094b6f319f3"
-
-[[files]]
-file = "config/fancymenu/assets/exclamation_mark.png"
-hash = "3fae34b295ff6e2d3822643cbb7f388e141931f254a1cced196ed1eff3874832"
-
-[[files]]
-file = "config/fancymenu/assets/exit.png"
-hash = "e8ccc93a9a67f2a7db0644ed6e69a4e94366740ad2a2b971c9d00238539af947"
-
-[[files]]
-file = "config/fancymenu/assets/exit_hovered.png"
-hash = "1ed9f140397d626da0f1d1cd43fc191228b401bead0cbc06ddc95db9790ed891"
-
-[[files]]
-file = "config/fancymenu/assets/languages.png"
-hash = "5c7728b8a5d9ac914226e8e961d6763f20479c159c0f13eacabeddd2695b7af0"
-
-[[files]]
-file = "config/fancymenu/assets/languages_hovered.png"
-hash = "316b289be526d08e19fcbbedf5c3e9dfed45a328dd155cad512628abdd3d4ab5"
-
-[[files]]
-file = "config/fancymenu/assets/mods.png"
-hash = "0e6b893f31496bbc0f480f6fdc4db7d6c485acfa935626a356cdeb1a197fb975"
-
-[[files]]
-file = "config/fancymenu/assets/mods_hovered.png"
-hash = "490dcde992750d3b47975ea3b9f0563b158c3af50482a7bc686cb2d32462b040"
-
-[[files]]
-file = "config/fancymenu/assets/multiplayer.png"
-hash = "be2d365b6f5a992a3c42ec9ed0af2e4cf9e363dce9a386e30fb166a77e381a26"
-
-[[files]]
-file = "config/fancymenu/assets/multiplayer_hovered.png"
-hash = "856e1e102bff883d3b59d11cba836600154ab21dde95f3a851bc39066bf4578d"
-
-[[files]]
-file = "config/fancymenu/assets/rent_a_server.png"
-hash = "7526cd03d18e3b420c8cd8c19275f53588f3b00c8ee2d92bc48fa129ddd775cd"
-
-[[files]]
-file = "config/fancymenu/assets/rent_a_server_hovered.png"
-hash = "2bfb9ed06a1374fd1c4fd5b79a6ae14b817f4abd3cb55f424255d06dc0b86de1"
-
-[[files]]
-file = "config/fancymenu/assets/singleplayer.png"
-hash = "a30b9548c45e2790889c78559c8f7316722e911c02035f81b691e99c2136d27e"
-
-[[files]]
-file = "config/fancymenu/assets/singleplayer_hovered.png"
-hash = "d95184259a6de7bf2cf9486d28fa68784ce607ba487d67cc5e55b7586cb43180"
-
-[[files]]
-file = "config/fancymenu/assets/slider.png"
-hash = "94264b1e58bc6f87cf7c816153738f9cac3e4ea6715635be85a37b6619bd850d"
-
-[[files]]
-file = "config/fancymenu/assets/slider_disabled.png"
-hash = "ce06f22aed115a70b5886b88eff876ece84e4876b4447c35b35bb34ccae8c5a8"
-
-[[files]]
-file = "config/fancymenu/assets/slider_hovered.png"
-hash = "e99a5f425efbbcadfdbcca387c09a3e236c03be2e8bdd8c5c90e7097151fd71b"
-
-[[files]]
-file = "config/fancymenu/assets/small_button.png"
-hash = "72112e975c941f66e390fcd59c3988b0236b58e6c34422da7a0407615c8f5eb3"
-
-[[files]]
-file = "config/fancymenu/assets/small_button_98.png"
-hash = "8d4f26fc367f1af4e18a61ecb0ef92a681472c0d2f9873efd60858f8e8678407"
-
-[[files]]
-file = "config/fancymenu/assets/small_button_disabled.png"
-hash = "4e3d0d4381f600dedd23924d6d58587f501458d2a055cf0c14c02129b756e5df"
-
-[[files]]
-file = "config/fancymenu/assets/small_button_disabled_98.png"
-hash = "d12f220627147c7dc22d3c709ec89a456d8cf88ec1a5b4b9d813bd92fad544e1"
-
-[[files]]
-file = "config/fancymenu/assets/small_button_hovered.png"
-hash = "8fa41dbd227361a6bd7db92fc70242e5554b86f167fd7641ff216960c723d131"
-
-[[files]]
-file = "config/fancymenu/assets/small_button_hovered_98.png"
-hash = "3765b108d73265397f1ec51befd42618485042784fbe28d8d654a8d6233d4695"
-
-[[files]]
-file = "config/fancymenu/assets/smaller_button.png"
-hash = "641dc252e195242d725185eb018817487673c1c34790b78a55ad4cf370b61c21"
-
-[[files]]
-file = "config/fancymenu/assets/smaller_button_disabled.png"
-hash = "0a96e725d2cf06b29741fd65a1c0fe06c385fd1a36aa021d7953ceee97fcce48"
-
-[[files]]
-file = "config/fancymenu/assets/smaller_button_hovered.png"
-hash = "0cfda4ca36be466d11797d87f5e527fdf59c08e54d36fcff7f358953132ee1bc"
-
-[[files]]
-file = "config/fancymenu/assets/square_button.png"
-hash = "e91127196c816a35f0afc05d9256553842975bf5c6501711058204d76846308b"
-
-[[files]]
-file = "config/fancymenu/assets/square_button_disabled.png"
-hash = "53b5cec8e462201e0a60565dff8f44b4be9af7132d9b6aacedfcb389e50d0fc5"
-
-[[files]]
-file = "config/fancymenu/assets/square_button_hovered.png"
-hash = "ae795d60098b197750bf9b61470d7ed81458c214a033a0d41457e669d11934ea"
-
-[[files]]
-file = "config/fancymenu/assets/villager_button.png"
-hash = "b17d94e14c252b0e85020b8105718dec54c7d892abba574a92a710a969a26b0d"
-
-[[files]]
-file = "config/fancymenu/assets/villager_button_disabled.png"
-hash = "33c0e1e1298f762abb5fb77711a6ef6f9a64384100eb3c49441d7668b7e90582"
-
-[[files]]
-file = "config/fancymenu/assets/villager_button_hovered.png"
-hash = "b7112495e2e201e7ccc7d1e0a3c48f8b91abfd71ad9da1443726ac2276b0e686"
-
-[[files]]
-file = "config/fancymenu/assets/wide_button.png"
-hash = "392181e3fb530490792bb067bd4738c2348e0223d28f506bc775943930d76da4"
-
-[[files]]
-file = "config/fancymenu/assets/wide_button_disabled.png"
-hash = "32a6ad2c1429856f469f837448378e9b2c2c923bf361660e7b89ab5a30994dee"
-
-[[files]]
-file = "config/fancymenu/assets/wide_button_hovered.png"
-hash = "64e8277a055b2223a56dd3a29d6b20030f9745d2f0cf9d2dc9dc7d3a0dc17e4e"
-
-[[files]]
-file = "config/fancymenu/assets/window_icon_mac.icns"
-hash = "d44ad2f8189eedff343f3a937f58aa9432c71093fb2789698728c9f55bbc60a3"
-
-[[files]]
-file = "config/fancymenu/custom_gui_screens.txt"
-hash = "ff492043eaf454c46e949d5eef32ece90cc5a19feb50a161dd29a43b5732c880"
-
-[[files]]
-file = "config/fancymenu/customizablemenus.txt"
-hash = "9e9be504b40c6ddccf1ccd29e87824e78c7b85ab8f957a5eafaff317ab810b6d"
-
-[[files]]
-file = "config/fancymenu/customization/chat_options_screen_layout.txt"
-hash = "70e1366dd0970cb71cdf761f68f7385c2761c23f938e302bee74a6a02d9678ce"
-
-[[files]]
-file = "config/fancymenu/customization/com.blamejared.controlling.client.newkeybindsscreen_layout.txt"
-hash = "24022a45a7bf8013ffe6c631fbc09397c0061018cd670f8f2420ef47974ca072"
-
-[[files]]
-file = "config/fancymenu/customization/com.mrcrayfish.catalogue.client.screen.cataloguemodlistscreen_layout.txt"
-hash = "1b9f24416d9d527fca8ec2d8ee313cd8ab58d406d9cc735676bacfa5cf9856ab"
-
-[[files]]
-file = "config/fancymenu/customization/confirm_link_screen_layout.txt"
-hash = "8d3d3c185c190a16d738076893973bc8b1f86b11e504d17ca0628e42918476df"
-
-[[files]]
-file = "config/fancymenu/customization/controls_screen_layout.txt"
-hash = "273aa1c70694dbd1b9c6f03b2644ffdda8ceba5afe2b4125e35a3294abeaeb41"
-
-[[files]]
-file = "config/fancymenu/customization/craftoria.txt"
-hash = "8fa30955badf72a18ae0ad7b0c2c2f02410c46b71681e449ca7b3b7d8a3f7322"
-
-[[files]]
-file = "config/fancymenu/customization/create_world_screen_layout.txt"
-hash = "9a489d877a818959facc2dab2b673a1283fd851aa905fc381b8239055fa69dab"
-
-[[files]]
-file = "config/fancymenu/customization/creative_mode_inventory_screen_layout.txt"
-hash = "01c09b8fc3fd7b47bc95cf52580bfdd0e5ede03097f0edf386c27f14f56b3573"
-
-[[files]]
-file = "config/fancymenu/customization/credits_and_attribution_screen_layout.txt"
-hash = "c265fa6f06cddbc096e1cb1b3dba8323e9fffad7d2b250d5e6033be99794bea8"
-
-[[files]]
-file = "config/fancymenu/customization/edit_world_screen_layout.txt"
-hash = "6d0056132f4951988b0da8c181ef1b508d39a23c2c0d0f7e5750a377aadb2330"
-
-[[files]]
-file = "config/fancymenu/customization/experiments_screen_layout.txt"
-hash = "7d1757c67df3d6802c26720fd28c3c6fd6b7f20530e11bc95e2bcaf0dd3a4992"
-
-[[files]]
-file = "config/fancymenu/customization/merchant_screen_layout.txt"
-hash = "f48b0e3739bb892d01c4afa30a0929956628d029ca486e5f08dcda1d53f61a2a"
-
-[[files]]
-file = "config/fancymenu/customization/mouse_settings_screen_layout.txt"
-hash = "6b71b13fb10838fe1d8f8a4af62a303c136100f049e133b6e42307d9fe0a5336"
-
-[[files]]
-file = "config/fancymenu/customization/online_options_screen_layout.txt"
-hash = "4b0d0da2055f611d812eeace9ca87ab35b62e5cb470a2942421cccb5eae36428"
-
-[[files]]
-file = "config/fancymenu/customization/options_screen_layout.txt"
-hash = "3746203373a361d4884f1c5ce4ebf0bde4712731167e316691f23475e7c2e3db"
-
-[[files]]
-file = "config/fancymenu/customization/pause_screen_layout.txt"
-hash = "25ed3a6167c4ff48cf14d608bfc251748a31c91e9de37b1adcbfa2187459608a"
-
-[[files]]
-file = "config/fancymenu/customization/select_world_screen_layout.txt"
-hash = "bce70ac38c2a40db61ce06fa03bc2d8f1b0a861f7db389f685c1861ee2340868"
-
-[[files]]
-file = "config/fancymenu/customization/skin_customization_screen_layout.txt"
-hash = "f03bacb52ea0d20077b66f362eb00997fa22051dd9332948e6999756620b1283"
-
-[[files]]
-file = "config/fancymenu/layout_editor/widgets/element_layer_control.lewidget"
-hash = "051d700ea7ff1bd626063d60f9a9cd65a0af1fed5903706d1e70fce20bcb2495"
-
-[[files]]
-file = "config/fancymenu/legacy_checklist.txt"
-hash = "9a25d3dc708e43eabafce5479a13c02dae15bc7f673afb2745b8b2ba48a97dc0"
-
-[[files]]
-file = "config/fancymenu/options.txt"
-hash = "8f00159113dc630db0e620878bb9e0fdb4b61ffa67243e7c1b83f7a8597c44ab"
-
-[[files]]
-file = "config/fancymenu/ui_themes/cherry_blossom.json"
-hash = "993c16664fe2d1b9e8ad107bf1c19c1dbb244729c403ed058ca2e54616dc5452"
-
-[[files]]
-file = "config/fancymenu/ui_themes/cozy_campfire.json"
-hash = "1e7505231b9d99e6315845043ce810dfc7004ce1d8f5a4ceddb4ecb96c03ac50"
-
-[[files]]
-file = "config/fancymenu/ui_themes/dark.json"
-hash = "01e2a3b5d250c0259a7f97f0d353785bfeab6d7ee2e147c16bb910f1d23e9498"
-
-[[files]]
-file = "config/fancymenu/ui_themes/dark_high_contrast.json"
-hash = "54316a2b309ddb472b9133f8ccb8694dce9b57be6ebcfb3c2e9d1bbfdade3f26"
-
-[[files]]
-file = "config/fancymenu/ui_themes/light.json"
-hash = "a05e95f7b62f338049fe0045d9a6a50060d3aba52d5ab83ac1ed6ff55cac1153"
-
-[[files]]
-file = "config/fancymenu/ui_themes/light_high_contrast.json"
-hash = "7c96ba2f2cb4d59d20eaf88960de7a9308ce8a3460c4e1757e07c42e174ea65a"
-
-[[files]]
-file = "config/fancymenu/ui_themes/pumpkin_soup.json"
-hash = "7c6a5d5b19e53ca2f88371c2e867f51339b045697aab29864df5877a6bba9311"
-
-[[files]]
-file = "config/fancymenu/ui_themes/purple_void.json"
-hash = "fa63577441fd576ebac90ecf06b7ded376cbf80ca5103d398bc9a73a25c6c2c0"
-
-[[files]]
-file = "config/fancymenu/ui_themes/spooky_season.json"
-hash = "cfa46554bbb027efe3c2184a073ee652000acac2500cd5136764f901355ec0cd"
-
-[[files]]
-file = "config/fancymenu/user_variables.db"
-hash = "3d7d4cda73d6bde134a568ccbe4e8d2e7fbe701570012b71fa45acdb2258c823"
 
 [[files]]
 file = "config/fancytabsections-client.toml"
@@ -6458,159 +6126,23 @@ hash = "cbd253f282a7bef3200333f934f4f889630f7893108a05b6f1f96c2a9d122573"
 
 [[files]]
 file = "config/openloader/options.json"
-hash = "aecd2d223c33257182654d3e8d5286c414508706fa0f0f33b868d4c1c9b7b786"
+hash = "116200456db8a6f0d83835b00a67b28c2fae7970cc83513fd22772ac831c7742"
 
 [[files]]
-file = "config/openloader/packs/00_Fine Armoury v1.7.zip"
-hash = "b0779cb67fee7803f155a5739c89d4fde18d88eebcaf7413c0a2d33c52b1a746"
+file = "config/openloader/packs/BetterEndCities.zip"
+hash = "7412c8b0617848bab7f6cbcba826d2ec5b49f749bf437e0a8d2ae1ac10d33dd3"
 
 [[files]]
-file = "config/openloader/packs/01_BetterEndCities.zip"
-hash = "37577397d228e112eba127d1dace316b7da7e1348cb931b34958666305adfbee"
+file = "config/openloader/packs/Compact_Machines.zip"
+hash = "48b8da7fa52ff00c52f167ed35163be59599777882cec9a689bea21f89fe0f7c"
 
 [[files]]
-file = "config/openloader/packs/03_Waystones.zip"
-hash = "8bf91c6140d71038e0b36b46a12229cd767bea01b8db3d5daf27fc12634fc107"
+file = "config/openloader/packs/Create Immersive Aircrafts Datapack 1.21.1 - 3.0.zip"
+hash = "b1c687cbc53d85aa5ed12b1efc2d2312d256381f63c03412daa8bfc6b8934537"
 
 [[files]]
-file = "config/openloader/packs/04_Aquaculture 2.zip"
-hash = "c4a148a11f904314e9a8197dd45f5724dddfccd6b02c313442417a59c191ffdf"
-
-[[files]]
-file = "config/openloader/packs/05_Suren Sophisticated Storage v3.0 Universal.zip"
-hash = "3fe5c8b495327f501aacd7b574ca9f00ab87aab5253bbce468be90ba1920c238"
-
-[[files]]
-file = "config/openloader/packs/06_Slightly-Improved-Font.zip"
-hash = "b991537dd86f7dee818d8d059b8beb21d17d606ae797865e0c71b8cc9918c1de"
-
-[[files]]
-file = "config/openloader/packs/07_Pretty X Smart Pipez Mekanism.zip"
-hash = "7ddcc81242e4d7bc733b78f93898d9d79e814b55e593d9786790694cfc725b13"
-
-[[files]]
-file = "config/openloader/packs/08_Better SB Upgrades.zip"
-hash = "429dd5e2452e124432c0bdd297a027c916a58b04d009a38c48eedb914cef6078"
-
-[[files]]
-file = "config/openloader/packs/09_Ars Nouveau Refresh.zip"
-hash = "5752ab75d299483a911ca7ad6d6efe7627a8a4e70a5d896d336daf7b7c7a8f07"
-
-[[files]]
-file = "config/openloader/packs/10_Stay_True.zip"
-hash = "fca6f2502880d5813b228c582e155b22dc3a19c603227b26a55e240e8d69a0a1"
-
-[[files]]
-file = "config/openloader/packs/11_Facu's Resourcepack.zip"
-hash = "2e9d569c7b0abb43ef8236eb8464730d86a717060edbe27ed935637c5f7d2db3"
-
-[[files]]
-file = "config/openloader/packs/12_Fancy_Beds-v4.1.zip"
-hash = "ceb50953d84fa1efb89ef88f2b695159e54cb84e0b4c4802101f742c580ff3ae"
-
-[[files]]
-file = "config/openloader/packs/13_Fancy Crops v1.3.zip"
-hash = "0c26af02ec87d523e195cab9638391febbc0ce39bff3a8978d44b88e28771755"
-
-[[files]]
-file = "config/openloader/packs/14_EnderEyes_1.21.11_v3.1.zip"
-hash = "04c24b7c841d8edfcb30e106ad6804878b4235f71b6e470e59418ce2daf7f71d"
-
-[[files]]
-file = "config/openloader/packs/16_FreshAnimations_v1.10.4.zip"
-hash = "8609a6eaa1dbc8a6c090bb36c5cba63dbc87e90e4a7b674f661063ebe19ade3f"
-
-[[files]]
-file = "config/openloader/packs/17_boss-refreshed-v2-1.19-1.21.zip"
-hash = "2e61371fff5a0db6b602fc9d74beebb9f42966f36527801195d477e1500c26dc"
-
-[[files]]
-file = "config/openloader/packs/18_Ender_Dragon_Reborn.zip"
-hash = "28d91cf5c91d444147f1ae56de66c360684331dac5c3c8ddb54b9e9a0251f368"
-
-[[files]]
-file = "config/openloader/packs/18_golems-refreshed-v2.1.zip"
-hash = "ce926b0f6a3483118c9351df79989c1670a9a21ebd13b49d7c305df92198581e"
-
-[[files]]
-file = "config/openloader/packs/19_Freshly Modded 3.0.4.zip"
-hash = "ed36e122206c60926eaf5c140e1611ae434ba67d5203d131bee749786894b0d8"
-
-[[files]]
-file = "config/openloader/packs/19_Icon Xaero's 1.21.zip"
-hash = "f33e2f6488fc0ee01f8643ed9456dedf6e67c65fe2862ae9c18b070bdad6031e"
-
-[[files]]
-file = "config/openloader/packs/21_FA+Player-v1.1.zip"
-hash = "9ee3ae5b2fe5cd980e4041429dc66d88243f5f2420e2814e5361c746ad937f33"
-
-[[files]]
-file = "config/openloader/packs/21_Icon Fresh 1.3.zip"
-hash = "029134f6c8d51fa86550fe0c703b92d7514324121f7900bfa3f9439d8e289ff5"
-
-[[files]]
-file = "config/openloader/packs/22_ComputerCraft Greg Refreshed.zip"
-hash = "0fad834485e0ac199ff0b5028c6f319c50e2216db2f1f09e382e22c92564a7ad"
-
-[[files]]
-file = "config/openloader/packs/23_AE2Blackout-V1.2.9.zip"
-hash = "cd946916f6858cba1ce0537761399fe483f644e3362da18f8f9f5f58ce40331f"
-
-[[files]]
-file = "config/openloader/packs/23_mobs-refreshed-fa-v2.2.zip"
-hash = "f5386f79e98c7f82a8ee78c535b4b4c3ffd704cc1a3f01f4e7431368aeaff2e4"
-
-[[files]]
-file = "config/openloader/packs/24_Drodi's Illagers x FA [v5.2].zip"
-hash = "b058e6ea7b4b8492efdef03115d84043b11ee2d33e263f8610aae189e771e416"
-
-[[files]]
-file = "config/openloader/packs/24_Pixel's Simple Hud.zip"
-hash = "7fd8127bfc5cdd5d9f382ad2410059ed43b7255e3d883f931d16562212fc69dd"
-
-[[files]]
-file = "config/openloader/packs/25_TwilightJAPPAPack.zip"
-hash = "8bacc800970d14b8a0f24e405c3143441620de20dba701a5d5cdec7673109050"
-
-[[files]]
-file = "config/openloader/packs/26_Irons_Armors.zip"
-hash = "7719fcd15b8473be0eb4da94a786b4d9ed4d6ccaa4d728ed237737509355733b"
-
-[[files]]
-file = "config/openloader/packs/27_Mob Grinding Utils Vanillafied.zip"
-hash = "c916eee0b86f98c1b9a32268fa4f06857e512b9b60e786fab4b88be2a40c863e"
-
-[[files]]
-file = "config/openloader/packs/28_Excalibur_Lootr.zip"
-hash = "b5131c446be7ff5a4005ad86f4bd64b79379f8a8e1bf66d0a990b011ae1503ce"
-
-[[files]]
-file = "config/openloader/packs/29_Chaotix Apotheotic Tweaks v3.0 1.21.1.zip"
-hash = "21e6701bf1440d42c36224642d2323d5c85500967d69ab54a80d6defda51b22e"
-
-[[files]]
-file = "config/openloader/packs/30_Torchmaster Remaster.zip"
-hash = "443cf04aeae1a64924cba8e9a1a0851222b9257dff2c86f0b6bb5a943546461e"
-
-[[files]]
-file = "config/openloader/packs/32_Sounds x Create.zip"
-hash = "9e8e966c4f3ab4641bb34f3f3352152d711a78e64de7dfaf359f1d6d3dfc4065"
-
-[[files]]
-file = "config/openloader/packs/33_Compact_Machines.zip"
-hash = "500fdd47629b96590ddf171034b4ca19527feb24a69a19e902a70cb30a671cd7"
-
-[[files]]
-file = "config/openloader/packs/34_Icons - Numerals.zip"
-hash = "6acd811896c55a22727b22a10d005a98334146ec741d7ec139660d85a475797a"
-
-[[files]]
-file = "config/openloader/packs/35_Construction Sticks Grips.zip"
-hash = "e962147bf86449284b70fdf9bef826645f639dab0e3997f4e1aeb21d7c46bc41"
-
-[[files]]
-file = "config/openloader/packs/36_Visual Titles.zip"
-hash = "990fea9d30883eb72982488c64d580c2025da9238e65fa3eb54d87d8070ac549"
+file = "config/openloader/packs/Create Man of Many Planes Recipe Datapack v1.0.zip"
+hash = "22ed3e130f0574a1e4ccbf2db9bb3920098c63bfdbc25069d16fa237073a988d"
 
 [[files]]
 file = "config/overflowingbars-client.toml"
@@ -7178,7 +6710,7 @@ hash = "e2142707d353f2620cde4a8c92ac811a33c2244039d6a2548d005411afd6d73d"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "487c27c97a73544e187415295ae43fc6dd2aa307a20327f677283f561e6dd33a"
+hash = "4ca5eedbdf5ef127cea3c3c8132497a6796f07a0bd54c609c0facdcc46130f83"
 
 [[files]]
 file = "config/rftoolsbase-server.toml"
@@ -20960,6 +20492,11 @@ hash = "7cd6286ad0975cce954e15e6611f4d592672db45fa52603161e8c3a9e338a4d8"
 metafile = true
 
 [[files]]
+file = "mods/adachirei-nui.pw.toml"
+hash = "426fc1d61c7eeede13f0ba5285238dc7f8e96f02c45220cfe57670725a1c23bc"
+metafile = true
+
+[[files]]
 file = "mods/advanced-peripherals.pw.toml"
 hash = "9554839248a8a90229737e18cb2410aeb27d7b195c1e0758d1bb9dd042d1760c"
 metafile = true
@@ -21289,11 +20826,6 @@ hash = "f53d98dc09fb5abb52798e5dfd25297d85a290e1e4874d8208b981654799121e"
 metafile = true
 
 [[files]]
-file = "mods/bisecthosting-server-integration-menu-neoforge.pw.toml"
-hash = "e3d12b69f218240aff7e92b97d5d47a08c154259adacd70352f4c05c3ede151d"
-metafile = true
-
-[[files]]
 file = "mods/bookshelf-extended-enchanting-reach.pw.toml"
 hash = "90465ee632dde9aeda7a8a096d51657950ed000d95fcd53a11ef3926d89dd1fb"
 metafile = true
@@ -21519,6 +21051,11 @@ hash = "6457e8702c7c3d603e1e35252bf2388db4ec44c875209af3c4364a79f4c1709c"
 metafile = true
 
 [[files]]
+file = "mods/create-big-cannons.pw.toml"
+hash = "a0e9ff95570cd9af3374ca8b44aa095447baf94e565f46ae99819d52a9b48dc1"
+metafile = true
+
+[[files]]
 file = "mods/create-connected.pw.toml"
 hash = "3b1b6163af92aa709dbc1800f76654db759a6ae590a6dd1858509138e1a70d6c"
 metafile = true
@@ -21564,6 +21101,11 @@ hash = "933542ef6b68b15a91e20f9d87cb1f03546d0081b12c2e489df860fd47b3be28"
 metafile = true
 
 [[files]]
+file = "mods/create-radars.pw.toml"
+hash = "c24712eb82bb29d7ed210d7bc175baeb3b022c3b365b2dd0275c25f690e98f52"
+metafile = true
+
+[[files]]
 file = "mods/create-schematicchecker.pw.toml"
 hash = "3b100be55a6a5a25aa3e79490eb3bbbf428520642a96381501a12ed2b880446f"
 metafile = true
@@ -21580,7 +21122,7 @@ metafile = true
 
 [[files]]
 file = "mods/create.pw.toml"
-hash = "4b0ca63279620ec9ba4c63820a9d4f9ceea9b717227137ea19e5c420c820f858"
+hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
 
 [[files]]
@@ -21866,11 +21408,6 @@ metafile = true
 [[files]]
 file = "mods/fancy-toasts.pw.toml"
 hash = "ee614e98c0481871ef58747c2b3bac8b3a73027675db3cd9cb9872144533fc8e"
-metafile = true
-
-[[files]]
-file = "mods/fancymenu.pw.toml"
-hash = "10208ca3f0f29e42f973363bf9cb3daf3e19de5af0ae69237103cc3c17cd0289"
 metafile = true
 
 [[files]]
@@ -22548,6 +22085,11 @@ hash = "ce71c31bae3eabed36e3fcec1c7db6b7cb9b3882cdd05ac5b2b518b32109092d"
 metafile = true
 
 [[files]]
+file = "mods/man-of-many-planes.pw.toml"
+hash = "cb3339242a641dcc82c446ac5ea5da84d6f40f023cea5da617044d3f3f2ab9a5"
+metafile = true
+
+[[files]]
 file = "mods/measurements.pw.toml"
 hash = "5634fdbd968dfd9fd3bce683f3474d34dc5d7753ed87574d713c15b41f88e8f9"
 metafile = true
@@ -23043,6 +22585,11 @@ hash = "93bca87a0adcabe6dab9fb8302d65a3a54742df555d8855f4fe12cba6758526f"
 metafile = true
 
 [[files]]
+file = "mods/resource-pack-overrides.pw.toml"
+hash = "b8101dca20d054277d99e75b43dd8db44dea64a761d2ab69fdda9f6d59d9e6f1"
+metafile = true
+
+[[files]]
 file = "mods/resourceful-config.pw.toml"
 hash = "89d21f5da7fea8b1197c6e8e5215d45f7400844560e0f7c179d3c6145bd36a95"
 metafile = true
@@ -23065,6 +22612,11 @@ metafile = true
 [[files]]
 file = "mods/ribbits.pw.toml"
 hash = "5d1a0fefc09545d23a75f37a7cd8b7dcf817a7a57fe28f1419b19be92476dcaa"
+metafile = true
+
+[[files]]
+file = "mods/rpl.pw.toml"
+hash = "7815e5a589de0c02a62ae83590e1f75f4d0c269e48f2435ce2ac448976ddf49f"
 metafile = true
 
 [[files]]
@@ -23598,13 +23150,124 @@ hash = "145943325d3b47d7fb916835d8530645e3f5806c72f68f9d75183493b2c68425"
 metafile = true
 
 [[files]]
+file = "resourcepacks/AE2Blackout-V1.2.9.zip"
+hash = "cd946916f6858cba1ce0537761399fe483f644e3362da18f8f9f5f58ce40331f"
+
+[[files]]
+file = "resourcepacks/Aquaculture 2 Excalibur Support.zip"
+hash = "2588b4624613479aa32eeb95fb9eff0392a76fe266cddeb5b4faa093715103e3"
+
+[[files]]
+file = "resourcepacks/Aquaculture 2.zip"
+hash = "c4a148a11f904314e9a8197dd45f5724dddfccd6b02c313442417a59c191ffdf"
+
+[[files]]
+file = "resourcepacks/Armors.zip"
+hash = "d7b8f735fa29d10a1cee4d679b8ad09366a98c3de1321e7897e9f2a017390a77"
+
+[[files]]
+file = "resourcepacks/Better SB Upgrades.zip"
+hash = "429dd5e2452e124432c0bdd297a027c916a58b04d009a38c48eedb914cef6078"
+
+[[files]]
+file = "resourcepacks/Chaotix Apotheotic Tweaks v3.0 1.21.1.zip"
+hash = "21e6701bf1440d42c36224642d2323d5c85500967d69ab54a80d6defda51b22e"
+
+[[files]]
+file = "resourcepacks/Compact_Machines.zip"
+hash = "3d73ab883dd8f57b45759649e1ea318c6d0f049880b089af2f970208be83569f"
+
+[[files]]
+file = "resourcepacks/Compliance-Powder-Snow-Detector.zip"
+hash = "ef61e454d19ee4819f8b73f72cfe05737a82107776d0d1bb096aa7e6dcce0ce1"
+
+[[files]]
+file = "resourcepacks/ComputerCraft Greg Refreshed 1.1 - 1.20.1.zip"
+hash = "66616b0b8c5950dffd6dd53cf2f337d11b2d47330beca41ee2360206537de36c"
+
+[[files]]
+file = "resourcepacks/Construction Sticks Grips.zip"
+hash = "07d0dcb266ba5d12ace9035a2a43cc0c0edb38732a423c3cb9f12cdaa9cd8289"
+
+[[files]]
 file = "resourcepacks/Craftoria Chinese Translation Resource.zip"
 hash = "16ff15f1ad8755621527d6ff370d09d6b89453e51a3cd3ccacba1f3e6a7e7d2c"
 
 [[files]]
-file = "resourcepacks/ae2-blackout.pw.toml"
-hash = "64517a4b23d02f0d9754bb6af7235ee27ff9d9c7d2538a7c52fcd87add97ddd9"
-metafile = true
+file = "resourcepacks/Create Immersive Aircraft Warship ResoucePack v1.2.zip"
+hash = "6d8923cfe67f986291f4f93bc6aec11abf63230ed979a72167c19f1d0b2edcaa"
+
+[[files]]
+file = "resourcepacks/Create Immersive Aircrafts Bamboo hopper Resource .zip"
+hash = "2aee6f9ed021b7af82a0a1c0e125974996a4f596b5c49fbe4673a1862bef03c2"
+
+[[files]]
+file = "resourcepacks/Ender_Dragon_Reborn.zip"
+hash = "4aed8cab0feab6b8d4707a54fa3c9136977292f5697cc6d23b0aa7a25bf0b33c"
+
+[[files]]
+file = "resourcepacks/Excalibur_Lootr.zip"
+hash = "b5131c446be7ff5a4005ad86f4bd64b79379f8a8e1bf66d0a990b011ae1503ce"
+
+[[files]]
+file = "resourcepacks/Facu's Resourcepack.zip"
+hash = "d2a6aac326a71fd44b65f49df623ff2147eadd60431ea8de3dbe3899678eaf81"
+
+[[files]]
+file = "resourcepacks/Freshly Modded 3.0.4.zip"
+hash = "ed36e122206c60926eaf5c140e1611ae434ba67d5203d131bee749786894b0d8"
+
+[[files]]
+file = "resourcepacks/Icon Fresh 1.3.zip"
+hash = "029134f6c8d51fa86550fe0c703b92d7514324121f7900bfa3f9439d8e289ff5"
+
+[[files]]
+file = "resourcepacks/Icon Xaero's 1.21.zip"
+hash = "f33e2f6488fc0ee01f8643ed9456dedf6e67c65fe2862ae9c18b070bdad6031e"
+
+[[files]]
+file = "resourcepacks/Icons - Numerals.zip"
+hash = "6acd811896c55a22727b22a10d005a98334146ec741d7ec139660d85a475797a"
+
+[[files]]
+file = "resourcepacks/Medieval_Style_Lootr.zip"
+hash = "592bb110455e4557f2c6034f4afbabe45e8cc9690f624bd9d06b9453208b8e21"
+
+[[files]]
+file = "resourcepacks/Pixel's Simple HUD.zip"
+hash = "7fd8127bfc5cdd5d9f382ad2410059ed43b7255e3d883f931d16562212fc69dd"
+
+[[files]]
+file = "resourcepacks/Pretty X Smart Pipez Mekanism.zip"
+hash = "7ddcc81242e4d7bc733b78f93898d9d79e814b55e593d9786790694cfc725b13"
+
+[[files]]
+file = "resourcepacks/Pretty X Smart Pipez.zip"
+hash = "b951f9465fd0b4d04bcf2addbef8f26f157d20c79e7aa98d3333e3e8d65a08ed"
+
+[[files]]
+file = "resourcepacks/Sounds x Create.zip"
+hash = "9e8e966c4f3ab4641bb34f3f3352152d711a78e64de7dfaf359f1d6d3dfc4065"
+
+[[files]]
+file = "resourcepacks/Stay_True.zip"
+hash = "fca6f2502880d5813b228c582e155b22dc3a19c603227b26a55e240e8d69a0a1"
+
+[[files]]
+file = "resourcepacks/Suren Sophisticated Storage v3.0 Universal.zip"
+hash = "899e1b162244e7744cf1035d13064721fa0989310ff550e366d5aae99c6ab644"
+
+[[files]]
+file = "resourcepacks/Tiny_Extendo_Grip_Create.zip"
+hash = "1111a93ad61197e5ce90a1453e827daefe46e036f51b3ba1c956a4f517f7b20f"
+
+[[files]]
+file = "resourcepacks/Torchmaster Remaster.zip"
+hash = "b0351e04346ae0a0388c85ceea72312f7da80ae7ae113ad95df66af1352acb89"
+
+[[files]]
+file = "resourcepacks/Visual Titles.zip"
+hash = "990fea9d30883eb72982488c64d580c2025da9238e65fa3eb54d87d8070ac549"
 
 [[files]]
 file = "resourcepacks/ae2-light-mode.pw.toml"
@@ -23612,23 +23275,8 @@ hash = "d2afa2015854259cde2fb0d2b52860594131aac6ce7229067f210f215025e5b0"
 metafile = true
 
 [[files]]
-file = "resourcepacks/aquaculture-updated.pw.toml"
-hash = "8173bfa1aa1779f5a468e1314a86549d6e14b8dc4c70a02fcbd81f8ec07a2567"
-metafile = true
-
-[[files]]
 file = "resourcepacks/ars-nouveau-refresh.pw.toml"
 hash = "a80d5c72df1b9561b934d8a408aa2f280d325d0ef6a8c64c0603c5d0f8cf97ac"
-metafile = true
-
-[[files]]
-file = "resourcepacks/aures-medieval-style-lootr.pw.toml"
-hash = "84fc1eadce7e6548db57470f579aaf4d9cc80a8a36928cac832e4fe1373ac183"
-metafile = true
-
-[[files]]
-file = "resourcepacks/better-sophisticated-backpack-upgrades-bsbu.pw.toml"
-hash = "2c43e1a25c86c6f0137f37faf66e1183c7c0b08013b9be6be752e7439ba15df6"
 metafile = true
 
 [[files]]
@@ -23642,33 +23290,18 @@ hash = "d204df07b6d6067b579c110510d25cafd3bbfa7ee3ea3386a0d8a829d114c12b"
 metafile = true
 
 [[files]]
-file = "resourcepacks/chaotix-apotheotic-tweaks.pw.toml"
-hash = "0536c2f5e32e7b36e00e595e83d39f4802ea4e028f25a9a89089ef6195269d0d"
-metafile = true
-
-[[files]]
-file = "resourcepacks/computercraft-greg-flavored.pw.toml"
-hash = "da0614dc696e65593585e479d11f38286bf8ebfcde2082cf5b453f08151d18ef"
-metafile = true
-
-[[files]]
-file = "resourcepacks/construction-sticks-grips.pw.toml"
-hash = "8c7572ce1f057dce7afd8f7cafc68c0263c15315782c3d582a7acb829f1005be"
-metafile = true
-
-[[files]]
 file = "resourcepacks/craftoria-emissive-ores.pw.toml"
 hash = "4071fd140400e885355da25c069aa7b7eacd65b9e1d424217ccbbd7ab6436aad"
 metafile = true
 
 [[files]]
-file = "resourcepacks/drodis-illagers-x-fresh-animations.pw.toml"
-hash = "f76d2761fe2e6c4e5dc1f06a0de64280632b2edabca8e2f75eda40dbf84fbdb2"
+file = "resourcepacks/create-immersive-aircrafts.pw.toml"
+hash = "cc5dff9306eee6c936f802113cc121b6c2a5b449b7d9176bec8c918a5d2a3025"
 metafile = true
 
 [[files]]
-file = "resourcepacks/excalibur-aquaculture-2.pw.toml"
-hash = "2ff5bc66f7963ffeea095c3218f30150792b3ce7cae6d9a3959b17ec4bc4ce4b"
+file = "resourcepacks/drodis-illagers-fresh-animation.pw.toml"
+hash = "8fbec1ab8bbe86144a05d7397aa5c2e09fa853a414f0a11908558350a9431fc6"
 metafile = true
 
 [[files]]
@@ -23688,7 +23321,7 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
-hash = "da66421a2a0dcab59fc4b17705b0aae4cd88b20634ebea20b0224fee2bef8251"
+hash = "6a1556a0e4fcb411b33efafc3382b4abd9a6e671f140dc0d42e9aad2808e24f3"
 metafile = true
 
 [[files]]
@@ -23702,18 +23335,8 @@ hash = "dd91c22e378715d83782d03668ad65b5833c7c85ed634f2e664412cb50e4366b"
 metafile = true
 
 [[files]]
-file = "resourcepacks/freshly-modded.pw.toml"
-hash = "2d9b5152758a93c0661214902adb45e0387c213acc979675c66742fad41b483b"
-metafile = true
-
-[[files]]
 file = "resourcepacks/golems-refreshed.pw.toml"
 hash = "567ba4fc9dac74c223c5de9df12eadbb8e3cca279c8c96375fa364834b613251"
-metafile = true
-
-[[files]]
-file = "resourcepacks/irons-spells-n-spellbooks-armors-overhaul.pw.toml"
-hash = "a524b14eb008b3b52a52705843601e5b0f3a1fd5ef2a81de792dd5f744298b1e"
 metafile = true
 
 [[files]]
@@ -23727,38 +23350,8 @@ hash = "0a87d721c5071d605cd861e5de1213b13bce035504a1c353694deca193b8ffea"
 metafile = true
 
 [[files]]
-file = "resourcepacks/pixels-simple-hud.pw.toml"
-hash = "56983fadc592145486f0d635081d1a228b9abefa33552d01f65af5f21ce25292"
-metafile = true
-
-[[files]]
-file = "resourcepacks/pretty-x-smart-pipez-mekanism-edition.pw.toml"
-hash = "6d1b256814df6c7f26dfabea9d7854220915bb2ce96cbf44c7962c23074eb6ee"
-metafile = true
-
-[[files]]
-file = "resourcepacks/pretty-x-smart-pipez.pw.toml"
-hash = "75b811a77e333696a0b8eafc723ae206ede852c880c89cb4a0eacebb45deba86"
-metafile = true
-
-[[files]]
 file = "resourcepacks/slightly-improved-font.pw.toml"
 hash = "1500696334c198418def3441b2a5764156c1b68d7de1882d345f61d842dc3d25"
-metafile = true
-
-[[files]]
-file = "resourcepacks/stay-true.pw.toml"
-hash = "e53a1e480f2a8051cc6581a0d7323fb3b31c317562caa12c37eab9e952cc9300"
-metafile = true
-
-[[files]]
-file = "resourcepacks/suren-ss.pw.toml"
-hash = "4793da32d65415ce11eaf080236ccdbbceee3f96ef31a816ad0579baf48a664f"
-metafile = true
-
-[[files]]
-file = "resourcepacks/torchmaster-remaster.pw.toml"
-hash = "4415898f4f842c2a9c12a47d6d51d4b7a3bf914a54c6b8c957f99af9c069b1ef"
 metafile = true
 
 [[files]]
@@ -23767,9 +23360,8 @@ hash = "8fa19430ce433fe18eadd70d1a9b7b3b9441965bd7c0905978841fb180799420"
 metafile = true
 
 [[files]]
-file = "resourcepacks/villagers-refreshed-fresh-animations.pw.toml"
-hash = "2ccf39bd64b18025cb9e53ecfacad18aeff24d5fb849354fff70ce96557cf1ad"
-metafile = true
+file = "resourcepacks/updated_aquaculture-1.1.zip"
+hash = "22d1701235565e7d355e9c12391c87d545bbe85098dcd7114c74841fdd498c93"
 
 [[files]]
 file = "shaderpacks/complementary-unbound.pw.toml"

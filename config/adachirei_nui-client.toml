@@ -1,0 +1,3 @@
+[general]
+    # Keep Minecraft's normal splash text.
+    enableCustomSplash = false

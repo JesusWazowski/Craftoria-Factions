@@ -1,0 +1,13 @@
+name = "AdachiRei-nui"
+filename = "AdachiRei-nui-neoforge-mc1.21.1-v1.1.5.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/zA0tDCfF/versions/ZVtABgtF/AdachiRei-nui-neoforge-mc1.21.1-v1.1.5.jar"
+hash-format = "sha512"
+hash = "e7054cd3e42dc2f7d7239ea22e49b091645e8f8e2d5212e9a90c458a5e04e0afcab7bcf643706c92a9f5ffc902b30bd7fafdcbb51f1be92fe5a3d766088b1881"
+
+[update]
+[update.modrinth]
+mod-id = "zA0tDCfF"
+version = "ZVtABgtF"

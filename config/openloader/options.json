@@ -2,7 +2,7 @@
   "load_resource_packs": {
     "//": "Determines if OpenLoader should load resource packs.",
     "//default": true,
-    "value": true
+    "value": false
   },
   "load_data_packs": {
     "//": "Determines if OpenLoader should load data packs.",
