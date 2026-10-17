@@ -20270,7 +20270,7 @@ hash = "53f83e620ca0e51ae8c130be3a14fecfe2b24916420e65d3d1dee12f81cfad1e"
 
 [[files]]
 file = "kubejs/server_scripts/Mods/ModernIndustrialization/ReplicatorBlacklist.js"
-hash = "b0752bf92d2c79337faa608e719e7ea0b6f9a73ed85d094f563dee040f7fb65a"
+hash = "bbe817a12ae4d850af172c34f37337a7c053e8d45abf1bb64c5917aac808e4a9"
 
 [[files]]
 file = "kubejs/server_scripts/Mods/NeoVitae/Recipes.js"
@@ -20382,7 +20382,7 @@ hash = "169c5d454caa495474db05cd6890a42b8661511286244eb284018bf9847427a4"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
-hash = "459bbfffa748e1b4768884df750de36982e4674dea3bd683d7c27fbc4b4d678b"
+hash = "3a932e5838757b8481d87860231cfdb09e55d07b8acd3345d7f3f7d5d1ab141a"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"

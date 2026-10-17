@@ -256,7 +256,8 @@ const factionSession = {
         }
       });
       this.players(server).forEach(player => {
-        if (!(player instanceof SessionFakePlayer) && !this.party(player)) {
+        if (!(player instanceof SessionFakePlayer) && !this.party(player)
+          && !(typeof factionParties !== 'undefined' && factionParties.active())) {
           problems.push(String(player.username) + ': must join an FTB Teams faction');
         }
       });
@@ -268,7 +269,11 @@ const factionSession = {
     server.persistentData.putBoolean('sessionLocked', locked);
     this.previous.clear();
     this.teleportUntil.clear();
-    if (locked) this.players(server).forEach(player => this.enforce(player));
+    if (locked) this.players(server).forEach(player => {
+      if (!(player instanceof SessionFakePlayer) && !this.party(player)
+        && typeof factionParties !== 'undefined' && factionParties.active()) factionParties.hold(player, true);
+      else this.enforce(player);
+    });
     server.tell(locked ? 'Session locked: claims are frozen and wilderness travel is disabled.' : 'Session unlocked: exploration and claim changes are enabled.');
     return 1;
   },
