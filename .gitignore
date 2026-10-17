@@ -1,4 +1,8 @@
 # Project Infrastructure
+# Local server operations instructions and connection details
+/AGENTS.md
+/SERVER.md
+
 # ---
 /*
 
@@ -139,3 +143,6 @@ ModListCreator-5.0.0-fatjar.jar
 !/resourcepacks/Construction Sticks Grips.zip
 !/resourcepacks/Armors.zip
 !/resourcepacks/villagers-refrehsed+FA-v1.0.zip
+
+!/mods/craftoria-factions-guard-1.1.1.jar
+/automation/faction-guard/.build/

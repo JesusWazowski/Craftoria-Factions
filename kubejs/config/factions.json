@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "factions": [
+    {
+      "id": "stargazers",
+      "name": "Stargazers",
+      "mods": [
+        "ae2",
+        "enderdrives",
+        "rep_ae2",
+        "extendedae",
+        "ae2ct",
+        "ae2networkanalyzer",
+        "ae2importexportcard",
+        "appmek",
+        "mekanism",
+        "mekanismgenerators",
+        "mekanismadditions",
+        "mekanismtools",
+        "more_mekanism_processing",
+        "mekanism_unleashed",
+        "mekanism_weapons",
+        "mekanism_curios",
+        "jem",
+        "mekanismextras",
+        "powah",
+        "justdirethings",
+        "mffs"
+      ],
+      "sharedGroups": [
+        "science_shared"
+      ]
+    },
+    {
+      "id": "mechanists",
+      "name": "Mechanists",
+      "mods": [
+        "create",
+        "create_stock_bridge",
+        "create_enchantment_industry",
+        "create_dragons_plus",
+        "create_pattern_schematics",
+        "modern_industrialization",
+        "industrialization_overdrive",
+        "mi_sound_addon",
+        "pneumaticcraft",
+        "replication",
+        "reliquary"
+      ],
+      "sharedGroups": [
+        "science_shared"
+      ]
+    },
+    {
+      "id": "spellcasters",
+      "name": "Spellcasters",
+      "mods": [
+        "ars_nouveau",
+        "ars_elemental",
+        "ars_controle",
+        "notenoughglyphs",
+        "ars_energistique",
+        "ars_ocultas",
+        "ars_creo",
+        "reliquified_ars",
+        "ars_additions",
+        "arsdelight",
+        "ars_elemancy",
+        "ars_unification",
+        "hazen_n_stuff",
+        "irons_spellbooks",
+        "gtbcs_spell_lib",
+        "aces_spell_utils"
+      ],
+      "sharedGroups": [
+        "magic_shared"
+      ]
+    },
+    {
+      "id": "ritualists",
+      "name": "Ritualists",
+      "mods": [
+        "apotheosis",
+        "apothic_enchanting",
+        "attributeslib",
+        "apothic_spawners",
+        "extra_apoth_compat",
+        "irons_apothic",
+        "irons_apothic_invaders",
+        "occultism",
+        "twilightforest",
+        "eternal_starlight",
+        "gateways",
+        "lendercataclysm",
+        "cataclysm_spellbooks",
+        "reliquified_cataclysm",
+        "lootintegrations_cataclysm",
+        "reliquified_twilight",
+        "twilightdelight",
+        "twilight_treehouses"
+      ],
+      "sharedGroups": [
+        "magic_shared"
+      ]
+    }
+  ],
+  "sharedGroups": [
+    {
+      "id": "science_shared",
+      "mods": [
+        "rftoolsbase",
+        "rftoolscontrol",
+        "rftoolsstorage",
+        "rftoolsutility",
+        "rftoolsbuilder",
+        "tempad"
+      ]
+    },
+    {
+      "id": "magic_shared",
+      "mods": [
+        "waystones",
+        "relics",
+        "artifacts",
+        "irons_gems_n_jewelry"
+      ]
+    }
+  ]
+}

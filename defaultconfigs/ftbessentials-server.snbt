@@ -12,6 +12,9 @@
 
 {
 	teleportation: {
+		home: {
+			enabled: false
+		}
 		rtp: {
 			cooldown: 300
 			dimension_blacklist: []

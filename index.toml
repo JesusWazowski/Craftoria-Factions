@@ -4318,7 +4318,7 @@ hash = "02ca66b96ba200d209cd25601f30ccbad4b4af66d4ccc85809cd06551291e8fb"
 
 [[files]]
 file = "config/ftbessentials.snbt"
-hash = "f55ca157708b8b73fe70763ac611b9d3552ffe0eccf57ef0e754bec91ac096d6"
+hash = "18d8f8345984fa61119390441ec7d78bb70b7b2ecc75a45c27561ecc43d55160"
 
 [[files]]
 file = "config/ftblibrary-client.snbt"
@@ -7430,7 +7430,7 @@ hash = "a9937d9ca25ce9ec55c67f0be78c2f60db3f4aad21d2a66abd41e60c2c981d43"
 
 [[files]]
 file = "defaultconfigs/ftbessentials-server.snbt"
-hash = "50e38d8f4ff42db768a70f0d51312d977330218413043f3648f3f7b3058048f6"
+hash = "399a9f12e0c30c7c378c1adbbb1ada680466bd087c14752e1188e69a68cfa525"
 
 [[files]]
 file = "defaultconfigs/ftblibrary/ftblibrary-client.snbt"
@@ -19085,6 +19085,10 @@ file = "kubejs/config/defaultoptions.txt"
 hash = "d708425ce292448cb2d9a90460a075d4f3f9db2a56a000aea444b4ce686e10c3"
 
 [[files]]
+file = "kubejs/config/factions.json"
+hash = "4ff9d2adfbe4be82d2d8a559250e026e87e9c5581bb287c55cfff84c3dcf3c36"
+
+[[files]]
 file = "kubejs/config/web_server.json"
 hash = "4db1f335912cac6e593305fc4a267c7763f91c1ebe501a24b6bbe2d8825feef4"
 
@@ -20325,6 +20329,18 @@ file = "kubejs/server_scripts/Mods/XyCraft/Recipes.js"
 hash = "7b8881ca8bbb426755fd8d5907052713377c87b91b51b3376ba159d9a2570251"
 
 [[files]]
+file = "kubejs/server_scripts/faction_definitions.js"
+hash = "d9db657062b562901ae11d565ccebd9f7042b329f2f9e56eb1fabfcfd8ca5c3c"
+
+[[files]]
+file = "kubejs/server_scripts/faction_parties.js"
+hash = "17201df0b55abd399eb523e53a3d5d112d52a388c224e356bd38c641d851a44a"
+
+[[files]]
+file = "kubejs/server_scripts/faction_quest_rewards.js"
+hash = "9499253054535ad28c68cf51d1d466416f8426b3f8f00cf45d52888d86103612"
+
+[[files]]
 file = "kubejs/server_scripts/first_join.js"
 hash = "0fb0dae878951b98aeaad30c6cc2361f695729d0613596c8bab24b5dd667000a"
 
@@ -20358,7 +20374,7 @@ hash = "822f62f8838b71c56d980b185266dc8304c150d6e2f283849704d37ff143199d"
 
 [[files]]
 file = "kubejs/server_scripts/mod_gating.js"
-hash = "f64deba24df1f241192f346be28a8a0c9d5c3551ba2ddaed05b890fe16fecc65"
+hash = "522d0bc2e68824754caadd7f4df89567f80c12c7c38efc441f39017fa8774f43"
 
 [[files]]
 file = "kubejs/server_scripts/removals.js"
@@ -20366,7 +20382,7 @@ hash = "169c5d454caa495474db05cd6890a42b8661511286244eb284018bf9847427a4"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
-hash = "34c6201666993fa491f708a88b5a5e6c74957eddcc7e22683e7408d8a3592ff3"
+hash = "459bbfffa748e1b4768884df750de36982e4674dea3bd683d7c27fbc4b4d678b"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"
@@ -20741,6 +20757,11 @@ hash = "bc0f66cc6958163527668af00f435b261fd81efae69dd9bffb02e0e4a621f986"
 metafile = true
 
 [[files]]
+file = "mods/astages.pw.toml"
+hash = "0f398f2ee5153364cac42fc4c26ce0305f69406922d23c192c96c3a2f958a736"
+metafile = true
+
+[[files]]
 file = "mods/asynclogger.pw.toml"
 hash = "91913d9b793cd9113f9c7c0e94dc3918b56bbb421d7c98385d1e02119bdafde6"
 metafile = true
@@ -21039,6 +21060,10 @@ metafile = true
 file = "mods/craftoria-core.pw.toml"
 hash = "ce99acf7b15a1927e38364aa02bb4ed0ad7583ab12f3351cb3161fdd2e160b49"
 metafile = true
+
+[[files]]
+file = "mods/craftoria-factions-guard-1.1.1.jar"
+hash = "6b0241ce4e25eb4694801ef6b8182bf29ecbfd145284c7dc98220161a36a5af9"
 
 [[files]]
 file = "mods/crash-assistant.pw.toml"
@@ -21516,7 +21541,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-quests-forge.pw.toml"
-hash = "93330f6ec85532067df176c6baee0e0f6d685c78088b1a2217726f6421899148"
+hash = "d15a3089b2c5e5f69ea723408c61c32f67707139936304fdbdde754bb85a240a"
 metafile = true
 
 [[files]]
@@ -21531,7 +21556,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-teams-forge.pw.toml"
-hash = "c21c2308684a75cda7dd9d557d129c9f89f49be527da3d5aa675fff444c11f5e"
+hash = "81961770ff1e727758cfedecd74be325d50de03c8221451fa493e178c9a7045a"
 metafile = true
 
 [[files]]

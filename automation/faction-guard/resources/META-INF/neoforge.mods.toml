@@ -1,0 +1,27 @@
+modLoader="lowcodefml"
+loaderVersion="[1,)"
+license="MIT"
+[[mods]]
+modId="craftoria_factions_guard"
+version="1.1.1"
+displayName="Craftoria Faction Permission Guard"
+description="Makes direct FTB Teams GUI operations respect faction permissions and protects reserved memberships."
+[[dependencies.craftoria_factions_guard]]
+modId="ftbteams"
+type="required"
+versionRange="[2101.1.11]"
+ordering="AFTER"
+side="SERVER"
+[[dependencies.craftoria_factions_guard]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.craftoria_factions_guard]]
+modId="ftbquests"
+type="required"
+versionRange="[2101.1.36]"
+ordering="AFTER"
+side="SERVER"

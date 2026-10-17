@@ -68,6 +68,7 @@ function setup(data = new Tag()) {
     FTBChunksWorldConfig: Object.fromEntries(['MAX_CLAIMED_CHUNKS', 'HARD_TEAM_CLAIM_LIMIT', 'PARTY_LIMIT_MODE', 'MAX_IDLE_DAYS_BEFORE_UNCLAIM']
       .map(key => [key, { set: value => { configs[key] = value; } }])),
     PartyLimitMode: { LARGEST: 'largest' }, TeamRank: { OFFICER: 'officer' },
+    TeamArgument: { create: type => type, get: context => context.target }, TeamType: { PARTY: 'party' },
     ChunkDimPos: ChunkPos, BlockPos, AABB: Box, Direction: { UP: 'up' },
     ResourceKey: { create: (_, dimension) => dimension }, ResourceLocation: { parse: value => value },
     Registries: { DIMENSION: 'dimension' }, ServerPlayer: Player, FakePlayer,
@@ -104,16 +105,16 @@ function setup(data = new Tag()) {
     players.push(value); return value;
   }
   function command(player) {
-    return { server, getPlayerOrException: () => player,
+    return { server, hasPermission: () => false, getPlayerOrException: () => player,
       sendSuccess: value => { command.success = value; },
       sendFailure: value => { command.failure = value; } };
   }
-  return { subject, handlers, claims, teams, players, ranks, configs, updates, level, server, team, claim, player, command };
+  return { subject, handlers, claims, teams, players, ranks, configs, updates, level, server, team, claim, player, command, context };
 }
 
 test('only lock/unlock/info exist and require operator level 2', () => {
   const s = setup(); const commands = [];
-  s.handlers.registry({ commands: { literal: name => new Command(name) }, register: node => commands.push(node) });
+  s.handlers.registry({ commands: { literal: name => new Command(name), argument: name => new Command(name) }, register: node => commands.push(node) });
   assert.deepEqual(commands[0].children.map(node => node.name), ['lock', 'unlock', 'info']);
   assert.equal(commands[0].predicate({ hasPermission: level => level <= 1 }), false);
   assert.equal(commands[0].predicate({ hasPermission: level => level <= 2 }), true);
@@ -172,7 +173,7 @@ test('high speed paths cannot cross gaps, holes or diagonal wilderness corners',
   assert.equal(s.subject.claimedPath(s.level, { x: 8, z: 8 }, { x: 24, z: 24 }), true);
 });
 
-test('homes require officer rank, own claims and safe ground; bounded recovery never leaves the chunk', () => {
+test('homes require officer rank, own claims and valid bounds; bounded recovery never leaves the chunk', () => {
   const s = setup(); const owner = s.team(); const p = s.player(owner); const command = s.command(p);
   s.claim(0, 0, s.team('enemy'));
   assert.equal(s.subject.setHome(command), 0);
@@ -191,7 +192,7 @@ test('lock preflight includes offline factions and leaves state active when inco
   const s = setup(); s.team('Offline faction'); const command = s.command();
   assert.equal(s.subject.setLocked(command, true), 0);
   assert.equal(Boolean(s.subject.locked(s.server)), false);
-  assert.match(s.command.failure, /Offline faction.*factionhome set/);
+  assert.match(s.command.failure, /Offline faction.*sethome/);
 });
 
 function ready() {
@@ -212,7 +213,7 @@ test('enemy claims and disconnected claimed teleport destinations are allowed', 
   assert.equal(s.p.returned, undefined); assert.equal(s.p.x, 56);
 });
 
-test('actual fast client movement across a gap returns home even at a claimed endpoint', () => {
+test('actual fast client movement across a gap returns to the previous claim even at a claimed endpoint', () => {
   const s = ready(); s.claim(3, 0, s.owner); s.p.x = 56;
   s.p.getKnownMovement = () => ({ x: 47.5, z: 0 }); s.subject.enforce(s.p);
   assert.equal(s.p.returned, 'minecraft:overworld');
@@ -222,7 +223,7 @@ test('leaving/disbanding a faction or losing its home disconnects instead of gue
   const s = ready(); s.p.party = null; s.subject.enforce(s.p);
   assert.match(s.p.disconnected, /join an FTB Teams faction/);
   s.p.party = s.owner; s.claims.clear(); s.subject.homeCache.clear(); s.subject.enforce(s.p);
-  assert.match(s.p.disconnected, /no safe home/); assert.equal(s.p.returned, undefined);
+  assert.match(s.p.disconnected, /no valid home/); assert.equal(s.p.returned, undefined);
 });
 
 test('native pearls reject wilderness while cross-dimension command teleports defer to the tick check', () => {
@@ -247,14 +248,128 @@ test('extra claim bonus mutations are blocked through aliases and nested execute
   delete event.canceled; handler(event); assert.equal(event.canceled, undefined);
 });
 
-test('unsafe floors, fluids, collision and body overlap at chunk edges reject home positions', () => {
+test('home validation keeps height and chunk bounds without inspecting terrain', () => {
   const s = setup();
+  for (const method of ['getBlockState', 'getBlock', 'getFluidState', 'noCollision']) {
+    s.level[method] = () => { throw new Error('Home validation must not inspect ' + method); };
+  }
   assert.equal(s.subject.safe(s.level, 15.9, 64, 8.5), false);
-  s.level.getFluidState = () => ({ isEmpty: () => false });
-  assert.equal(s.subject.safe(s.level, 8.5, 64, 8.5), false);
-  s.level.getFluidState = () => ({ isEmpty: () => true });
-  s.level.getBlock = () => ({ id: 'minecraft:magma_block' });
-  assert.equal(s.subject.safe(s.level, 8.5, 64, 8.5), false);
-  s.level.getBlock = () => ({ id: 'minecraft:air' }); s.level.noCollision = () => false;
-  assert.equal(s.subject.safe(s.level, 8.5, 64, 8.5), false);
+  assert.equal(s.subject.safe(s.level, -0.1, 64, 8.5), false);
+  assert.equal(s.subject.safe(s.level, 8.5, -64, 8.5), false);
+  assert.equal(s.subject.safe(s.level, 8.5, 318, 8.5), false);
+  assert.equal(s.subject.safe(s.level, 8.5, 64, 8.5), true);
+  const owner = s.team(); const player = s.player(owner); s.claim(0, 0, owner);
+  assert.equal(s.subject.setHome(s.command(player)), 1);
+  s.subject.homeCache.clear();
+  assert.equal(s.subject.home(s.server, owner).y, 64);
+});
+
+test('managed worlds hold unaffiliated locked arrivals without disconnecting them', () => {
+  const s = setup(); const p = s.player(null);
+  s.server.persistentData.putBoolean('sessionLocked', true);
+  s.context.factionParties = { active: () => true, hold: player => { player.pending = true; } };
+  s.subject.enforce(p);
+  assert.equal(p.pending, true); assert.equal(p.disconnected, undefined);
+});
+test('reserved-only parties do not require homes before locking a managed world', () => {
+  const s = setup(); s.team('reserved-only');
+  s.context.factionParties = { active: () => true, humanMembers: () => 0 };
+  s.subject.setLocked(s.command(), true);
+  assert.equal(s.subject.locked(s.server), true);
+});
+
+test('boundary crossings return quietly to the last claimed position instead of home', () => {
+  const s = ready(); s.p.x = 14; s.p.y = 70; s.p.yaw = 90; s.subject.enforce(s.p);
+  let messages = 0; s.p.tell = () => messages++; s.p.x = 17; s.subject.enforce(s.p);
+  assert.equal(s.p.x, 14); assert.equal(s.p.y, 70); assert.equal(messages, 0);
+  assert.equal(s.p.dismounted, true); assert.equal(s.p.fallDistance, 0);
+});
+test('negative chunk edges are clamped within the previous claimed chunk', () => {
+  const s = ready(); s.claim(-1, 0, s.owner); s.p.x = -0.01; s.subject.enforce(s.p);
+  s.p.x = 32; s.subject.enforce(s.p); assert.ok(Math.abs(s.p.x + 0.32) < 1e-9);
+});
+test('unsafe, unclaimed or missing snapshots fall back to the faction home', () => {
+  for (const mode of ['collision', 'hazard', 'missing', 'unclaimed']) {
+    const s = ready(); s.p.x = 14; s.subject.enforce(s.p);
+    if (mode === 'collision') s.level.noCollision = box => box.values[0] < 10;
+    if (mode === 'hazard') s.level.getBlock = pos => ({ id: pos.x > 10 ? 'minecraft:lava' : 'minecraft:air' });
+    if (mode === 'missing') s.subject.previous.clear();
+    if (mode === 'unclaimed') s.subject.previous.set(s.p.uuid, { dimension: s.level.dimension, x: 40, y: 64, z: 8.5, yaw: 0, pitch: 0 });
+    s.p.x = 33; s.subject.enforce(s.p); assert.equal(s.p.x, 8.5, mode);
+  }
+});
+test('closure and login outside claims use home while subsequent exits use the local snapshot', () => {
+  const s = ready(); s.p.x = 40; s.subject.previous.clear(); s.subject.enforce(s.p); assert.equal(s.p.x, 8.5);
+  s.p.x = 14; s.subject.enforce(s.p); s.p.x = 17; s.subject.enforce(s.p); assert.equal(s.p.x, 14);
+  s.p.x = 40; s.p.server.scheduleInTicks = (_, fn) => fn();
+  s.handlers.player.loggedIn({ player: s.p }); assert.equal(s.p.x, 8.5);
+});
+
+test('operator can set a different party home without membership, preserving other homes', () => {
+  const s = setup(); const own = s.team('own'); const target = s.team('target'); const player = s.player(own);
+  const source = s.command(player); source.hasPermission = level => level === 2;
+  s.claim(0, 0, own); s.subject.setHome(source); const old = s.subject.homes(s.server).getCompound('own');
+  s.claim(0, 0, target); assert.equal(s.subject.setHome(source, target), 1);
+  assert.equal(s.subject.homes(s.server).getCompound('target').getDouble('x'), 8.5);
+  s.claim(1, 0, target); player.x = 24;
+  assert.equal(s.subject.setHome(source, target), 1);
+  assert.equal(s.subject.homes(s.server).getCompound('target').getDouble('x'), 24.5);
+  assert.equal(s.subject.homes(s.server).getCompound('own'), old);
+  assert.equal(player.party, own);
+});
+test('optional party target requires operators in the command tree and runtime policy', () => {
+  const s = setup(); const commands = [];
+  s.handlers.registry({ commands: { literal: name => new Command(name), argument: name => new Command(name) }, register: node => commands.push(node) });
+  const set = commands.find(c => c.name === 'sethome');
+  assert.equal(typeof set.handler, 'function'); const party = set.children[0]; assert.equal(party.name, 'party');
+  assert.equal(party.predicate({ hasPermission: () => false }), false);
+  assert.equal(party.predicate({ hasPermission: n => n === 2 }), true);
+  const target = s.team('target'); const p = s.player(null); s.claim(0, 0, target);
+  assert.equal(s.subject.setHome(s.command(p), target), 0); assert.match(s.command.failure, /Only operators/);
+  assert.equal(s.subject.homes(s.server).contains('target'), false);
+});
+test('operator target still requires unlocked session, target territory and valid bounds', () => {
+  const s = setup(); const target = s.team('target'); const other = s.team('other'); const p = s.player(null);
+  const source = s.command(p); source.hasPermission = () => true;
+  s.claim(0, 0, other); assert.equal(s.subject.setHome(source, target), 0);
+  s.claim(0, 0, target); s.subject.safe = () => false; assert.equal(s.subject.setHome(source, target), 0);
+  s.subject.safe = () => true; s.server.persistentData.putBoolean('sessionLocked', true);
+  assert.equal(s.subject.setHome(source, target), 0);
+  assert.equal(s.subject.homes(s.server).contains('target'), false);
+  s.server.persistentData.putBoolean('sessionLocked', false);
+  assert.equal(s.subject.setHome(source, s.team('personal', false)), 0);
+  assert.equal(s.subject.setHome(source, target), 1);
+});
+
+test('home reports information without teleporting; legacy roots are removed', () => {
+  const s = setup(); const commands = [];
+  s.handlers.registry({ commands: { literal: name => new Command(name), argument: name => new Command(name) }, register: node => commands.push(node) });
+  assert.deepEqual(commands.map(c => c.name), ['session', 'sethome', 'home']);
+  const home = commands.find(c => c.name === 'home');
+  assert.deepEqual(home.children.map(c => c.name), []);
+  assert.equal(typeof home.handler, 'function');
+  const player = s.player(null); home.handler({ source: s.command(player) });
+  assert.match(s.command.success, /No valid faction home/);
+  assert.match(s.command.success, /\/sethome/);
+  assert.equal(player.returned, undefined);
+});
+
+
+test('locking a managed world holds unaffiliated online players and resends selection', () => {
+  const s = setup(); const p = s.player(null); let prompts = 0;
+  s.context.factionParties = { active: () => true, hold: (player, reset) => {
+    assert.equal(s.subject.locked(s.server), true);
+    assert.equal(reset, true); player.pending = true; prompts++;
+  } };
+  assert.equal(s.subject.setLocked(s.command(), true), 1);
+  assert.equal(p.pending, true); assert.equal(p.disconnected, undefined); assert.equal(prompts, 1);
+  s.subject.setLocked(s.command(), false); s.subject.setLocked(s.command(), true);
+  assert.equal(prompts, 2);
+});
+
+test('unaffiliated players still block locking unmanaged worlds', () => {
+  const s = setup(); s.player(null);
+  assert.equal(s.subject.setLocked(s.command(), true), 0);
+  assert.equal(Boolean(s.subject.locked(s.server)), false);
+  assert.match(s.command.failure, /must join/);
 });

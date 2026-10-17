@@ -6,10 +6,11 @@ const SessionRanks = Java.loadClass('dev.ftb.mods.ftbranks.api.FTBRanksAPI');
 const SessionConfig = Java.loadClass('dev.ftb.mods.ftbchunks.FTBChunksWorldConfig');
 const SessionPartyLimit = Java.loadClass('dev.ftb.mods.ftbchunks.data.PartyLimitMode');
 const SessionTeamRank = Java.loadClass('dev.ftb.mods.ftbteams.api.TeamRank');
+const SessionTeamArgument = Java.loadClass('dev.ftb.mods.ftbteams.data.TeamArgument');
+const SessionTeamType = Java.loadClass('dev.ftb.mods.ftbteams.data.TeamType');
 const SessionChunkPos = Java.loadClass('dev.ftb.mods.ftblibrary.math.ChunkDimPos');
 const SessionBlockPos = Java.loadClass('net.minecraft.core.BlockPos');
 const SessionAABB = Java.loadClass('net.minecraft.world.phys.AABB');
-const SessionDirection = Java.loadClass('net.minecraft.core.Direction');
 const SessionServerPlayer = Java.loadClass('net.minecraft.server.level.ServerPlayer');
 const SessionFakePlayer = Java.loadClass('net.neoforged.neoforge.common.util.FakePlayer');
 const SessionTeleportCommand = Java.loadClass('net.neoforged.neoforge.event.entity.EntityTeleportEvent$TeleportCommand');
@@ -76,16 +77,7 @@ const factionSession = {
     // Keep the whole standing body in this chunk, including homes near chunk edges.
     if (Math.floor((x - 0.31) / 16) !== Math.floor((x + 0.31) / 16)
       || Math.floor((z - 0.31) / 16) !== Math.floor((z + 0.31) / 16)) return false;
-    let feet = new SessionBlockPos(Math.floor(x), y, Math.floor(z));
-    let floor = feet.below();
-    let state = level.getBlockState(floor);
-    if (!state.isFaceSturdy(level, floor, SessionDirection.UP)) return false;
-    let hazards = /(?:lava|fire|magma|cactus|campfire|berry_bush|powder_snow|wither_rose)/;
-    for (let pos of [floor, feet, feet.above()]) {
-      let block = level.getBlock(pos);
-      if (!level.getFluidState(pos).isEmpty() || hazards.test(String(block.id))) return false;
-    }
-    return level.noCollision(new SessionAABB(x - 0.31, y, z - 0.31, x + 0.31, y + 1.9, z + 0.31));
+    return true;
   },
 
   home(server, team) {
@@ -141,7 +133,7 @@ const factionSession = {
     this.previous.delete(String(player.uuid));
   },
 
-  returnHome(player, home) {
+  returnHome(player, home, silent) {
     player.stopRiding();
     player.stopFallFlying();
     player.setMotion(0, 0, 0);
@@ -152,12 +144,40 @@ const factionSession = {
     }
     player.setMotion(0, 0, 0);
     player.fallDistance = 0;
-    player.tell('Session is locked. Wilderness travel is disabled; you have been returned to your faction home.');
+    if (!silent) player.tell('Session is locked. Wilderness travel is disabled; you have been returned to your faction home.');
     this.previous.set(String(player.uuid), this.position(player));
   },
 
   position(player) {
-    return { dimension: String(player.level.dimension), x: player.x, z: player.z };
+    return { dimension: String(player.level.dimension), x: player.x, y: player.y, z: player.z, yaw: player.yaw, pitch: player.pitch };
+  },
+
+  returnPrevious(player, before) {
+    if (!before || before.dimension !== String(player.level.dimension)
+      || ![before.x, before.y, before.z, before.yaw, before.pitch].every(Number.isFinite)) return false;
+    let level = player.level;
+    let chunkX = Math.floor(before.x / 16);
+    let chunkZ = Math.floor(before.z / 16);
+    let x = Math.max(chunkX * 16 + 0.32, Math.min(chunkX * 16 + 15.68, before.x));
+    let z = Math.max(chunkZ * 16 + 0.32, Math.min(chunkZ * 16 + 15.68, before.z));
+    let y = before.y;
+    if (!this.claim(level, x, z) || y <= level.getMinBuildHeight() || y + 2 >= level.getMaxBuildHeight()) return false;
+    let feet = new SessionBlockPos(Math.floor(x), Math.floor(y), Math.floor(z));
+    let hazards = /(?:lava|fire|magma|cactus|campfire|berry_bush|powder_snow|wither_rose)/;
+    for (let pos of [feet.below(), feet, feet.above()]) {
+      if (!level.getFluidState(pos).isEmpty() || hazards.test(String(level.getBlock(pos).id))) return false;
+    }
+    // Airborne snapshots are valid; no supporting floor is required.
+    if (!level.noCollision(new SessionAABB(x - 0.31, y, z - 0.31, x + 0.31, y + 1.9, z + 0.31))) return false;
+    player.stopRiding();
+    player.stopFallFlying();
+    player.setMotion(0, 0, 0);
+    player.fallDistance = 0;
+    if (!player.teleportTo(before.dimension, x, y, z, before.yaw, before.pitch)) return false;
+    player.setMotion(0, 0, 0);
+    player.fallDistance = 0;
+    this.previous.set(String(player.uuid), this.position(player));
+    return true;
   },
 
   // Grid traversal catches motion that crosses a wilderness gap within one tick.
@@ -197,9 +217,12 @@ const factionSession = {
   enforce(player) {
     if (!this.locked(player.server) || player instanceof SessionFakePlayer) return;
     let team = this.party(player);
-    if (!team) return this.rejectPlayer(player, 'join an FTB Teams faction and configure its home first');
+    if (!team) {
+      if (typeof factionParties !== 'undefined' && factionParties.active()) return factionParties.hold(player);
+      return this.rejectPlayer(player, 'join an FTB Teams faction and configure its home first');
+    }
     let home = this.home(player.server, team);
-    if (!home) return this.rejectPlayer(player, 'your faction has no safe home inside its own claim');
+    if (!home) return this.rejectPlayer(player, 'your faction has no valid home inside its own claim');
     if (!player.isAlive()) return;
     let id = String(player.uuid);
     let now = this.position(player);
@@ -213,7 +236,9 @@ const factionSession = {
       let physicalRange = 0.01 + 5 * Math.hypot(motion.x, motion.z);
       if (distance <= physicalRange) outside = !this.claimedPath(player.level, before, now);
     }
-    if (outside) this.returnHome(player, home);
+    if (outside) {
+      if (!this.returnPrevious(player, before)) this.returnHome(player, home);
+    }
     else this.previous.set(id, now);
   },
 
@@ -224,8 +249,10 @@ const factionSession = {
       this.normalizeLimits();
       let problems = [];
       SessionTeams.api().getManager().getTeams().forEach(team => {
-        if (team.isPartyTeam() && !team.getMembers().isEmpty() && !this.home(server, team)) {
-          problems.push(String(team.getName().getString()) + ': owner/officers must use /factionhome set in a safe owned claim');
+        let nonempty = typeof factionParties !== 'undefined' && factionParties.active()
+          ? factionParties.humanMembers(team) > 0 : !team.getMembers().isEmpty();
+        if (team.isPartyTeam() && nonempty && !this.home(server, team)) {
+          problems.push(String(team.getName().getString()) + 'Do not have a valid home! use /sethome within world bounds in an owned claim');
         }
       });
       this.players(server).forEach(player => {
@@ -256,14 +283,18 @@ const factionSession = {
     }
   },
 
-  setHome(source) {
+  setHome(source, target) {
+    if (target && !source.hasPermission(2)) {
+      source.sendFailure(Text.of('Only operators can set a home for a specified party.'));
+      return 0;
+    }
     let player = source.getPlayerOrException();
     if (this.locked(source.server)) {
       source.sendFailure(Text.of('Unlock the session before changing faction homes.'));
       return 0;
     }
-    let team = this.party(player);
-    if (!team || !team.getRankForPlayer(player.uuid).isAtLeast(SessionTeamRank.OFFICER)) {
+    let team = target || this.party(player);
+    if (!team || !team.isPartyTeam() || (!target && !team.getRankForPlayer(player.uuid).isAtLeast(SessionTeamRank.OFFICER))) {
       source.sendFailure(Text.of('Only an FTB Teams party owner or officer can set its faction home.'));
       return 0;
     }
@@ -273,7 +304,7 @@ const factionSession = {
     let claim = this.claim(player.level, x, z);
     if (!claim || String(claim.getTeamData().getTeam().getId()) !== String(team.getId())
       || !this.safe(player.level, x, y, z)) {
-      source.sendFailure(Text.of('Stand on safe solid ground inside a chunk claimed by your own FTB Teams party.'));
+      source.sendFailure(Text.of('Stand within world height bounds and fully inside a chunk claimed by the selected FTB Teams party.'));
       return 0;
     }
     let saved = NBT.compoundTag();
@@ -285,7 +316,7 @@ const factionSession = {
     saved.putFloat('pitch', player.pitch);
     this.homes(source.server).put(String(team.getId()), saved);
     this.homeCache.clear();
-    source.sendSuccess(Text.of('Faction home set in your claimed chunk.'), false);
+    source.sendSuccess(Text.of('Faction home set for ' + team.getName().getString() + '.'), false);
     return 1;
   },
 
@@ -293,7 +324,7 @@ const factionSession = {
     let team = this.party(source.getPlayerOrException());
     this.homeCache.clear();
     let home = team ? this.home(source.server, team) : null;
-    source.sendSuccess(Text.of(home ? `Faction home: ${home.dimension} ${home.x}, ${home.y}, ${home.z}` : 'No valid faction home. Your party owner/officers must use /factionhome set while the session is unlocked.'), false);
+    source.sendSuccess(Text.of(home ? `Faction home: ${home.dimension} ${home.x}, ${home.y}, ${home.z}` : 'No valid faction home. Your party owner/officers must use /sethome while the session is unlocked.'), false);
     return 1;
   },
 };
@@ -308,10 +339,12 @@ ServerEvents.commandRegistry(event => {
     .then(commands.literal('lock').executes(context => factionSession.command(context.source, () => factionSession.setLocked(context.source, true))))
     .then(commands.literal('unlock').executes(context => factionSession.command(context.source, () => factionSession.setLocked(context.source, false))))
     .then(commands.literal('info').executes(info)).executes(info));
-  event.register(commands.literal('factionhome')
-    .then(commands.literal('set').executes(context => factionSession.command(context.source, () => factionSession.setHome(context.source))))
-    .then(commands.literal('info').executes(context => factionSession.command(context.source, () => factionSession.homeInfo(context.source))))
-    .executes(context => factionSession.command(context.source, () => factionSession.homeInfo(context.source))));
+  event.register(commands.literal('sethome')
+    .executes(context => factionSession.command(context.source, () => factionSession.setHome(context.source)))
+    .then(commands.argument('party', SessionTeamArgument.create(SessionTeamType.PARTY)).requires(source => source.hasPermission(2))
+      .executes(context => factionSession.command(context.source,
+        () => factionSession.setHome(context.source, SessionTeamArgument.get(context, 'party'))))));
+  event.register(commands.literal('home').executes(context => factionSession.command(context.source, () => factionSession.homeInfo(context.source))));
 });
 
 for (let operation of ['claim', 'unclaim']) {
