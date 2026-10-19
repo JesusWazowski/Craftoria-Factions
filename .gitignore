@@ -146,3 +146,6 @@ ModListCreator-5.0.0-fatjar.jar
 
 !/mods/craftoria-factions-guard-1.1.1.jar
 /automation/faction-guard/.build/
+
+# Serve packwiz files unchanged through GitHub Pages
+!/.nojekyll
