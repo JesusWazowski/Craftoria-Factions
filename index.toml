@@ -269,10 +269,6 @@ file = "config/almostunified/.gitignore"
 hash = "abfe79685d4d74888072befedc60b4d19c641c8cf32b48f1b332f11d0aba9a6e"
 
 [[files]]
-file = "config/almostunified/debug.json"
-hash = "435ad46870d033c8652097d64c6ec592907e5ab6f1877240532a6a1743d4fca5"
-
-[[files]]
 file = "config/almostunified/duplicates.json"
 hash = "b70f57eadf6eec0ce43acd4c441f08feac1432826e04cb8e2736a73997c20c08"
 
@@ -4021,10 +4017,6 @@ file = "config/elevatorid-server.toml"
 hash = "9693a70b639cdea378d42b746bf494f2c45eb353d2403fcf444bd92d3267f577"
 
 [[files]]
-file = "config/embeddium-fingerprint.json"
-hash = "1d57a3daa6b567e30a2cdc36d0d8bf0fe5d62122d3dc327aaa0b0be6057e0688"
-
-[[files]]
 file = "config/embeddium-mixins.properties"
 hash = "708750dc530ed52462185c7b1421291db8b292a350e164daaad437ba6f4fe4ef"
 
@@ -4465,19 +4457,7 @@ file = "config/ftbquests/quests/lang/en_us.snbt"
 hash = "64e73c7b75cfb4ecb1e38c43581cec8eeba4d55d74ecbdb2daca02aaab2d38fe"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapter.snbt_merged"
-hash = "5643fda8af2c0edc3b88b847bea3b4b810440198d73aee160b1972615725035b"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapter_group.snbt_merged"
-hash = "3fbdd2a8040149eb087ae6a86aec772d7413d817bef0e8e8c1eec1ca991bb682"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
-hash = "6e16d15fbf3f9d138845f530f8aa987255b0c0dbc2637f477f98e140ff1e3b41"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt_merged"
 hash = "6e16d15fbf3f9d138845f530f8aa987255b0c0dbc2637f477f98e140ff1e3b41"
 
 [[files]]
@@ -4485,35 +4465,11 @@ file = "config/ftbquests/quests/lang/en_us/chapters/Ars Nouveau.snbt"
 hash = "d09c8d498ed210ff9f58c636cf2050a6e84cd0f13c9c785760c9c7703d643c2c"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Ars Nouveau.snbt_merged"
-hash = "d09c8d498ed210ff9f58c636cf2050a6e84cd0f13c9c785760c9c7703d643c2c"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Completionist.snbt_merged"
-hash = "842cbf135b921fae560ad0842e7da73702a636223b53d0a1c13eff0ec68da1f8"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Create.snbt"
 hash = "35bcc8310957466c3f0a8496e28545cd5408193b682dce4b81eda97a014a1655"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Create.snbt_merged"
-hash = "c24b0c21d104bf97d41394d3b1071252d06db3a5c2ee0c5fc8ee253736aca0d1"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Gadgets.snbt_merged"
-hash = "c9f593115ac60fa734e0652c28ece66ebdb09c04f667603c080497b600a4ea2b"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Gardening.snbt_merged"
-hash = "88d96d3e1ba168bd9c0dcc9073423432cd0ca56114530089b0d5315cbaf69758"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Immersive Aircraft.snbt"
-hash = "068786c5e57b6a69aff8b55aca22bfe3f5ef40cafc233be0a13d83c678378993"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Immersive Aircraft.snbt_merged"
 hash = "068786c5e57b6a69aff8b55aca22bfe3f5ef40cafc233be0a13d83c678378993"
 
 [[files]]
@@ -4521,76 +4477,20 @@ file = "config/ftbquests/quests/lang/en_us/chapters/Irons Spells.snbt"
 hash = "55ceb3d5bfd43f0e9676526806609630ba117e195aa2028fee9efebf3fa28f14"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Irons Spells.snbt_merged"
-hash = "55ceb3d5bfd43f0e9676526806609630ba117e195aa2028fee9efebf3fa28f14"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Just Dire Things.snbt"
 hash = "1ff0c6a6bc4737fd618443924292a5023d09159b21463bf617bda35f8d344655"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Just Dire Things.snbt_merged"
-hash = "1ff0c6a6bc4737fd618443924292a5023d09159b21463bf617bda35f8d344655"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Mekanism Ore Processing.snbt_merged"
-hash = "98291f2a786d34a8e194f03637a123d0a07e75aaf5fe8d8b247a7c78f72502a5"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Mekanism.snbt_merged"
-hash = "db6c0fc4d88e5a5dd35c12b6a001e969013a657b2188041b5160557e006dc70f"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Modern Industrialization.snbt_merged"
-hash = "e14860a43314f8ff0814ab92844423ffa8b89cc2a693b367140b8678c8335e3d"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Monster Mayhem.snbt_merged"
-hash = "c966df8182a72f8d2c649d164209785194c0329ec7aa83a84ed9edfc52f591f4"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Occultism.snbt"
 hash = "01a5411a0bb9e5b4e06d8bae16ab6f43e4e1146a55d7da8fb394078dcc079693"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Occultism.snbt_merged"
-hash = "01a5411a0bb9e5b4e06d8bae16ab6f43e4e1146a55d7da8fb394078dcc079693"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Organized Storage.snbt_merged"
-hash = "1401b08c430cc7da32c4801c8985a13a18508e3953a16b8bb1f47a95b92e3a4a"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Personal Storage.snbt_merged"
-hash = "f2b939e02a04eb80bc2deba7eba8188f4c93814628095919cb789795c286fa1b"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/PneumaticCraft.snbt"
 hash = "ed881dcba25464756803567134233c46770ab41619bd11fcf3c2dd1fec44147a"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/PneumaticCraft.snbt_merged"
-hash = "ed881dcba25464756803567134233c46770ab41619bd11fcf3c2dd1fec44147a"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Powah.snbt_merged"
-hash = "2aee76bf6466a86bf2c382a41633558e96e509ef130fa6161fa8b72c4ab08edb"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Theurgy.snbt"
 hash = "6a21700156d8c98d49cc8e0bb51d29f74543f0aaf20fb6c22eb3002d6db50e65"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Theurgy.snbt_merged"
-hash = "6a21700156d8c98d49cc8e0bb51d29f74543f0aaf20fb6c22eb3002d6db50e65"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Utility.snbt_merged"
-hash = "870d21a71284a657de5818f929bae33e2873a6c991cd435b07c36d0e84795d65"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/Welcome.snbt_merged"
-hash = "fcc13ad4fc9e3e4bb3a957f8f9ec8028d39642e3261b675f88c28cf52455a862"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/apotheosis.snbt"
@@ -4609,10 +4509,6 @@ file = "config/ftbquests/quests/lang/en_us/chapters/bosses.snbt"
 hash = "2b7d0f120f693602fd8f2aa22e54d0768781e514281d985f200f01874016de0e"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/bosses.snbt_merged"
-hash = "55dde94fe939e3ac64033c007893e79b2a5c07bf75509be7bd6a2fb547bd724f"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/completionist.snbt"
 hash = "a5be42eeabc07c7a0245b00ff463bdbebe55b5e615bf75d241d1f212730f7076"
 
@@ -4621,16 +4517,8 @@ file = "config/ftbquests/quests/lang/en_us/chapters/endgame.snbt"
 hash = "cbd7e8465d8db3da2bf65d2ccb6732cb87cd9349cac8a021ee5399631dcb057b"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/endgame.snbt_merged"
-hash = "cbd7e8465d8db3da2bf65d2ccb6732cb87cd9349cac8a021ee5399631dcb057b"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/fishing.snbt"
 hash = "7db81cc2f3cf82aa5c4f5d09cfda473dee11aad741eb5b72ad7a517bc1740a32"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/fishing.snbt_merged"
-hash = "9d0483fe3b062a0cf73edc26fbbc872962420543924ab5fac27fb81b46b17172"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/immersive_aircraft.snbt"
@@ -4689,10 +4577,6 @@ file = "config/ftbquests/quests/lang/en_us/chapters/replication.snbt"
 hash = "8e6e110601eb0e0bb47ac2501f549b2ff0708025d5f332833d4641e1d601d412"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/chapters/replication.snbt_merged"
-hash = "8e6e110601eb0e0bb47ac2501f549b2ff0708025d5f332833d4641e1d601d412"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/welcome.snbt"
 hash = "258235dbdba368aafae0c4edc42627ed8e11cdd4d1a9ef4e8861590e116255e7"
 
@@ -4701,35 +4585,15 @@ file = "config/ftbquests/quests/lang/en_us/file.snbt"
 hash = "32706693e2e80e231588ff36d8d63ae99bfbe9a23a70477e5b0136d1fe4de407"
 
 [[files]]
-file = "config/ftbquests/quests/lang/en_us/file.snbt_merged"
-hash = "32706693e2e80e231588ff36d8d63ae99bfbe9a23a70477e5b0136d1fe4de407"
-
-[[files]]
 file = "config/ftbquests/quests/lang/en_us/reward_table.snbt"
 hash = "42ba64e3d665047d84a3548513a17b97f39b575a6af1df7a8ccc8c9445398b4d"
-
-[[files]]
-file = "config/ftbquests/quests/lang/en_us/reward_table.snbt_merged"
-hash = "effb530b660e56e64ba846042757f3bd1ad950966a7be4b47f9786092aa20aad"
 
 [[files]]
 file = "config/ftbquests/quests/lang/es_es.snbt"
 hash = "afd8798b9fe464d16875d9401cb41251d722b239bc3a70a00948f7fa4ed5678e"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapter.snbt_merged"
-hash = "956240ec56771b4e54381c8a42d2f3b63111677c228c85fb682d663f2ebbce84"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapter_group.snbt_merged"
-hash = "35df666da7ab6f2aee59bd8d09e9b30fe7be0f807392c0509ac6c5eaec66b6fd"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/Applied Energistics.snbt"
-hash = "057bdbad97e6bb30fdbbcfa2524beab99cbc1146dc6cd4816af6065136ae0d71"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Applied Energistics.snbt_merged"
 hash = "057bdbad97e6bb30fdbbcfa2524beab99cbc1146dc6cd4816af6065136ae0d71"
 
 [[files]]
@@ -4737,27 +4601,11 @@ file = "config/ftbquests/quests/lang/es_es/chapters/Ars Nouveau.snbt"
 hash = "1c72a2d75dc87ad8991848a13a2a58a3fdcf826ba4bd9872faf65ff6fe2d705f"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Ars Nouveau.snbt_merged"
-hash = "1c72a2d75dc87ad8991848a13a2a58a3fdcf826ba4bd9872faf65ff6fe2d705f"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/Completionist.snbt"
 hash = "93f35b9cc48ab2156146067add86c100259b0e09c4358a35da662ab743c8474d"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Completionist.snbt_merged"
-hash = "93f35b9cc48ab2156146067add86c100259b0e09c4358a35da662ab743c8474d"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Gadgets.snbt_merged"
-hash = "b1746ed63a0ee533548f824d53180e55dcd63853cb774a05d03353f29756d5ce"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/Irons Spells.snbt"
-hash = "afa28fbdb8b7de5f5a038173936a0c5c7adc51df1b1354dc80d7bc7e54079a5a"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Irons Spells.snbt_merged"
 hash = "afa28fbdb8b7de5f5a038173936a0c5c7adc51df1b1354dc80d7bc7e54079a5a"
 
 [[files]]
@@ -4765,23 +4613,7 @@ file = "config/ftbquests/quests/lang/es_es/chapters/Just Dire Things.snbt"
 hash = "564023d2f6caca027c7ecf183b8ec99944c5fbbb7ce21a1832193f42d4358051"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Just Dire Things.snbt_merged"
-hash = "564023d2f6caca027c7ecf183b8ec99944c5fbbb7ce21a1832193f42d4358051"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Mekanism Ore Processing.snbt_merged"
-hash = "98c782aa6351f9da35ea36b684ee5626bab589aaec04e2ee67bdfab6a7a70721"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Mekanism.snbt_merged"
-hash = "43ccd3bbc578c57d5baedeb10925f6fc0988fa75ddeec9a990d47b3952a25a25"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/Modern Industrialization.snbt"
-hash = "78b4e58cc4b2b5bdbc9bf7e4d1e10d6d8f0bdf863b415764bd61994548605b83"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Modern Industrialization.snbt_merged"
 hash = "78b4e58cc4b2b5bdbc9bf7e4d1e10d6d8f0bdf863b415764bd61994548605b83"
 
 [[files]]
@@ -4789,31 +4621,11 @@ file = "config/ftbquests/quests/lang/es_es/chapters/Monster Mayhem.snbt"
 hash = "34c261d9077dfa2746f9bbe8db99d6642672022affa079de76310c8a6f12f12a"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Monster Mayhem.snbt_merged"
-hash = "34c261d9077dfa2746f9bbe8db99d6642672022affa079de76310c8a6f12f12a"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/Occultism.snbt"
 hash = "44aa17310d72406a910a0d2438b70e4a7f5aff887ff9119693747e30f219a426"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Occultism.snbt_merged"
-hash = "44aa17310d72406a910a0d2438b70e4a7f5aff887ff9119693747e30f219a426"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Organized Storage.snbt_merged"
-hash = "b91acba798da3fb3bae106a02acdc0fd985727b7e532335a7934ed05e86435a4"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Personal Storage.snbt_merged"
-hash = "62c6b99280cfabd136baa7d8901da376bc8fb32991bb9f74ce31027afab4e029"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/PneumaticCraft.snbt"
-hash = "59c506d5fb297025aaa1c03ab730e02bbc315ce9423757571b02baacdaf93a2e"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/PneumaticCraft.snbt_merged"
 hash = "59c506d5fb297025aaa1c03ab730e02bbc315ce9423757571b02baacdaf93a2e"
 
 [[files]]
@@ -4821,27 +4633,11 @@ file = "config/ftbquests/quests/lang/es_es/chapters/Powah.snbt"
 hash = "2f29c9cccc9aa9359d9914f0d65aac499f99a22819f1cb7fb22e67e681929fe4"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Powah.snbt_merged"
-hash = "015310902fbadbe5f41708c6122f962317ccd239043890c3d4a8b8a4f5f2d453"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/Theurgy.snbt"
 hash = "0755a7217c8c23868cd2232925c65f3644cb3577b79793860e665dbdb8bf8bd9"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Theurgy.snbt_merged"
-hash = "0755a7217c8c23868cd2232925c65f3644cb3577b79793860e665dbdb8bf8bd9"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Utility.snbt_merged"
-hash = "3c05ea2c4b97468c01656bbd77fb127703cf3fd2613ad3a29044a04cacb08bc3"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/Welcome.snbt"
-hash = "3856a3d108f9cb6ce0b17353fc2277ff268b5aa32f9204d8bf216b0e9ee63067"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/Welcome.snbt_merged"
 hash = "3856a3d108f9cb6ce0b17353fc2277ff268b5aa32f9204d8bf216b0e9ee63067"
 
 [[files]]
@@ -4857,15 +4653,7 @@ file = "config/ftbquests/quests/lang/es_es/chapters/bosses.snbt"
 hash = "fc3e1e0adb7533a82b9784832cf8e7cb8d57ea342c2e42b974e6ce7c0fb5e074"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/bosses.snbt_merged"
-hash = "fc3e1e0adb7533a82b9784832cf8e7cb8d57ea342c2e42b974e6ce7c0fb5e074"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/chapters/endgame.snbt"
-hash = "74fee200b659785991b7a7fa04a85c118d2cffc37d6252c614ab84ae8e6c458e"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/endgame.snbt_merged"
 hash = "74fee200b659785991b7a7fa04a85c118d2cffc37d6252c614ab84ae8e6c458e"
 
 [[files]]
@@ -4913,15 +4701,7 @@ file = "config/ftbquests/quests/lang/es_es/chapters/replication.snbt"
 hash = "6f081e8d1648444a6bb828bac129a4edcef36d6f805bc76c6828015fc9f10d08"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/chapters/replication.snbt_merged"
-hash = "6f081e8d1648444a6bb828bac129a4edcef36d6f805bc76c6828015fc9f10d08"
-
-[[files]]
 file = "config/ftbquests/quests/lang/es_es/file.snbt"
-hash = "32706693e2e80e231588ff36d8d63ae99bfbe9a23a70477e5b0136d1fe4de407"
-
-[[files]]
-file = "config/ftbquests/quests/lang/es_es/file.snbt_merged"
 hash = "32706693e2e80e231588ff36d8d63ae99bfbe9a23a70477e5b0136d1fe4de407"
 
 [[files]]
@@ -4929,104 +4709,8 @@ file = "config/ftbquests/quests/lang/es_es/reward_table.snbt"
 hash = "8a36ff9a950edef5a23eece0934469e79b4209f685a0badce22d7f95b5f9164d"
 
 [[files]]
-file = "config/ftbquests/quests/lang/es_es/reward_table.snbt_merged"
-hash = "8a36ff9a950edef5a23eece0934469e79b4209f685a0badce22d7f95b5f9164d"
-
-[[files]]
 file = "config/ftbquests/quests/lang/pt_br.snbt"
 hash = "1e9038190b39f9f19e509cfd251c0be15171ab8e1516cfec104a6b1c0079f9bc"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapter.snbt_merged"
-hash = "610f33e25c6a5306fb90417dba30e12217d90c6770c87fc193502032c610ec0d"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapter_group.snbt_merged"
-hash = "73404a7d1f15ab3c633e8dd3b87ab26c07ca168d53b1c5bc8e35758e32b7fb75"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Applied Energistics.snbt_merged"
-hash = "2e428f6842d1632f37226768c14d5bbae4c2f73c381df1379394e6e90e800c64"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Ars Nouveau.snbt_merged"
-hash = "ba6865a2fbaaddc651f608d18d503fe7f18c9fc095925e1ac66b91d20a0d8460"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Completionist.snbt_merged"
-hash = "3b99acfaab540dcf9e6a5b2c06e43167659c5015bfc69d36e155f5a0e67fc16c"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Create.snbt_merged"
-hash = "eff40038b2c6de294e17a86fa1f5ede5049fd8ea8e69cd54efeeb584d78854d6"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Gadgets.snbt_merged"
-hash = "0674274639742d7105c99ae62f6073244c7e3545c2e48e2a6f56cb66d6c2e904"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Gardening.snbt_merged"
-hash = "fe79b5a00749a16b8c55c16cd6e12ad781108bd815349f95674c7d71a4aa13a7"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Immersive Aircraft.snbt_merged"
-hash = "1d662a46271d2ada408cba42a2b8eb4a5a167018069cd12b91c10af175c287d4"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Irons Spells.snbt_merged"
-hash = "36f7a8e80bb9b8a034e4567ed337d17bb1370c55eccfbb79a5e49dfb06af9817"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Just Dire Things.snbt_merged"
-hash = "2b525ccce9429b407602218a922b97963a1221f1124c5844845da46d26125b2a"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Mekanism Ore Processing.snbt_merged"
-hash = "8d0de2bfb3e2fb7772d7f6ca3e33901d74f75db898126deecf9f033391a4a28a"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Mekanism.snbt_merged"
-hash = "317c72496fc050818860312dcbe6d8ed65706ea56189dfb8aaa6fcc3f31d0c7e"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Modern Industrialization.snbt_merged"
-hash = "ea1574465995bade33e89ca30fd1b8257bbf75b81d91ff339d1ab6568fd855f8"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Monster Mayhem.snbt_merged"
-hash = "d1ae08632db7426a884f6b691fb36463ce82249718d27ddd3bda9f944ba9504b"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Occultism.snbt_merged"
-hash = "20164ff75799531ed9fc823d72dfab7b4c5d181666088ed0cd4001cc56a62cb7"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Organized Storage.snbt_merged"
-hash = "0fe09f0a00f4205a004bdaeb9c9002bb072760ac00b542ea17812892e550521e"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Personal Storage.snbt_merged"
-hash = "45d0415ee0f6aff3b9ddb976ff2780734fb327f05675cdb8ca607d73e7bf7858"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/PneumaticCraft.snbt_merged"
-hash = "15968780ab8aacc47fd16804a85ea1c29f9a661e291a48415d5678a7f892bac2"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Powah.snbt_merged"
-hash = "cfa66f54218a1eddde6f2792a03ddc56439a0ef636c4e3e0732109d13e49e357"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Theurgy.snbt_merged"
-hash = "f6520c827d4b5dbd9b0b7532c1b57281f7cec8ecfbb3bf41f2b106a2399e223e"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Utility.snbt_merged"
-hash = "b65b4f959f06957a4d995fb78fe0e9cc0103e1506d890586135993f162d3729f"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/Welcome.snbt_merged"
-hash = "5244d02dbbce10d83ac6d37cccbacda58bee80b95711b76416404750734269cd"
 
 [[files]]
 file = "config/ftbquests/quests/lang/pt_br/chapters/applied_energistics.snbt"
@@ -5041,10 +4725,6 @@ file = "config/ftbquests/quests/lang/pt_br/chapters/bosses.snbt"
 hash = "35d6fb2064cf4a754fc57c855b71f5232e3aa35be9cac06c6b5475e987707f4f"
 
 [[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/bosses.snbt_merged"
-hash = "649ba8684e8116d0de132ec4173a699d1160e1df33f3d494df5c2ec1f3dc3a4e"
-
-[[files]]
 file = "config/ftbquests/quests/lang/pt_br/chapters/completionist.snbt"
 hash = "85049dc55931f2f2104039421f4feea4093bd772a4cd732a44c8cd7304d9706e"
 
@@ -5057,16 +4737,8 @@ file = "config/ftbquests/quests/lang/pt_br/chapters/endgame.snbt"
 hash = "764be4d5ed0a47bfa1dcb228a2638556592efcf07bdc2bf10c9e8be13bc83f2a"
 
 [[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/endgame.snbt_merged"
-hash = "051ae380aa4594e46da2969bb37d5c1118c508453b7c20a337b10e0a6f049315"
-
-[[files]]
 file = "config/ftbquests/quests/lang/pt_br/chapters/fishing.snbt"
 hash = "92f5dd9d0405dc176ca6183a0616706f62e9917cdc0a19721cc882bbf2c69f45"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/fishing.snbt_merged"
-hash = "1db50ca8eb0f2ca3faf9b0bc312b695a45b0b901bb21539ad78809985723afc9"
 
 [[files]]
 file = "config/ftbquests/quests/lang/pt_br/chapters/immersive_aircraft.snbt"
@@ -5121,10 +4793,6 @@ file = "config/ftbquests/quests/lang/pt_br/chapters/replication.snbt"
 hash = "e0eea7b144b568d17d62a9540f9589b1ee77cc3914152239924348c7e959b391"
 
 [[files]]
-file = "config/ftbquests/quests/lang/pt_br/chapters/replication.snbt_merged"
-hash = "257231f548fb55485116a17dd0ae26d6b487694d065b51567beb5d3b767d6638"
-
-[[files]]
 file = "config/ftbquests/quests/lang/pt_br/chapters/theurgy.snbt"
 hash = "c75295511d1bea0a3234339e5244b8f6fb33040c8f50b4f218ac9dac1e5c8c2f"
 
@@ -5137,28 +4805,8 @@ file = "config/ftbquests/quests/lang/pt_br/file.snbt"
 hash = "dd540af532d27b32120b2118a929af07a586f127e2c830a63ae731df14b86fbe"
 
 [[files]]
-file = "config/ftbquests/quests/lang/pt_br/file.snbt_merged"
-hash = "32706693e2e80e231588ff36d8d63ae99bfbe9a23a70477e5b0136d1fe4de407"
-
-[[files]]
 file = "config/ftbquests/quests/lang/pt_br/reward_table.snbt"
 hash = "a36692b739d6e4363eaf60daaca8b0abc183d202c3212fbc01211648f4db00fb"
-
-[[files]]
-file = "config/ftbquests/quests/lang/pt_br/reward_table.snbt_merged"
-hash = "7836b359cc863405f3727f75df76f49cf1ca7cfb61a1a7999934406611f2f5eb"
-
-[[files]]
-file = "config/ftbquests/quests/lang/recovery/en_us_1765464836.snbt"
-hash = "1662ca8402b0697550a22c13a0effbbfa9310c2eb2ee2c52d9a2a30eda665174"
-
-[[files]]
-file = "config/ftbquests/quests/lang/recovery/en_us_1773053674.snbt"
-hash = "0d67f3aaac4da042ed2a390d31489b55793e0da82e260855dd641101cd1cc224"
-
-[[files]]
-file = "config/ftbquests/quests/lang/recovery/pt_br_1772770719.snbt"
-hash = "8e4a2eb745380aa08e46395b4f4e516e7e200c156cc3d5ae5818babd15e5b791"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/0414572B7C36F04F.snbt"
@@ -6126,7 +5774,7 @@ hash = "cbd253f282a7bef3200333f934f4f889630f7893108a05b6f1f96c2a9d122573"
 
 [[files]]
 file = "config/openloader/options.json"
-hash = "116200456db8a6f0d83835b00a67b28c2fae7970cc83513fd22772ac831c7742"
+hash = "9f3c05e6948b1028c9e79459fe2d324fddc3cf96f84d6173b4b25f6a1b16c9a1"
 
 [[files]]
 file = "config/openloader/packs/BetterEndCities.zip"
@@ -6710,7 +6358,7 @@ hash = "e2142707d353f2620cde4a8c92ac811a33c2244039d6a2548d005411afd6d73d"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "4ca5eedbdf5ef127cea3c3c8132497a6796f07a0bd54c609c0facdcc46130f83"
+hash = "a1c00154b5c67902b2fe312208b62afe12365bfce8cef9e8493bb246dde13090"
 
 [[files]]
 file = "config/rftoolsbase-server.toml"
@@ -21541,7 +21189,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-quests-forge.pw.toml"
-hash = "d15a3089b2c5e5f69ea723408c61c32f67707139936304fdbdde754bb85a240a"
+hash = "8aeda4d5e60e51432ad309717ecfb1345951b2e5b79ecdc29c80d6910e83adc2"
 metafile = true
 
 [[files]]
@@ -21556,7 +21204,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-teams-forge.pw.toml"
-hash = "81961770ff1e727758cfedecd74be325d50de03c8221451fa493e178c9a7045a"
+hash = "dfa89323f0fd64655c73063134f2fed4307d50cf1de2a3372dec87a80a1d3978"
 metafile = true
 
 [[files]]

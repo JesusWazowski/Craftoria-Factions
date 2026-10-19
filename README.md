@@ -274,3 +274,16 @@ be distinguished by scripts; validate those mods on staging. The full pack's
 GUI, vehicles, and Waystones still need normal-client acceptance testing.
 Existing FTB building, interaction, and PvP permissions continue to apply;
 enemy players can still meet or fight inside claimed territory.
+
+### Packwiz hosting on GitHub Pages
+
+Use `https://jesuswazowski.github.io/Craftoria-Factions/pack.toml` as the
+packwiz bootstrap pack URL. GitHub Pages publishes the `main` branch root.
+The root `.nojekyll` file disables Jekyll so in-game Markdown guides and all
+other pack files are served unchanged, preserving packwiz checksums.
+
+Before publishing pack updates, run `packwiz refresh` from a clean checkout
+of the files being published. The index must not reference local-only or
+Git-ignored files; every indexed file must exist in the repository. Commit
+`index.toml` and the corresponding `pack.toml` hash together, then confirm
+that the Pages build and deployment succeeds after pushing.
