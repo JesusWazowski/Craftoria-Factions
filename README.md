@@ -378,53 +378,111 @@ them. See [Faction milestones](#faction-milestones).
 Each faction has a milestone chapter in the **Faction Milestones** quest group:
 Stargazers, Mechanists, Spellcasters and Ritualists. A party starts with **4**
 claimable chunks and earns the other **60** (up to **64**) by completing its own
-chapter. Every chapter opens with the same two 1-chunk starters (set a faction
-home with `/sethome`; craft a Sophisticated Backpack) and uses the same chunk
-budget per tier: 10 / 14 / 16 / 14 chunks for tiers I-IV plus a 4-chunk capstone.
-The quests, their rationale and the related mod assignments are in
+chapter. The quests, their rationale and the related mod assignments are in
 [docs/faction-milestones.md](docs/faction-milestones.md); the generated review
 table is [docs/faction-milestone-quests.md](docs/faction-milestone-quests.md).
 
-How it works:
+### What changed (October 26, 2026)
 
-- A hidden **charter** quest completes automatically for members of the matching
-  faction party. Everything else in the chapter depends on it and is hidden until
-  it completes, so each faction only sees its own chapter. In existing unmanaged
-  worlds the charter instead follows an operator-granted AStages faction stage, and
-  the party's faction is the charter it holds.
-- The allowance is **derived from completion**, not from claimed rewards: base +
-  the chunk value of every completed quest in the party's own chapter, capped at 64.
-  The `+N Claimed Chunks` rewards are team rewards that auto-claim to announce the
-  change; a forfeited or unclaimed reward does not change the allowance. Quest
-  progress is per party, so late joiners, ownership transfers and offline owners
-  do not matter.
-- FTB Chunks ignores bonuses stored on a party and uses each member's *personal*
-  bonus (`party_limit_mode: "largest"`). The script therefore gives every member of
-  a party that party's earned chunks as their personal bonus, and 0 to players
-  outside a party, every second and whenever a milestone reward is claimed. A
-  player moved to another faction carries the new faction's value within a second.
-- FTB caches offline members' limits from their last login; the reserved system
-  member is never online. If a party's computed limit is above its allowance (an
-  existing world's cached "unlimited" value, or a quest reset), the script empties
-  that party's member cache once so FTB rebuilds it from the config and personal
-  bonuses. That rebuild also forgets which claims each member originally brought
-  into the party, so a member who later leaves does not take those chunks back.
-- `/faction claims` shows the party's claimed chunks and current allowance.
-- Volume quests (for example 8,192 Fluix Crystals or 4,096 Brass Ingots) consume
-  their items. Submit them from the inventory in batches, or pipe them into an
-  FTB Quests **Task Screen** (craftable; assign it to the task and feed it).
-- Cooperation quests list connector content that needs another faction's
-  materials. They are optional and award no chunks.
+Before this update, claiming was effectively unlimited (`max_claimed_chunks:
+2147483647`, no team cap) and no quest affected territory. Territory is now earned
+through faction progression:
+
+| Area | Files | Change |
+| --- | --- | --- |
+| Quests | `config/ftbquests/quests/chapters/milestones_*.snbt` | Four new chapters, one per faction, with 35 (Stargazers), 36 (Mechanists), 38 (Spellcasters) and 39 (Ritualists) chunk-awarding quests. |
+| Quest group and text | `config/ftbquests/quests/chapter_groups.snbt`, `config/ftbquests/quests/lang/en_us.snbt` | New **Faction Milestones** group, listed first. All milestone titles, subtitles and descriptions are lang entries; existing entries were not reordered. |
+| Claim limits | `config/ftbchunks-world.snbt` | `max_claimed_chunks` 2147483647 → **4** (base allowance); `hard_team_claim_limit` 0 → **64** (team cap). `party_limit_mode` stays `largest`. |
+| Milestone runtime | `kubejs/server_scripts/faction_milestones.js` (new) | Reads `kubejs/config/faction_milestones.json`, completes the charter and `/sethome` custom tasks, works out each party's earned chunks, announces milestone rewards, and adds `/faction claims`. |
+| Claim enforcement | `kubejs/server_scripts/session_lock.js` | Limit normalization now applies the 4-chunk base and 64-chunk cap and writes each player's milestone bonus. It also rebuilds stale cached member limits. The admin `extra_claim_chunks` `set`/`add` commands stay blocked, with a new message pointing to `/faction claims`. |
+| Generated config | `kubejs/config/faction_milestones.json` (new) | Generated map of each faction's chapter, charter, home task, quest chunk values and reward IDs. The scripts read it; do not edit it by hand. |
+| Mod assignments | `kubejs/config/factions.json` | The previously unassigned gameplay mods now have explicit decisions, made with FACTION_CONTENT_DESIGN.md's rules. Applied Construction Sticks went to Stargazers; Sophisticated Storage Create Integration to Mechanists; BEER, Enigmatic Arcana and Repeatable Trial Vaults to Ritualists; XyCraft core to `science_shared`. 66 baseline mods (Sophisticated Backpacks, Lootr, structure mods, skill trees, QoL and furniture) are recorded as Everyone. Existing assignments are unchanged. |
+| Authoring tools | `automation/faction-milestones/spec.cjs`, `generate.cjs` (new) | The spec is the single source of truth for every milestone quest; the generator writes all of the files above from it. |
+| Tests | `automation/tests/faction-milestones.test.cjs` (new), `session-lock.test.cjs` | Cover generated-file freshness, equal chunk budgets, ID consistency, visibility, the bonus calculation and the cached-limit rebuild. |
+| Docs and pack | `docs/faction-milestones.md`, `docs/faction-milestone-quests.md` (new), `index.toml`, `pack.toml` | Design notes, the generated quest table, and refreshed packwiz hashes. |
+
+### Chapter layout
+
+- **Starters (1 chunk each):** every chapter opens with the same two quests.
+  *Plant the Banner* completes once the party has a valid `/sethome` home; its
+  description explains homes and locked sessions. *Pack for the Journey* asks for
+  any Sophisticated Backpack.
+- **Pillars:** each chapter groups its quests by mod family, for example the
+  Stargazers' Applied Energistics, Mekanism, Power and Tools, and Science
+  Collective. Inside a pillar, quests follow that mod's own progression. Every
+  pillar starts from the charter, so a faction can work on its mods in any order.
+- **Tiers:** every chapter spends the same chunks per tier: 10 / 14 / 16 / 14 for
+  tiers I–IV. Tiers follow cumulative effort, about 0–8, 8–25, 25–70 and 70–200
+  focused hours for one player. Within a tier, chunks scale with the space a
+  technology needs (reactors, multiblocks, trains, ritual fields), and otherwise
+  with difficulty.
+- **Capstone (4 chunks):** requires the tier IV quests it names.
+- **Cooperation (0 chunks):** an optional *Diplomatic Interfaces* quest lists
+  connector content that needs another faction's materials. Every chunk-awarding
+  quest can be finished by the faction alone, using its own mods, its shared group
+  and Everyone content.
+- **Volume quests:** some quests consume large counts where mass production fits
+  the faction's loop (for example 8,192 Fluix Crystals or 4,096 Brass Ingots).
+  Submit them from the inventory in batches, or craft an FTB Quests **Task
+  Screen**, assign it to the task and pipe the items in.
+
+Shared-group mods appear in both member factions' chapters with the same chunk
+values, so each faction's total is exactly 2 + 54 + 4 = 60.
+
+### How it works
+
+- **Visibility.** A hidden **charter** quest in each chapter has a custom task that
+  checks once a second whether the player belongs to the matching faction party.
+  Everything else in the chapter depends on the charter and stays hidden until it
+  completes, so each faction only sees its own chapter. In existing unmanaged
+  worlds, the charter follows an operator-granted AStages faction stage instead,
+  and a party's faction is whichever charter it holds.
+- **Home quest.** *Plant the Banner* is a custom task that checks every two
+  seconds whether the party has a valid home (the same check `/session lock` uses).
+- **Allowance.** The allowance is **derived from completion**, not from claimed
+  rewards. It is 4, plus the chunk value of every completed quest in the party's
+  own chapter, capped at 64. Quests in another faction's chapter never count.
+  Quest progress is per party, so late joiners, ownership transfers and offline
+  owners do not matter.
+- **Rewards.** Each `+N Claimed Chunks` reward is a team reward that auto-claims.
+  It recalculates limits immediately and tells online members the party's new
+  allowance. A forfeited or unclaimed reward does not change the allowance;
+  completing the quest is what counts.
+- **Who receives the chunks.** FTB Chunks never counts a bonus stored on a party,
+  and reading one moves it to the owner. Under `party_limit_mode: "largest"`, a
+  party's limit is its largest member limit: the base plus that member's
+  *personal* bonus. The script therefore sets every party member's personal bonus
+  to the party's earned chunks, and players outside a party to 0. It does this
+  every second and whenever a milestone reward is claimed. Faction parties start
+  out owned by a reserved system identity, so a leader-only bonus would vanish
+  or move with ownership. A player moved to another faction carries the new
+  faction's value within a second.
+- **Cached limits.** FTB keeps offline members' limits from their last login, and
+  the reserved system member is never online. If a party's computed limit is
+  above its allowance (an existing world's cached "unlimited" value, or a quest
+  reset), the script empties that party's member cache once. FTB then rebuilds
+  it from the config and personal bonuses, and the server log records the rebuild.
+  The rebuild also forgets which claims each member brought into the party, so a
+  member who later leaves does not take those chunks back. A rebuild is never
+  repeated for the same party within a minute.
+- **Over the allowance.** Lowering the allowance never unclaims anything. A
+  faction already above it keeps its chunks but cannot claim more until it earns
+  them.
+- `/faction claims` shows the party's claimed chunks and its current allowance.
+
+### Editing the milestones
 
 Edit `automation/faction-milestones/spec.cjs`, never the generated files, then run
 `node automation/faction-milestones/generate.cjs` from the repository root. It
 rewrites the four `chapters/milestones_*.snbt` files, the milestone entries in
 `lang/en_us.snbt`, the chapter group, `kubejs/config/faction_milestones.json` and
-the review table. Quest, task and reward IDs are hashes of the permanent spec keys,
-so renaming text or moving quests keeps progress; changing a key creates a new
-quest. In-game edits to these chapters are overwritten by the next generation.
-Tests fail when the generated files are stale. Restart the server after
-regenerating: custom tasks are bound when FTB Quests loads its file.
+the review table. It refuses to write a faction whose chunks do not total 60.
+Quest, task and reward IDs are hashes of the permanent spec keys, so renaming
+text or moving quests keeps progress; changing a key creates a new quest.
+In-game edits to these chapters are overwritten by the next generation. Use
+`--check` to confirm the generated files are current without writing; the tests
+fail when they are stale. Restart the server after regenerating: custom tasks
+are bound when FTB Quests loads its file. Refresh the packwiz index afterwards.
 
 ### Verification and release checks
 
@@ -436,6 +494,10 @@ formatting, native membership events, existing-world travel permissions, quest
 requirement checks, cache reload, and local boundary returns. Session policy tests cover permissions,
 claim cancellation, persistence, home preflight, rank/bonus normalization,
 negative coordinates, dimensions, shared claims, gaps, invalid homes, and riders.
+Milestone tests cover generated-file freshness, the per-tier and 60-chunk budgets,
+ID uniqueness, charter visibility, earned-bonus calculation, unmanaged-world
+charters, and the one-time cached-limit rebuild. The milestone chapters have not
+yet been launched in game.
 
 The consolidated integration passes 50 automated policy tests and 36 isolated
 native checks, including console/operator ownership transfer, nonmember rejection,
@@ -481,6 +543,12 @@ multiplayer world and complete these checks with normal modded clients:
   claim-all paths: verify no reward is delivered and the claim is consumed. Move
   the player to an eligible faction and restart: verify forfeiture persists.
   Confirm eligible, shared-mod, and vanilla quest rewards work normally.
+- Faction milestones: confirm each charter completes only for its own faction
+  and that other chapters stay hidden. Check that `/sethome` completes *Plant the
+  Banner* and that rewards announce the new allowance. `/faction claims` must
+  match FTB's claim screen, and Task Screens must accept the volume-quest items.
+  In a copy of an existing world, confirm a party drops from "unlimited" to its
+  earned allowance after one restart without losing claimed chunks.
 - Refresh the packwiz index after pack-file changes and before distribution.
 
 Containment is server-enforced return teleportation, without border graphics or
