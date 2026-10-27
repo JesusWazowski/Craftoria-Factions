@@ -123,8 +123,30 @@ const factionParties = {
     }
   },
 
+  manualStages(player) {
+    return this.state().getCompound('craftoriaManualStagePlayers').getBoolean(String(player.uuid));
+  },
+
+  stageMode(source, player, manual) {
+    if (!source.hasPermission(2)) throw new Error('Only operators can change stage synchronization mode');
+    if (!this.active()) throw new Error('Faction stage synchronization is not enabled in this world; AStages commands already persist normally');
+    let state = this.state();
+    if (!state.contains('craftoriaManualStagePlayers')) state.put('craftoriaManualStagePlayers', NBT.compoundTag());
+    state.getCompound('craftoriaManualStagePlayers').putBoolean(String(player.uuid), manual);
+    this.manager().markDirty();
+    this.manager().saveNow();
+    this.stages(player);
+    source.sendSuccess(Text.of('Faction stage synchronization for ' + player.username + ': '
+      + (manual ? 'manual testing mode. AStages commands now control your stages.' : 'automatic party mode.')), false);
+    return 1;
+  },
+
   stages(player) {
     if (!this.active() || player instanceof FactionFakePlayer) return;
+    if (this.manualStages(player)) {
+      this.lastTeams.set(String(player.uuid), String(this.party(player) ? this.party(player).getId() : ''));
+      return;
+    }
     let faction = this.faction(this.party(player));
     let expected = faction ? [faction.id].concat(faction.sharedGroups) : [];
     factionDefinitions.stages.forEach(stage => {
@@ -283,7 +305,15 @@ ServerEvents.commandRegistry(event => {
   });
   let id = context => String(FactionWord.getString(context, 'id'));
   let player = context => FactionPlayerArgument.getPlayer(context, 'player');
+  let stageMode = (name, manual) => commands.literal(name)
+    .executes(context => factionParties.command(context.source,
+      () => factionParties.stageMode(context.source, context.source.getPlayerOrException(), manual)))
+    .then(commands.argument('player', FactionPlayerArgument.player())
+      .executes(context => factionParties.command(context.source,
+        () => factionParties.stageMode(context.source, player(context), manual))));
   event.register(commands.literal('faction')
+    .then(commands.literal('stages').requires(source => source.hasPermission(2))
+      .then(stageMode('manual', true)).then(stageMode('auto', false)))
     .then(commands.literal('choose').executes(context => factionParties.command(context.source, () => factionParties.choose(context.source.getPlayerOrException()))))
     .then(commands.literal('join').then(argument().executes(context => factionParties.command(context.source,
       () => factionParties.join(context.source.getPlayerOrException(), id(context), false)))))

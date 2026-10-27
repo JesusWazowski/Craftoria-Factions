@@ -20,7 +20,10 @@ const factionQuestRewards = {
       if (!(task instanceof FactionItemTask)) return;
       let choices = new Set();
       task.getValidDisplayItems().forEach(stack => {
-        if (!stack.isEmpty()) choices.add(String(stack.id).split(':')[0]);
+        if (!stack.isEmpty()) {
+          let id = String(stack.id);
+          choices.add(factionRecipeOverrides.publicQuestItems.includes(id) ? '' : id.split(':')[0]);
+        }
       });
       // FTB can fall back to the filter token when an adapter cannot enumerate it.
       if (!choices.size || choices.has('ftbfiltersystem')) {

@@ -114,7 +114,7 @@ function setup({ age = 0, config = data, persisted = new Tag(), existing = false
   const subject = context.subject;
   function player(id = 'player') {
     manager.playerLoggedIn(null, id);
-    const p = { uuid: id, server, level: { dimension: 'minecraft:overworld' }, x: 0, y: 64, z: 0, yaw: 0, pitch: 0,
+    const p = { uuid: id, username: id, server, level: { dimension: 'minecraft:overworld' }, x: 0, y: 64, z: 0, yaw: 0, pitch: 0,
       astages: new Set(['unrelated_progression']), messages: [], tell: text => p.messages.push(text), getGameProfile: () => new Profile(id, id),
       stopRiding() {}, stopFallFlying() {}, setMotion() {}, teleportTo: (...args) => { p.anchor = args; return true; } };
     players.push(p); return p;
@@ -191,7 +191,7 @@ test('FTB ranks deny managed operations to normal players and allow operators; c
   const s = setup(); s.subject.initialize(s.server);
   assert.equal(s.ranks.get('faction_members').values.get('command.ftbteams.party.leave'), false);
   assert.equal(s.ranks.get('faction_operators').values.get('command.ftbteams.party.transfer_ownership'), true);
-  for (const name of ['assign', 'remove']) {
+  for (const name of ['assign', 'remove', 'stages']) {
     const command = s.handlers.commands.children.find(c => c.name === name);
     assert.equal(command.permission({ hasPermission: () => false }), false);
     assert.equal(command.permission({ hasPermission: level => level === 2 }), true);
@@ -277,4 +277,56 @@ test('locked operator assignment teleports once without intermediate faction pro
   s.subject.join(p, 'mechanists', true);
   assert.equal(p.messages.length, 0); assert.equal(teleports, 1);
   assert.equal(s.subject.pending.has(p.uuid), false);
+});
+
+
+function operatorSource(server) {
+  return { server, hasPermission: level => level === 2, sendSuccess() {} };
+}
+
+test('manual testing preserves command-added and removed faction stages across login and reload', () => {
+  const s = setup(); s.subject.initialize(s.server); const p = s.player();
+  s.subject.join(p, 'stargazers', false);
+  s.subject.stageMode(operatorSource(s.server), p, true);
+  p.astages.delete('stargazers'); p.astages.add('ritualists'); p.astages.add('first_join');
+  s.handlers.players.logout({ player: p });
+  s.handlers.players.login({ player: p, server: s.server });
+  s.subject.lastTeams.clear(); s.handlers.tick({ server: s.server });
+  assert.deepEqual([...p.astages].sort(), ['first_join', 'ritualists', 'science_shared', 'unrelated_progression']);
+  assert.equal(s.subject.lastTeams.get(p.uuid), s.subject.party(p).getId());
+  // A new script context reads the same saved world data, without an in-memory flag.
+  const reloaded = setup({ persisted: s.persisted }); const reconnect = reloaded.player();
+  reconnect.astages = new Set(p.astages);
+  assert.equal(reloaded.subject.manualStages(reconnect), true);
+  reloaded.subject.stages(reconnect);
+  assert.deepEqual([...reconnect.astages].sort(), [...p.astages].sort());
+});
+
+test('manual mode survives membership changes; automatic mode immediately restores faction stages', () => {
+  const s = setup(); s.subject.initialize(s.server); const p = s.player();
+  s.subject.stageMode(operatorSource(s.server), p, true);
+  p.astages.add('spellcasters'); p.astages.add('first_join');
+  s.subject.join(p, 'mechanists', false);
+  assert.deepEqual([...p.astages].sort(), ['first_join', 'spellcasters', 'unrelated_progression']);
+  s.subject.remove(p); assert.equal(p.astages.has('spellcasters'), true);
+  s.subject.join(p, 'mechanists', false);
+  s.subject.stageMode(operatorSource(s.server), p, false);
+  assert.deepEqual([...p.astages].sort(), ['first_join', 'mechanists', 'science_shared', 'unrelated_progression']);
+  s.subject.remove(p);
+  assert.deepEqual([...p.astages].sort(), ['first_join', 'unrelated_progression']);
+});
+
+test('testing mode is per-player and operator-only; enabling it grants no stages', () => {
+  const s = setup(); s.subject.initialize(s.server); const p = s.player('tester'); const other = s.player('member');
+  assert.throws(() => s.subject.stageMode({ hasPermission: () => false }, p, true), /Only operators/);
+  s.subject.stageMode(operatorSource(s.server), p, true);
+  assert.deepEqual([...p.astages], ['unrelated_progression']);
+  other.astages.add('ritualists'); s.subject.stages(other);
+  assert.deepEqual([...other.astages], ['unrelated_progression']);
+  assert.equal(s.subject.manualStages(other), false);
+  const modes = s.handlers.commands.children.find(c => c.name === 'stages');
+  assert.deepEqual(modes.children.map(c => c.name), ['manual', 'auto']);
+  for (const mode of modes.children) {
+    assert.equal(typeof mode.execute, 'function'); assert.equal(mode.children[0].name, 'player');
+  }
 });

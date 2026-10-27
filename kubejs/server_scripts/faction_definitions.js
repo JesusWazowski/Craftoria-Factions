@@ -21,6 +21,16 @@ const factionDefinitions = (() => {
     restrictions[entry.id] = entry.mods;
   }
   data.sharedGroups.forEach(group => { register(group); groups[group.id] = group; });
+  // Everyone is represented by an explicit unrestricted list, never a new stage/group.
+  if (data.unrestrictedMods !== undefined) {
+    if (!Array.isArray(data.unrestrictedMods)) throw new Error('Invalid unrestricted mods');
+    data.unrestrictedMods.forEach(mod => {
+      if (typeof mod !== 'string' || !/^[a-z][a-z0-9_]*$/.test(mod) || mods.has(mod)) {
+        throw new Error('Invalid or conflicting unrestricted mod: ' + mod);
+      }
+      mods.add(mod);
+    });
+  }
   data.factions.forEach(faction => {
     register(faction);
     if (typeof faction.name !== 'string' || !faction.name.trim() || !Array.isArray(faction.sharedGroups)
@@ -28,5 +38,15 @@ const factionDefinitions = (() => {
       throw new Error('Invalid faction name or shared groups: ' + faction.id);
     }
   });
-  return { factions: data.factions, restrictions, stages: Array.from(ids) };
+  let recipeNamespaceAliases = data.recipeNamespaceAliases === undefined ? {} : data.recipeNamespaceAliases;
+  if (!recipeNamespaceAliases || Array.isArray(recipeNamespaceAliases) || typeof recipeNamespaceAliases !== 'object') {
+    throw new Error('Invalid recipe namespace aliases');
+  }
+  Object.keys(recipeNamespaceAliases).forEach(namespace => {
+    if (!/^[a-z][a-z0-9_]*$/.test(namespace) || mods.has(namespace)
+      || typeof recipeNamespaceAliases[namespace] !== 'string' || !mods.has(recipeNamespaceAliases[namespace])) {
+      throw new Error('Invalid or conflicting recipe namespace alias: ' + namespace);
+    }
+  });
+  return { factions: data.factions, restrictions, stages: Array.from(ids), recipeNamespaceAliases };
 })();

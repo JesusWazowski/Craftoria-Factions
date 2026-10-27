@@ -15,6 +15,7 @@ function setup() {
     manager: () => ({ getTeamForPlayerID: uuid => ({ orElse: () => membership.get(uuid) }) }), faction: team => factions[team] };
   const context = vm.createContext({ console: { warn: message => warnings.push(message) },
     Java: { loadClass: () => ItemTask }, factionParties: parties,
+    factionRecipeOverrides: { publicQuestItems: ['ars_nouveau:experience_gem', 'ars_nouveau:greater_experience_gem', 'ars_technica:giant_experience_gem', 'ars_technica:gargantuan_experience_gem'] },
     factionDefinitions: { restrictions: { science: ['ae2'], magic: ['ars_nouveau'], shared: ['create'] } },
     FactionGuard: { setRewardValidator: fn => { validator = fn; }, setQuestCacheListener: fn => { clear = fn; } } });
   vm.runInContext(source, context);
@@ -46,4 +47,15 @@ test('filter enumeration is cached and invalidated on quest reload; unresolved f
   task.ids = ['ars_nouveau:book']; s.clear(); assert.equal(s.allowed('p', s.reward(q)), false); assert.equal(task.calls, 2);
   const unresolved = s.reward(s.quest(2, new ItemTask('ftbfiltersystem:smart_filter')));
   assert.equal(s.allowed('p', unresolved), true); s.allowed('p', unresolved); assert.equal(s.warnings.length, 1);
+});
+
+test('generic XP gems permit quest rewards across factions without exempting other Ars tasks', () => {
+  const s = setup(); s.membership.set('p', 'science');
+  for (const item of ['ars_nouveau:experience_gem', 'ars_nouveau:greater_experience_gem',
+    'ars_technica:giant_experience_gem', 'ars_technica:gargantuan_experience_gem']) {
+    assert.equal(s.allowed('p', s.reward(s.quest(item, new ItemTask(item)))), true);
+    assert.equal(s.allowed('none', s.reward(s.quest(item + '/none', new ItemTask(item)))), true);
+  }
+  assert.equal(s.allowed('p', s.reward(s.quest('ordinary', new ItemTask('ars_nouveau:book')))), false);
+  assert.equal(s.allowed('p', s.reward(s.quest('mixed', new ItemTask('ars_nouveau:experience_gem'), new ItemTask('ars_nouveau:book')))), false);
 });

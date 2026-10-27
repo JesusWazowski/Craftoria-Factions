@@ -18733,8 +18733,12 @@ file = "kubejs/config/defaultoptions.txt"
 hash = "d708425ce292448cb2d9a90460a075d4f3f9db2a56a000aea444b4ce686e10c3"
 
 [[files]]
+file = "kubejs/config/faction_recipe_overrides.json"
+hash = "ca54e842a699965180c7bc0e7c3f5153938c9c27a1ab25f8a84362beed155732"
+
+[[files]]
 file = "kubejs/config/factions.json"
-hash = "4ff9d2adfbe4be82d2d8a559250e026e87e9c5581bb287c55cfff84c3dcf3c36"
+hash = "676a55eb42280ea50cd9bc248c8cd66cef920b74d8f6c23133e8327792e3ef9d"
 
 [[files]]
 file = "kubejs/config/web_server.json"
@@ -19705,6 +19709,10 @@ file = "kubejs/server_scripts/Mods/ActuallyAdditions/Reconstructor.js"
 hash = "50ee24aa29c74ce23df8e525544f6c9c3dbfe9b29d431456a70394bcb8c292c5"
 
 [[files]]
+file = "kubejs/server_scripts/Mods/AdachiReiNui/Recipes.js"
+hash = "3946dfeb2e662c142cd14b8a1b3e2537c6637866f6776130bee7c4e493a9530e"
+
+[[files]]
 file = "kubejs/server_scripts/Mods/Apothic/Adventure.js"
 hash = "4875d99c0a5fc3d8ec6c0640e4b1a4a1e60aedc38744724f597336c451c9bb9d"
 
@@ -19819,6 +19827,10 @@ hash = "fb5864b71a79281bd798bf70de4d357b03b4739cdecc20dc6317dc42512d9794"
 [[files]]
 file = "kubejs/server_scripts/Mods/HostileNeuralNetworks/DataModels.js"
 hash = "b053aff52419fcefffa154bf1888dd61dcbaa6629ccee975a5621868a9767bd5"
+
+[[files]]
+file = "kubejs/server_scripts/Mods/ImmersiveAircraft/Unification.js"
+hash = "d227dd2057864dd0f7559f91586bca43d91aae855209edec53bad2b39ea75de2"
 
 [[files]]
 file = "kubejs/server_scripts/Mods/IndustrialForegoing/Info.js"
@@ -19978,15 +19990,19 @@ hash = "7b8881ca8bbb426755fd8d5907052713377c87b91b51b3376ba159d9a2570251"
 
 [[files]]
 file = "kubejs/server_scripts/faction_definitions.js"
-hash = "d9db657062b562901ae11d565ccebd9f7042b329f2f9e56eb1fabfcfd8ca5c3c"
+hash = "e29a5f7d8ed44afd593622971a3cce26943da9c331374faf376b28620b72814e"
 
 [[files]]
 file = "kubejs/server_scripts/faction_parties.js"
-hash = "17201df0b55abd399eb523e53a3d5d112d52a388c224e356bd38c641d851a44a"
+hash = "10ba70c9c353782e963d63a40f63b1eecdb5ad3517e4bc1c9509802232b1a4a3"
 
 [[files]]
 file = "kubejs/server_scripts/faction_quest_rewards.js"
-hash = "9499253054535ad28c68cf51d1d466416f8426b3f8f00cf45d52888d86103612"
+hash = "451b8d7791c256eb2345c8ea55647a73b1458f82d43560320e2cb9561ba2701a"
+
+[[files]]
+file = "kubejs/server_scripts/faction_recipe_overrides.js"
+hash = "d1b0f1aa499cae604e8cb7fc62e92dde130726111c0d4b6c7efe03517b8101ae"
 
 [[files]]
 file = "kubejs/server_scripts/first_join.js"
@@ -20022,7 +20038,7 @@ hash = "822f62f8838b71c56d980b185266dc8304c150d6e2f283849704d37ff143199d"
 
 [[files]]
 file = "kubejs/server_scripts/mod_gating.js"
-hash = "522d0bc2e68824754caadd7f4df89567f80c12c7c38efc441f39017fa8774f43"
+hash = "a002ec394eb0d847aa40af2c6d64bcef3ea5845d76358b5df4e5cf771ae566af"
 
 [[files]]
 file = "kubejs/server_scripts/removals.js"

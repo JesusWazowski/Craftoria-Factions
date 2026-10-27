@@ -1,5 +1,57 @@
 # Craftoria - 1.21
 
+## Faction content design handoff
+
+[FACTION_CONTENT_DESIGN.md](FACTION_CONTENT_DESIGN.md) records the faction
+identities, content-sorting principles, current exceptions, and assignment
+snapshot for further gameplay research. It covers content beyond crafting
+recipes and provides distinctions for later quest classification without
+specifying a milestone system. Implementation and operating details remain below.
+
+## AdachiRei-nui recipe compatibility
+
+`kubejs/server_scripts/Mods/AdachiReiNui/Recipes.js` restores the four crafting
+recipes from AdachiRei-nui NeoForge v1.1.5 on Minecraft 1.21.1 without editing
+the mod JAR. Its bundled recipes use the obsolete `recipes/` directory and
+`result.item` format. The script preserves the original shaped patterns,
+ingredients, recipe IDs, and yields: one of each stuffed Rei variant, or eight
+Adachi Rei's blocks from one Stuffed Adachi Rei surrounded by eight white wool.
+
+These are temporary fixes. On every AdachiRei-nui version change, check and
+validate all four native recipes; remove each workaround once its native recipe
+works, and delete the script when all four are fixed. Version changes alone do
+not prove the recipes are repaired. Reload server data with `/reload` or restart
+to apply the script. Verify all four recipes in **Craftoria Factions Test**.
+
+## Recipes from local additions
+
+The 2026-10-17 static audit against the locally available `upstream/main`
+(`d9b70f8c6`) covers 439 recipe JSON files in added mods and OpenLoader packs,
+including disabled/overridden recipes. Source versions, recipe types, and
+ingredient references are recorded in `automation/additional-recipes-audit.json`.
+Packwiz-managed mod archives were checked against their pinned download hashes.
+
+`kubejs/server_scripts/Mods/ImmersiveAircraft/Unification.js` explicitly converts
+Create iron, copper, and brass sheets to `#c:plates/iron`, `#c:plates/copper`, and
+`#c:plates/brass` in aircraft recipe namespaces. This covers ten recipes in the
+Create Immersive Aircrafts datapack, retaining their patterns and yields. The
+existing Almost Unified priorities select Modern Industrialization iron/copper
+plates and Create brass sheets, while accepting other items in those tags.
+
+Big Cannons (151 recipes) and Radars (18) already use common plate/metal tags.
+Big Cannons bronze/steel crafting and Create processing outputs are covered by
+the existing Almost Unified material rules. Its cast iron, nethersteel, cannon
+parts, assembly intermediates, and molten fluids remain distinct. The Man of
+Many Planes datapack, Compact Machines pack, CC:Tweaked, FramedBlocksPlus, and
+Plushie Buddies introduce no additional plate substitutions; their shared
+materials use the existing global rules. The AdachiRei-nui repair is documented
+above. Source inspection does not confirm the final runtime recipe registry.
+
+After installing in **Craftoria Factions Test**, check the aircraft propeller,
+hull reinforcement, eco engine, cannon mount, radar dish, and bronze/steel
+processing recipes with the preferred materials. Inspect KubeJS/Almost Unified
+logs for reload errors. No Minecraft instance was launched for this audit.
+
 # Setup
 Follow the instructions below to get your workspace setup:
 
@@ -106,14 +158,105 @@ For example, a faction entry has this shape (retain its complete existing mod li
 ```
 
 The top-level `factions` and `sharedGroups` arrays contain entries with stable
-lowercase IDs; groups have `id` and `mods`. Keep `version` at `1`. Every mod must
-belong to exactly one faction or shared group. Duplicate IDs, conflicting mod
+lowercase IDs; groups have `id` and `mods`. Keep `version` at `1`. Restricted mods
+belong to exactly one faction or shared group. `unrestrictedMods` records explicit
+Everyone decisions without adding a stage or party; other unassigned mods are
+also unrestricted. Duplicate IDs, conflicting mod
 assignments, and unknown group references are rejected before creating parties.
 Change names or mod assignments as needed; names are used for selection and
 initial party creation, and owners can rename their party independently. Keep
 existing IDs stable. Adding or removing factions/groups is a **new-world
 customization**, not a migration of an existing save. Restart after editing the
 document or changing either dependency; do not rely on live recipe reloads.
+
+### Recipe access and balance decisions (October 26, 2026)
+
+Addon assignments follow their parents except for the explicitly chosen
+cross-mod integrations. Everyone includes CC:Tweaked and its addons, Farmer's
+Delight and Ars Delight, Flux Networks, Functional Storage, Sophisticated
+Storage in Motion, Compact Machines, Logistics Networks, LaserIO, More Red,
+Little Big Redstone, SFM, and the other explicitly unrestricted utilities in
+`factions.json`. Everyone does not grant a stage or create a fifth faction.
+Twilight Delight remains Ritualists. Both Modular Routers connectors follow
+Modular Routers in `science_shared`. Integrated Dynamics and its addons,
+including their compatibility namespaces, use `magic_shared`.
+
+`kubejs/config/faction_recipe_overrides.json` lists recipes available to everyone
+despite their mod's faction assignment. The pinned AStages 2.5.3
+`ARecipeModRestriction.ignoreItems(String...)` method takes **recipe IDs**, not
+item IDs. It excludes only those exact IDs from the matching recipe-namespace
+restriction. The configured exceptions cover both directions of AE2 interface,
+pattern-provider and energy-acceptor block/cable-part conversions, and all six
+compression/decompression recipes across Ars experience, greater experience,
+giant experience and gargantuan experience gems. Initial AE2 device crafting,
+other Ars equipment, and unrelated conversion recipes retain their normal gates.
+
+The October 26 conversion expansion additionally exempts the 168 recipe IDs for
+the 85 reviewed one-item-in/one-item-out reversible pairs, plus all 189 entries
+in the reviewed state-reset/disassembly list. The exact groups and prior 12-ID
+baseline are recorded in `automation/faction-recipe-override-audit.json`; the
+runtime document now contains 369 unique recipe IDs. Other compression and
+decompression exceptions were not added. The six existing XP-gem conversion
+exceptions remain as previously approved. Recipe exceptions do not create
+new item-task exemptions for quest rewards.
+
+These reset/disassembly recipes are real recipe-manager definitions, generally
+loaded from JSON whose `type` selects custom Java matching/result code in the
+mod. The reviewed list contains 170 AE2-style cell-disassembly definitions,
+seven crafting-unit transformations, five Integrated Dynamics clears, one
+Mekanism clear, one Pipez clear, and four Spectrum clears. It also contains
+one ordinary XyCraft stonecutting entry caught by the original scan; that exact
+ID is included for completeness but is outside the crafting-table gate.
+
+**Startup troubleshooting watchpoint:** if new cross-faction crafting bugs,
+configuration loss, unexpected component refunds, or reset/disassembly output
+problems appear after this update, check these custom serializers first. Save
+the recipe ID, mod version, faction/stages, exact input stack/components and
+observed result, and compare behavior with an eligible faction in a disposable
+test world. An exception changes eligibility only; it does not rewrite the
+serializer or guarantee its component handling. Use the audit's
+`stateResetAndDisassembly` list to identify specific suspect exception IDs;
+remove only the relevant IDs from `recipeIds` while investigating and restart.
+Do not alter compression recipes or disable faction gating globally as a
+workaround. Full-pack client acceptance remains pending; Minecraft was not
+launched for this change.
+
+The same document's `publicQuestItems` exempts those four XP-gem items from the
+faction quest-reward item-task check. They are generic XP tokens for machines
+and quests; this does not exempt other requirements in the same quest or change
+quest progress sharing. AE2 conversion outputs are not generally exempted from
+quest checks. Recipe restrictions match recipe-ID namespaces, whereas quest
+checks match item-ID namespaces; a pack-authored cross-namespace recipe can
+therefore have different access. These overrides do not change existing recipes,
+ingredients, output quantities, stored item components, or machine access.
+
+The optional `recipeNamespaceAliases` object in `factions.json` maps a recipe
+namespace to an assigned mod ID. XyCraft's native recipes use `xycraft:`, so
+`"xycraft": "xycraft_world"` makes them follow the XyCraft family's science-shared
+assignment. Alias targets must exist in the assigned or explicit unrestricted
+mod lists; aliases cannot overlap actual configured mod IDs. This adds no stage
+or item restriction. Other pack-generated `craftoria:` recipes retain their
+existing namespace behavior.
+
+Keep the following balance decisions visible when revisiting assignments:
+
+- Farmer's Delight, including Ars Delight, is an Everyone baseline and a possible
+  content addition for an unpopular faction. Always move Ars Delight with it.
+- Functional Storage is Everyone and a possible logistical boost for a faction
+  that lacks storage options.
+- Modular Routers is science-shared, with Everyone as a future option. Keep both
+  its Mekanism and MI connectors with it.
+- After reviewing the two science factions side by side, MI and its addons,
+  including Modern Dynamics, remain Mechanists. Replication is `science_shared`.
+  This keeps a substantial industrial progression path for each science faction
+  while sharing access to replication. Preserve this decision unless a later
+  balance review revisits MI/Mekanism replication progression and HNN farms.
+- Powah remains Stargazers; reconsider Mechanists if they lose MI.
+
+Restart after applying faction or override changes. No automatic world/party
+migration is performed. The [grouped faction review](docs/mod-faction-review.md) and
+[conversion override review](docs/recipe-conversion-review.md) are tracked
+decision aids, not distributable gameplay configuration.
 
 Only an unused new world (no played ticks, known players, or teams) receives
 parties. Existing worlds receive no automatic party creation, adoption, or
@@ -169,6 +312,25 @@ preserved. KubeJS's separate stage storage is not used as a substitute. AStages
 recipe restrictions still load in existing worlds, but their membership/stages
 are not automatically migrated by this feature.
 
+### Manual stages for testing
+
+Normal managed-world behavior makes faction stages follow party membership on
+login, membership changes, and reload. Consequently, faction stages granted with
+AStages commands are normally replaced on rejoin; unrelated stages are preserved.
+
+Operators can pause that synchronization for an individual online player:
+
+- `/faction stages manual [player]`: preserve that player's current stages and let
+  native AStages commands control them, including after rejoin/reload/restart.
+- `/faction stages auto [player]`: immediately restore normal party-based stages.
+
+Omit the player to target yourself; console must specify a player. Enable manual
+mode before granting testing stages. The mode is saved by player UUID in the
+world's FTB Teams manager data, and membership changes do not clear it. It does
+not grant stages itself or bypass session locks, faction selection, or membership-
+based quest rewards. Other players retain automatic synchronization. Fully restart
+or reload server scripts to register the new commands.
+
 ### Quest rewards and faction access
 
 In managed faction worlds, FTB quest progress remains shared. When claiming a
@@ -219,7 +381,7 @@ requirement checks, cache reload, and local boundary returns. Session policy tes
 claim cancellation, persistence, home preflight, rank/bonus normalization,
 negative coordinates, dimensions, shared claims, gaps, invalid homes, and riders.
 
-The consolidated integration passes 47 automated policy tests and 36 isolated
+The consolidated integration passes 50 automated policy tests and 36 isolated
 native checks, including console/operator ownership transfer, nonmember rejection,
 protected system membership, personal-home command removal, target completion,
 and spawn/back permissions in managed and existing-world contexts. Restart and
