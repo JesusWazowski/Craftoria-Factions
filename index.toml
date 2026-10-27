@@ -4102,7 +4102,7 @@ hash = "e10707e6340c39a57cb6c0d70bbacb9187edc403cce3d1736b5a3136e1f824cc"
 
 [[files]]
 file = "config/entity_model_features.json"
-hash = "24b96b44263a5b8db218d02fe26038619946367041d78d7a8637010e703cd868"
+hash = "0b6cddfc156ffd585600ac0219bd83b78eb03d1c6e9acc7409e42fabee562471"
 
 [[files]]
 file = "config/entity_texture_features.json"
@@ -4322,7 +4322,7 @@ hash = "4a5fde899abf8afca1d75fd4ad13946232040f712f6bce8d0f64d37bbbd957f4"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "fdad1adb6a6efb3d86b88d0b5dd957ecbc967bd2c2f6471e6dce0761a013851b"
+hash = "c06fb95141252ae8034b370ba1d76858838a238c5aac9f3a0a5afcf2ab087eac"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/Completionist.snbt"
@@ -4401,6 +4401,10 @@ file = "config/ftbquests/quests/chapters/harvest_and_hearth.snbt"
 hash = "e29635e46394b042af1ad4a1ebce0475652d303f0c3d163a14f807d66e77f4f1"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/hephaestus.snbt"
+hash = "4d3c448688a15d537c6606d6b47499b37754d363eddea0f0556e998ec23e8114"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/immersive_aircraft.snbt"
 hash = "ac4732462bb5c858bd30a75d2b904f5b46f256b26f68a4c64fa928358a67a095"
 
@@ -4454,7 +4458,7 @@ hash = "bd15b9b7cfbf0cbb1f20ab394805f88c23917d9ecf45b47d60271892a35daf2d"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "64e73c7b75cfb4ecb1e38c43581cec8eeba4d55d74ecbdb2daca02aaab2d38fe"
+hash = "fe4477d86dce1d4d0e18ef4ce4342e5e42426fe099de6db5a45df3e90804e3ce"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
@@ -10014,7 +10018,7 @@ hash = "105511c01906ae54f1696072c24cfb419f0f3847253830ce12d11905ef4ffbfb"
 
 [[files]]
 file = "kubejs/assets/ftbquests/ftb_quests_theme.txt"
-hash = "2f2ad9a6e60bc47265bfd5659be3a458cb3138a71317068286d8ff01285d6f6f"
+hash = "3af51c4817594a334a6dc1a8b2ff5af65f1116cbfd8714115bb38a5e42749535"
 
 [[files]]
 file = "kubejs/assets/ftbquests/textures/block/water_still_opaque.png"
@@ -10141,6 +10145,10 @@ file = "kubejs/assets/ftbquests/textures/gui/flowing_mekanism.png"
 hash = "b9b4795fff323a75871cfdad13e73a5430699dd3f9c3b4f9657270d7387961ed"
 
 [[files]]
+file = "kubejs/assets/ftbquests/textures/gui/forge.png"
+hash = "0aba646c62dcb2885a2c5d54da00ed3f034d0febb31766c1baaf1db47b192a19"
+
+[[files]]
 file = "kubejs/assets/ftbquests/textures/gui/gadgets.png"
 hash = "9e82df988ec89558905116ec7bbbdafbef313b03dfd1c6c008f248317a39a874"
 
@@ -10215,6 +10223,10 @@ hash = "8b8d4ea7f4cf442368b9d81f718e60e1a1816ca7db19f80e66ae0649c241e4bd"
 [[files]]
 file = "kubejs/assets/ftbquests/textures/gui/replication.png"
 hash = "d30c9a652d1622d57f2cfc8b969551bed7f99a58a613cbd91fae39cde8035554"
+
+[[files]]
+file = "kubejs/assets/ftbquests/textures/gui/the_forge.png"
+hash = "6bc29b3b5e0b2ddaab4cbb7536694409e6340f960106052e1c9f6ffb6a6e845c"
 
 [[files]]
 file = "kubejs/assets/ftbquests/textures/gui/title_ae2.png"
@@ -19825,6 +19837,30 @@ file = "kubejs/server_scripts/Mods/GatewaysToEternity/Events.js"
 hash = "fb5864b71a79281bd798bf70de4d357b03b4739cdecc20dc6317dc42512d9794"
 
 [[files]]
+file = "kubejs/server_scripts/Mods/Hephaestus/alloying.js"
+hash = "bab61ee0c04d12018fec4c2234ca660da9c14637a07b0040a33e50253f6c4531"
+
+[[files]]
+file = "kubejs/server_scripts/Mods/Hephaestus/casting_basin.js"
+hash = "47ee603d90132627c60adcd6d132c8a18057893ce813627d988a55ccea5914fa"
+
+[[files]]
+file = "kubejs/server_scripts/Mods/Hephaestus/casting_table.js"
+hash = "67d7e83dc3090640ad138c540ceef10ac0031218fc6bde6f75821e418464513d"
+
+[[files]]
+file = "kubejs/server_scripts/Mods/Hephaestus/entity_melting.js"
+hash = "cd01071786e2198c74bf7e7fe71e79139dd3ed21beacfa3a9f462bdfeb5a0ba7"
+
+[[files]]
+file = "kubejs/server_scripts/Mods/Hephaestus/materials.js"
+hash = "536348feb8b1e390e2296562481f13986cbf5a46ac368a00430fc91838d43ee8"
+
+[[files]]
+file = "kubejs/server_scripts/Mods/Hephaestus/melting.js"
+hash = "f143276bb8cb0d2b87ffaa2c919a33d9002dcfd48a1c120728be3e63ed3fac70"
+
+[[files]]
 file = "kubejs/server_scripts/Mods/HostileNeuralNetworks/DataModels.js"
 hash = "b053aff52419fcefffa154bf1888dd61dcbaa6629ccee975a5621868a9767bd5"
 
@@ -20042,7 +20078,7 @@ hash = "a002ec394eb0d847aa40af2c6d64bcef3ea5845d76358b5df4e5cf771ae566af"
 
 [[files]]
 file = "kubejs/server_scripts/removals.js"
-hash = "169c5d454caa495474db05cd6890a42b8661511286244eb284018bf9847427a4"
+hash = "b42b7394c74a00ab1a5fc95b184e7baf52e9972699d3cff384f24126de99d36b"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
