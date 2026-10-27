@@ -1,0 +1,1624 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "milestones_spellcasters"
+	group: "6D3FCD45F0736557"
+	icon: {
+		id: "ars_nouveau:archmage_spell_book"
+	}
+	id: "5B308E8C461FC08E"
+	images: [ ]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "ars_nouveau:archmage_spell_book" }
+			id: "17952259040FF4A5"
+			invisible: true
+			size: 1.0d
+			tasks: [
+				{
+					icon: { id: "ars_nouveau:archmage_spell_book" }
+					id: "37B61F4082B7D9DF"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "minecraft:white_banner" }
+			id: "1DEE44148A861944"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "757BFB503652D36E"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: { id: "minecraft:compass" }
+					id: "20D4338776CB408E"
+					type: "custom"
+				}
+			]
+			x: -1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "sophisticatedbackpacks:backpack" }
+			id: "55393F1BE5D37B15"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "64F179DBBB110EA6"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: { id: "sophisticatedbackpacks:backpack" }
+					id: "69BBE07E1ECE0EA8"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(sophisticatedbackpacks:backpack)item(sophisticatedbackpacks:copper_backpack)item(sophisticatedbackpacks:iron_backpack)item(sophisticatedbackpacks:gold_backpack)item(sophisticatedbackpacks:diamond_backpack)item(sophisticatedbackpacks:netherite_backpack))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "ars_nouveau:novice_spell_book" }
+			id: "19108F89C984E286"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "422FF64DD5F0BEFC"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "0F82F71B99420A30"
+					item: { count: 1, id: "ars_nouveau:novice_spell_book" }
+					type: "item"
+				}
+				{
+					id: "4BD845A5186B1D03"
+					item: { count: 1, id: "ars_nouveau:scribes_table" }
+					type: "item"
+				}
+				{
+					id: "718AA5C0FE152360"
+					item: { count: 1, id: "ars_nouveau:imbuement_chamber" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3B4D078A2A199929"
+					item: { count: 1, id: "ars_nouveau:source_jar" }
+					type: "item"
+				}
+				{
+					icon: { id: "ars_nouveau:volcanic_sourcelink" }
+					id: "679E70ACE99A0E3B"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(ars_nouveau:volcanic_sourcelink)item(ars_nouveau:mycelial_sourcelink)item(ars_nouveau:agronomic_sourcelink)item(ars_nouveau:vitalic_sourcelink)item(ars_nouveau:alchemical_sourcelink))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "5FB92097B50FADCB"
+					item: { count: 1, id: "ars_nouveau:source_gem" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 2.5d
+		}
+		{
+			dependencies: ["19108F89C984E286"]
+			icon: { id: "ars_nouveau:glyph_blink" }
+			id: "068E8FA1F7DB7A28"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "5AD08260E2A1B0E2"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "63938E577F1F92B6"
+					item: { count: 1, id: "ars_nouveau:glyph_leap" }
+					type: "item"
+				}
+				{
+					id: "20273BEB7DCF595A"
+					item: { count: 1, id: "ars_nouveau:glyph_light" }
+					type: "item"
+				}
+				{
+					id: "4AEC1DCB0D04FD3D"
+					item: { count: 1, id: "ars_nouveau:glyph_grow" }
+					type: "item"
+				}
+				{
+					id: "6121C3CAC015B951"
+					item: { count: 1, id: "ars_nouveau:glyph_harvest" }
+					type: "item"
+				}
+				{
+					id: "660E95DFE825136F"
+					item: { count: 1, id: "ars_nouveau:glyph_pickup" }
+					type: "item"
+				}
+				{
+					id: "00BDEA9EB26B2401"
+					item: { count: 1, id: "ars_nouveau:glyph_blink" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 4.0d
+		}
+		{
+			dependencies: ["19108F89C984E286"]
+			icon: { id: "ars_nouveau:enchanting_apparatus" }
+			id: "153D6C564AAC5DD5"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4DAAA3CC495F8778"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "431DB71352236727"
+					item: { count: 1, id: "ars_nouveau:enchanting_apparatus" }
+					type: "item"
+				}
+				{
+					id: "5DC069E351450EA4"
+					item: { count: 1, id: "ars_nouveau:arcane_core" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "61CDC9CCF99051EE"
+					item: { count: 1, id: "ars_nouveau:arcane_pedestal" }
+					type: "item"
+				}
+				{
+					id: "5DD674E3BFA64743"
+					item: { count: 1, id: "ars_nouveau:dominion_wand" }
+					type: "item"
+				}
+				{
+					id: "2D624FF01BE66A7B"
+					item: { count: 1, id: "ars_nouveau:starbuncle_charm" }
+					type: "item"
+				}
+				{
+					id: "53D9216F1AB6A28B"
+					item: { count: 1, id: "ars_nouveau:drygmy_charm" }
+					type: "item"
+				}
+				{
+					id: "3C6F86FF67249174"
+					item: { count: 1, id: "ars_nouveau:whirlisprig_charm" }
+					type: "item"
+				}
+				{
+					id: "0D5F57FC3281BC0C"
+					item: { count: 1, id: "ars_nouveau:wixie_charm" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 5.5d
+		}
+		{
+			dependencies: ["19108F89C984E286"]
+			icon: { id: "ars_nouveau:relay" }
+			id: "064FB462479A4487"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "14B1F6ED09240B23"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 2L
+					id: "5FA9038C0F8CDEC1"
+					item: { count: 1, id: "ars_nouveau:relay" }
+					type: "item"
+				}
+				{
+					id: "77D31961980093F2"
+					item: { count: 1, id: "ars_nouveau:relay_splitter" }
+					type: "item"
+				}
+				{
+					id: "0014EDBEED2C804F"
+					item: { count: 1, id: "ars_nouveau:spell_prism" }
+					type: "item"
+				}
+				{
+					id: "19DCD2F9F33B6098"
+					item: { count: 1, id: "ars_nouveau:basic_spell_turret" }
+					type: "item"
+				}
+				{
+					id: "5E85A7701D38DDE2"
+					item: { count: 1, id: "ars_nouveau:potion_melder" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 7.0d
+		}
+		{
+			dependencies: ["068E8FA1F7DB7A28"]
+			icon: { id: "ars_nouveau:apprentice_spell_book" }
+			id: "167CC36685E48564"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "6C6A818E7E167049"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "7C1A7A7CA79CECF0"
+					item: { count: 1, id: "ars_nouveau:apprentice_spell_book" }
+					type: "item"
+				}
+				{
+					id: "54588AFC9DE5E56D"
+					item: { count: 1, id: "ars_nouveau:alteration_table" }
+					type: "item"
+				}
+				{
+					id: "1B5B4D16E11AEBE8"
+					item: { count: 1, id: "ars_nouveau:sorcerer_hood" }
+					type: "item"
+				}
+				{
+					id: "128790C408178A3F"
+					item: { count: 1, id: "ars_nouveau:sorcerer_robes" }
+					type: "item"
+				}
+				{
+					id: "5CB887007C7A37B2"
+					item: { count: 1, id: "ars_nouveau:sorcerer_leggings" }
+					type: "item"
+				}
+				{
+					id: "14BCDB02ACEF3EDD"
+					item: { count: 1, id: "ars_nouveau:sorcerer_boots" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 8.5d
+		}
+		{
+			dependencies: ["153D6C564AAC5DD5"]
+			icon: { id: "ars_nouveau:ritual_flight" }
+			id: "2600521B7A1A8AD9"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "323C0145CF06B031"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "57F6421F4290DDAA"
+					item: { count: 1, id: "ars_nouveau:ritual_brazier" }
+					type: "item"
+				}
+				{
+					id: "64945235F844DF56"
+					item: { count: 1, id: "ars_nouveau:ritual_flight" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "7F37E64FA67BEA95"
+					item: { count: 1, id: "ars_nouveau:wilden_wing" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 10.0d
+		}
+		{
+			dependencies: ["153D6C564AAC5DD5"]
+			icon: { id: "ars_additions:advanced_dominion_wand" }
+			id: "1744E1FF5D81C07F"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "34C46F5A2C02A284"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "628A28A0AA69B853"
+					item: { count: 1, id: "ars_additions:advanced_dominion_wand" }
+					type: "item"
+				}
+				{
+					id: "797E6FD8FD5AEAC6"
+					item: { count: 1, id: "ars_controle:scroll_holder" }
+					type: "item"
+				}
+				{
+					id: "738C3FF3513198E7"
+					item: { count: 1, id: "ars_zero:archwood_rod" }
+					type: "item"
+				}
+				{
+					id: "2F0CEC2E64ADCB61"
+					item: { count: 1, id: "starbunclemania:fluid_sourcelink" }
+					type: "item"
+				}
+				{
+					id: "02E5B0B676CE106D"
+					item: { count: 1, id: "not_enough_glyphs:thread_sharp_paper" }
+					type: "item"
+				}
+				{
+					id: "284C024722A7E4FF"
+					item: { count: 1, id: "ars_musique:bards_bandeau" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 11.5d
+		}
+		{
+			dependencies: ["19108F89C984E286"]
+			icon: { id: "ars_nouveau:source_gem" }
+			id: "6FC149C4A6BB9825"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3C42B11D90C25DA4"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: true
+					count: 2048L
+					id: "43A2F78BAE151F1E"
+					item: { count: 1, id: "ars_nouveau:source_gem" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 13.0d
+		}
+		{
+			dependencies: ["167CC36685E48564"]
+			icon: { id: "ars_nouveau:archmage_spell_book" }
+			id: "2F35E280C7B33C63"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3A30E406987A267D"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					entity: "ars_nouveau:wilden_boss"
+					icon: { id: "ars_nouveau:wilden_tribute" }
+					id: "13123F7266EB4FD5"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "4F4655EEE455DF5F"
+					item: { count: 1, id: "ars_nouveau:wilden_tribute" }
+					type: "item"
+				}
+				{
+					id: "3248B50A408046E1"
+					item: { count: 1, id: "ars_nouveau:archmage_spell_book" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 14.5d
+		}
+		{
+			dependencies: ["2F35E280C7B33C63"]
+			icon: { id: "ars_elemental:air_focus" }
+			id: "39CB25A772BF2D0C"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "1CE8F77569E7964C"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "3D1C6C7EF3ECF365"
+					item: { count: 1, id: "ars_elemental:fire_focus" }
+					type: "item"
+				}
+				{
+					id: "4BF1C4D72D27E740"
+					item: { count: 1, id: "ars_elemental:water_focus" }
+					type: "item"
+				}
+				{
+					id: "6D2454EDAFBD85AB"
+					item: { count: 1, id: "ars_elemental:earth_focus" }
+					type: "item"
+				}
+				{
+					id: "69196035AFB25386"
+					item: { count: 1, id: "ars_elemental:air_focus" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "5B73412D49919B86"
+					item: { count: 1, id: "ars_elemental:mark_of_mastery" }
+					type: "item"
+				}
+				{
+					id: "66FD8288F6556E80"
+					item: { count: 1, id: "ars_elemental:everfull_urn" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 16.0d
+		}
+		{
+			dependencies: ["39CB25A772BF2D0C"]
+			icon: { id: "ars_elemancy:elemancer_hat" }
+			id: "6C5F1EF0B8D472BC"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "68DD702FB19F55F1"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "35F4C9FE2C1D6CD3"
+					item: { count: 1, id: "ars_elemancy:elemancer_hat" }
+					type: "item"
+				}
+				{
+					id: "7C5537C1D9CC5EAF"
+					item: { count: 1, id: "ars_elemancy:elemancer_robes" }
+					type: "item"
+				}
+				{
+					id: "195A367FC2D00C38"
+					item: { count: 1, id: "ars_elemancy:elemancer_leggings" }
+					type: "item"
+				}
+				{
+					id: "7CCFAE3C4C9720D6"
+					item: { count: 1, id: "ars_elemancy:elemancer_boots" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 17.5d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "irons_spellbooks:scroll_forge" }
+			id: "685677A1BB5C577B"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "0958C938DCC420AE"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "1E01BA26B6FCA4E5"
+					item: { count: 1, id: "irons_spellbooks:inscription_table" }
+					type: "item"
+				}
+				{
+					id: "19FEC163020A23CF"
+					item: { count: 1, id: "irons_spellbooks:scroll_forge" }
+					type: "item"
+				}
+				{
+					id: "37867E3E0080B721"
+					item: { count: 1, id: "irons_spellbooks:iron_spell_book" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7B8213437119ECBD"
+					item: { count: 1, id: "irons_spellbooks:arcane_essence" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 2.5d
+		}
+		{
+			dependencies: ["685677A1BB5C577B"]
+			icon: { id: "irons_jewelry:jewelcrafting_station" }
+			id: "351B076FF5FF2C0D"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "03E402F272FF2749"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "707341C1C7563155"
+					item: { count: 1, id: "irons_jewelry:jewelcrafting_station" }
+					type: "item"
+				}
+				{
+					id: "575D7B1CAD941A10"
+					item: { count: 1, id: "irons_spellbooks:mana_ring" }
+					type: "item"
+				}
+				{
+					icon: { id: "artifacts:cloud_in_a_bottle" }
+					id: "7A2076FDEB45E598"
+					item: {
+						components: { "ftbfiltersystem:filter": "mod(artifacts)" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 4.0d
+		}
+		{
+			dependencies: ["685677A1BB5C577B"]
+			icon: { id: "irons_spellbooks:gold_spell_book" }
+			id: "59E99F09C02157DA"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "21B56FA9AADFD19C"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 10L
+					id: "1230C66B383F56C3"
+					item: { count: 1, id: "irons_spellbooks:hogskin" }
+					type: "item"
+				}
+				{
+					id: "5575E92634471EC7"
+					item: { count: 1, id: "irons_spellbooks:gold_spell_book" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "05E03A50ED5D585C"
+					item: { count: 1, id: "irons_spellbooks:mithril_ingot" }
+					type: "item"
+				}
+				{
+					id: "0032C0A3BACAA664"
+					item: { count: 1, id: "irons_spellbooks:diamond_spell_book" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 5.5d
+		}
+		{
+			dependencies: ["59E99F09C02157DA"]
+			icon: { id: "irons_spellbooks:upgrade_orb" }
+			id: "1B001CD188427C01"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "324EBA826CB5C80F"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "0D1366BE570BA286"
+					item: { count: 1, id: "irons_spellbooks:arcane_anvil" }
+					type: "item"
+				}
+				{
+					entity: "irons_spellbooks:citadel_keeper"
+					id: "116219FD9B569485"
+					type: "kill"
+					value: 6L
+				}
+				{
+					count: 16L
+					id: "3242BE198D94E866"
+					item: { count: 1, id: "irons_spellbooks:cinder_essence" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "4ACD676535F10B71"
+					item: { count: 1, id: "irons_spellbooks:upgrade_orb" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 7.0d
+		}
+		{
+			dependencies: ["1B001CD188427C01"]
+			icon: { id: "irons_spellbooks:legendary_ink" }
+			id: "349E030CD54AEF35"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "5833920E5109E09C"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					icon: { id: "minecraft:filled_map" }
+					id: "07EE934B626FE14A"
+					structure: "irons_spellbooks:ancient_battleground"
+					type: "structure"
+				}
+				{
+					entity: "irons_spellbooks:dead_king"
+					id: "2D94D827F1454D5D"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "49B5DD155E65E45F"
+					item: { count: 1, id: "irons_spellbooks:legendary_ink" }
+					type: "item"
+				}
+				{
+					id: "0BF09FB771BA989A"
+					item: { count: 1, id: "irons_spellbooks:necronomicon_spell_book" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 8.5d
+		}
+		{
+			dependencies: ["349E030CD54AEF35"]
+			icon: { id: "irons_spellbooks:dragonskin" }
+			id: "14A8B1AB171D8AA0"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7B6E2304DD3F6D7A"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					entity: "minecraft:ender_dragon"
+					id: "638DB94B20305BFC"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 2L
+					id: "6F2B33C84B483172"
+					item: { count: 1, id: "irons_spellbooks:dragonskin" }
+					type: "item"
+				}
+				{
+					id: "7CB73811356A697D"
+					item: { count: 1, id: "irons_spellbooks:dragonskin_spell_book" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 10.0d
+		}
+		{
+			dependencies: ["1B001CD188427C01"]
+			icon: { id: "hazennstuff:ring_of_efficiency" }
+			id: "2DF528BDB1724C4A"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4B8208EAAF09CBFC"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "2D7D4C155E5C520D"
+					item: { count: 1, id: "hazennstuff:ring_of_efficiency" }
+					type: "item"
+				}
+				{
+					id: "3048EF5928C23F3B"
+					item: { count: 1, id: "gametechbcs_spellbooks:gtbcs_magical_repository" }
+					type: "item"
+				}
+				{
+					icon: { id: "reliquified_ars_nouveau:mana_ring" }
+					id: "43F3B7B6A3641AE9"
+					item: {
+						components: { "ftbfiltersystem:filter": "mod(reliquified_ars_nouveau)" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					icon: { id: "reliquified_irons_spells_and_spellbooks:ring_of_blades" }
+					id: "24F4036F8F89F00E"
+					item: {
+						components: { "ftbfiltersystem:filter": "mod(reliquified_irons_spells_and_spellbooks)" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 11.5d
+		}
+		{
+			dependencies: ["349E030CD54AEF35"]
+			icon: { id: "irons_spellbooks:divine_soulshard" }
+			id: "2AB95D9A871390A1"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "18CEA762B782CFBA"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					entity: "irons_spellbooks:fire_boss"
+					id: "4ED196F4B57454B3"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 2L
+					id: "1BF2C5B9F8FDAA03"
+					item: { count: 1, id: "irons_spellbooks:divine_soulshard" }
+					type: "item"
+				}
+				{
+					dimension: "crystal_chronicles:alpha"
+					icon: { id: "crystal_chronicles:rainbow_bismuth_crystal" }
+					id: "29BD9491904F1C84"
+					type: "dimension"
+				}
+			]
+			x: -1.25d
+			y: 13.0d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "spectrum:pedestal_basic_topaz" }
+			id: "4BA2D9A732693352"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3755D7BEF76BEB9D"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 16L
+					id: "4363B4C6F02A2C4A"
+					item: { count: 1, id: "spectrum:topaz_shard" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "069BD96585B5F6C7"
+					item: { count: 1, id: "spectrum:citrine_shard" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "45D641F31D86F7B1"
+					item: { count: 1, id: "minecraft:amethyst_shard" }
+					type: "item"
+				}
+				{
+					id: "4633D5B8628F6293"
+					item: { count: 1, id: "spectrum:paintbrush" }
+					type: "item"
+				}
+				{
+					icon: { id: "spectrum:pedestal_basic_topaz" }
+					id: "659BB850541634DF"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(spectrum:pedestal_basic_topaz)item(spectrum:pedestal_basic_amethyst)item(spectrum:pedestal_basic_citrine))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4BA2D9A732693352"]
+			icon: { id: "spectrum:bag_of_holding" }
+			id: "0CDC263539BE859A"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "12190FB8EA8A57C9"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "47F3DD3700DA2802"
+					item: { count: 1, id: "spectrum:bag_of_holding" }
+					type: "item"
+				}
+				{
+					id: "0D6AF9FB0126902B"
+					item: { count: 1, id: "spectrum:glow_vision_goggles" }
+					type: "item"
+				}
+				{
+					id: "7BA3D1DFDAB53CB0"
+					item: { count: 1, id: "spectrum:titration_barrel" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4BA2D9A732693352"]
+			icon: { id: "spectrum:fusion_shrine_basalt" }
+			id: "69AFCED8DE7EB453"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3A3B6E44CDED9B67"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "58CF7425A2AC31D4"
+					item: { count: 1, id: "spectrum:pedestal_all_basic" }
+					type: "item"
+				}
+				{
+					icon: { id: "spectrum:fusion_shrine_basalt" }
+					id: "75D473B522F1E0EA"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(spectrum:fusion_shrine_basalt)item(spectrum:fusion_shrine_calcite))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 5.5d
+		}
+		{
+			dependencies: ["69AFCED8DE7EB453"]
+			icon: { id: "spectrum:onyx_shard" }
+			id: "41234E23E34872F6"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3A4AD5131510D4A2"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 8L
+					id: "24A12FBBCCB7E139"
+					item: { count: 1, id: "spectrum:onyx_shard" }
+					type: "item"
+				}
+				{
+					id: "7C5C153182C4FD5B"
+					item: { count: 1, id: "spectrum:pedestal_onyx" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 7.0d
+		}
+		{
+			dependencies: ["41234E23E34872F6"]
+			icon: { id: "spectrum:enchanter" }
+			id: "5031E754DC555928"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "438A4EE47229CD1C"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "67DC77AADD0CDBEA"
+					item: { count: 1, id: "spectrum:enchanter" }
+					type: "item"
+				}
+				{
+					id: "319C759BB221E323"
+					item: { count: 1, id: "spectrum:spirit_instiller" }
+					type: "item"
+				}
+				{
+					id: "4DB921BCFA5D2853"
+					item: { count: 1, id: "spectrum:midnight_aberration" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 8.5d
+		}
+		{
+			dependencies: ["5031E754DC555928"]
+			icon: { id: "spectrum:bottle_of_ruin" }
+			id: "7023283C2CA4FC1C"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "6927594BC2947A72"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "5E16990BDAB542D0"
+					item: { count: 1, id: "spectrum:bottle_of_ruin" }
+					type: "item"
+				}
+				{
+					dimension: "spectrum:deeper_down"
+					icon: { id: "spectrum:bedrock_dust" }
+					id: "07D3821DEB1216FA"
+					type: "dimension"
+				}
+				{
+					count: 16L
+					id: "3015852826F72A5A"
+					item: { count: 1, id: "spectrum:bedrock_dust" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 10.0d
+		}
+		{
+			dependencies: ["7023283C2CA4FC1C"]
+			icon: { id: "spectrum:bedrock_pickaxe" }
+			id: "54C32279787FC543"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7C51D64A888EB091"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "64A90F06314EC736"
+					item: { count: 1, id: "spectrum:bedrock_pickaxe" }
+					type: "item"
+				}
+				{
+					id: "71BF047834AAF82E"
+					item: { count: 1, id: "spectrum:bedrock_helmet" }
+					type: "item"
+				}
+				{
+					id: "0550DEC823FAF4AC"
+					item: { count: 1, id: "spectrum:bedrock_chestplate" }
+					type: "item"
+				}
+				{
+					id: "256215859B0D1F2A"
+					item: { count: 1, id: "spectrum:bedrock_leggings" }
+					type: "item"
+				}
+				{
+					id: "227495508C3D503A"
+					item: { count: 1, id: "spectrum:bedrock_boots" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 11.5d
+		}
+		{
+			dependencies: ["41234E23E34872F6"]
+			icon: { id: "spectrum:onyx_shard" }
+			id: "28D5ABA7D41EB3ED"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "2A2F56A82E9F84FF"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: true
+					count: 512L
+					id: "344FFE712EC9DE0C"
+					item: { count: 1, id: "spectrum:topaz_shard" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 512L
+					id: "4B88AF491D83E886"
+					item: { count: 1, id: "spectrum:citrine_shard" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 512L
+					id: "2F5FC157ECB40645"
+					item: { count: 1, id: "minecraft:amethyst_shard" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 512L
+					id: "7BF36E5A555BD983"
+					item: { count: 1, id: "spectrum:onyx_shard" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7023283C2CA4FC1C"]
+			icon: { id: "spectrum:pedestal_moonstone" }
+			id: "02936F7BA59489E5"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "50412CB38E0D9E85"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 64L
+					id: "7FAF7EBF96DFC1FC"
+					item: { count: 1, id: "spectrum:moonstone_shard" }
+					type: "item"
+				}
+				{
+					id: "3673A1BA648A3A54"
+					item: { count: 1, id: "spectrum:pedestal_moonstone" }
+					type: "item"
+				}
+				{
+					id: "1990891AD5B74BE5"
+					item: { count: 1, id: "spectrum:crystallarieum" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 14.5d
+		}
+		{
+			dependencies: ["02936F7BA59489E5"]
+			icon: { id: "spectrum:moonstone_core" }
+			id: "6E37250E08195F9E"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "036060D395A59002"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "5A5E566FE0913E92"
+					item: { count: 1, id: "spectrum:moonstone_core" }
+					type: "item"
+				}
+				{
+					id: "5543E34C8B325D81"
+					item: { count: 1, id: "spectrum:omni_accelerator" }
+					type: "item"
+				}
+				{
+					icon: { id: "spectrum:glass_crest_workstaff" }
+					id: "5C77F2F652FA9ABD"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(spectrum:glass_crest_workstaff)item(spectrum:glass_crest_ultra_greatsword)item(spectrum:glass_crest_crossbow)item(spectrum:fractal_glass_crest_bident)item(spectrum:ferocious_glass_crest_bident))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 16.0d
+		}
+		{
+			dependencies: ["02936F7BA59489E5"]
+			icon: { id: "spectrum:moonstone_shard" }
+			id: "10D9E0560F578D80"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3CDF8A4007D5B60D"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: true
+					count: 512L
+					id: "00703F6A1719F372"
+					item: { count: 1, id: "spectrum:moonstone_shard" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 17.5d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "waystones:waystone" }
+			id: "06EF8A00EE25C6C9"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "0E935FF5200CCD8A"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "7E8C12C8315E9F8B"
+					item: { count: 1, id: "waystones:warp_stone" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "59644C075F9BE06C"
+					item: { count: 1, id: "waystones:waystone" }
+					type: "item"
+				}
+				{
+					id: "325EC5629B00F8E4"
+					item: { count: 1, id: "pylons:expulsion_pylon" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 2.5d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "theurgy:calcination_oven" }
+			id: "24A869F533BB7440"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "14ED8C5670D3DD3B"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "64B32303CABE625F"
+					item: { count: 1, id: "theurgy:pyromantic_brazier" }
+					type: "item"
+				}
+				{
+					id: "1F12D0A5C1B623E9"
+					item: { count: 1, id: "theurgy:calcination_oven" }
+					type: "item"
+				}
+				{
+					id: "1AC4B7EFA7D2707B"
+					item: { count: 1, id: "theurgy:liquefaction_cauldron" }
+					type: "item"
+				}
+				{
+					id: "3A344D09B64A7B55"
+					item: { count: 1, id: "theurgy:distiller" }
+					type: "item"
+				}
+				{
+					id: "15206A4D0333BC1A"
+					item: { count: 1, id: "theurgy:incubator" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "5ED9ECAD99FBB390"
+					item: { count: 1, id: "theurgy:mercury_shard" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 4.0d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "integrateddynamics:logic_programmer" }
+			id: "7DB8C867357E8257"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "5584831681FA08AA"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "3115349D3D703B42"
+					item: { count: 1, id: "integrateddynamics:squeezer" }
+					type: "item"
+				}
+				{
+					id: "428C6DDB9A1CB3E3"
+					item: { count: 1, id: "integrateddynamics:drying_basin" }
+					type: "item"
+				}
+				{
+					id: "1A65235F5FA08A31"
+					item: { count: 1, id: "integrateddynamics:logic_programmer" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0616B59D36B22271"
+					item: { count: 1, id: "integrateddynamics:variable_transformer_input" }
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "2E1FE5A2BED7784B"
+					item: { count: 1, id: "integrateddynamics:cable" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "49EECF432EC33B65"
+					item: { count: 1, id: "integratedtunnels:part_interface_item" }
+					type: "item"
+				}
+				{
+					id: "02EAE88EAB100D4A"
+					item: { count: 1, id: "integratedscripting:scripting_drive" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 5.5d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "reliquary:alkahestry_tome" }
+			id: "541261343D75C5CE"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "543501890B3E5ACA"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "26F2D1D6A1D3E211"
+					item: { count: 1, id: "reliquary:alkahestry_tome" }
+					type: "item"
+				}
+				{
+					id: "4AE91EC0620F9B4D"
+					item: { count: 1, id: "reliquary:fortune_coin" }
+					type: "item"
+				}
+				{
+					id: "384933C6B0503271"
+					item: { count: 1, id: "reliquary:rending_gale" }
+					type: "item"
+				}
+				{
+					id: "5F318EBD1C9C1820"
+					item: { count: 1, id: "reliquary:emperor_chalice" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 7.0d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "theurgy:reformation_source_pedestal" }
+			id: "76A0187154F6666F"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "5121FA0DFDA7FE07"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "4CFCA15B34C34266"
+					item: { count: 1, id: "theurgy:reformation_source_pedestal" }
+					type: "item"
+				}
+				{
+					id: "605FCC54AB479677"
+					item: { count: 1, id: "theurgy:reformation_target_pedestal" }
+					type: "item"
+				}
+				{
+					id: "14FEC9FC6347B8C2"
+					item: { count: 1, id: "theurgy:reformation_result_pedestal" }
+					type: "item"
+				}
+				{
+					id: "7A8ED6008EF81953"
+					item: { count: 1, id: "theurgy:sulfuric_flux_emitter" }
+					type: "item"
+				}
+				{
+					id: "215916671E8B8B30"
+					item: { count: 1, id: "theurgy:alchemical_sulfur_netherite" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 8.5d
+		}
+		{
+			dependencies: ["17952259040FF4A5"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "ars_technica:calibrated_precision_mechanism" }
+			id: "02B4B8CD00566436"
+			optional: true
+			size: 1.0d
+			tasks: [
+				{
+					id: "446E2D50407ACA92"
+					item: { count: 1, id: "ars_technica:calibrated_precision_mechanism" }
+					type: "item"
+				}
+				{
+					id: "7745073458F7658A"
+					item: { count: 1, id: "ars_ocultas:altar" }
+					type: "item"
+				}
+			]
+			x: 6.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6C5F1EF0B8D472BC", "2AB95D9A871390A1", "14A8B1AB171D8AA0", "6E37250E08195F9E", "10D9E0560F578D80", "76A0187154F6666F"]
+			icon: { id: "ars_nouveau:archmage_spell_book" }
+			id: "5BF0138299B43A12"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "45E9B1FD72E67852"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					id: "44753CAACD35203D"
+					item: { count: 1, id: "ars_nouveau:archmage_spell_book" }
+					type: "item"
+				}
+				{
+					id: "5EEC3954431C86E4"
+					item: { count: 1, id: "irons_spellbooks:dragonskin_spell_book" }
+					type: "item"
+				}
+				{
+					id: "05925B10C422B403"
+					item: { count: 1, id: "spectrum:moonstone_core" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "79231CB1C97DC72F"
+					item: { count: 1, id: "ars_elemental:mark_of_mastery" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 20.5d
+		}
+	]
+}

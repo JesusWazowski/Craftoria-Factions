@@ -12,6 +12,10 @@
 	chapter.0CF7A598566497C7.title: "&6Completionist"
 	chapter.1910D05CD66EC477.title: "Fishing"
 	chapter.1CFBA632673ABBFD.title: "Organized Storage"
+	chapter.1E829EEE0692CBA2.chapter_subtitle: [
+		"Exploration, combat, ritual and loot: Occultism, Apotheosis, Malum, Neo Vitae and the far realms."
+	]
+	chapter.1E829EEE0692CBA2.title: "&cRitualist Milestones"
 	chapter.216D532684E20496.title: "Bosses"
 	chapter.26E59C8DBA7F6FE3.title: "Monster Mayhem"
 	chapter.2A4C06811555B5D0.title: "Relics \\& Artifacts"
@@ -23,11 +27,23 @@
 	chapter.3B4FADE31FB88E9F.title: "Iron's Spells"
 	chapter.40CEA39FE5F5225D.title: "Mekanism: Industry"
 	chapter.5158EB105DEA1F80.title: "Immersive Aircraft"
+	chapter.517771B5A1AF0819.chapter_subtitle: [
+		"Engineered production: Create, Modern Industrialization, PneumaticCraft and aircraft."
+	]
+	chapter.517771B5A1AF0819.title: "&6Mechanist Milestones"
 	chapter.51BB74521F2334FA.title: "Cooking"
 	chapter.53A9F74C4BFE02D2.title: "MI: Electric Age"
+	chapter.575BCA3102AA8BFF.chapter_subtitle: [
+		"Integrated scientific infrastructure: AE2, Mekanism, Powah and Just Dire Things."
+	]
+	chapter.575BCA3102AA8BFF.title: "&bStargazer Milestones"
 	chapter.587D73D979FA9D28.title: "MI: Quantum Age"
 	chapter.58ABCA8D818937AA.title: "Mekanism: Logistics"
 	chapter.5A3894BACC5E8994.title: "Theurgy"
+	chapter.5B308E8C461FC08E.chapter_subtitle: [
+		"Magical experimentation: Ars Nouveau, Iron's Spells and Spectrum."
+	]
+	chapter.5B308E8C461FC08E.title: "&dSpellcaster Milestones"
 	chapter.5BF964A2F3CAA6E8.title: "Transportation"
 	chapter.61F4FCD929EE04DC.title: "Apotheosis"
 	chapter.679ED31B5B1D91DA.title: "Replication"
@@ -46,6 +62,7 @@
 	chapter_group.3F2E4C487BEC262A.title: "&8&lMisc&r &9⚒"
 	chapter_group.49042A4D0EC96D55.title: "&8&lStorage &6❑"
 	chapter_group.5016E3C5975D88DE.title: "&8&lAgriculture&r ♣"
+	chapter_group.6D3FCD45F0736557.title: "&6&lFaction Milestones"
 	file.0000000000000001.title: "&lCraftoria"
 	image.00D5A5F7DF551B88.title: "Da' plane! Da' Plane!"
 	image.016243ADD1F6272C.title: "MI: The Electric Age"
@@ -104,6 +121,11 @@
 	quest.0035439F73199781.title: "&eEnergized Steel"
 	quest.003AC28EAB72F0E6.title: "unlocks/equipment/early_elytra"
 	quest.003C38C78609709B.quest_desc: ["Crafted in the &bInscriber&f, the &bAccumulation Press&f is used with &bSky Stone Ingots&f to produce &bAccumulation Circuits&f."]
+	quest.00587E79E0F2BBB2.quest_desc: [
+		"&7A 172-rune altar is a building in its own right. The Athanor here can even make nether stars."
+	]
+	quest.00587E79E0F2BBB2.quest_subtitle: "Tier IV milestone: +2 claimed chunks"
+	quest.00587E79E0F2BBB2.title: "Transcendence"
 	quest.006DFA2A9D28D01B.title: "unlocks/blocks/fabrication_chest"
 	quest.0075009DEEA010B7.quest_desc: [
 		"Get your war on..."
@@ -214,12 +236,26 @@
 	quest.026C88446512DDB8.quest_subtitle: "Can run &eCoke Oven&r recipes in batches."
 	quest.027D62E83A7A81B4.title: "unlocks/enchantments/improved_critical"
 	quest.02801CF636366CA6.title: "unlocks/trinkets/fanciful_belt"
+	quest.02936F7BA59489E5.quest_desc: [
+		"&7Moonstone geodes grow in the Deeper Down. The moonstone pedestal structure is 13x13x7."
+	]
+	quest.02936F7BA59489E5.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.02936F7BA59489E5.title: "Moonlit Mastery"
 	quest.029408BEBBA6909B.title: "unlocks/equipment/any_preenchanted_tool"
 	quest.02A82707E3F2E6B8.title: "unlocks/blocks/universe_spyhole"
 	quest.02AC8B313D626C44.title: "unlocks/enchantments/voiding_crafting"
 	quest.02AE5771A57BC6BE.quest_subtitle: "Complete the quest chapter."
 	quest.02AE5771A57BC6BE.title: "&3Applied Energistics"
 	quest.02B0B4C2576ABB12.title: "unlocks/trinkets/fanciful_circlet"
+	quest.02B4B8CD00566436.quest_desc: [
+		"&7Ars Technica runs on Create parts; Ars Ocultas speaks to Occultism. Both are yours to use, but their inputs come from Mechanists and Ritualists."
+		""
+		"&7This quest awards no chunks and is not needed to finish the line."
+		""
+		"&8Optional cooperation."
+	]
+	quest.02B4B8CD00566436.quest_subtitle: "Optional: Spellcaster connectors that need another faction."
+	quest.02B4B8CD00566436.title: "Diplomatic Interfaces"
 	quest.02D3AFC713077502.quest_desc: ["Makes fermentation processes more &6efficient&r. &aYou may wish to automate this&r."]
 	quest.02E41ED20A80B914.title: "milestones/unlock_remembering_boss_memories"
 	quest.03030E8B6522BA85.title: "hidden/collect_sawblade_holly_berry"
@@ -436,8 +472,18 @@
 	quest.0633D2B1E1DB778B.title: "Silicon"
 	quest.063C55683B4163AF.title: "triggers/hints/shimmerstone_page1"
 	quest.064235CAA1FBF2BB.title: "mod_integration/the_bumblezone/white_continuity"
+	quest.064FB462479A4487.quest_desc: [
+		"&7Relays carry source across the base and turrets cast spells without a caster."
+	]
+	quest.064FB462479A4487.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.064FB462479A4487.title: "Source Logistics"
 	quest.06573610058AE660.title: "Red Glowcane"
 	quest.066402982AEF9728.title: "triggers/hints/azurite_page0"
+	quest.068E8FA1F7DB7A28.quest_desc: [
+		"&7Spells are sentences. Learn enough words to move, light the dark and work the fields."
+	]
+	quest.068E8FA1F7DB7A28.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.068E8FA1F7DB7A28.title: "Glyph Scholar"
 	quest.068FF8BF07CAB1C3.title: "unlocks/colored_saplings/purple_sapling"
 	quest.069382B7A2FC7D35.quest_desc: [
 		"Will &6calcify&r and &close&r efficiency over time to a minimum of &e33%&r efficiency when not using &bDistilled Water&r. "
@@ -460,6 +506,15 @@
 	]
 	quest.06DED76B2F4AFD02.title: "Coolants"
 	quest.06E3AE334E940D6E.title: "hidden/collect_primordial_torch"
+	quest.06EF8A00EE25C6C9.quest_desc: [
+		"&7Waystone travel costs one level per 100 blocks (27 levels across dimensions). Warp plates and global waystones are free."
+		""
+		"&7Under a locked session, travel destinations must be in claimed chunks. An &bExpulsion Pylon&7 keeps unwanted visitors out of your claim."
+		""
+		"&8Tier I milestone: +1 claimed chunk."
+	]
+	quest.06EF8A00EE25C6C9.quest_subtitle: "Shared magic: Waystones and Pylons."
+	quest.06EF8A00EE25C6C9.title: "Paths Between Stones"
 	quest.06F1E4885CE3C0C9.quest_desc: ["&bBlank Parchment&r can be used in the &bScribe's Table&r to put &dSpells&r onto the &6Parchment&r."]
 	quest.06F3E3F11AD94BCB.title: "unlocks/head_fusion/incandescent_recipes"
 	quest.0729CB454B970201.quest_desc: [
@@ -493,6 +548,11 @@
 	quest.07821D28021BB440.quest_subtitle: "Drill, Baby. Drill!"
 	quest.078665CB1B57E34C.title: "unlocks/colored_lamps/light_blue_lamp"
 	quest.07A78B338ED8DD51.title: "unlocks/food/suspicious_brew"
+	quest.07AF6A7D5AEDEEF9.quest_desc: [
+		"&7Relics are loot only, at a 10% chest chance, and Lootr gives everyone their own chest. Relics level up with you, and Iron's Gems 'n Jewelry turns looted gems into rings and amulets."
+	]
+	quest.07AF6A7D5AEDEEF9.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.07AF6A7D5AEDEEF9.title: "Relic Hunter"
 	quest.07C2255AD8FB16D5.title: "unlocks/enchantments/vanilla_water"
 	quest.07CDA4A349A19C92.title: "unlocks/weather/clear"
 	quest.07D88A0ABF82A39A.quest_desc: ["Harvested from &6Animals&f while using a &bKnife&f."]
@@ -581,6 +641,11 @@
 		""
 		"The effiency &owill&r reset if the recipe the machine is &6processing&f changes."
 	]
+	quest.08CCF302BE9DCBD2.quest_desc: [
+		"&7LPG burns at 720 EU/mB in MI generators before you have any electricity. Refining MI crude oil here beats MI's own distillation until nuclear power."
+	]
+	quest.08CCF302BE9DCBD2.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.08CCF302BE9DCBD2.title: "Refined Fuels"
 	quest.08DD0CB24FD0B193.quest_desc: [
 		"- &6Rotate&r components precisely"
 		""
@@ -706,6 +771,11 @@
 	]
 	quest.0B7267B31A1CCECA.quest_subtitle: "Draw the circle. Speak the words. Pay the price."
 	quest.0B7267B31A1CCECA.title: "Your First Ritual"
+	quest.0B929B7024E16BBB.quest_desc: [
+		"&7Heat generators are 2.5x stronger in this pack. An Enrichment Chamber doubles ore within your first hour of osmium."
+	]
+	quest.0B929B7024E16BBB.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.0B929B7024E16BBB.title: "Osmium Age"
 	quest.0B94435972292812.quest_desc: [
 		"The &bSpatial IO Port &fis the core of the &bSpatial Digitizing system&f. It's placed at the vertex where all 3 &bpylon edges &fmeet. It's where you place the &bSpatial Drive &fand allow it to&6 capture a build or rlease it&f. This is also the block to power when charging the system."
 		""
@@ -809,6 +879,11 @@
 	]
 	quest.0C6D0B1C1AF75292.quest_subtitle: "Say My Name!"
 	quest.0C6D0B1C1AF75292.title: "Chemical Reactor"
+	quest.0C6E5DF5C27B3F64.quest_desc: [
+		"&7The best anti-magic armor in the pack: an alternative to the MekaSuit against casters and Cataclysm beams."
+	]
+	quest.0C6E5DF5C27B3F64.quest_subtitle: "Tier IV milestone: +2 claimed chunks"
+	quest.0C6E5DF5C27B3F64.title: "Malignant Stronghold"
 	quest.0C91DF887A33A8E6.quest_desc: [
 		"&oRemember how I said spirits can mine ores for you?&r"
 		""
@@ -821,6 +896,11 @@
 	quest.0CBBECBBB20E8C62.title: "hidden/collect_enchanted_star_candy"
 	quest.0CC32C98A4D260DA.title: "unlocks/colored_lamps/yellow_lamp"
 	quest.0CD0B3C97F8D180A.title: "unlocks/items/everpromise_ribbon_recipe"
+	quest.0CDC263539BE859A.quest_desc: [
+		"&7Basic pedestal crafts: an ender bag, night vision and a fermenting barrel."
+	]
+	quest.0CDC263539BE859A.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.0CDC263539BE859A.title: "Pigment Crafts"
 	quest.0CE23EC64E1F4D8D.title: "unlocks/food/suspicious_brew"
 	quest.0CF205A7783A284C.title: "triggers/hints/fading_page1"
 	quest.0CFD3E65D3B73EC0.title: "triggers/hints/preservation_ruins_page2"
@@ -865,6 +945,11 @@
 		"- &6Right click&r the paper part."
 		"- Take the armor piece out."
 	]
+	quest.0DD00E44A884D417.quest_desc: [
+		"&7Your first assembly line: a belt, a deployer, a press and a saw working in sequence."
+	]
+	quest.0DD00E44A884D417.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.0DD00E44A884D417.title: "Sequenced Assembly"
 	quest.0DD2816485683CE6.quest_desc: ["Forge a complete set of &bSentient Armour&r and begin feeding it the souls of your enemies."]
 	quest.0DD2816485683CE6.quest_subtitle: "The armour no longer serves you. It fights beside you."
 	quest.0DD2816485683CE6.title: "Sentient Armour"
@@ -874,6 +959,11 @@
 		""
 		"Additionally, &bTube Modules&r can be &6attached&r to these &bTubes&r to provide &aextra features&r or &efunctionality&r."
 	]
+	quest.0DFEFC11D3E99018.quest_desc: [
+		"&7Fuse deuterium and tritium in a star of your own. Fusion here runs at 80% of default output."
+	]
+	quest.0DFEFC11D3E99018.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.0DFEFC11D3E99018.title: "Stellar Ignition"
 	quest.0E20737816537599.title: "triggers/hints/radiating_ender_page1"
 	quest.0E30CFA6C5B58BEA.quest_desc: ["This &bVat&r allows you to convert your &bAlchemical Niter&r from one tier to another."]
 	quest.0E30CFA6C5B58BEA.quest_subtitle: "Upgrades?"
@@ -911,12 +1001,26 @@
 	quest.0E50E568DFA078D5.quest_subtitle: "Goo Job!"
 	quest.0E50E568DFA078D5.title: "Begin Just Dire Things"
 	quest.0E616270A77B2B14.title: "triggers/hints/radiating_ender_page1"
+	quest.0E723ECF544C9151.quest_desc: [
+		"&7These connectors are Stargazer or shared science content, but each needs a partner: Create parts, PneumaticCraft parts or Ars source. Trade for what you lack."
+		""
+		"&7This quest awards no chunks and is not needed to finish the line."
+		""
+		"&8Optional cooperation."
+	]
+	quest.0E723ECF544C9151.quest_subtitle: "Optional: Stargazer connectors that need another faction."
+	quest.0E723ECF544C9151.title: "Diplomatic Interfaces"
 	quest.0E869C4DD398CF19.title: "triggers/hints/malachite_page1"
 	quest.0E89FB32767F03C0.quest_desc: [
 		"This is standard &bMinigun Ammo&r with no special properties. "
 		""
 		"However, it can be &6crafted&r with a &bPotion&r to imbue the &bAmmo&r with the &cpotion's effects&r."
 	]
+	quest.0E917634038AAD69.quest_desc: [
+		"&7The progression locks are default. The Uncrafting Table is disabled in this pack."
+	]
+	quest.0E917634038AAD69.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.0E917634038AAD69.title: "Tower and Labyrinth"
 	quest.0EA3189E471564A6.title: "unlocks/reagents/raw_bloodstone"
 	quest.0EA9EF2362AE52A2.quest_desc: ["The &bBasic Purifying Factory&r allows you to process &a3&r purifying recipes at once."]
 	quest.0EA9EF2362AE52A2.title: "Basic Purifying Factory"
@@ -1073,6 +1177,11 @@
 		"Tip: Combine this with the &eTome of Extraction&r to safely move powerful enchantments from existing gear into your collection."
 	]
 	quest.10BD26FC074B3066.quest_subtitle: "Master the Art of Enchanting"
+	quest.10D9E0560F578D80.quest_desc: [
+		"&7Hand in &b512 Moonstone Shards&7. Spectrum keeps a ring that wants this many as a joke; you are making the joke real."
+	]
+	quest.10D9E0560F578D80.quest_subtitle: "Tier IV milestone: +2 claimed chunks"
+	quest.10D9E0560F578D80.title: "Moonstone Hoard"
 	quest.10DE06AD0C054F60.title: "milestones/reveal_blood_orchid_petals"
 	quest.1103A1D59725AF3E.title: "unlocks/enchantments/vanilla_luck"
 	quest.110A09E98407AD4E.title: "hidden/collect_pigment/blue"
@@ -1091,6 +1200,11 @@
 	]
 	quest.110B0C8DD2FD5BE7.quest_subtitle: "Harness the power of advanced technology"
 	quest.110B0C8DD2FD5BE7.title: "&fWelcome to &aMekanism"
+	quest.111C700822136518.quest_desc: [
+		"&7Schematicannons are five times faster in this pack; Enhanced and Fast Schematicannon and the Schematic Checker add more. Pattern schematics tile a design across an area."
+	]
+	quest.111C700822136518.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.111C700822136518.title: "Blueprint Bureau"
 	quest.11337DF29B892F12.title: "hidden/collect_blazing_crystal"
 	quest.1145827C7C632640.quest_desc: [
 		"&7Harness the power of &bNiotic Energy&7."
@@ -1141,6 +1255,11 @@
 	quest.11E82005D3CF15DD.title: "unlocks/items/knowledge_gem"
 	quest.11FC8E533E897B8F.quest_desc: ["With just &b500,000 FE&f you can summon &blightning&f by charging a &bsnowball in the energizer!!!"]
 	quest.11FC8E533E897B8F.quest_subtitle: "Lightning in a snowball?"
+	quest.11FF294D090ED9C4.quest_desc: [
+		"&7The steel-drill quarry yields bauxite, uraninite, black quartz and zinc. Modern Dynamics pipe upgrades scale with MI motors and pumps."
+	]
+	quest.11FF294D090ED9C4.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.11FF294D090ED9C4.title: "Pipes and Quarries"
 	quest.12008A39DAFE0581.title: "mod_integration/neepmeat/vivisect_kindling"
 	quest.12094D44D2E3DB16.quest_desc: [
 		"An &bArmor&r that can be &6upgraded&r but has the armor points of &7Iron&r."
@@ -1248,6 +1367,11 @@
 		"Acquired by fighting &4Pillagers&r \\& the &4Wilden Chimera&r \\& &4The Wither&r."
 	]
 	quest.13C735FBB47EDCB2.title: "Archmage Spell Book (T3)"
+	quest.13DAEB6576F5D310.quest_desc: [
+		"&7Find a meteorite and recover its four presses. AE2 has no tech gate in this pack: the hard part is the search."
+	]
+	quest.13DAEB6576F5D310.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.13DAEB6576F5D310.title: "Fragments of a Fallen Star"
 	quest.13DBACAD958FC86D.title: "triggers/hints/citrine_page0"
 	quest.13F9067234C360D0.title: "unlocks/colored_lamps/light_gray_lamp"
 	quest.13FD42DF24D8E00E.title: "unlocks/blocks/black_hole_chest"
@@ -1262,9 +1386,28 @@
 	quest.1439B72B421AF009.quest_subtitle: "Sweet, Sweet Pie"
 	quest.14516C53D7174797.title: "midgame/collect_moonstone_shard"
 	quest.1468B8262007DF2C.title: "milestones/reveal_quitoxic_reeds"
+	quest.146B73D64A5E5AD1.quest_desc: [
+		"&7Waystone travel costs one level per 100 blocks (27 levels across dimensions). Warp plates and global waystones are free."
+		""
+		"&7Under a locked session, travel destinations must be in claimed chunks. An &bExpulsion Pylon&7 keeps unwanted visitors out of your claim."
+		""
+		"&8Tier I milestone: +1 claimed chunk."
+	]
+	quest.146B73D64A5E5AD1.quest_subtitle: "Shared magic: Waystones and Pylons."
+	quest.146B73D64A5E5AD1.title: "Paths Between Stones"
+	quest.147E934448684668.quest_desc: [
+		"&7Hand in &b1,536 spirits&7 reaped from natural spawns: spawner mobs drop none here. A spirit pouch and a good scythe help."
+	]
+	quest.147E934448684668.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.147E934448684668.title: "Spirit Harvest"
 	quest.148308ADDCAE5D36.title: "unlocks/enchantments/steadfast"
 	quest.14936F74F0D84BEA.title: "unlocks/blocks/ender_glass"
 	quest.149E278A2E9EFE34.title: "hidden/collect_cookbooks/brewers_handbook"
+	quest.14A8B1AB171D8AA0.quest_desc: [
+		"&7The best book takes the hide of the dragon itself."
+	]
+	quest.14A8B1AB171D8AA0.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.14A8B1AB171D8AA0.title: "Dragonskin"
 	quest.14A9BFD8547DFDA0.title: "triggers/hints/resonance_shards_page0"
 	quest.14B0F4CA0DE629A2.title: "unlocks/reagents/prickly_bayleaf"
 	quest.14DDF01D6F7D46A7.quest_desc: [
@@ -1297,6 +1440,11 @@
 	quest.15325B16AFE33D5C.quest_desc: ["You'll need &bTallow&r to make proper occultist candles. &6Killing larger animals&r with any &bknife&r will harvest some."]
 	quest.15325B16AFE33D5C.quest_subtitle: "Tools of the Trade"
 	quest.15325B16AFE33D5C.title: "Knives"
+	quest.153D6C564AAC5DD5.quest_desc: [
+		"&7Power-free automation: Drygmy mob farms, Whirlisprig crops, Wixie potions and Starbuncle couriers. Each farm needs ground to stand on."
+	]
+	quest.153D6C564AAC5DD5.quest_subtitle: "Tier I milestone: +2 claimed chunks"
+	quest.153D6C564AAC5DD5.title: "Familiar Helpers"
 	quest.1560BC273E27875B.title: "unlocks/blocks/shimmerstone_lights"
 	quest.1561B898CA3CA422.title: "unlocks/enchantments/vanilla_trial_breaching"
 	quest.156575F76CAB51A0.quest_desc: [
@@ -1469,6 +1617,11 @@
 		""
 		"Its large mass results in a very short range and causes the &bMinigun&r to use &7air&r at an &6increased rate&r."
 	]
+	quest.167CC36685E48564.quest_desc: [
+		"&7The second book needs a trip to the Nether for quartz and blaze rods."
+	]
+	quest.167CC36685E48564.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.167CC36685E48564.title: "Mage's Tome"
 	quest.168454850D8436AD.title: "unlocks/glowblocks/black_glowblock"
 	quest.1687FEFDB90272B0.quest_desc: ["The Farmer's Delight, Rustic Delight, Dumpling's Delight Rewrapped, and Fruits Delight mods all add more crop variety to our favorite game."]
 	quest.168AB4DADB1CA2D9.quest_desc: [
@@ -1543,6 +1696,11 @@
 		""
 		"Has some stroage space, one weapon slot, four upgrade slots, a banner slot, and can even take rockets for boost!"
 	]
+	quest.16F7091EA870E500.quest_desc: [
+		"&7Each BOMD boss has about three times its default health here."
+	]
+	quest.16F7091EA870E500.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.16F7091EA870E500.title: "Mass Destruction"
 	quest.16F7C881B4CED163.quest_desc: [
 		"- &bGlyphs&r: "
 		"&8+ Form: Touch"
@@ -1599,6 +1757,11 @@
 	quest.1730B5AB764F2F49.quest_subtitle: "The core component that brings your Smeltery to life"
 	quest.1730B5AB764F2F49.title: "The Heart of the Smeltery"
 	quest.1741E5781EC19C48.title: "milestones/unlock_spawner_creature_change"
+	quest.1744E1FF5D81C07F.quest_desc: [
+		"&7Ars addons: Additions, Controle relays, Zero, StarbuncleMania (whose fluid sourcelink turns lava into source) and Not Enough Glyphs; Ars Musique sets spells to music. Ars Unification also belongs here."
+	]
+	quest.1744E1FF5D81C07F.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.1744E1FF5D81C07F.title: "Arcane Innovations"
 	quest.175FB8657E473B96.title: "mod_integration/the_bumblezone/any_essence"
 	quest.17645BCE1F30F1C7.title: "unlocks/ampoules/raw_azurite_ampoule"
 	quest.176524D0E4475298.quest_desc: [
@@ -1618,8 +1781,19 @@
 		""
 		"You can also use smarter insertion methods, such as &bDrones&r or &bLogistics Frames&r, or other mods, to automatically manage the player's &9inventory&r—like keeping it stocked with &e64 torches&r, for instance."
 	]
+	quest.17952259040FF4A5.quest_desc: [
+		"&7Completed automatically for members of the Spellcasters. Only your faction can see this chapter."
+	]
+	quest.17952259040FF4A5.title: "Spellcasters Charter"
 	quest.17AEEBACB1111D66.title: "unlocks/food/mint_beverages"
 	quest.17B440777B3B968D.title: "unlocks/colored_saplings/magenta_sapling"
+	quest.17B98A2AC380259B.quest_desc: [
+		"&7Your first logistics are routers and pipes. Both are shared between the science factions, as are the Mekanistic Routers and Modern Industrial Routers connectors; this quest asks for the one your own machines can build."
+		""
+		"&8Tier I milestone: +1 claimed chunk."
+	]
+	quest.17B98A2AC380259B.quest_subtitle: "Shared science: Modular Routers and Pipez."
+	quest.17B98A2AC380259B.title: "Routing Theory"
 	quest.17C1F2791A6E0676.quest_desc: [
 		"Mekanism offers several upgrades to customize your machines. Install them through the machine's &bUpgrade&r tab or &6shift + right-click&r the machine with an upgrade."
 		""
@@ -1649,6 +1823,22 @@
 	quest.17C1F2791A6E0676.quest_subtitle: "Tune your machines to perfection"
 	quest.17C1F2791A6E0676.title: "Machine Upgrades"
 	quest.17C211239CD33B6C.title: "unlocks/reagents/bedrock_dust"
+	quest.17D0CA70DE5804BA.quest_desc: [
+		"&7Every Stargazer enterprise starts from a fixed point. Your party owner or an officer must stand inside a chunk your faction has claimed and run &b/sethome&7."
+		""
+		"&6How faction homes work"
+		"&7- &b/sethome&7 saves the dimension, position and facing of whoever runs it. It only works while the session is &aunlocked&7, inside your own claim, within world height. Operators can also run &b/sethome <party>&7 for any faction."
+		"&7- &b/home&7 shows the saved home. It never teleports: travel is built, not commanded."
+		"&7- Operators cannot &block&7 a session until every faction has a valid home."
+		"&7- While a session is locked, anyone found in the wilderness is returned to the last claimed position they stood in, or to this home. New and reassigned members also arrive here."
+		"&7- If the home chunk is unclaimed, the home becomes invalid and members are disconnected until it is fixed."
+		""
+		"&7This task completes automatically once your faction has a valid home. Your faction starts with &b4&7 claimable chunks; this milestone line raises that to &b64&7."
+		""
+		"&8Starter milestone: +1 claimed chunk."
+	]
+	quest.17D0CA70DE5804BA.quest_subtitle: "Use /sethome to establish your faction base."
+	quest.17D0CA70DE5804BA.title: "Plant the Banner"
 	quest.17E7640F55666577.quest_desc: [
 		"The &bPigment Extractor&r allows you to take almost any &adye-colored&r object and &6extract the dye&r from it."
 		""
@@ -1722,6 +1912,11 @@
 		"&8(storage chest/barrel still needs to be set)"
 	]
 	quest.183EB573F8F1DC8C.quest_subtitle: "Potion | Crafting | Apparatus"
+	quest.1842C75965DE6A28.quest_desc: [
+		"&7Trial vaults are repeatable in this pack. Wither Skeleton Tweaks also makes the Nether worth a second look."
+	]
+	quest.1842C75965DE6A28.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.1842C75965DE6A28.title: "Ominous Trials"
 	quest.185A13426F0F2D9F.title: "unlocks/equipment/knotted_sword"
 	quest.18680FEE2B6FF16F.quest_desc: [
 		"  Crops planted on &bBlazebloom Soil&r will &6harvest&r and &6replant&r themselves."
@@ -1774,6 +1969,11 @@
 		"Be cautious—it can also set &6fire&r to the &asurrounding environment&r!"
 	]
 	quest.18F1D911289E9B7D.title: "unlocks/blocks/blackslag_shimmerstone_light"
+	quest.19108F89C984E286.quest_desc: [
+		"&7Source is the lifeblood of Ars. Mycelial and Volcanic sourcelinks are the easiest to keep fed."
+	]
+	quest.19108F89C984E286.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.19108F89C984E286.title: "Novice Arcanist"
 	quest.1910E0D1BB24E94D.quest_desc: [
 		"To produce &eenergy&r, the &bSolar Panel&r needs a matching tier &bPhotovoltaic Cell&r in its &6inventory&r."
 		""
@@ -1892,12 +2092,33 @@
 		""
 		"{image:justdirethings:block/gooblock_tier3 width:100 height:100 align:center fit:true}"
 	]
+	quest.1B001CD188427C01.quest_desc: [
+		"&7Cinder essence from the Citadel Keepers. Each item takes at most three upgrades in this pack."
+	]
+	quest.1B001CD188427C01.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.1B001CD188427C01.title: "Upgrade Orbs"
 	quest.1B03CC2B86C5BF56.title: "hidden/collect_vanilla/phantom_membrane"
 	quest.1B1ED97DF0FE2E3C.quest_desc: ["The&b Storage Bus&f allows you to use a chest or other storage box a &5network &ffor your &bME System&f to connect to rather then a &bStorage Drive&f."]
 	quest.1B28EE5B24ABEE42.title: "unlocks/equipment/gemstone_armor_category"
 	quest.1B345A2F9F75399A.title: "hidden/collect_cookbooks/melochites_cookbook_vol_2"
+	quest.1B55340F748A44E4.quest_desc: [
+		"&7Every Reliquary ingredient comes from mob kills in this pack: the gold-ingot fallback recipes are disabled."
+		""
+		"&7The Emperor's Chalice is also part of the infinity water cell."
+		""
+		"&8Tier III milestone: +1 claimed chunk."
+	]
+	quest.1B55340F748A44E4.quest_subtitle: "Shared magic: Reliquary."
+	quest.1B55340F748A44E4.title: "Relics of the Fallen"
 	quest.1B56B8988AB177CF.title: "unlocks/items/incandescent_amalgam_doom"
 	quest.1B5BAD2DB3308907.title: "unlocks/blocks/enchanter"
+	quest.1B659D65F61FFA15.quest_desc: [
+		"&7Integrated Dynamics is magic-shared here for its menril magitech flavour. It is logic and transport only: Integrated Terminals and Crafting are not in the pack."
+		""
+		"&8Tier II milestone: +1 claimed chunk."
+	]
+	quest.1B659D65F61FFA15.quest_subtitle: "Shared magic: Integrated Dynamics, Tunnels and Scripting."
+	quest.1B659D65F61FFA15.title: "Integrated Thought"
 	quest.1B65CA6898CC3F9E.quest_desc: [
 		"Tier Installers let you upgrade compatible &eMekanism&r machines directly in-world, without breaking them down and rebuilding them."
 		""
@@ -1916,6 +2137,11 @@
 	quest.1BDB469B9DE9CE40.title: "unlocks/colored_lamps/green_lamp"
 	quest.1BE2D120BD28C648.title: "unlocks/weather/thunder"
 	quest.1BF08713FF3DB851.title: "milestones/unlock_spawner_manipulation"
+	quest.1BF5D6C35C09ABE3.quest_desc: [
+		"&7Powah is the cheapest scalable FE here. It runs everything except MI, which only accepts EU."
+	]
+	quest.1BF5D6C35C09ABE3.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.1BF5D6C35C09ABE3.title: "Energized"
 	quest.1C19154B90CBEB17.title: "hidden/collect_cookbooks/imperial_cookbook"
 	quest.1C25114D2AF71C35.quest_desc: [
 		"  Using &bIndustrial TNT&r, the &bImplosion Compressor&r is able to compress the dusts and ingots of the most resistant materials. This includes &bTungsten&r, &bBlast-proof Alloy&r, &bBeryllium&r and finally &bDiamonds&r! Some of those materials will be very important for your journey into nuclear fission."
@@ -1959,6 +2185,24 @@
 	quest.1CAAB041CC0A02FE.title: "triggers/hints/dragonbone_page0"
 	quest.1CACDF56CB395997.quest_desc: ["You can have my &bExtendo Grip&r... when you &6pry&r it out of my cold, dead, fingers. xD"]
 	quest.1CACDF56CB395997.quest_subtitle: "Reach for the sky!"
+	quest.1CAE0733E1A5C95E.quest_desc: [
+		"&7MIFA pushes Industrial Foregoing addons past tier 2. The Actually Additions &bEmpowerer&7 is mandatory for Cosmic Matter and the boss-gateway pearls, so other factions may come to you for it."
+		""
+		"&7Its crusher doubles late MI ores. A &bTempad&7 opens timed doors home, for a price in chronons."
+		""
+		"&8Tier II milestone: +1 claimed chunk."
+	]
+	quest.1CAE0733E1A5C95E.quest_subtitle: "Shared science: Industrial Foregoing, Actually Additions and Tempad."
+	quest.1CAE0733E1A5C95E.title: "Industrial Collective"
+	quest.1CB028B73E4B4521.quest_desc: [
+		"&7Xychorium crystals feed XyCraft machines and storage. In this pack XyCraft uses iron where it would use aluminium, so it is an early iron-tier option."
+		""
+		"&7The bronze-drill MI quarry also yields xychorium."
+		""
+		"&8Tier I milestone: +1 claimed chunk."
+	]
+	quest.1CB028B73E4B4521.quest_subtitle: "Shared science: XyCraft."
+	quest.1CB028B73E4B4521.title: "Xychorium Crystals"
 	quest.1CB1BCCEC54D72C6.title: "unlocks/colored_saplings/orange_sapling"
 	quest.1CC5987AE95902C5.title: "hidden/collect_raw_bloodstone"
 	quest.1CC910880728D896.quest_desc: [
@@ -2034,6 +2278,15 @@
 	quest.1D57C823A1F0203C.quest_subtitle: "Cling, Clang, Cling, Clang!"
 	quest.1D57C823A1F0203C.title: "Steam Mining Drill"
 	quest.1D6254A3EA14DB80.title: "unlocks/reagents/onyx_powder"
+	quest.1D7DD0820FEEF6AB.quest_desc: [
+		"&7Cataclysm Spellbooks are Ritualist loot, but they cast Iron's spells: a natural trade with the Spellcasters."
+		""
+		"&7This quest awards no chunks and is not needed to finish the line."
+		""
+		"&8Optional cooperation."
+	]
+	quest.1D7DD0820FEEF6AB.quest_subtitle: "Optional: Ritualist connectors that need another faction."
+	quest.1D7DD0820FEEF6AB.title: "Diplomatic Interfaces"
 	quest.1D814F2B51652D6C.title: "unlocks/trinkets/ring_of_denser_steps"
 	quest.1D82D6814ED1BD59.title: "unlocks/food/glistering_jelly_tea"
 	quest.1D8772B99DEB6713.title: "unlocks/items/constructors_staff"
@@ -2066,6 +2319,22 @@
 	]
 	quest.1DE9A85C2E5348D1.quest_subtitle: "Control the heart of fusion power"
 	quest.1DE9A85C2E5348D1.title: "Fusion Reactor Controller"
+	quest.1DEE44148A861944.quest_desc: [
+		"&7Every Spellcaster enterprise starts from a fixed point. Your party owner or an officer must stand inside a chunk your faction has claimed and run &b/sethome&7."
+		""
+		"&6How faction homes work"
+		"&7- &b/sethome&7 saves the dimension, position and facing of whoever runs it. It only works while the session is &aunlocked&7, inside your own claim, within world height. Operators can also run &b/sethome <party>&7 for any faction."
+		"&7- &b/home&7 shows the saved home. It never teleports: travel is built, not commanded."
+		"&7- Operators cannot &block&7 a session until every faction has a valid home."
+		"&7- While a session is locked, anyone found in the wilderness is returned to the last claimed position they stood in, or to this home. New and reassigned members also arrive here."
+		"&7- If the home chunk is unclaimed, the home becomes invalid and members are disconnected until it is fixed."
+		""
+		"&7This task completes automatically once your faction has a valid home. Your faction starts with &b4&7 claimable chunks; this milestone line raises that to &b64&7."
+		""
+		"&8Starter milestone: +1 claimed chunk."
+	]
+	quest.1DEE44148A861944.quest_subtitle: "Use /sethome to establish your faction base."
+	quest.1DEE44148A861944.title: "Plant the Banner"
 	quest.1DF80E9D2A1732BC.quest_desc: ["Use a &5Dispel&r spell or &4kill&r the mob to get the charm back."]
 	quest.1DF80E9D2A1732BC.quest_subtitle: "Dispel / Kill"
 	quest.1DF80E9D2A1732BC.title: "Accidental summon?"
@@ -2131,6 +2400,11 @@
 		""
 		"With a &bModule Expansion Card&r, you can precisely &6adjust&r the pressure threshold through the &3GUI&r."
 	]
+	quest.1EE7BF0AF698D413.quest_desc: [
+		"&7Cataclysm bosses have 3x to 25x health here, with per-hit damage caps that make every fight last minutes. The Harbinger's witherite builds the Wither Assault Shoulder Weapon."
+	]
+	quest.1EE7BF0AF698D413.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.1EE7BF0AF698D413.title: "Cataclysm: Ruin and Flame"
 	quest.1EE981E9EB635911.title: "mod_integration/the_bumblezone/light_blue_calming"
 	quest.1EEBC04FABD3B3F2.quest_desc: ["&bQuartz Fiber&f is used to &6transfer &bpower&f, but not &bChannels&f."]
 	quest.1EEBC04FABD3B3F2.title: "Quartz Fiber"
@@ -2141,6 +2415,15 @@
 	quest.1F0B8A0EBCBA4399.title: "&bIron's Spells 'n Spellbooks"
 	quest.1F33EBCE377EF15D.quest_desc: ["The &bAdvanced Crushing Factory&r can process up to &a5&r crushing processes at the same time, containing the same \"&eAuto-Sort&r\" function."]
 	quest.1F33EBCE377EF15D.title: "Advanced Crushing Factory"
+	quest.1F42C6440FF17A48.quest_desc: [
+		"&7Data models are the only way to automate boss drops here: bosses are blacklisted from spawners, cloning and crushers."
+		""
+		"&7Train a model by killing its mob with the Deep Learner equipped, then run it in a Simulation Chamber."
+		""
+		"&8Tier II milestone: +1 claimed chunk."
+	]
+	quest.1F42C6440FF17A48.quest_subtitle: "Shared science: Hostile Neural Networks."
+	quest.1F42C6440FF17A48.title: "Simulated Prey"
 	quest.1F5752EB1E364FC7.title: "milestones/unlock_remembering_boss_memories"
 	quest.1F5996E728CD376D.title: "unlocks/colored_saplings/brown_sapling"
 	quest.1F715A14CD9A0FD9.title: "unlocks/blocks/spirit_instiller"
@@ -2192,6 +2475,11 @@
 	quest.1F9A1456487655B0.quest_subtitle: "Instant Travel"
 	quest.1F9A1456487655B0.title: "Teleporter"
 	quest.1F9D78BC05E4949D.title: "hidden/discover_rock_crystal"
+	quest.1F9F68C26576C073.quest_desc: [
+		"&7Throw offerings into a Weeping Well for void materials. Enigmatic Arcana and Gaze build on the same spirit infusions."
+	]
+	quest.1F9F68C26576C073.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.1F9F68C26576C073.title: "The Weeping Well"
 	quest.1FA90B3E33E0DFEE.quest_desc: [
 		"Path &6clearing&r and &6building&r. Very cool."
 		""
@@ -2390,6 +2678,11 @@
 	quest.21B38D40ACA3F4E3.title: "unlocks/blocks/memories_via_mob_head"
 	quest.21B62373ACBE871E.quest_subtitle: "A variant of the Hearthstone that you can bind to any location!"
 	quest.21B6DE76E735A196.quest_desc: ["&bLiner Chasis&r and &bRotational Chassis&r &6help&r build contraptions without superglue."]
+	quest.21BF8E78D80F38D9.quest_desc: [
+		"&7Ascent needs an uncommon set and an Invader kill; Iron's Apothic Invaders adds caster invaders that hit very hard. Gateways to Eternity summons waves on demand."
+	]
+	quest.21BF8E78D80F38D9.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.21BF8E78D80F38D9.title: "Ascent"
 	quest.21C20AAD334EE92F.title: "unlocks/items/bottomless_bundle"
 	quest.21E1E62AA4761EE2.quest_desc: [
 		"There is far more to this world than simply gathering resources and building machines."
@@ -2480,6 +2773,11 @@
 	quest.22D2716905D415E5.title: "Enrichment Chamber"
 	quest.22D9DD78741A197A.title: "unlocks/blocks/spirit_instiller"
 	quest.2303D328050EF6FC.title: "unlocks/trinkets/seven_league_boots"
+	quest.230703DF10F44EDB.quest_desc: [
+		"&7Automate the Assembler first: the pack's Assembler recipes are 25-50% cheaper than hand crafting. MI only takes EU; no FE source can power it."
+	]
+	quest.230703DF10F44EDB.quest_subtitle: "Tier II milestone: +3 claimed chunks"
+	quest.230703DF10F44EDB.title: "Electric Age"
 	quest.23078FC22FA949AB.title: "unlocks/trinkets/any_base_trinket"
 	quest.2311C5782DB24A93.title: "triggers/confirmed_drinking_age"
 	quest.231404F75545A149.quest_desc: [""]
@@ -2520,9 +2818,24 @@
 	quest.23CC2667A1269C9C.title: "Small Spatial Component"
 	quest.23D6139CB82DB980.title: "mod_integration/malum/replenishing"
 	quest.23F1D70D5BFDD550.title: "unlocks/equipment/molten_rod"
+	quest.2401D1C20BF2C8F3.quest_desc: [
+		"&7Jet Boots V are portable flight at about the same point as the other factions reach theirs."
+	]
+	quest.2401D1C20BF2C8F3.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.2401D1C20BF2C8F3.title: "Pneumatic Armor"
+	quest.2409D059D2642477.quest_desc: [
+		"&7Craftoria's custom multiblock runs any Hostile Neural Networks model as an MI recipe and adds greater XP gems: boss drops without the boss."
+	]
+	quest.2409D059D2642477.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.2409D059D2642477.title: "Model Synthesizer"
 	quest.241C0F5717A2CD36.title: "unlocks/food/camomillesque"
 	quest.24200D5B55F7D85C.title: "hidden/get_substantial_azure_dike_charge"
 	quest.242BFA118F1C2DA3.title: "unlocks/enchantments/vanilla_treasure"
+	quest.244F3B46CE4201F6.quest_desc: [
+		"&7Create 6 logistics: factory gauges order components from stock and frogports carry the boxes. Filters Anywhere lets every attribute filter join in, and Sophisticated Storage Create Integration lets your storage ride on contraptions."
+	]
+	quest.244F3B46CE4201F6.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.244F3B46CE4201F6.title: "Packaged Logistics"
 	quest.2472B23BC0C28C6C.quest_desc: [
 		"  Remember those \"ticks\" we talked about? How each one is a twentieth of a second?"
 		""
@@ -2569,6 +2882,15 @@
 	]
 	quest.24A4F1AA0BFFE867.quest_subtitle: "It's Getting &cHot&r In Here"
 	quest.24A4F1AA0BFFE867.title: "Electric Blast Furnace"
+	quest.24A869F533BB7440.quest_desc: [
+		"&7Break matter into salt, sulfur and mercury, then put it back together as something better."
+		""
+		"&7Rare and precious sulfurs need iesnium, fluix or iridium, so some of them are trade goods."
+		""
+		"&8Tier II milestone: +1 claimed chunk."
+	]
+	quest.24A869F533BB7440.quest_subtitle: "Shared magic: Theurgy alchemy."
+	quest.24A869F533BB7440.title: "Spagyrics"
 	quest.24A9E9A5E3B7B041.quest_desc: [
 		"The &aIdentification Chamber&r will &6scan&r items to know their matter values and store them into &cchips&r. "
 		""
@@ -2667,6 +2989,11 @@
 	quest.25D9CC6D269D03B5.title: "unlocks/blocks/cmy_pedestal"
 	quest.25E76B26F9E2D72A.title: "unlocks/items/bottle_of_forfeiture"
 	quest.25F33CB3A9BD4A89.title: "unlocks/redstone/player_detector"
+	quest.2600521B7A1A8AD9.quest_desc: [
+		"&7Creative flight within the brazier's range. It cannot be relayed (blacklisted from Ars Controle relays), so it is base-bound: more claimed ground, more sky."
+	]
+	quest.2600521B7A1A8AD9.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.2600521B7A1A8AD9.title: "Ritual of Flight"
 	quest.263FE6D3550CD41C.quest_desc: [""]
 	quest.263FE6D3550CD41C.title: "Advanced Upgrades"
 	quest.2643E12EC04D65FC.title: "unlocks/equipment/bedrock_tools"
@@ -2775,6 +3102,11 @@
 	quest.2805DA3A1F411588.quest_desc: ["Used to &astore &f&4power&f, you will need to get yourself a &bFE Cell Housing&f."]
 	quest.28174C0B223D28AC.title: "triggers/hints/resonant_lily_page0"
 	quest.281BB992E485D2B7.title: "unlocks/equipment/lagoon_rod"
+	quest.281DAEE2E39ACDE0.quest_desc: [
+		"&7Crafts and Additions bridges kinetics and FE; Enchantment Industry puts enchanting on a belt; Dragons Plus adds fluid hatches and fan processing; Copycats, Connected, Deco, Encased and Bells and Whistles finish the build."
+	]
+	quest.281DAEE2E39ACDE0.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.281DAEE2E39ACDE0.title: "Workshop Extensions"
 	quest.2821236A1E8FEF73.quest_desc: [
 		"The &bFusion Reactor Port&r is a reinforced passage into the center of the &bFusion Reactor&r."
 		""
@@ -2808,6 +3140,13 @@
 	quest.28A35996DE62CFA0.title: "Only 10k? Where wireless?"
 	quest.28CE46C5E5AFD464.title: "unlocks/malachite/fractal_glass_crest_bident"
 	quest.28D21FEB05973DE7.title: "unlocks/trinkets/shieldgrasp_amulet"
+	quest.28D5ABA7D41EB3ED.quest_desc: [
+		"&7Hand in &b512 each&7 of topaz, citrine, amethyst and onyx shards, from the inventory or through Task Screens."
+		""
+		"&7Budding onyx from the Spirit Instiller makes the last of them renewable."
+	]
+	quest.28D5ABA7D41EB3ED.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.28D5ABA7D41EB3ED.title: "Chromatic Hoard"
 	quest.28D8463C6036B3BF.title: "Hamimelon"
 	quest.28EB489B44A05070.quest_desc: ["&aReplicators&r will use the &dMatter&r stored in tanks to replicate the item from scratch and send it back to the &bterminal&r."]
 	quest.28EB489B44A05070.quest_subtitle: "Uses matter stored to create items."
@@ -2819,10 +3158,20 @@
 	]
 	quest.2909AE63FA355344.title: "Tier 3 Glyphs"
 	quest.290D072FA1AED883.title: "unlocks/blocks/crystallarieum"
+	quest.2910BAB7D08B6097.quest_desc: [
+		"&7A rare set and the Wither. Mobs now shrug off a tenth of your damage."
+	]
+	quest.2910BAB7D08B6097.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.2910BAB7D08B6097.title: "Summit"
 	quest.291406AFDDBE4FBE.title: "unlocks/malachite/glass_arrows"
 	quest.292875386D7B9981.quest_desc: ["&bUraninite &fis a ore you can get from &6mining&f. You can also get it from the &bMI Quarry&f. &bUraninite&f is a key part in powah and is used in alot of recipes and to power the &breactor."]
 	quest.292875386D7B9981.quest_subtitle: "Might want to put some gloves on"
 	quest.292875386D7B9981.title: "&aUraninite"
+	quest.293446C57B82E2B6.quest_desc: [
+		"&7World tiers gate combat and enchanting. You can step back down with Ctrl+T if Invaders hit too hard."
+	]
+	quest.293446C57B82E2B6.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.293446C57B82E2B6.title: "Frontier"
 	quest.2936EE38CEAB4337.quest_desc: ["&bWeapon&r and &bBow Tomes&r focus on combat-related enchantments and help keep your specialized enchantment collections organized."]
 	quest.2936EE38CEAB4337.quest_subtitle: "Target combat enchantments"
 	quest.2936EE38CEAB4337.title: "Tomes of Combat"
@@ -2979,6 +3328,11 @@
 		"Goes up to 1024 co-processors"
 	]
 	quest.2AB5183A0BD8D387.title: "Multi Core Crafting Accelerator"
+	quest.2AB95D9A871390A1.quest_desc: [
+		"&7Tyros drops the divine soulshard behind every supreme caster set, the Crystal Chronicles shards and their knight armor."
+	]
+	quest.2AB95D9A871390A1.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.2AB95D9A871390A1.title: "Divine Spark"
 	quest.2ABCACEBACE7A37D.title: "Menril Berries"
 	quest.2AC6E9EFC6D1D83D.title: "unlocks/items/phantom_frames"
 	quest.2ACF8F5EFD3C4AF7.title: "Boots"
@@ -3103,6 +3457,13 @@
 	]
 	quest.2BF835F8F73E8F06.quest_subtitle: "Diggy diggy hole!"
 	quest.2BF835F8F73E8F06.title: "&cVein Be Gone!"
+	quest.2C0A6F5996DF2B23.quest_desc: [
+		"&7Hand in &b4,096 stainless steel&7 and &b512 titanium&7 ingots, from the inventory or through Task Screens."
+		""
+		"&7The Actually Additions crusher doubles MI's late ores; processing arrays multiply your furnaces."
+	]
+	quest.2C0A6F5996DF2B23.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.2C0A6F5996DF2B23.title: "Mill Output"
 	quest.2C323F602F7ED630.title: "unlocks/food/honey"
 	quest.2C42A6E79A5242F0.quest_subtitle: "Used for biome specific fish."
 	quest.2C42A6E79A5242F0.title: "Baits"
@@ -3118,6 +3479,13 @@
 	quest.2C4CA092A557205E.title: "Gravi-chestplate"
 	quest.2C4E81B5F427DECD.quest_desc: ["The mod Sushi Go Crafting adds several crops \\& materials for the making of... you guessed it, sushi!"]
 	quest.2C522C316A676B7D.title: "unlocks/gemstone_lights/citrine"
+	quest.2C5D41C84861D71C.quest_desc: [
+		"&7Godforged pearls are what mythic gear leaves behind. Eight of them, with cursium from Maledictus, are the measure of a Ritualist."
+		""
+		"&8Capstone milestone: +4 claimed chunks."
+	]
+	quest.2C5D41C84861D71C.quest_subtitle: "Loot fit for a god."
+	quest.2C5D41C84861D71C.title: "Godforged"
 	quest.2C66FFA15364FDB2.title: "triggers/hints/azurite_page0"
 	quest.2C67C22D74F097A3.quest_desc: [
 		"Some notables &brituals&r:"
@@ -3141,6 +3509,13 @@
 	quest.2C67C22D74F097A3.title: "Purple Tablets"
 	quest.2C78397EB8EEB67A.title: "hidden/collect_vanilla/nautilus_shell"
 	quest.2C7BABC76D6DE355.title: "unlocks/glowblocks/purple_glowblock"
+	quest.2C848F7D20C46AE5.quest_desc: [
+		"&7Tools that let the network follow you: universal wireless terminals, cross-dimensional EnderDrives, P2P planning, network analysis and ME-fed construction sticks."
+		""
+		"&7Wireless Terminal Color and AE2: Crafting Tree also live here; they add no items to hand in."
+	]
+	quest.2C848F7D20C46AE5.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.2C848F7D20C46AE5.title: "Signal Everywhere"
 	quest.2C8902E340DD210E.title: "hidden/collect_pigment/green"
 	quest.2C92B957A5E8646F.quest_desc: ["The &bBlank Pattern&f is used to make &acrafting recipes &6automated&f. You must &6encode &fthe &bBlank Pattern &fin the &bPattern Encoder&f, then place it into a &bPattern Provider&f."]
 	quest.2CAB789D60FFFFE3.quest_desc: [
@@ -3223,6 +3598,11 @@
 	quest.2DAE44549D0FDD55.quest_subtitle: "Source Storrage"
 	quest.2DD08FC93F6ED0EF.title: "unlocks/blocks/crystal_apothecary"
 	quest.2DDF658C99BE5911.title: "unlocks/reagents/onyx_powder"
+	quest.2DF528BDB1724C4A.quest_desc: [
+		"&7Hazen 'n Stuff adds three schools and the Ring of Efficiency (cooldown and cast time in one slot). GTBC adds new spellbooks; the dynamic skill tree spends XP on magic power. Reliquified relics come from loot chests and level up with use."
+	]
+	quest.2DF528BDB1724C4A.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.2DF528BDB1724C4A.title: "Extended Spellcraft"
 	quest.2DFC8E60A89E4B31.title: "unlocks/blocks/item_bowl"
 	quest.2E0837E85AD433EC.quest_subtitle: "Cinnamon Rolls Are Better"
 	quest.2E192A8302EA6B38.title: "unlocks/food/sawblade_holly_titration"
@@ -3290,11 +3670,35 @@
 	quest.2E97456B0ED0AB1A.quest_subtitle: "Pull fluids from the world"
 	quest.2E97456B0ED0AB1A.title: "Electric Pump"
 	quest.2EA3FE458DAB45EB.title: "unlocks/glowblocks/red_glowblock"
+	quest.2EAE435D466419DB.quest_desc: [
+		"&7Storage for everything: MEGA cells and bulk cells, Applied Flux energy, Applied Mekanistics chemicals and Applied Replicatics matter."
+	]
+	quest.2EAE435D466419DB.quest_subtitle: "Tier IV milestone: +2 claimed chunks"
+	quest.2EAE435D466419DB.title: "Exabyte Archive"
 	quest.2EB0D8DB6C0D366F.title: "milestones/reveal_mermaids_brush"
+	quest.2EC21AADC76FCBBD.quest_desc: [
+		"&7Sophisticated Backpacks are open to every faction. A backpack is your portable stockpile while claims are scarce."
+		""
+		"&7Upgrades from the backpack also work in Sophisticated Storage chests and barrels in this pack, and any backpack tier counts for this quest."
+		""
+		"&8Starter milestone: +1 claimed chunk."
+	]
+	quest.2EC21AADC76FCBBD.quest_subtitle: "Sew a Sophisticated Backpack."
+	quest.2EC21AADC76FCBBD.title: "Pack for the Journey"
 	quest.2EE48762D9C66FDD.title: "hidden/discover_weeping_gala"
+	quest.2F35E280C7B33C63.quest_desc: [
+		"&7The Wilden Tribute is the shared bottleneck of every Ars addon: one tribute imbued gives five Marks of Mastery."
+	]
+	quest.2F35E280C7B33C63.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.2F35E280C7B33C63.title: "Archmage"
 	quest.2F4B6DFC221E8B7C.title: "hidden/collect_vanilla/ender_eye"
 	quest.2F4F94DCC3986B5B.title: "unlocks/potions/bad_omen"
 	quest.2F53567C34E86536.quest_desc: ["This is the most basic Spellbook, it can only hold five Spells"]
+	quest.2F5527B3F3B1FE54.quest_desc: [
+		"&7Spiritfire and your first foliot. The foliot crusher doubles ore with no power at all."
+	]
+	quest.2F5527B3F3B1FE54.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.2F5527B3F3B1FE54.title: "Otherworld Sight"
 	quest.2F66F85A601AC908.quest_desc: [
 		"{image:modern_industrialization:block/machines/macerator/overlay_top_active width:32 height:32 align:center}"
 		"  Now you can &6hemiquadruple your ores&r! This means you'll have a 50% chance to extract an extra dust from your &bRaw Ore&r. You can also turn a &bFull Ore&r and extract a lot of &bRaw Ore&r from it using the &bMacerator&r."
@@ -3304,6 +3708,11 @@
 	quest.2F66F85A601AC908.title: "Bronze Macerator"
 	quest.2F6C16939D136BF0.quest_desc: ["The&b Annihilation Plane&f will &6break blocks&f and&6 pick up&6&b items&f directly in front of it."]
 	quest.2F6C16939D136BF0.title: "ME Planes"
+	quest.2F73691EBF292AFD.quest_desc: [
+		"&7A controller, a drive and a terminal: the first room of what will become a server hall. Plan for growth when you choose where it goes."
+	]
+	quest.2F73691EBF292AFD.quest_subtitle: "Tier I milestone: +2 claimed chunks"
+	quest.2F73691EBF292AFD.title: "The Network Awakens"
 	quest.2F78D16A73C4598A.title: "unlocks/reagents/star_fragment"
 	quest.2F7A213261682E1B.quest_desc: [
 		"The &bLiquefaction Cauldron&r &6soaks&r resources in &dsolvent&r to produce &bSulfur&r from them. &6Heat&r is required for the reaction."
@@ -3365,8 +3774,20 @@
 		"Just another crafting item. "
 		"Check &bEMI/JEI&r for recipe."
 	]
+	quest.302D45F79151A78C.quest_desc: [
+		"&7Cursed Earth, Mob Grinding Utils and Apothic Spawners turn a dark room into a loot and experience engine; Cognition stores the experience."
+		""
+		"&7Malum gives no spirits from spawner mobs."
+	]
+	quest.302D45F79151A78C.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.302D45F79151A78C.title: "Monster Husbandry"
 	quest.30396F5AD792EABD.title: "unlocks/colored_lamps/brown_lamp"
 	quest.3047758B41C1DCD4.title: "unlocks/enchantments/vanilla_treasure"
+	quest.305773E28DE42E47.quest_desc: [
+		"&7Steel guns, autocannons and radars that drive the mounts. Radar coverage needs space around it; the 0.4 radar scans only 20 blocks up or down."
+	]
+	quest.305773E28DE42E47.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.305773E28DE42E47.title: "Fire Control"
 	quest.305EDA1DA23E9BDF.quest_desc: ["Guardians of order in an unpredicatble world of &bChains,&r &bBelts,&r and &bBoxes&r."]
 	quest.305EDA1DA23E9BDF.quest_subtitle: "Package them again, Sam."
 	quest.3065BBCE6E4844FD.title: "unlocks/memory_to_head"
@@ -3433,6 +3854,13 @@
 	quest.31D5374CE1F8E674.title: "unlocks/enchantments/vanilla_protection"
 	quest.31D8FD32507C53C1.title: "unlocks/food/karak_chai"
 	quest.31E97F2E362F0308.title: "unlocks/equipment/dreamflayer"
+	quest.3203B48698E46780.quest_desc: [
+		"&7Hand in &b4,096 Brass Ingots&7, from the inventory or by belting them into a Task Screen."
+		""
+		"&7That is 2,048 each of copper and zinc through a heated mixer: a continuous ore line, not a stockpile."
+	]
+	quest.3203B48698E46780.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.3203B48698E46780.title: "Brass Foundry"
 	quest.320C2F44DD138054.quest_desc: [
 		"Unlike other bosses, this animal is not meant to be slain. "
 		""
@@ -3592,6 +4020,10 @@
 	quest.33D4B0B289A55EC9.title: "unlocks/items/experience_bottle"
 	quest.33EEBDD0730C020E.quest_desc: ["Using the Scroll Forge and a Blood Vial to craft a Blood Scrolls."]
 	quest.33F695229D12C6FB.quest_subtitle: "Dry That Resin"
+	quest.3407B2E127E0D004.quest_desc: [
+		"&7Completed automatically for members of the Mechanists. Only your faction can see this chapter."
+	]
+	quest.3407B2E127E0D004.title: "Mechanists Charter"
 	quest.3423502520249615.title: "unlocks/equipment/dreamflayer"
 	quest.3438F71F3FE2FD49.title: "unlocks/potions/strong_sleep_effects"
 	quest.3442EB0EFAD95794.title: "unlocks/equipment/gemstone_armor_category"
@@ -3622,6 +4054,11 @@
 	quest.345F2EDA7007A031.title: "unlocks/food/bodacious_berry_bar"
 	quest.3461AB3CF534FBFA.title: "unlocks/blocks/pastel_network"
 	quest.3480351307F0DD04.quest_desc: ["These components go up to 256M, but I won't force you to make higher tiers."]
+	quest.3492243E93C89F44.quest_desc: [
+		"&7Programmed drones run farms, logistics and defence inside your borders."
+	]
+	quest.3492243E93C89F44.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.3492243E93C89F44.title: "Drone Corps"
 	quest.3492CFBA1602D7F2.quest_desc: [
 		"  When &6powered&r, provides &bdiamond armor&r levels of armor and armor toughness."
 		""
@@ -3637,6 +4074,11 @@
 	quest.3492CFBA1602D7F2.quest_subtitle: "Power On!"
 	quest.3492CFBA1602D7F2.title: "Celestigem Armor"
 	quest.3496B9F60EA059C6.title: "unlocks/colored_lamps/red_lamp"
+	quest.349E030CD54AEF35.quest_desc: [
+		"&7Legendary ink is the gate to legendary scrolls."
+	]
+	quest.349E030CD54AEF35.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.349E030CD54AEF35.title: "The Dead King"
 	quest.34B822EC25F66B54.quest_desc: ["The &bOsmium Compressor&r is used to &6compress&r &3osmium&r into certain dusts to &6create&r their ingot counterparts."]
 	quest.34B822EC25F66B54.title: "Osmium Compressor"
 	quest.34CA776ECB3E8AEA.title: "triggers/hints/nightdew_sprout_page1"
@@ -3656,6 +4098,11 @@
 		""
 		"Has limited range of 1000 blocks, unlike the &bQuantum Ring&r."
 	]
+	quest.351B076FF5FF2C0D.quest_desc: [
+		"&7There are four ring slots and two belt slots. Iron's Gems 'n Jewelry and Artifacts (both magic-shared) compete for them."
+	]
+	quest.351B076FF5FF2C0D.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.351B076FF5FF2C0D.title: "Adornments"
 	quest.3528E594213C49AF.title: "hidden/collect_vanilla/ender_eye"
 	quest.35368ED401EE7BC4.title: "unlocks/colored_lamps/purple_lamp"
 	quest.35448B3F86649BB8.title: "hidden/collect_slush"
@@ -3707,6 +4154,11 @@
 	quest.35D797292DAB5C89.quest_desc: ["Obtain &bScriptura Vitae&r and begin generating &4Essentia Vitae&r."]
 	quest.35D797292DAB5C89.quest_subtitle: "Learn to turn life itself into energy."
 	quest.35D797292DAB5C89.title: "Blood Is Power"
+	quest.35DE2B13A05D08F5.quest_desc: [
+		"&7MI steel is the unified steel for the whole pack. The steam age is quick; the walls come later."
+	]
+	quest.35DE2B13A05D08F5.quest_subtitle: "Tier I milestone: +2 claimed chunks"
+	quest.35DE2B13A05D08F5.title: "Age of Steam"
 	quest.35F320164724B44C.quest_desc: [
 		"The &bAscent Spawner Upgrade Rune&f is a stronger tier of spawner upgrade."
 		""
@@ -3994,6 +4446,11 @@
 	quest.39A4FF688D140EC2.title: "Logistical Sorter"
 	quest.39A9548E3A6B3BEE.title: "unlocks/colored_lamps/brown_lamp"
 	quest.39B3E48AC11BF987.title: "unlocks/enchantments/inertia"
+	quest.39CB25A772BF2D0C.quest_desc: [
+		"&7Foci bind a school to you. The air focus is also wanted by Stargazers for the Just Dire Things flight upgrade."
+	]
+	quest.39CB25A772BF2D0C.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.39CB25A772BF2D0C.title: "Elemental Schools"
 	quest.39CCD71B54271A98.title: "hidden/collect_stratine_gem"
 	quest.39CF27CAC4EE33DB.quest_desc: [
 		"- Press &6Right Click&r on &9Still Water&r or &9Flowing Water&r to fill."
@@ -4059,6 +4516,11 @@
 	quest.3AA43F4E91E31E82.title: "Yucca Fruit"
 	quest.3AAA390CA130181F.title: "unlocks/reagents/stardust"
 	quest.3AAE23B6BE07E5DC.quest_desc: ["Using the Scroll Forge and a Divine Pearl to craft a Holy Scrolls which are good for healing and effects."]
+	quest.3AC015EB06B325BB.quest_desc: [
+		"&7Nitro crystals come from nether stars. Every Powah solar tier needs a Mekanism circuit and plastic."
+	]
+	quest.3AC015EB06B325BB.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.3AC015EB06B325BB.title: "Nitro Reactor"
 	quest.3AE00D06232E0175.quest_desc: [
 		"  &bThe Portal Gun&r:"
 		"    • L/R clicks, &6open&r paired &5portals&r"
@@ -4074,6 +4536,13 @@
 	quest.3AE1798E7291F41C.title: "unlocks/glowblocks/light_blue_glowblock"
 	quest.3AE3329F99AE9389.title: "unlocks/glowblocks/green_glowblock"
 	quest.3AE8C5BC19EBF64A.title: "triggers/hints/resonance_shards_page1"
+	quest.3B03DC0DBFA1531F.quest_desc: [
+		"&7A quantum upgrade consumes a singularity and UU-Matter. Make one, and keep the circuits to make more."
+		""
+		"&8Capstone milestone: +4 claimed chunks."
+	]
+	quest.3B03DC0DBFA1531F.quest_subtitle: "The engine behind every other engine."
+	quest.3B03DC0DBFA1531F.title: "Masterwork"
 	quest.3B0AB80C9FAD48F2.quest_desc: [
 		"The &bAntiprotonic Nucleosynthesizer&r uses &dAntimatter&r to fundamentally alter the molecular structure of certain materials."
 		""
@@ -4085,6 +4554,13 @@
 	quest.3B117FA99DD7558F.title: "Solvent"
 	quest.3B2A3B2085D6CC60.title: "unlocks/food/myceylon_liquor"
 	quest.3B323F6CD92884C3.title: "unlocks/upgrades/upgrade_experience2"
+	quest.3B382CDF1C48AE88.quest_desc: [
+		"&7Your first logistics are routers and pipes. Both are shared between the science factions, as are the Mekanistic Routers and Modern Industrial Routers connectors; this quest asks for the one your own machines can build."
+		""
+		"&8Tier I milestone: +1 claimed chunk."
+	]
+	quest.3B382CDF1C48AE88.quest_subtitle: "Shared science: Modular Routers and Pipez."
+	quest.3B382CDF1C48AE88.title: "Routing Theory"
 	quest.3B3A9A8C40291D24.title: "unlocks/potions/strong_sleep_effects"
 	quest.3B3FDF02E891DD39.quest_desc: ["The Apprentice Spellbook being a better book, requires you to take a trip to the Nether."]
 	quest.3B6674B3B91BD8B4.quest_desc: [
@@ -4203,6 +4679,11 @@
 	quest.3CFE340D8C2F75F0.title: "hidden/collect_crawfish"
 	quest.3D138EBE5C3BCB81.title: "unlocks/trinkets/gleaming_pin"
 	quest.3D17DB42D3929457.title: "triggers/hints/paltaeria_page1"
+	quest.3D1A975E29156EF6.quest_desc: [
+		"&7The rest of the Twilight court."
+	]
+	quest.3D1A975E29156EF6.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.3D1A975E29156EF6.title: "Twilight Throne"
 	quest.3D4317C2B25D5680.quest_desc: [
 		"The &bScroll Forge&r is used to &6craft&r scrolls using &bPaper&r and &bInk&r."
 		""
@@ -4230,6 +4711,11 @@
 	quest.3D8AC0906DED0B41.title: "hidden/collect_all_jade_vine_products"
 	quest.3D9DED933A80CAFA.quest_desc: ["This is used to &6copy and paste&r settings of &bME Devices&f. This is also used to &6link &bP2P Tunnels&f."]
 	quest.3D9DED933A80CAFA.title: "Memory Card"
+	quest.3DAC233354BF020D.quest_desc: [
+		"&7Reactor blocks are crafted two at a time in this pack. A full reactor is 36 blocks; uraninite comes from ore or the MI steel-drill quarry."
+	]
+	quest.3DAC233354BF020D.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.3DAC233354BF020D.title: "Starter Reactor"
 	quest.3DB08778C530F405.title: "unlocks/reagents/raw_malachite"
 	quest.3DB0B446418955FE.title: "unlocks/reagents/bone_ash"
 	quest.3DB567FA2FABD939.title: "unlocks/colored_lamps/white_lamp"
@@ -4261,6 +4747,13 @@
 	quest.3E2BD3556D2D29C2.title: "triggers/hints/downstone_fragments_page0"
 	quest.3E31F4C62054C67F.title: "milestones/reveal_shimmerstone"
 	quest.3E3BB8540C9DC8EE.title: "hidden/collect_vanilla/netherite_scrap"
+	quest.3E3C2FDE1002182B.quest_desc: [
+		"&7Fission makes the plutonium behind Supreme circuits and the MekaSuit. Reactors fail loudly: give yours a containment zone you can afford to lose."
+		""
+		"&7Fission yields half its default energy per fuel in this pack."
+	]
+	quest.3E3C2FDE1002182B.quest_subtitle: "Tier III milestone: +3 claimed chunks"
+	quest.3E3C2FDE1002182B.title: "Critical Mass"
 	quest.3E4032B031A2DD15.title: "unlocks/resources/pure_azurite"
 	quest.3E41681892FA2E44.quest_desc: ["Used in &bPattern Providers&r or &bInterfaces&r, which allows them to provide power to touching blocks/cables."]
 	quest.3E5F0B9CCF95C8A5.title: "triggers/hints/midnight_chip_page0"
@@ -4304,6 +4797,11 @@
 		""
 		"  When you start out &6mining&r in the early game, grab as much &bAndesite&r as possible and don't forget to gather &bZinc&r too, to save your &bIron&r for other uses than &6making&r &bAndesite Alloy&r."
 	]
+	quest.3F367D8B2A0921FB.quest_desc: [
+		"&7The hardest normal fights in the pack. Bring Pinnacle gear, malignant or sentient armor, and everything you have learned."
+	]
+	quest.3F367D8B2A0921FB.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.3F367D8B2A0921FB.title: "Cataclysm: The Abyss"
 	quest.3F3C9A6F590496AD.quest_desc: ["To open the &6GUI&r to add different hooks, bobbers and baits &3sneak&r + &3right-click&r."]
 	quest.3F3C9A6F590496AD.quest_subtitle: "Can you catch them all?"
 	quest.3F581374C4DDD0A9.quest_desc: [
@@ -4341,6 +4839,13 @@
 	quest.3F73EC8E087E2920.title: "Burning Spawner Rune"
 	quest.3F7F938A54C50396.title: "triggers/hints/stratine_page0"
 	quest.3F8B9421E85C047D.title: "Water for Chemical Washing"
+	quest.3FAFE0B6BD0B697D.quest_desc: [
+		"&7AdvancedAE quantum armor is built on MekaSuit pieces and quantum alloy: the clearest proof that your network and your reactors work as one system."
+		""
+		"&8Capstone milestone: +4 claimed chunks."
+	]
+	quest.3FAFE0B6BD0B697D.quest_subtitle: "AE2 and Mekanism, worn as one."
+	quest.3FAFE0B6BD0B697D.title: "Celestial Integration"
 	quest.3FB60EC2EE4D0435.quest_desc: [
 		"The &bEnchanter's Tools&r can be applied with &dSpells&r at the &bScribe's Table&r."
 		""
@@ -4349,6 +4854,13 @@
 	]
 	quest.3FB60EC2EE4D0435.title: "Enchanter's Tools"
 	quest.3FD0CB4DDB3EECC6.title: "unlocks/trinkets/cotton_cloud_boots"
+	quest.3FECE5A691420AFF.quest_desc: [
+		"&7Neo Vitae is not Blood Magic: its circular altar needs 8, 24, 52, 100 and 172 runes for tiers 2 to 6."
+		""
+		"&7The Oathbound relic doubles incoming damage, so sacrifice mobs rather than yourself."
+	]
+	quest.3FECE5A691420AFF.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.3FECE5A691420AFF.title: "Blood Altar"
 	quest.3FF4126574E3A6BA.title: "unlocks/blocks/ethereal_platform"
 	quest.400274581B9BD5FC.quest_desc: [
 		"The &bLaser Focus Matrix&r is the ignition system for your &dFusion Reactor&r."
@@ -4400,6 +4912,13 @@
 	quest.407D04C17AA78E09.quest_subtitle: "You might need these"
 	quest.407D04C17AA78E09.title: "Capacitors"
 	quest.407EDA3B964E0557.title: "hidden/status_effects/magic_annulation"
+	quest.407EDA70086E0638.quest_desc: [
+		"&7Hand in &b1,280 processors&7. Submit them from your inventory in batches or pipe them into an FTB Quests Task Screen."
+		""
+		"&7An automated inscriber line (or ExtendedAE circuit cutter) makes this a matter of patience. Engineering processors cost a diamond each."
+	]
+	quest.407EDA70086E0638.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.407EDA70086E0638.title: "Processor Foundry"
 	quest.407FD46B5C5A1EC0.quest_desc: [
 		"The &bStickiest Stick&f is the first iteration of a set of &9five&f Construction Sticks that allow you to build at quicker rates with more precision. This one can &6build&f with a max of &9three&f blocks in many different modes."
 		""
@@ -4450,6 +4969,11 @@
 	quest.41111391C43D4FD3.title: "hidden/collect_glass_peach"
 	quest.41183734EB2C28FF.quest_desc: ["&6Fills&r vanilla &bfluid containers&r and &6applies&r &9fluids&r to &bitems&r in sequenced recipes."]
 	quest.41183734EB2C28FF.quest_subtitle: "Where’d the itsy bitsy spider go?"
+	quest.41234E23E34872F6.quest_desc: [
+		"&7Onyx forms only in a Fusion Shrine at midnight under a new moon. Plan for an eight-day wait."
+	]
+	quest.41234E23E34872F6.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.41234E23E34872F6.title: "Midnight Onyx"
 	quest.41261F8928285052.title: "unlocks/redstone/item_detector"
 	quest.413557ECF489FD2C.quest_subtitle: "Appears in rare structures in the end islands."
 	quest.413557ECF489FD2C.title: "&5Obsidilith"
@@ -4799,6 +5323,11 @@
 	]
 	quest.4513758183EFECE7.quest_subtitle: "Turn &dMatter&r into nearly anything."
 	quest.4513758183EFECE7.title: "&aReplication!"
+	quest.451878C37B2DCFF1.quest_desc: [
+		"&7Modern technology for the record. Photograph a rival base or your own masterpiece; a polaroid develops on the spot."
+	]
+	quest.451878C37B2DCFF1.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.451878C37B2DCFF1.title: "Developing Film"
 	quest.4526B82A151F72AC.quest_desc: [
 		"Main block to be used for &5the mod&r storage system."
 		""
@@ -4874,6 +5403,20 @@
 	]
 	quest.45F0194CF3DCA5DD.title: "Lignite Coal"
 	quest.45F481F23D71E92E.title: "unlocks/pylons/amethyst_pylon"
+	quest.4601CFB75AD2350A.quest_desc: [
+		"&7An industrial turbine and thermoelectric boiler beside the reactor. Together they are the largest structures in the Stargazer kit."
+	]
+	quest.4601CFB75AD2350A.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.4601CFB75AD2350A.title: "Steam to Spare"
+	quest.460A3084DAFAF9B1.quest_desc: [
+		"&7MIFA pushes Industrial Foregoing addons past tier 2. The Actually Additions &bEmpowerer&7 is mandatory for Cosmic Matter and the boss-gateway pearls, so other factions may come to you for it."
+		""
+		"&7Its crusher doubles late MI ores. A &bTempad&7 opens timed doors home, for a price in chronons."
+		""
+		"&8Tier II milestone: +1 claimed chunk."
+	]
+	quest.460A3084DAFAF9B1.quest_subtitle: "Shared science: Industrial Foregoing, Actually Additions and Tempad."
+	quest.460A3084DAFAF9B1.title: "Industrial Collective"
 	quest.4628ABEE13B276A9.quest_desc: [
 		" &bRaw blazegold&r &6drops&r from broken &braw blazegold ore&r."
 		""
@@ -5022,6 +5565,13 @@
 		""
 		"{image:justdirethings:item/celestigem width:100 height:100 align:center fit:true}"
 	]
+	quest.47F950C786A48F67.quest_desc: [
+		"&7Hand in &b8,192 Fluix Crystals&7, from the inventory or through a Task Screen."
+		""
+		"&7Growth accelerators, chargers and the ExtendedAE crystal assembler make this a throughput problem rather than a mining one."
+	]
+	quest.47F950C786A48F67.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.47F950C786A48F67.title: "Fluix Flood"
 	quest.47FE63E4E742A880.title: "unlocks/enchantments/resonance_crafting"
 	quest.480F170F7028C337.quest_desc: ["The Lesser Spell slot "]
 	quest.48212961977655E7.quest_desc: [
@@ -5065,6 +5615,11 @@
 	quest.488CBBC3C0897ED2.title: "unlocks/trinkets/ashen_circlet"
 	quest.489156E83ADD2173.title: "hidden/collect_pigment/pink"
 	quest.4894A3C1A0042B51.title: "hidden/collect_milky_resin"
+	quest.48D4F63AAA736F5B.quest_desc: [
+		"&7The press makes every MI plate 1:1 apart from a few nuclear and late alloys: the cheapest plate route in the pack."
+	]
+	quest.48D4F63AAA736F5B.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.48D4F63AAA736F5B.title: "Kinetic Foundations"
 	quest.48E96D243486D38E.quest_desc: [
 		"  The &bVoidShift Wand&r's &6abilities&r:"
 		""
@@ -5093,6 +5648,16 @@
 	quest.4914DA1D409FF641.title: "unlocks/reagents/moonstone_powder"
 	quest.4915063F38BA7C3C.title: "unlocks/ampoules/pure_bloodstone_ampoule"
 	quest.493D07C3866529A2.title: "unlocks/reagents/amethyst_powder"
+	quest.494E34C4F17ED039.quest_desc: [
+		"&7A head start on every biome and the two resource dimensions. JAMD's mining world even has Malum soulstone ore."
+	]
+	quest.494E34C4F17ED039.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.494E34C4F17ED039.title: "Wayfinder"
+	quest.4959C1CAB135E543.quest_desc: [
+		"&7Marid essence takes a fight. The master miner is the ore faucet for the rest of the game, apart from MI's late ores."
+	]
+	quest.4959C1CAB135E543.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.4959C1CAB135E543.title: "Master Miner"
 	quest.495EEAA73357FA60.quest_desc: [
 		"  Accepts top-level &6upgrades&r:"
 		""
@@ -5147,15 +5712,30 @@
 	quest.49C5862DCDDE0F53.title: "unlocks/trinkets/fanciful_pendant"
 	quest.49D4F55F8A20DB22.quest_desc: ["Comes in several colors to match any decor."]
 	quest.49D4F55F8A20DB22.quest_subtitle: "Relax. Have a seat."
+	quest.49E593EC5C0E4586.quest_desc: [
+		"&7A library worth the name needs a hall of shelves; BEER extends how far the table reads them. Maximum Eterna is capped by your world tier."
+	]
+	quest.49E593EC5C0E4586.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.49E593EC5C0E4586.title: "The Ender Library"
 	quest.49E73DF03C8D28C7.quest_desc: ["&4Red&r Chalk attracts and binds Afrit, allowing them to do your bidding."]
 	quest.49E73DF03C8D28C7.quest_subtitle: "Afrit Control"
 	quest.49FE3020310FDB1E.title: "unlocks/trinkets/lesser_potion_pendant"
 	quest.4A060CCD1558254F.title: "hidden/collect_enchanted_star_candy"
+	quest.4A09E37591428D43.quest_desc: [
+		"&7Reap spirits with a scythe and infuse them at the altar. Spells from Iron's mobs also reap spirits."
+	]
+	quest.4A09E37591428D43.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.4A09E37591428D43.title: "Spirit Altar"
 	quest.4A0E862883FE42BB.quest_desc: ["This gem is able to &6store&r most &bmobs&r inside it, for easy transport."]
 	quest.4A0E862883FE42BB.quest_subtitle: "Gotta catch them all"
 	quest.4A100483D2553BB8.title: "unlocks/items/exchanging_staff"
 	quest.4A1114FF93286E91.title: "unlocks/food/lucky_roll"
 	quest.4A178A26F111B91E.title: "unlocks/blocks/midnight_aberration"
+	quest.4A224957EA2EFBBA.quest_desc: [
+		"&7A pressure chamber is the core of PneumaticCraft. Build it where you can grow it: bigger chambers hold higher pressure."
+	]
+	quest.4A224957EA2EFBBA.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.4A224957EA2EFBBA.title: "Under Pressure"
 	quest.4A25E60DD359F959.quest_subtitle: "Catch &d134&r unique fishes."
 	quest.4A476B25B5A3E88D.quest_desc: [
 		"The &bYouthful Spawner Rune&f modifies a spawner so that spawned mobs remain youthful."
@@ -5205,6 +5785,11 @@
 	quest.4B96616E52D2FD29.title: "hidden/get_substantial_azure_dike_charge"
 	quest.4B99345AECD80EC2.quest_subtitle: "Used to obtain Hooks and Bobbers through archaeology."
 	quest.4B99345AECD80EC2.title: "Brushing"
+	quest.4BA2D9A732693352.quest_desc: [
+		"&7Spectrum is the longest magic mod in the pack. Topaz grows high in mountains, citrine in the middle layers, amethyst deep down."
+	]
+	quest.4BA2D9A732693352.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.4BA2D9A732693352.title: "Gemstone Resonance"
 	quest.4BA462A27BFE442B.title: "milestones/reveal_colored_saplings_cmy"
 	quest.4BB0A9ECCA5A96E2.title: "unlocks/food/myceylon_pastries"
 	quest.4BD9A727CE930331.title: "unlocks/items/glass_ampoules"
@@ -5245,9 +5830,19 @@
 	quest.4BF483174CC0A0F1.quest_subtitle: "Away with You!"
 	quest.4BF483174CC0A0F1.title: "Celestigem Tools \\& Weapons"
 	quest.4C08AB9E6C44FAF3.title: "hidden/collect_cookbooks/imbrifer_cookbook"
+	quest.4C16F5C27B4941AC.quest_desc: [
+		"&7Seventy-seven nuclear casings and a heat exchanger plant: one of the largest builds in the pack."
+	]
+	quest.4C16F5C27B4941AC.quest_subtitle: "Tier IV milestone: +4 claimed chunks"
+	quest.4C16F5C27B4941AC.title: "Nuclear Age"
 	quest.4C269A1290FA14C8.title: "hidden/collect_vanilla/ghast_tear"
 	quest.4C357D8CF72B8F25.quest_subtitle: "Appears in rare structures in the nether. "
 	quest.4C357D8CF72B8F25.title: "&4Nether Gauntlet"
+	quest.4C490C9499400B04.quest_desc: [
+		"&7A collection takes hundreds of chests. Reliquified Artifacts turns Artifacts into relics that level up, and Reliquified Cataclysm adds relics of its own. Oblivion stones forge the Oathbound sin weapons."
+	]
+	quest.4C490C9499400B04.quest_subtitle: "Tier IV milestone: +2 claimed chunks"
+	quest.4C490C9499400B04.title: "Reliquary of Legends"
 	quest.4C636D0358500A87.title: "triggers/hints/stargazing_page1"
 	quest.4C90797964ED2B5A.title: "unlocks/items/celestial_pocketwatch"
 	quest.4CA2A53F4C298E2B.quest_desc: [
@@ -5311,6 +5906,11 @@
 		"{image:justdirethings:item/creaturecatcher_top_animation width:100 height:100 align:center}"
 	]
 	quest.4D59020A532C4E92.quest_subtitle: "Here, Kitty Kitty."
+	quest.4D606CDD124D47BD.quest_desc: [
+		"&7A heated mixer means a blaze from a Nether spawner. Brass unlocks mechanical crafting, which aircraft, cannons and radars depend on."
+	]
+	quest.4D606CDD124D47BD.quest_subtitle: "Tier I milestone: +2 claimed chunks"
+	quest.4D606CDD124D47BD.title: "The Brass Age"
 	quest.4D6B41D267A1B7C4.title: "unlocks/trinkets/take_off_belt"
 	quest.4D6BE20FB2A2C62C.title: "hidden/status_effects/lightweight"
 	quest.4D7ACEC10AD8330F.title: "hidden/collect_weeping_gala"
@@ -5343,6 +5943,11 @@
 	quest.4DCA027828C2921C.quest_desc: ["Portable, stored power for some Create stuff."]
 	quest.4DCA7554F0B54086.title: "unlocks/reagents/bedrock_dust"
 	quest.4DCAA7606A2913C7.title: "hidden/status_effects/immunity"
+	quest.4DE27A0E64D98A08.quest_desc: [
+		"&7Tier 2 machines need steel and an advanced hull: a Mekanism ultimate installer or an IF advanced frame both count."
+	]
+	quest.4DE27A0E64D98A08.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.4DE27A0E64D98A08.title: "Celestigem"
 	quest.4DE80794D0109F0A.title: "unlocks/food/reprise"
 	quest.4DE8993F6A7F096B.quest_desc: [
 		"Obtain the &bLex Vitae&r and wield one of Neo Vitae's most powerful creations."
@@ -5367,6 +5972,11 @@
 	quest.4E0A519AC89A17BC.title: "triggers/hints/preservation_ruins_page1"
 	quest.4E1B3935FC8A1170.quest_desc: ["Another 4x! You're on a roll!"]
 	quest.4E1B3935FC8A1170.title: "16k Storage Component"
+	quest.4E31039C2886006F.quest_desc: [
+		"&7The best armor in the pack, gated by Supreme circuits. Mekanism Unleashed lets it carry enchantments; GMUT adds a flight module."
+	]
+	quest.4E31039C2886006F.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.4E31039C2886006F.title: "MekaSuit"
 	quest.4E33ED9C42F906F6.quest_desc: [
 		"This cell can store radioactive chemicals, unlike the regular &bChemical Storage Cell&r."
 		""
@@ -5472,6 +6082,11 @@
 		"5 Deposit into &bstorage&r block next to the flower."
 	]
 	quest.4E97BABA7D6B07FE.quest_subtitle: "Crop \\& Tree Farm"
+	quest.4E9B57A79948967E.quest_desc: [
+		"&7Sixty-four nukes compressed into one singularity: the currency of MI's endgame."
+	]
+	quest.4E9B57A79948967E.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.4E9B57A79948967E.title: "Singularity"
 	quest.4EA0C90A02A43131.quest_desc: [
 		"The &bPressurized Reaction Chamber&r is a versatile machine that combines &fsolids&r, &9fluids&r, and &eGases&r to create new materials."
 		""
@@ -5484,6 +6099,11 @@
 	quest.4EA0C90A02A43131.quest_subtitle: "Combine matter under pressure"
 	quest.4EA0C90A02A43131.title: "Pressurized Reaction Chamber"
 	quest.4EA56C469E9B0F5C.title: "triggers/hints/mermaids_gems_page0"
+	quest.4EB1F717290307F4.quest_desc: [
+		"&7Perfect gems drop at Pinnacle, and enchanting reaches 100 Eterna."
+	]
+	quest.4EB1F717290307F4.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.4EB1F717290307F4.title: "Pinnacle"
 	quest.4EC1818FF036CE0E.title: "unlocks/glowblocks/gray_glowblock"
 	quest.4EC894E7808440AC.quest_desc: [
 		"&bExtended Pattern Provider&r holds quadruple the patterns compared to a regular."
@@ -5591,6 +6211,11 @@
 	quest.50259DC3F4F43F20.title: "unlocks/glowblocks/any_glowblock"
 	quest.502AE28898DB7B64.title: "unlocks/food/fissure_plum_titration"
 	quest.502C86251AD64A53.title: "hidden/collect_weeping_gala"
+	quest.5031E754DC555928.quest_desc: [
+		"&7Both are large structures: the enchanter alone is 11x11x5. The Spirit Instiller edits spawners and makes budding onyx."
+	]
+	quest.5031E754DC555928.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.5031E754DC555928.title: "Spectral Enchanting"
 	quest.50512A7282E61B92.title: "unlocks/enchantments/vanilla_projectile_infinity"
 	quest.506E4136CB6D7AF8.title: "unlocks/items/bottomless_bundle"
 	quest.508A650402DC24F5.quest_desc: [
@@ -5656,6 +6281,11 @@
 	]
 	quest.511C07DFE796F377.title: "Tier 1 Glyphs"
 	quest.511E7475AD64A32D.quest_desc: ["The &bME Crystal Fixer&f can repair &bBudding Block&f into the next tier."]
+	quest.511ED78EF19BA40A.quest_desc: [
+		"&7Netherite into goo. Tier 4 fuel is the best combustion fuel in the pack, and eclipse tools beat Mekanism tools until the Supreme tier."
+	]
+	quest.511ED78EF19BA40A.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.511ED78EF19BA40A.title: "Eclipse Alloy"
 	quest.513AB22B4E22DC91.title: "hidden/collect_vanilla/ghast_tear"
 	quest.513E5FA9F15D5533.title: "milestones/reveal_shimmerstone"
 	quest.513E700CE766E833.title: "unlocks/reagents/amethyst_powder"
@@ -5791,6 +6421,10 @@
 	quest.52575C93CD6DD5D5.quest_desc: ["For &6packing&r and &6unpacking&r packages."]
 	quest.525AE9031FB66D21.title: "triggers/hints/preservation_ruins_page0"
 	quest.525D3BBD78692516.title: "Soul Fruit"
+	quest.52604FC3AFF2CA1C.quest_desc: [
+		"&7Completed automatically for members of the Stargazers. Only your faction can see this chapter."
+	]
+	quest.52604FC3AFF2CA1C.title: "Stargazers Charter"
 	quest.5264D6E719AB4C0E.title: "unlocks/blocks/fabrication_chest"
 	quest.5265A95671B17CED.title: "unlocks/food/fissure_plum_titration"
 	quest.52685B216B158E4E.title: "hidden/visit_dd_biomes/noxshroom_forest"
@@ -5830,6 +6464,11 @@
 	quest.52CA774E9F825514.quest_desc: ["Perform the &bRitual of Harvest&r and turn nature's bounty into a reliable resource."]
 	quest.52CA774E9F825514.quest_subtitle: "Let nothing go to waste."
 	quest.52CA774E9F825514.title: "&6Ritual of Harvest"
+	quest.52D5BD8A6C419838.quest_desc: [
+		"&7Multiblock storage for energy and fluid. These structures only grow from here."
+	]
+	quest.52D5BD8A6C419838.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.52D5BD8A6C419838.title: "Induction Matrix"
 	quest.5304EACB52CF4715.title: "unlocks/items/night_salts"
 	quest.5319FD97D5133E7A.quest_desc: ["To craft &bRedstone Crystal&6 throw&b 1 Block of Redstone, 1 Glowstone Dust, and 1 Fluix Crystal &finto &awater &fand watch the magic happen."]
 	quest.5320AA6BC3158A58.title: "unlocks/trinkets/jeopardant"
@@ -5873,6 +6512,10 @@
 	quest.53C7E3E3572DA8CE.title: "hidden/visit_dd_biomes/deep_dripstone_caves"
 	quest.53CBCFCCAD084BA8.title: "unlocks/glowblocks/cyan_glowblock"
 	quest.53CBE51D1E359FE7.title: "hidden/collect_shards/topaz"
+	quest.53DB455C7C3D44C6.quest_desc: [
+		"&7Completed automatically for members of the Ritualists. Only your faction can see this chapter."
+	]
+	quest.53DB455C7C3D44C6.title: "Ritualists Charter"
 	quest.53DEE3EF1297B630.quest_desc: ["This &bEmitter&r uses &dMercury Flux&r to generate &6heat&r that can be used in place of the &bPyromantic Brazier&r."]
 	quest.53DEE3EF1297B630.quest_subtitle: "A new source of heat"
 	quest.53EC4A657655A7D5.title: "Brine"
@@ -5893,6 +6536,15 @@
 	]
 	quest.5401B18217772D6C.title: "Heat Exchanger"
 	quest.540C9CD6C7AEFB6B.title: "unlocks/enchantments/foundry"
+	quest.541261343D75C5CE.quest_desc: [
+		"&7Every Reliquary ingredient comes from mob kills in this pack: the gold-ingot fallback recipes are disabled."
+		""
+		"&7The Emperor's Chalice is also part of the infinity water cell."
+		""
+		"&8Tier III milestone: +1 claimed chunk."
+	]
+	quest.541261343D75C5CE.quest_subtitle: "Shared magic: Reliquary."
+	quest.541261343D75C5CE.title: "Relics of the Fallen"
 	quest.54191CC6C718348B.title: "unlocks/items/ender_splice"
 	quest.541B0B59F78AD602.title: "triggers/hints/nightdew_sprout_page0"
 	quest.541B75345B1A37AF.title: "milestones/reveal_stratine"
@@ -5929,6 +6581,11 @@
 		"  By evacuating the chamber, pressure drops below the boiling point; but the water then loses energy through boiling and evaporation, then freezes."
 	]
 	quest.54BF53CB70636C3F.title: "Vacuum Freezer"
+	quest.54C32279787FC543.quest_desc: [
+		"&7Bedrock gear never breaks and takes Apotheosis affixes."
+	]
+	quest.54C32279787FC543.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.54C32279787FC543.title: "Unbreakable"
 	quest.54CC2C1F72066F60.title: "milestones/reveal_azurite"
 	quest.54D178C57E788506.quest_desc: [
 		"The &bME Caner&f automates the &afilling of buckets and tanks&f with &bFluids, Mekanism Gases, Botania mana, and POWAH!!!&f"
@@ -5977,6 +6634,15 @@
 	]
 	quest.55391FF509DA53A5.quest_subtitle: "The easiest way to alchemy"
 	quest.55391FF509DA53A5.title: "&dWelcome to Theurgy"
+	quest.55393F1BE5D37B15.quest_desc: [
+		"&7Sophisticated Backpacks are open to every faction. A backpack is your portable stockpile while claims are scarce."
+		""
+		"&7Upgrades from the backpack also work in Sophisticated Storage chests and barrels in this pack, and any backpack tier counts for this quest."
+		""
+		"&8Starter milestone: +1 claimed chunk."
+	]
+	quest.55393F1BE5D37B15.quest_subtitle: "Sew a Sophisticated Backpack."
+	quest.55393F1BE5D37B15.title: "Pack for the Journey"
 	quest.553EB688C3FFD7E4.quest_desc: ["The &bBasic Combining Factory&r allows you to process &a3&r combining recipes at once."]
 	quest.553EB688C3FFD7E4.title: "Basic Combining Factory"
 	quest.5546D8616508B080.title: "triggers/hints/resonance_shards_page1"
@@ -6034,12 +6700,22 @@
 		"It's the simplest first step to &6generating&r free power for Create, while also embodying rotational motion, an essential feature of Create."
 	]
 	quest.55AEBE2068711237.quest_subtitle: "Water flows, the wheel spins, and so it all begins."
+	quest.55B17464122E9808.quest_desc: [
+		"&7Cast iron needs a blaze burner, a melting basin and a cannon drill. Whether you aim it at anyone is a diplomatic question."
+	]
+	quest.55B17464122E9808.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.55B17464122E9808.title: "Artillery"
 	quest.55B23FB3D0DA1BC5.title: "hidden/status_effects/lava_gliding"
 	quest.55B26E6ABE74048C.title: "unlocks/food/demon_trifle"
 	quest.55B4497680B48819.title: "Peaches"
 	quest.55DBF04C81688194.quest_subtitle: "The Un-Spout"
 	quest.55E3FF90F6BEEA13.title: "hidden/collect_pigment/white"
 	quest.55E9002FBFE38A93.title: "unlocks/colored_lamps/blue_lamp"
+	quest.55F701778D57D188.quest_desc: [
+		"&7Self-scaling sentient armour: strong sustain that competes with nerfed Apotheosis gear."
+	]
+	quest.55F701778D57D188.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.55F701778D57D188.title: "Sentient Arms"
 	quest.560634C7982F2FDC.quest_desc: [
 		"&bSpell projectile&r redirection."
 		"&8(to know when a spell hits the prism, use an &bObserver&r&8)"
@@ -6064,6 +6740,11 @@
 	quest.560D431DCEE5E3B5.title: "A Controlled Flow"
 	quest.5619683321410B74.quest_desc: ["Screw a house, take your entire lair with you! But be warned, it won't be cheap!"]
 	quest.5619683321410B74.title: "Large Spatial Component"
+	quest.5630EB6A484E8190.quest_desc: [
+		"&7Jetpacks burn three times less hydrogen here, and Mekanism Curios puts one in a curio slot."
+	]
+	quest.5630EB6A484E8190.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.5630EB6A484E8190.title: "Personal Propulsion"
 	quest.5643738FABBFB6CE.title: "unlocks/trinkets/any_base_trinket"
 	quest.565AF8294E95CBA7.quest_desc: [
 		"Energy Cubes are Mekanism's portable energy storage blocks, allowing you to store and move large amounts of &eFE&r."
@@ -6157,9 +6838,23 @@
 	quest.586BC2F962B0A14D.title: "hidden/collect_shale_clay"
 	quest.5872EAD18233566C.title: "unlocks/enchantments/vanilla_silk_touch"
 	quest.587745777D15FE97.title: "mod_integration/malum/understand_color_and_spirit"
+	quest.587BA4F74A2DF58A.quest_desc: [
+		"&7Replica ingots need quantum infusion plus either the &bMI Electrolyzer&7 (Mechanists) or the &bMekanism APNS&7 (Stargazers)."
+		""
+		"&7Replication copies diamonds, gems, common metals and drops, but not iridium, platinum, titanium, tungsten or plutonium."
+		""
+		"&8Tier III milestone: +2 claimed chunks."
+	]
+	quest.587BA4F74A2DF58A.quest_subtitle: "Shared science: Replication."
+	quest.587BA4F74A2DF58A.title: "Matter From Nothing"
 	quest.587EA76BB6BEC847.title: "unlocks/enchantments/big_catch"
 	quest.58855B9C5E6E7C43.title: "unlocks/blocks/mob_heads"
 	quest.589287B5220D25DE.title: "unlocks/equipment/lucky_pickaxe"
+	quest.589BA510EB9C67C8.quest_desc: [
+		"&7The Gatekeeper waves you through without a duel if you have already killed the Ender Dragon. The golem's alloy furnace makes netherite from two scrap."
+	]
+	quest.589BA510EB9C67C8.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.589BA510EB9C67C8.title: "Eternal Starlight"
 	quest.58B93F89B9633508.title: "hidden/build_any_complex_structure"
 	quest.58CA2853D9620919.quest_desc: [
 		"The &bBasic Upgrade&f is an upgrade you can &6create&f with only simple components to &9speed&f up your machines."
@@ -6182,6 +6877,15 @@
 		"You can solve that problem by using &bStabilizers&r. These will further &6stabilize&r the Actuator's link to the storage dimension. allowing for it to &6store more&r and more."
 	]
 	quest.58F3BCF5BFBCF371.quest_subtitle: "I want more"
+	quest.590B5C7C2015131E.quest_desc: [
+		"&7Sophisticated Backpacks are open to every faction. A backpack is your portable stockpile while claims are scarce."
+		""
+		"&7Upgrades from the backpack also work in Sophisticated Storage chests and barrels in this pack, and any backpack tier counts for this quest."
+		""
+		"&8Starter milestone: +1 claimed chunk."
+	]
+	quest.590B5C7C2015131E.quest_subtitle: "Sew a Sophisticated Backpack."
+	quest.590B5C7C2015131E.title: "Pack for the Journey"
 	quest.590D73FDE6335297.quest_desc: ["&6Measure&r how much &denergy,&r in the form of Stress Units, your contraptions are &6generating&r and &6consuming,&r or how fast they are working."]
 	quest.59128813386BFDB1.quest_desc: [
 		"&bPoint 2 Point (P2P) Tunnels&f can be overwhelmingly complex, but at the same time extremely useful. These &btunnels&f can be used to &6transfer up to 32 channels from one point to the other&f. Now, you might be asking: \"But why can't I just use a &bDense Cable&f?\""
@@ -6207,12 +6911,45 @@
 	quest.5946631C59C788DC.quest_subtitle: "Carry your power wherever you go."
 	quest.594BC97607EEE341.quest_desc: ["A key piece of most Create builds: &6interchanges&r axis of rotational motion between one plane and another"]
 	quest.59552E5C69FBC99E.title: "hidden/collect_stratine_gem"
+	quest.595822C88F32AA23.quest_desc: [
+		"&7The full 5x ore line is a room of its own. More Mekanism Processing extends it to modded ores; MI's late ores (Ti, W, Pt, Ir) were removed from it."
+	]
+	quest.595822C88F32AA23.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.595822C88F32AA23.title: "Quintuple Yield"
 	quest.596057832C440706.title: "Dielectric"
 	quest.599ED4665AC4455D.title: "triggers/hints/quitoxic_reeds_page0"
+	quest.59A5953B73ADAFC9.quest_desc: [
+		"&7The Reformation Array copies a sulfur endlessly: in effect, an infinite ore of your choice. An array takes floor space; claim accordingly."
+		""
+		"&8Tier III milestone: +2 claimed chunks."
+	]
+	quest.59A5953B73ADAFC9.quest_subtitle: "Shared magic: endless sulfur."
+	quest.59A5953B73ADAFC9.title: "Reformation Array"
 	quest.59B0B5B66DA2BFE4.quest_subtitle: "Catch ALL &z131&r fishes."
 	quest.59BB6A488F452783.title: "unlocks/redstone/item_detector"
+	quest.59C10AB88A73B0B7.quest_desc: [
+		"&7Every Ritualist enterprise starts from a fixed point. Your party owner or an officer must stand inside a chunk your faction has claimed and run &b/sethome&7."
+		""
+		"&6How faction homes work"
+		"&7- &b/sethome&7 saves the dimension, position and facing of whoever runs it. It only works while the session is &aunlocked&7, inside your own claim, within world height. Operators can also run &b/sethome <party>&7 for any faction."
+		"&7- &b/home&7 shows the saved home. It never teleports: travel is built, not commanded."
+		"&7- Operators cannot &block&7 a session until every faction has a valid home."
+		"&7- While a session is locked, anyone found in the wilderness is returned to the last claimed position they stood in, or to this home. New and reassigned members also arrive here."
+		"&7- If the home chunk is unclaimed, the home becomes invalid and members are disconnected until it is fixed."
+		""
+		"&7This task completes automatically once your faction has a valid home. Your faction starts with &b4&7 claimable chunks; this milestone line raises that to &b64&7."
+		""
+		"&8Starter milestone: +1 claimed chunk."
+	]
+	quest.59C10AB88A73B0B7.quest_subtitle: "Use /sethome to establish your faction base."
+	quest.59C10AB88A73B0B7.title: "Plant the Banner"
 	quest.59CF110755612E1F.title: "milestones/reveal_azurite"
 	quest.59E9687611B389CB.title: "triggers/hints/fading_page0"
+	quest.59E99F09C02157DA.quest_desc: [
+		"&7Hoglin hide for gold, mithril for diamond. Mekanism and MI triple mithril, if you can trade for it."
+	]
+	quest.59E99F09C02157DA.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.59E99F09C02157DA.title: "Gilded Grimoires"
 	quest.59EC9D8641CF67B8.quest_desc: ["The Oh The Biomes We've Gone mod also has its selection of crops... if you know where to find them!"]
 	quest.59EE97EF70F6F962.quest_desc: ["You can sometimes find flax growing by bodies of water in the wild! Pick some!"]
 	quest.59EE97EF70F6F962.quest_subtitle: "Vegan... string?"
@@ -6253,6 +6990,15 @@
 		""
 		"It's also perfect for those hankering for the nomadic life-style."
 	]
+	quest.5A7B3EA89B45ABB6.quest_desc: [
+		"&7Ars Creo is Mechanist content, but its wheels run on Ars familiars. Schematic Energistics feeds a schematicannon from an ME network. Trade for the parts you lack."
+		""
+		"&7This quest awards no chunks and is not needed to finish the line."
+		""
+		"&8Optional cooperation."
+	]
+	quest.5A7B3EA89B45ABB6.quest_subtitle: "Optional: Mechanist connectors that need another faction."
+	quest.5A7B3EA89B45ABB6.title: "Diplomatic Interfaces"
 	quest.5AB4D1D72EFD4428.quest_desc: [
 		"The &bInduction Port&r is the interface between your factory and the &dInduction Matrix&r."
 		""
@@ -6322,6 +7068,13 @@
 	quest.5BDE55C11519F7F7.title: "Purification Chamber"
 	quest.5BDEC0D157A43D9E.quest_desc: ["&5Purple&r Chalk is common in rituals that bind spirits into objects."]
 	quest.5BDEC0D157A43D9E.quest_subtitle: "Infusion"
+	quest.5BF0138299B43A12.quest_desc: [
+		"&7Carry the archmage's book, the dragon's grimoire, a moonstone core and eight marks of mastery."
+		""
+		"&8Capstone milestone: +4 claimed chunks."
+	]
+	quest.5BF0138299B43A12.quest_subtitle: "Three traditions, one hand."
+	quest.5BF0138299B43A12.title: "Grand Archmage"
 	quest.5C1154A0B49399BE.title: "unlocks/items/night_salts"
 	quest.5C2A1462B7F57C3F.title: "unlocks/food/azalea_tea"
 	quest.5C2F8FE480840A1F.title: "unlocks/ampoules/pure_azurite_ampoule"
@@ -6525,6 +7278,11 @@
 		"&8apply spell by using Spell Parchment in the &bEnchanting Apparatus&r&8."
 	]
 	quest.5F46E1D3938F5F2A.title: "Ars Armory"
+	quest.5F54FAC0CBA280B3.quest_desc: [
+		"&7The AdvancedAE Quantum Computer reaches 7x7x7. The Reaction Chamber makes quantum alloy, which your capstone armor needs."
+	]
+	quest.5F54FAC0CBA280B3.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.5F54FAC0CBA280B3.title: "Quantum Computer"
 	quest.5F680A64DB3E9F94.title: "unlocks/head_fusion/frostbite_recipes"
 	quest.5F68A9CE887E8AD9.title: "unlocks/colored_lamps/cyan_lamp"
 	quest.5F8E418D6A0AD158.quest_desc: ["Divine Pearls are crafted using one Gold Ingot and one Amythist Shard in a Crafting Bench. They are used to create Holy Scrolls."]
@@ -6567,6 +7325,15 @@
 	quest.60225C11880C3534.title: "Blueberries"
 	quest.60226C10C6103714.title: "unlocks/items/ender_splice"
 	quest.602C62D32CEF9C8A.title: "unlocks/colored_lamps/gray_lamp"
+	quest.6045D4F2F6056195.quest_desc: [
+		"&7Xychorium crystals feed XyCraft machines and storage. In this pack XyCraft uses iron where it would use aluminium, so it is an early iron-tier option."
+		""
+		"&7The bronze-drill MI quarry also yields xychorium."
+		""
+		"&8Tier I milestone: +1 claimed chunk."
+	]
+	quest.6045D4F2F6056195.quest_subtitle: "Shared science: XyCraft."
+	quest.6045D4F2F6056195.title: "Xychorium Crystals"
 	quest.606D881A86B80103.title: "unlocks/food/karak_chai"
 	quest.6070283AEA8DFA7E.quest_desc: [
 		"The &bRefinery&r is a &3multiblock&r in which you &6place&r the &bRefinery Controller&r on the bottom and and &bRefineries&r on top of it, &atwo&r to begin with. "
@@ -6733,6 +7500,11 @@
 	quest.62CF33223F7108D6.quest_subtitle: "Unwanted gear can still be useful."
 	quest.62CF33223F7108D6.title: "Salvaging"
 	quest.62D4A797B2F27D3A.title: "milestones/reveal_colored_trees_w"
+	quest.62D4F700B75CE743.quest_desc: [
+		"&7Tier 4 stabilizers hold about 7.9 million items, a magical rival to AE2."
+	]
+	quest.62D4F700B75CE743.quest_subtitle: "Tier IV milestone: +2 claimed chunks"
+	quest.62D4F700B75CE743.title: "Ancient Eldritch"
 	quest.62D623A128D69DBE.title: "unlocks/reagents/storm_stone"
 	quest.62E0363693E5DFF7.title: "hidden/collect_pigment/orange"
 	quest.62F43B936E236071.quest_desc: [
@@ -6745,6 +7517,11 @@
 	quest.62FCB2F06126B622.quest_desc: ["The &bWireless Terminal&f is a &bregular Terminal&f that can be used to access an&b ME System&b wirelessly. Use an &bAccess Point&f to connect up your &bTerminal&f and use &bBooster Cards&b to increase the total distance from that &bAccess Point&f you want to be able to use your system. Using multiple &bAccess Points&f on the same network in different locations can help you cover a larger footprint."]
 	quest.62FCB2F06126B622.title: "Wireless Terminal"
 	quest.6307E15FAAF30712.quest_desc: ["Allows you to &6make&b patterns&f that need to be&6 inserted&f specific direction to tell it through the &bpattern &fwhat side of the machine its importing/exporting."]
+	quest.630D02F3BCA42A50.quest_desc: [
+		"&7A hangar full of aircraft. The Scarlet Biplane has twice the biplane's durability, two weapon slots and a gunner seat."
+	]
+	quest.630D02F3BCA42A50.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.630D02F3BCA42A50.title: "Air Wing"
 	quest.630EF1A8715E2D90.quest_subtitle: "Found by using the Eye of Storm"
 	quest.630EF1A8715E2D90.title: "&eScylla"
 	quest.632BE5724D2120EB.quest_desc: [
@@ -6812,10 +7589,20 @@
 	quest.644B280698D65076.title: "Ultimate Universal Cable"
 	quest.6496BE98F5D82981.title: "unlocks/items/dragon_breath"
 	quest.649A25064116EF69.title: "hidden/collect_cookbooks/melochites_cookbook_vol_1"
+	quest.64ADCD62903182EB.quest_desc: [
+		"&7Djinni miners dig infinite random ore with no power and no world damage; the pack adds MI bauxite to their table."
+	]
+	quest.64ADCD62903182EB.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.64ADCD62903182EB.title: "Dimensional Excavation"
 	quest.64B356FA4A9E2C31.title: "hidden/entity_interact/preservation_turret"
 	quest.64CF2863FA5296C1.title: "unlocks/glowblocks/yellow_glowblock"
 	quest.64D625C86F3AB75C.quest_desc: ["The Beholder makes nearby mobs &bglow&r, and &6shoots&r lasers at your &benemies&r."]
 	quest.64D625C86F3AB75C.quest_subtitle: "I'mma firin mah lazer"
+	quest.64EDBC7A8777E0E4.quest_desc: [
+		"&7The first flight in the pack and the best early scouting tool. Remember that enemies can board aircraft parked in your claims."
+	]
+	quest.64EDBC7A8777E0E4.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.64EDBC7A8777E0E4.title: "Take Flight"
 	quest.64F025DAA4A9D40C.quest_desc: [
 		"All Apotheosis Gems can be reduced to"
 		"&bGem Dust&r through crushing."
@@ -6939,6 +7726,11 @@
 	quest.678A65A6A3461CFC.quest_subtitle: "Complete the quest chapter."
 	quest.678A65A6A3461CFC.title: "&6Fishing"
 	quest.678B4F34673DD733.title: "unlocks/reagents/bone_ash"
+	quest.67914208BF084A41.quest_desc: [
+		"&7Hand in rare, epic and mythic salvage, from the inventory or through Task Screens: the residue of hundreds of affixed drops broken down at the salvaging table."
+	]
+	quest.67914208BF084A41.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.67914208BF084A41.title: "Salvage Hoard"
 	quest.6793FC359952E287.title: "unlocks/gemstone_lights/onyx"
 	quest.6794A40DE2A79575.quest_desc: [
 		"This mod has a &2villager&r. "
@@ -6994,6 +7786,11 @@
 		"The &7pressure&r required for the &bElevator&r maxes out at &c5.0&r and doesnt increase based on &bElevator Bases&r."
 	]
 	quest.67B17617F57B247F.title: "Elevator"
+	quest.67C6F77DFA8D8021.quest_desc: [
+		"&7The infinite tier needs Mekanism: More Machine UU-Matter. Each one is a long recycling and fusion run, so plan the scrap supply early."
+	]
+	quest.67C6F77DFA8D8021.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.67C6F77DFA8D8021.title: "Infinite Horizon"
 	quest.67D26D75BF3DCF22.title: "unlocks/reagents/aether_vestiges"
 	quest.67D5ED5703F35A2D.quest_desc: [
 		"The &bSolar Neutron Activator&r directs &cneutron radiation&r from the &eSun&r into an internal reservoir, creating specific &9isotopes&r."
@@ -7038,8 +7835,22 @@
 	quest.67F9EF1D0C743BD9.title: "unlocks/weather/clear"
 	quest.6817F9FF3248F3CD.title: "hidden/status_effects/projectile_rebound"
 	quest.682D1178AF51998C.quest_desc: ["Craft any Rune that goes best with the magic armor or upgrade orb that you want."]
+	quest.683934EAD368DEC1.quest_desc: [
+		"&7Sophisticated Backpacks are open to every faction. A backpack is your portable stockpile while claims are scarce."
+		""
+		"&7Upgrades from the backpack also work in Sophisticated Storage chests and barrels in this pack, and any backpack tier counts for this quest."
+		""
+		"&8Starter milestone: +1 claimed chunk."
+	]
+	quest.683934EAD368DEC1.quest_subtitle: "Sew a Sophisticated Backpack."
+	quest.683934EAD368DEC1.title: "Pack for the Journey"
 	quest.68493CE96FD68EBA.title: "Cryomancer"
 	quest.6849F9CC71D2D96D.title: "unlocks/blocks/compacting_chest"
+	quest.685677A1BB5C577B.quest_desc: [
+		"&7Iron's Spells is the strongest direct damage in the pack. Swords consume mana here."
+	]
+	quest.685677A1BB5C577B.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.685677A1BB5C577B.title: "Scrollsmith"
 	quest.6866DE035D9767A0.title: "hidden/build_any_complex_structure"
 	quest.68721F148E2805FB.quest_desc: [
 		"Your first &bSpell Book&r will allow you to start &6collecting&r and using &bspells&r."
@@ -7251,7 +8062,17 @@
 	quest.698594BEA9750A4E.quest_subtitle: "Third Foundation"
 	quest.6990726B5BF63438.title: "unlocks/blocks/budding_onyx"
 	quest.699BD2354F78EECE.title: "hidden/status_effects/swiftness"
+	quest.699F621D53CD0343.quest_desc: [
+		"&7Throw an ender pearl at a bee nest. The Bee Queen's royal jelly trades can return totems, beacons and even nether stars."
+	]
+	quest.699F621D53CD0343.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.699F621D53CD0343.title: "Into the Hive"
 	quest.69A2154B9F9F2730.title: "unlocks/equipment/draconic_twinsword"
+	quest.69AFCED8DE7EB453.quest_desc: [
+		"&7The Fusion Shrine is a 9x9x5 structure under open sky. It controls the weather and makes netherite from a single scrap."
+	]
+	quest.69AFCED8DE7EB453.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.69AFCED8DE7EB453.title: "Fusion Shrine"
 	quest.69B079DABB860AEF.quest_desc: [
 		"The &dUltimate Control Circuit&r is the pinnacle of &bMekanism&r circuitry, built to handle the most demanding machines and systems."
 		""
@@ -7302,6 +8123,11 @@
 	]
 	quest.6A502A9610D82942.quest_subtitle: "Lay the foundation for a bigger and better Smeltery."
 	quest.6A502A9610D82942.title: "A Smith's Beginning"
+	quest.6A76C66E05911799.quest_desc: [
+		"&7ExtendedAE replaces rows of assemblers with one multiblock and grows crystals directly. ExtendedAE-Plus adds faster matrix parts."
+	]
+	quest.6A76C66E05911799.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.6A76C66E05911799.title: "Assembler Matrix"
 	quest.6A7718AD2FDFBFAD.title: "unlocks/food/bodacious_berry_bar"
 	quest.6A9D0A5F16C94F3F.quest_desc: ["The Enchanting Table of the Raven allows the core enchanting stats to be customized manually. Use it when you want direct control over your enchanting setup."]
 	quest.6A9D0A5F16C94F3F.quest_subtitle: "Manual stat control"
@@ -7392,6 +8218,11 @@
 		"  Use them wisely, they are pretty pricey to make."
 	]
 	quest.6BD625E5CA469914.title: "Highly Advanced Upgrade"
+	quest.6BDF94B3CCABE9BE.quest_desc: [
+		"&7Hand in &b1,024 Precision Mechanisms&7. Each one is five sequenced steps; a hand-fed line will not get there."
+	]
+	quest.6BDF94B3CCABE9BE.quest_subtitle: "Tier III milestone: +2 claimed chunks"
+	quest.6BDF94B3CCABE9BE.title: "Precision Line"
 	quest.6BE08185BB44CEF8.quest_desc: [
 		"Same amount of slots as the &bExtended Interface&f, but holds &a16x the amount per slot (1048)&f."
 		""
@@ -7406,6 +8237,11 @@
 	quest.6C012E0F8B3922DC.title: "Elite Injecting Factory"
 	quest.6C1251B60133D26C.title: "hidden/collect_pigment/black"
 	quest.6C3A12E3697016BE.title: "unlocks/trinkets/jeopardant"
+	quest.6C5F1EF0B8D472BC.quest_desc: [
+		"&7A full Elemancer set costs 28 Marks of Mastery: about six Chimera kills."
+	]
+	quest.6C5F1EF0B8D472BC.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.6C5F1EF0B8D472BC.title: "Elemancer"
 	quest.6C7789B56E50B6F1.quest_desc: [
 		"An &bArmor&r that can be &6upgraded&r but has the armor points of &bDiamond&r."
 		""
@@ -7495,6 +8331,11 @@
 	quest.6E28C25469FF7738.title: "Power Generation"
 	quest.6E2932D7D8228910.title: "&7Pressure &cGauge"
 	quest.6E33C81DE56F1E05.title: "hidden/status_effects/frenzy"
+	quest.6E37250E08195F9E.quest_desc: [
+		"&7Moonstone cores come from guarded vaults in the Forgotten Cities."
+	]
+	quest.6E37250E08195F9E.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.6E37250E08195F9E.title: "Glass Crest"
 	quest.6E3F0C072B55467B.quest_desc: ["Simple: &6harvests&r and &6resets&r &bmature crops&r."]
 	quest.6E60988E8F8C4FF2.title: "Sulfur Trioxide"
 	quest.6E996D2A7638D705.title: "unlocks/blocks/egg_laying_wooly_pig_head"
@@ -7532,6 +8373,11 @@
 		"  Remember that you'll need a &olot&r of &bRubber Sheets&r in the long run, so you'll need to make them constantly. Note that you can use &bWood&r to &6grind down&r and turn into &bWood Pulp&r which can then be turned into &bPaper&r with a high output yield."
 	]
 	quest.6EF133E0EC49BC33.title: "Rubber"
+	quest.6EF240F32BA25500.quest_desc: [
+		"&7Aluminium, chemistry and stainless steel. Extended Industrialization, Industrialization Overdrive, Yet Another Industrialization and MI Utilities widen every step."
+	]
+	quest.6EF240F32BA25500.quest_subtitle: "Tier III milestone: +3 claimed chunks"
+	quest.6EF240F32BA25500.title: "Industrial Chemistry"
 	quest.6F07EDE7A819467B.quest_subtitle: "Complete the quest chapter."
 	quest.6F07EDE7A819467B.title: "&cPowah"
 	quest.6F0E634C3D32EF6F.title: "hidden/interact_with_doombloom"
@@ -7585,6 +8431,13 @@
 	quest.6FA414147B59B2A9.title: "unlocks/reagents/stardust"
 	quest.6FAF4EDBB976751D.title: "unlocks/upgrades/upgrade_yield2"
 	quest.6FB646823086AFBF.title: "hidden/status_effects/toughness"
+	quest.6FC149C4A6BB9825.quest_desc: [
+		"&7Hand in &b2,048 Source Gems&7, from the inventory or through a Task Screen."
+		""
+		"&7Amethyst Golems, imbuement chambers and a well-fed sourcelink farm do this without a single machine."
+	]
+	quest.6FC149C4A6BB9825.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.6FC149C4A6BB9825.title: "Wellspring"
 	quest.6FD3C9B4EF558332.quest_desc: ["Brassy on the edges, but classy-not-brassy all over."]
 	quest.6FDE684299FEC954.quest_desc: ["The &bElite Mechanical Pipe&r has a per-pipe capacity of &932,000mb&r and a per-\"&apull&r\" pipe flow rate of &98,000mb/t&r."]
 	quest.6FDE684299FEC954.title: "Elite Mechanical Pipe"
@@ -7632,6 +8485,11 @@
 	]
 	quest.6FF7CECC5DAF516B.quest_subtitle: "&oTransubstantiation with &bGoo&r"
 	quest.6FF9FFFA16A11509.title: "hidden/collect_vanilla/nether_star"
+	quest.7023283C2CA4FC1C.quest_desc: [
+		"&7The Bottle of Ruin needs dragon breath, so the End comes first. Bring a Bottle of Decay Away."
+	]
+	quest.7023283C2CA4FC1C.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.7023283C2CA4FC1C.title: "Deeper Down"
 	quest.703C1F1E9A6F4A9E.quest_desc: [
 		"The &bChemical Infuser&r allows you to combine &egases&r together to create a new &bsingle product&r."
 		""
@@ -7671,6 +8529,11 @@
 		"&4NOTE&r: check the &bwiki&r or the &bbook&r for all the interactions it can do."
 	]
 	quest.70BB3BAF2F93B88C.title: "unlocks/blocks/universe_spyhole"
+	quest.70D000D5A923CF4C.quest_desc: [
+		"&7The fusion torus is enormous. Claim the ground before you lay the first casing."
+	]
+	quest.70D000D5A923CF4C.quest_subtitle: "Tier IV milestone: +4 claimed chunks"
+	quest.70D000D5A923CF4C.title: "Plasma Age"
 	quest.70DB6CB855D3828D.title: "triggers/hints/stratine_page0"
 	quest.70E5F2E588EFEC0D.quest_desc: [
 		"This quest is just for &bquest chapter focusing&r on open."
@@ -7686,6 +8549,11 @@
 	quest.711CCA919D92650B.title: "hidden/collect_pyrite"
 	quest.711F5E63F18B4D74.title: "unlocks/trinkets/any_azure_dike_equipment"
 	quest.712C6B1B53AC0D12.title: "triggers/hints/azurite_page1"
+	quest.715DC979DCE8F7A1.quest_desc: [
+		"&7Printed circuit boards for drones, programmable controllers and armor."
+	]
+	quest.715DC979DCE8F7A1.quest_subtitle: "Tier III milestone: +1 claimed chunk"
+	quest.715DC979DCE8F7A1.title: "Assembly Line"
 	quest.7162E1268768E92E.title: "unlocks/food/mermaids_popcorn"
 	quest.71776A6A96EB037C.quest_desc: [
 		"  &bFire Clay&r is a &6mixture&r of plain river &bClay&r and &bBrick Dust&r as a tempering agent, then &6re-fired&r to harden it to make it withstand extreme temperatures."
@@ -7763,6 +8631,15 @@
 	quest.7249F999EB4AA9C9.title: "unlocks/food/azalea_tea"
 	quest.72539873C7201A47.quest_desc: ["Poisonous Potatos are used to craft Nature Scrolls."]
 	quest.72598DB6FC138E79.title: "unlocks/enchantments/vanilla_projectile"
+	quest.727140CA51AC8F1F.quest_desc: [
+		"&7Replica ingots need quantum infusion plus either the &bMI Electrolyzer&7 (Mechanists) or the &bMekanism APNS&7 (Stargazers)."
+		""
+		"&7Replication copies diamonds, gems, common metals and drops, but not iridium, platinum, titanium, tungsten or plutonium."
+		""
+		"&8Tier III milestone: +2 claimed chunks."
+	]
+	quest.727140CA51AC8F1F.quest_subtitle: "Shared science: Replication."
+	quest.727140CA51AC8F1F.title: "Matter From Nothing"
 	quest.7277A0413086D71A.quest_desc: ["&6Right-click&f a &bFluix Block &fwith an &bEntro Seed&f to turn it into a &bEntroized Fluix Budding&f."]
 	quest.7281A850FDD2EA35.title: "hidden/solve_every_preservation_ruin"
 	quest.7283C1B759AF0F5F.quest_subtitle: "Catch &a500&r total fishes and &610&r unique golden fishes."
@@ -7789,6 +8666,15 @@
 	quest.72E69FF9753D3CEA.quest_desc: ["The Otherstone trader will make acquiring &bOtherstone&r a lot more convenient - and more efficient."]
 	quest.72E69FF9753D3CEA.quest_subtitle: "This rocks"
 	quest.72E69FF9753D3CEA.title: "Ritual: Summon Otherstone Trader"
+	quest.72FEACEB64FFF1C8.quest_desc: [
+		"&7Break matter into salt, sulfur and mercury, then put it back together as something better."
+		""
+		"&7Rare and precious sulfurs need iesnium, fluix or iridium, so some of them are trade goods."
+		""
+		"&8Tier II milestone: +1 claimed chunk."
+	]
+	quest.72FEACEB64FFF1C8.quest_subtitle: "Shared magic: Theurgy alchemy."
+	quest.72FEACEB64FFF1C8.title: "Spagyrics"
 	quest.72FF205D1C9A9178.quest_subtitle: "Found by using the Eye of Monstrous"
 	quest.72FF205D1C9A9178.title: "&cNetherite Monstrosity"
 	quest.73156BF022D5710F.quest_desc: [
@@ -7861,6 +8747,11 @@
 	quest.7364889F9999AF44.title: "unlocks/malachite/glass_crest_crossbow"
 	quest.73661FD985B372E9.title: "milestones/unlock_shooting_stars"
 	quest.73712AE5CA6D3EC6.title: "unlocks/blocks/lava_sponge"
+	quest.73857449FEAE1A2F.quest_desc: [
+		"&7Autocrafting turns the network into a factory that answers requests. An &bME Requester&7 keeps stock levels topped up without you asking."
+	]
+	quest.73857449FEAE1A2F.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.73857449FEAE1A2F.title: "Requests Fulfilled"
 	quest.739D2E03341174B1.quest_subtitle: "Complete the quest chapter."
 	quest.739D2E03341174B1.title: "&dRelics"
 	quest.73A48DA93F67805B.quest_desc: ["&6Facilitates&r having multiple &9fluids&r flowing in your &bpipe&r networks."]
@@ -7985,6 +8876,11 @@
 		"[ tip: see the &bInventory Ticker&r for Create's great take on a storage terminal ]"
 	]
 	quest.754EC4FE62F454E8.quest_subtitle: "It's all your Vault!"
+	quest.755079B52E3A6C86.quest_desc: [
+		"&7Powered mining lasers for clearing space inside your claims."
+	]
+	quest.755079B52E3A6C86.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.755079B52E3A6C86.title: "Laser Excavation"
 	quest.757E045A539D2D22.title: "triggers/hints/dragonbone_page0"
 	quest.75810CDFB362E0CB.quest_desc: [
 		"They are &6crafted&r by causing a &6reaction&r between &bEnder Pearl&r or &bEnder Dust&r and a &bSingularity&r. Any &6explosive force&r should be enough to trigger the reaction."
@@ -8005,6 +8901,11 @@
 		"  Check the outputs in EMI and make sure you know that &6the drill has a chance of breaking&r, so don't just make one."
 	]
 	quest.7593E582FA928061.title: "Copper Drill"
+	quest.759C5C3C27A5989D.quest_desc: [
+		"&7Trains for cargo, Hypertubes for people. While a session is locked, nobody may stand in the wilderness. Track you mean to ride needs claimed chunks under it, and that is what these chunks are for."
+	]
+	quest.759C5C3C27A5989D.quest_subtitle: "Tier II milestone: +2 claimed chunks"
+	quest.759C5C3C27A5989D.title: "Rails Across the Realm"
 	quest.75C533892BFC1171.title: "unlocks/blocks/color_picker"
 	quest.75C53C1C75E2A63D.title: "unlocks/glowblocks/brown_glowblock"
 	quest.75C73A5C77C18637.title: "triggers/hints/fading_page1"
@@ -8023,6 +8924,11 @@
 	quest.75FE996305813D68.quest_desc: ["In order to find a &6Meteorite&r you'll be needing to craft the &bMeteorite Compass&r. With the &bCompass&f it will point you to the closest &6Meteorite&f."]
 	quest.75FE996305813D68.quest_subtitle: "Find a Meteorite"
 	quest.75FE996305813D68.title: "What is the bol- roc- meteor?"
+	quest.760BD4B838FBF86D.quest_desc: [
+		"&7Throw a diamond into a flower-ringed pool. Twilight Treehouses and Twilight Delight are part of this realm too."
+	]
+	quest.760BD4B838FBF86D.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.760BD4B838FBF86D.title: "Into the Twilight"
 	quest.7610F9A545A15194.quest_desc: [
 		"The &bSolar Generator&r uses the &6sun&r to generate &epower&r. "
 		""
@@ -8036,6 +8942,13 @@
 	quest.766BE7C846BBD47F.title: "triggers/hints/clover_page0"
 	quest.768973710C811CB1.quest_subtitle: "Mark 2, Fashion and more Gadgets!"
 	quest.768973710C811CB1.title: "&aQuantum Nano Set"
+	quest.76A0187154F6666F.quest_desc: [
+		"&7The Reformation Array copies a sulfur endlessly: in effect, an infinite ore of your choice. An array takes floor space; claim accordingly."
+		""
+		"&8Tier III milestone: +2 claimed chunks."
+	]
+	quest.76A0187154F6666F.quest_subtitle: "Shared magic: endless sulfur."
+	quest.76A0187154F6666F.title: "Reformation Array"
 	quest.76A80C64BCC44B12.title: "unlocks/items/heavy_core"
 	quest.76BA847F28ACE170.title: "Tier 2, 1:2"
 	quest.76C83F5BB91BA6A4.title: "White Puffball"
@@ -8286,6 +9199,15 @@
 	quest.7B2D02467FCE097A.title: "unlocks/items/artisans_atlas"
 	quest.7B3C86E79AB225F5.title: "hidden/collect_dragonjag"
 	quest.7B4E3ED1082305EB.title: "unlocks/trinkets/laurels_of_serenity"
+	quest.7B547EAFE8CC1022.quest_desc: [
+		"&7Data models are the only way to automate boss drops here: bosses are blacklisted from spawners, cloning and crushers."
+		""
+		"&7Train a model by killing its mob with the Deep Learner equipped, then run it in a Simulation Chamber."
+		""
+		"&8Tier II milestone: +1 claimed chunk."
+	]
+	quest.7B547EAFE8CC1022.quest_subtitle: "Shared science: Hostile Neural Networks."
+	quest.7B547EAFE8CC1022.title: "Simulated Prey"
 	quest.7B61FE02FBA6ECD3.title: "unlocks/enchantments/tight_grip"
 	quest.7B6BD6C536620A2E.title: "unlocks/blocks/heartbound_chest"
 	quest.7B81E0A800E42F1F.quest_subtitle: "To Infinity and Beyond!"
@@ -8331,6 +9253,11 @@
 	quest.7B95981B60CD11BE.quest_subtitle: "Example Spell"
 	quest.7B95981B60CD11BE.title: "Enchanter's Sword"
 	quest.7B96B716D4C25052.title: "unlocks/items/basic_ink_storage_items"
+	quest.7BAB26E761C7E472.quest_desc: [
+		"&7Just Dire Things is the best early personal power in the pack. Ferricore tools take upgrades from the start."
+	]
+	quest.7BAB26E761C7E472.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.7BAB26E761C7E472.title: "Primogel"
 	quest.7BB4CE27736F4C08.quest_desc: [
 		"The final piece of your &bDynamic Tank&r is the &bDynamic Valve&r."
 		""
@@ -8343,6 +9270,11 @@
 	quest.7BB4CE27736F4C08.quest_subtitle: "Control your tank's flow"
 	quest.7BB4CE27736F4C08.title: "Dynamic Valve"
 	quest.7BC09DD0D14DE860.title: "Pineapple"
+	quest.7BD02D9D2047A1E7.quest_desc: [
+		"&7Rituals of harvest, growth and fallen trees. Animus adds more sigils and rituals on top."
+	]
+	quest.7BD02D9D2047A1E7.quest_subtitle: "Tier II milestone: +1 claimed chunk"
+	quest.7BD02D9D2047A1E7.title: "Ritual Stones"
 	quest.7BD21409A2AEB350.title: "unlocks/pylons/citrine_pylon"
 	quest.7BD7F5E46151B2EB.quest_desc: [
 		"A pre-programmed &bDrone&r that performs logistics tasks within a &e31x31x31&r area centered on the position the it's deployed from. "
@@ -8461,12 +9393,29 @@
 	quest.7DB4E20D476B5786.quest_desc: ["Killing the &cMinoshroom&r, and eating some of his &bMeef Stroganoff&r will allow you to enter the &6Fire Swamp&r without being burnt."]
 	quest.7DB4E20D476B5786.quest_subtitle: "You may locate a natural entrance through a chasm or cave, or you may find the entrance in a small mound."
 	quest.7DB4E20D476B5786.title: "&cMinoshroom"
+	quest.7DB8C867357E8257.quest_desc: [
+		"&7Integrated Dynamics is magic-shared here for its menril magitech flavour. It is logic and transport only: Integrated Terminals and Crafting are not in the pack."
+		""
+		"&8Tier II milestone: +1 claimed chunk."
+	]
+	quest.7DB8C867357E8257.quest_subtitle: "Shared magic: Integrated Dynamics, Tunnels and Scripting."
+	quest.7DB8C867357E8257.title: "Integrated Thought"
+	quest.7DBA9410064FF5B1.quest_desc: [
+		"&7The SPS is ten times cheaper to run in this pack, which makes antimatter a real production line. The APNS feeds Replication and UU-Matter."
+	]
+	quest.7DBA9410064FF5B1.quest_subtitle: "Tier IV milestone: +3 claimed chunks"
+	quest.7DBA9410064FF5B1.title: "Antimatter"
 	quest.7DC5A39F5DF85750.title: "triggers/hints/preservation_ruins_page2"
 	quest.7DD81584380EE8F7.quest_desc: ["This &bwand&r is used to interface with &6Mercurial Logistics&r."]
 	quest.7DDBB40194D5ABAE.title: "unlocks/enchantments/vanilla_water"
 	quest.7E141B9A82750F83.title: "hidden/collect_ash_and_slush"
 	quest.7E3BD249213C7036.title: "unlocks/trinkets/azure_dike_belt"
 	quest.7E49DB806DD04701.quest_desc: [""]
+	quest.7E8020DE8FF24B74.quest_desc: [
+		"&7Blazebloom goo needs a wither skeleton skull; skull shards drop only a quarter of the time here."
+	]
+	quest.7E8020DE8FF24B74.quest_subtitle: "Tier I milestone: +1 claimed chunk"
+	quest.7E8020DE8FF24B74.title: "Blazegold"
 	quest.7E88E36EDE4C0BF0.quest_desc: [
 		"One final expansion remains."
 		""
@@ -8609,6 +9558,22 @@
 		"- &6Plating&r: When supplied with crops or saplings, it will plant them on valid soil. Using different plating modes will plant them in different arrangements."
 	]
 	quest.7FD5FCEFE3697A7C.quest_subtitle: "What did the baby &ecorn&r say to the mama &ecorn&r?"
+	quest.7FE845454BDAFAF4.quest_desc: [
+		"&7Every Mechanist enterprise starts from a fixed point. Your party owner or an officer must stand inside a chunk your faction has claimed and run &b/sethome&7."
+		""
+		"&6How faction homes work"
+		"&7- &b/sethome&7 saves the dimension, position and facing of whoever runs it. It only works while the session is &aunlocked&7, inside your own claim, within world height. Operators can also run &b/sethome <party>&7 for any faction."
+		"&7- &b/home&7 shows the saved home. It never teleports: travel is built, not commanded."
+		"&7- Operators cannot &block&7 a session until every faction has a valid home."
+		"&7- While a session is locked, anyone found in the wilderness is returned to the last claimed position they stood in, or to this home. New and reassigned members also arrive here."
+		"&7- If the home chunk is unclaimed, the home becomes invalid and members are disconnected until it is fixed."
+		""
+		"&7This task completes automatically once your faction has a valid home. Your faction starts with &b4&7 claimable chunks; this milestone line raises that to &b64&7."
+		""
+		"&8Starter milestone: +1 claimed chunk."
+	]
+	quest.7FE845454BDAFAF4.quest_subtitle: "Use /sethome to establish your faction base."
+	quest.7FE845454BDAFAF4.title: "Plant the Banner"
 	quest.7FEBDFAE021B3C56.quest_desc: ["Useful for &oreally&r big crafts."]
 	quest.7FEBDFAE021B3C56.title: "Mega Crafting Storage"
 	quest.7FF0A973396E9236.title: "hidden/status_effects/fatal_slumber"
@@ -8699,6 +9664,154 @@
 	quest.F2F097789CBF49CE.quest_desc: ["The Enchantment Library stores enchanted books as points, measured in level-one equivalents. Insert higher-level enchantments once to unlock those levels for extraction later."]
 	quest.F2F097789CBF49CE.quest_subtitle: "Store your enchantments"
 	quest.F2F097789CBF49CE.title: "The Enchantment Library"
+	reward.0004B35B7EC022D7.title: "+1 Claimed Chunk"
+	reward.036060D395A59002.title: "+3 Claimed Chunks"
+	reward.039E9B1B0E72EE7D.title: "+3 Claimed Chunks"
+	reward.03E402F272FF2749.title: "+1 Claimed Chunk"
+	reward.0420ED106D788927.title: "+2 Claimed Chunks"
+	reward.05008CC5997C02FF.title: "+1 Claimed Chunk"
+	reward.05D04D743D24C47F.title: "+1 Claimed Chunk"
+	reward.07D9EF83D4D9DFFD.title: "+1 Claimed Chunk"
+	reward.08D0BC13ACE0ADA8.title: "+1 Claimed Chunk"
+	reward.0958C938DCC420AE.title: "+1 Claimed Chunk"
+	reward.099DFAA1B9E3461E.title: "+1 Claimed Chunk"
+	reward.09D4A90149761FA3.title: "+2 Claimed Chunks"
+	reward.09D567EFEDD2F0B6.title: "+1 Claimed Chunk"
+	reward.0A8BE67C8371B46F.title: "+2 Claimed Chunks"
+	reward.0B45B3DB80C2D66A.title: "+3 Claimed Chunks"
+	reward.0B8B57F635F84370.title: "+1 Claimed Chunk"
+	reward.0BDE7BBBB487B89D.title: "+1 Claimed Chunk"
+	reward.0C0C6893A7816499.title: "+1 Claimed Chunk"
+	reward.0E8EBEDEBB1C4270.title: "+1 Claimed Chunk"
+	reward.0E935FF5200CCD8A.title: "+1 Claimed Chunk"
+	reward.11493C522EE18D51.title: "+2 Claimed Chunks"
+	reward.12190FB8EA8A57C9.title: "+1 Claimed Chunk"
+	reward.12749940A6D66C30.title: "+1 Claimed Chunk"
+	reward.14B1F6ED09240B23.title: "+1 Claimed Chunk"
+	reward.14ED8C5670D3DD3B.title: "+1 Claimed Chunk"
+	reward.17F0194068ED578B.title: "+1 Claimed Chunk"
+	reward.18CEA762B782CFBA.title: "+3 Claimed Chunks"
+	reward.18ED64565FADD11C.title: "+2 Claimed Chunks"
+	reward.18FF0760BA888D18.title: "+1 Claimed Chunk"
+	reward.19E195D8188234C2.title: "+2 Claimed Chunks"
+	reward.1A42CDA7EB16D2DA.title: "+2 Claimed Chunks"
+	reward.1B1BEBA4B52830DB.title: "+1 Claimed Chunk"
+	reward.1C490C90E1F0075E.title: "+2 Claimed Chunks"
+	reward.1CB8F05D57CB0556.title: "+1 Claimed Chunk"
+	reward.1CD91971DA09C827.title: "+3 Claimed Chunks"
+	reward.1CE8F77569E7964C.title: "+1 Claimed Chunk"
+	reward.1DCA0B04636B46F7.title: "+3 Claimed Chunks"
+	reward.200442245D43DD3C.title: "+1 Claimed Chunk"
+	reward.20649943B19638DC.title: "+1 Claimed Chunk"
+	reward.20895357A8A0B5EA.title: "+1 Claimed Chunk"
+	reward.21B56FA9AADFD19C.title: "+1 Claimed Chunk"
+	reward.23EDAAA554669D9A.title: "+1 Claimed Chunk"
+	reward.24325EC6EF23AD82.title: "+1 Claimed Chunk"
+	reward.26BA692C726FBC59.title: "+3 Claimed Chunks"
+	reward.26EC26E2BB7C9312.title: "+2 Claimed Chunks"
+	reward.2719CCB6D2931599.title: "+1 Claimed Chunk"
+	reward.27F9515F3DDB150C.title: "+1 Claimed Chunk"
+	reward.283CD78E87DA243C.title: "+1 Claimed Chunk"
+	reward.2A2F56A82E9F84FF.title: "+2 Claimed Chunks"
+	reward.2A324BD591BDEC68.title: "+4 Claimed Chunks"
+	reward.2C053E9266AC686F.title: "+2 Claimed Chunks"
+	reward.2EEBB0FC315E4BC0.title: "+1 Claimed Chunk"
+	reward.30061164A018D9CD.title: "+2 Claimed Chunks"
+	reward.31DD963519E2282B.title: "+1 Claimed Chunk"
+	reward.323C0145CF06B031.title: "+2 Claimed Chunks"
+	reward.324EBA826CB5C80F.title: "+1 Claimed Chunk"
+	reward.32E4DB39C18B3F85.title: "+1 Claimed Chunk"
+	reward.33F11AC81C41E877.title: "+1 Claimed Chunk"
+	reward.34C46F5A2C02A284.title: "+1 Claimed Chunk"
+	reward.3543C359DBFC376F.title: "+2 Claimed Chunks"
+	reward.359AEB76136C922D.title: "+3 Claimed Chunks"
+	reward.3755D7BEF76BEB9D.title: "+1 Claimed Chunk"
+	reward.37D26230DA13E1CC.title: "+2 Claimed Chunks"
+	reward.3A30E406987A267D.title: "+2 Claimed Chunks"
+	reward.3A3B6E44CDED9B67.title: "+2 Claimed Chunks"
+	reward.3A4AD5131510D4A2.title: "+1 Claimed Chunk"
+	reward.3AA5810B50CA39B5.title: "+1 Claimed Chunk"
+	reward.3B67BAF81B32F3B6.title: "+1 Claimed Chunk"
+	reward.3BBE24911C9AAB01.title: "+1 Claimed Chunk"
+	reward.3C42B11D90C25DA4.title: "+2 Claimed Chunks"
+	reward.3CDF8A4007D5B60D.title: "+2 Claimed Chunks"
+	reward.3DA8FE20D5B17BC2.title: "+1 Claimed Chunk"
+	reward.4162DDD816A2EB3D.title: "+2 Claimed Chunks"
+	reward.422FF64DD5F0BEFC.title: "+1 Claimed Chunk"
+	reward.438A4EE47229CD1C.title: "+2 Claimed Chunks"
+	reward.43C87AB2AF4C33F5.title: "+3 Claimed Chunks"
+	reward.4492F9D32F13D071.title: "+1 Claimed Chunk"
+	reward.45E9B1FD72E67852.title: "+4 Claimed Chunks"
+	reward.4666B497A8209ABD.title: "+2 Claimed Chunks"
+	reward.4846BC5F6F12C133.title: "+2 Claimed Chunks"
+	reward.4905E11C840E2EED.title: "+2 Claimed Chunks"
+	reward.49D98EF0B045A47C.title: "+1 Claimed Chunk"
+	reward.4B43CE17CC1289E0.title: "+1 Claimed Chunk"
+	reward.4B8208EAAF09CBFC.title: "+1 Claimed Chunk"
+	reward.4C49AFBF79A76086.title: "+2 Claimed Chunks"
+	reward.4CCC09E237BA601B.title: "+2 Claimed Chunks"
+	reward.4D6019AAB0DB2DF5.title: "+1 Claimed Chunk"
+	reward.4D94C4B4861EC713.title: "+1 Claimed Chunk"
+	reward.4DAAA3CC495F8778.title: "+2 Claimed Chunks"
+	reward.4DD5F4BFCF659B84.title: "+1 Claimed Chunk"
+	reward.4F3E11B74B4A2E04.title: "+3 Claimed Chunks"
+	reward.4F81052CDA177373.title: "+2 Claimed Chunks"
+	reward.50412CB38E0D9E85.title: "+3 Claimed Chunks"
+	reward.5121FA0DFDA7FE07.title: "+2 Claimed Chunks"
+	reward.515559982D95B35A.title: "+2 Claimed Chunks"
+	reward.52E4997A394EDD04.title: "+1 Claimed Chunk"
+	reward.5354FD2C5333CA58.title: "+3 Claimed Chunks"
+	reward.53D2C0AFC6050799.title: "+1 Claimed Chunk"
+	reward.543501890B3E5ACA.title: "+1 Claimed Chunk"
+	reward.5584831681FA08AA.title: "+1 Claimed Chunk"
+	reward.55A40C86A446E39A.title: "+2 Claimed Chunks"
+	reward.56F1DDCDBB6A03CE.title: "+2 Claimed Chunks"
+	reward.5833920E5109E09C.title: "+2 Claimed Chunks"
+	reward.58D7512734EB5565.title: "+2 Claimed Chunks"
+	reward.5A67D40083407884.title: "+4 Claimed Chunks"
+	reward.5AD08260E2A1B0E2.title: "+1 Claimed Chunk"
+	reward.5BC89482DA52614E.title: "+4 Claimed Chunks"
+	reward.5C617801DD4DE359.title: "+1 Claimed Chunk"
+	reward.5C739FF5021E8088.title: "+1 Claimed Chunk"
+	reward.5D91CCCFE94C54B0.title: "+1 Claimed Chunk"
+	reward.5EBBADB9B3AC22E8.title: "+1 Claimed Chunk"
+	reward.61C9EDCF72607187.title: "+1 Claimed Chunk"
+	reward.6334118AD7F5ACAC.title: "+1 Claimed Chunk"
+	reward.648C7E68AD6343DF.title: "+2 Claimed Chunks"
+	reward.64F179DBBB110EA6.title: "+1 Claimed Chunk"
+	reward.68DD702FB19F55F1.title: "+3 Claimed Chunks"
+	reward.6927594BC2947A72.title: "+1 Claimed Chunk"
+	reward.6B8F3E1D9DE64942.title: "+1 Claimed Chunk"
+	reward.6C48921CCF8D6E86.title: "+2 Claimed Chunks"
+	reward.6C6A818E7E167049.title: "+2 Claimed Chunks"
+	reward.6D53FEA06B337160.title: "+2 Claimed Chunks"
+	reward.6DFD399B990ED955.title: "+2 Claimed Chunks"
+	reward.6E2A71FB7D672F80.title: "+1 Claimed Chunk"
+	reward.6FC2CD5BB74DCAA0.title: "+2 Claimed Chunks"
+	reward.7080A97031B1E8CC.title: "+1 Claimed Chunk"
+	reward.7081F8A43E4BCE0D.title: "+2 Claimed Chunks"
+	reward.708610B0A630702C.title: "+1 Claimed Chunk"
+	reward.71B72D74D2D8E117.title: "+3 Claimed Chunks"
+	reward.73B8D57804221027.title: "+4 Claimed Chunks"
+	reward.73F51F3133EDC9DA.title: "+1 Claimed Chunk"
+	reward.757BFB503652D36E.title: "+1 Claimed Chunk"
+	reward.75C3903A756DAFEB.title: "+1 Claimed Chunk"
+	reward.79D9E82B0616031E.title: "+2 Claimed Chunks"
+	reward.79F0F36EAF53DAA4.title: "+1 Claimed Chunk"
+	reward.7A3EA64F8C4024AB.title: "+4 Claimed Chunks"
+	reward.7A93892A62F0D6CA.title: "+1 Claimed Chunk"
+	reward.7ACFED3253B8E3D2.title: "+3 Claimed Chunks"
+	reward.7B6E2304DD3F6D7A.title: "+1 Claimed Chunk"
+	reward.7C1A99BB7EF958E1.title: "+2 Claimed Chunks"
+	reward.7C3C498118056CF3.title: "+1 Claimed Chunk"
+	reward.7C43D51940089495.title: "+1 Claimed Chunk"
+	reward.7C51D64A888EB091.title: "+1 Claimed Chunk"
+	reward.7C7DCA8943F61B39.title: "+1 Claimed Chunk"
+	reward.7D7F3D0F63CA36DA.title: "+1 Claimed Chunk"
+	reward.7E450282FB8FC83B.title: "+1 Claimed Chunk"
+	reward.7EFB6D0C31055EA8.title: "+1 Claimed Chunk"
+	reward.7FE2DF73C37A48C9.title: "+1 Claimed Chunk"
+	reward.7FEABF6EBEF17244.title: "+2 Claimed Chunks"
 	reward_table.0414572B7C36F04F.title: "Powah Rewards"
 	reward_table.0DF6EBF90213BF49.title: "Immersive Aircraft"
 	reward_table.1CD342FEDCDF6159.title: "Mekanism T3"
@@ -8716,23 +9829,35 @@
 	reward_table.769C9AEC3DB2FA42.title: "Mekanism T2"
 	reward_table.7D1F93D6860D4667.title: "PNC"
 	task.0020C1E77C424CB0.title: "Look at Spiritfire"
+	task.003F20E04760E4C5.title: "Any 12 Relics"
 	task.00CA3CB10A03DF62.title: "PNC 100%"
 	task.013281B2076D21ED.title: "Helpful Tips \\& Tricks"
+	task.0199AE27653C40C0.title: "Defeat the Night Lich"
 	task.0223DC40BCB8FF6D.title: "Obtain a Pinnacle Spawner Upgrade Rune"
 	task.02D1703C79A7F3EF.title: "Any #c:logs/archwood"
 	task.04FBCF96BB8F176A.title: "Vein be gone!"
+	task.054202A4C66A857D.title: "Defeat the Netherite Monstrosity"
+	task.0610602EE74FD441.title: "Defeat Ignis"
+	task.0688D374336E3051.title: "Defeat the Twilight Lich"
 	task.06D736F223A44B10.title: "Obtain an Ascent Spawner Upgrade Rune"
 	task.072DA381BC096184.title: "Refining Your Craft"
+	task.07D3821DEB1216FA.title: "Enter the Deeper Down"
+	task.07EE934B626FE14A.title: "Find the Ancient Battleground"
+	task.0A0C43319C6009EF.title: "Defeat Breezes"
 	task.0AAA27790F8C94A0.title: "Chemical Tanks"
 	task.0B2C0AF7B7B4B841.title: "Thermodynamic Conductors"
 	task.0B9C85688F6EEAFB.title: "Fluid Tanks"
 	task.0BA54BE324AE1978.title: "How Delightful!"
+	task.0C2003FA46286DB0.title: "Close 3 Gateways"
 	task.0D4D94F0997C1769.title: "Reach World Tier: Ascent"
 	task.0D974A2537B460E2.title: "Upgrades AAAAAAAAAAAAHHHHHHHHH"
 	task.0FA270C84C6558F4.title: "Clean Slurry"
 	task.0FF55D7FA5CEAD32.title: "Any #c:seeds/flax"
+	task.116219FD9B569485.title: "Defeat Citadel Keepers"
 	task.11CC52C63FF1FDE8.title: "Summon a Beaver Familiar"
+	task.123ECE7D46B7F895.title: "Defeat the Hydra"
 	task.12C4C946FBE466AD.title: "Summon a Devil Familiar"
+	task.13123F7266EB4FD5.title: "Defeat the Wilden Chimera"
 	task.13B903DFDCAB1CD3.title: "Skills"
 	task.141B9E891675C4BB.title: "Summon a Chimera Familiar"
 	task.1531CE8CE061AFC3.title: "Any #handcrafted:chests"
@@ -8742,32 +9867,48 @@
 	task.170444FFD4D57753.title: "Obtain a Youthful Spawner Rune"
 	task.175253B942A04EEB.title: "Apothic Enchanting Table"
 	task.17EAF020DF15D376.title: "Miscellaneous Origins"
+	task.19D146D8C7E860D4.title: "Defeat the Alpha Yeti"
 	task.1A36A5D48C75BE0D.title: "Any #minecraft:candles"
 	task.1ACF33BDD92D15DA.title: "KILL the Pope"
 	task.1B5D407F2729F56F.title: "The DEAD King"
+	task.1BA2EE0BBC870672.title: "Defeat Maledictus"
 	task.1BEC4027E735B683.title: "Need a guide?"
 	task.1D870ED2303FAE8A.title: "Magic?!"
 	task.1F5A29E07CD58234.title: "Hats"
 	task.203841AC95941F00.title: "Welcome to Create!"
+	task.20D4338776CB408E.title: "Set a valid faction home"
 	task.2103677DA5F292DE.title: "Summon a Dragon Familiar"
 	task.2144D7AA3F8732C4.title: "Obtain an Ignore Conditions Spawner Rune"
 	task.21895164503139CA.title: "Water for Condensentrator"
 	task.22915CF7043550CD.title: "Induction Cells"
 	task.22E777BE43621489.title: "Any #handcrafted:chests"
+	task.2444B3749FF792A4.title: "Defeat the Starlight Golem"
 	task.247993FCB25C4979.title: "Chestplate Tome"
+	task.249F1708054CF440.title: "Defeat the Knight Phantoms"
+	task.24A05EE074EDA895.title: "Enter the Bumblezone"
 	task.24A76A503F53AA7B.title: "Bookshelves"
 	task.24EFDA7774F27E3E.title: "Obtain a Silent Spawner Rune"
+	task.24F4036F8F89F00E.title: "Any Reliquified Iron's relic"
+	task.24F766C0DABD4CF5.title: "Any Sophisticated Backpack"
 	task.253E536043DBF3EA.title: "Quantum Computer Storage"
+	task.25569F93B0166318.title: "Defeat the Snow Queen"
 	task.256831387C82AA19.title: "Iron's Spells 'n Spellbooks"
+	task.25AC66892C35D57B.title: "Enter the Twilight Forest"
+	task.2604C4619FDA8E12.title: "Summon a Foliot Crusher"
 	task.268DC896793A48C7.title: "Forage Time!"
 	task.276086CF0F30A677.title: "Obtain an Echoing Spawner Rune"
 	task.2772306CF31750FD.title: "Any #minecraft:coals"
 	task.2836DAFB8BAF8D7B.title: "Summon a Headless Ratman Familiar"
 	task.296A456AF1F00270.title: "Summon an Otherstone Trader"
+	task.29BD9491904F1C84.title: "Enter the crystal realm"
+	task.29C0EDF97A5CADAA.title: "Any Sophisticated Backpack"
 	task.29E9B2B466DF099E.title: "QIO Drives"
 	task.2A1C946A44A39D6F.title: "Make Primogel Soil"
 	task.2A344C35DC371D0C.title: "Tier Installers"
+	task.2B138DB2112E451B.title: "Visit the mining dimension"
+	task.2C2B8503ABB4F745.title: "Any Reliquified Cataclysm relic"
 	task.2C366BDF75DC4677.title: "Boots Tome"
+	task.2D94D827F1454D5D.title: "Defeat the Dead King"
 	task.2DCC056348E9BB4B.title: "Summon a Demonic Wife"
 	task.2E011A6CEC3FE9F6.title: "Pressurized Tubes"
 	task.2FA7F24545E1C37E.title: "Start Here"
@@ -8782,26 +9923,36 @@
 	task.3404171FB712C24D.title: "Tier 5 Ores, 1:5"
 	task.341F7CB191A0790A.title: "Universal Cables"
 	task.3716986BD12061AA.title: "Any #c:raw_materials/gold"
+	task.37B61F4082B7D9DF.title: "Belong to the Spellcasters"
 	task.37DECFA02129E0B8.title: "Summon a Deer Familiar"
 	task.38084EDBEB9647AD.title: "Sentient Evolution"
 	task.39BEE58652B540A6.title: "Tome of Scrapping"
+	task.39E3CA4C436162CE.title: "Defeat the Minoshroom"
 	task.3BC634992A1E9BAD.title: "Observe: &2Any Entro Budding&r"
+	task.3C893606FB88888F.title: "Defeat the Harbinger"
 	task.3C8E0C3D705AB65F.title: "Any #c:raw_materials/iron"
+	task.3E2651D7894326D2.title: "Defeat the Leviathan"
 	task.3ED23CC07C23FD76.title: "&bWelcome To Occultism"
 	task.4046229AF35778A3.title: "Seasons"
 	task.4137D2B088325C60.title: "Summon a Foliot Transporter"
 	task.41BA785802B6F35E.title: "Quests"
 	task.41EC40C5739AA13D.title: "Oh The Crops You'll Find!"
 	task.42634C57B87C09DB.title: "Summon a Fairy Familiar"
+	task.4273594EC0D1B203.title: "Visit the void dimension"
 	task.429785464C6CD059.title: "Any #minecraft:axes"
 	task.43CE51B3EC9945C1.title: "&aRitual of Fallen Trees"
+	task.43F3B7B6A3641AE9.title: "Any Reliquified Ars Nouveau relic"
 	task.442ACE1521CFC2A5.title: "Upgrades"
 	task.443D8F4CD01CC0C9.title: "Summon a Parrot \"Familiar\""
+	task.450B77BD2ABF9303.title: "Set a valid faction home"
 	task.4552085BF5330776.title: "OK, Let Me Cook"
+	task.45B0E028B57843C5.title: "Defeat the Ancient Remnant"
 	task.45BD3F9D0F2542F6.title: "Obtain a Summit Spawner Upgrade Rune"
 	task.46DBAE66F97438E6.title: "Runes"
 	task.47F4FCBBFF748733.title: "Obtain an Initial Health Spawner Rune"
 	task.480E9CFA1CEE6479.title: "Spiritus Gems"
+	task.482A9C94EEA17398.title: "Defeat the Ur-Ghast"
+	task.48D46696E1F536D6.title: "Belong to the Ritualists"
 	task.498AC4BAB884D0A6.title: "Reach World Tier: Summit"
 	task.4C7021388543ED23.title: "Obtain any Affix item"
 	task.4CE3EEAAF41AE050.title: "Summon a Foliot Janitor"
@@ -8809,6 +9960,7 @@
 	task.4D63FA888F0497B5.title: "Summon a Cthulhu Familiar"
 	task.4E146480AAEB65FB.title: "Reach World Tier: Pinnacle"
 	task.4E775BAB4EB29C69.title: "Any #c:crops/garlic"
+	task.4ED196F4B57454B3.title: "Defeat Tyros"
 	task.4F4699F9117BC270.title: "Pre-Programmed Drones"
 	task.4F7787C0557CF5CC.title: "Apo The Carist"
 	task.4FE35A4D3D394847.title: "Tome of Superior Scrapping"
@@ -8822,31 +9974,52 @@
 	task.570D439C4AC9F64C.title: "World Tiers"
 	task.57F02AA9BFBA7624.title: "Enchanting Tables"
 	task.58AC1E8BBD7EAB5B.title: "Summon a Mummy Familiar"
+	task.58EEADE224391A47.title: "Reach the Ascent world tier"
 	task.597ECA1E95F8C178.title: "Tomes of Armor"
 	task.59BF158D97C90086.title: "Bins"
+	task.5B1E4E1E9A9FD01D.title: "Reach the Frontier world tier"
 	task.5B40B4748A49BE45.title: "Rare Materials"
 	task.5B790B22E115CEB3.title: "Obtain a Frontier Spawner Upgrade Rune"
+	task.5BAA0E34D7832856.title: "Any Gaze artifact"
+	task.5BFB7F8169B75839.title: "Defeat the Gauntlet"
+	task.5C77F2F652FA9ABD.title: "Any Glass Crest weapon"
 	task.5CB700830F80DFD8.title: "Water for Chemical Washing"
 	task.5D5634634E3879E5.title: "Summon a Bat Familiar"
 	task.5DAF1EE0903D876A.title: "Machines?"
+	task.5DFA52D697F2D8A1.title: "Reach the Summit world tier"
+	task.5E7D2A303CE0CFC0.title: "Defeat the Wither"
 	task.5F8B536CAF189745.title: "Obtain a No AI Spawner Rune"
 	task.601F7C69458E7589.title: "Welcome to Theurgy"
 	task.61ADF1E6345BC7E1.title: "Any #c:raw_materials/copper"
+	task.6279318990C49013.title: "Any 4 Artifacts"
 	task.62E5D383DDDA0BBE.title: "Fill the Socket"
+	task.62EB3B7A813B5FEC.title: "Defeat the Obsidilith"
+	task.638DB94B20305BFC.title: "Defeat the Ender Dragon"
+	task.63BE3E0D4646C90D.title: "Belong to the Stargazers"
 	task.63DAD8D3277DA248.title: "Evolving Manufacturing Index"
 	task.64433571E92D5E65.title: "Emotes"
 	task.644BA76D2324EF21.title: "Induction Providers"
+	task.64D153317F4EE252.title: "Reach the Pinnacle world tier"
+	task.65252EB2D76CEC5A.title: "Defeat the Ender Guardian"
 	task.6544A3FD1B532809.title: "Summon a Demonic Husband"
+	task.658DBCAF5F65DCB9.title: "Any 3 Relics"
+	task.659BB850541634DF.title: "Any basic pedestal"
 	task.65A43DD683FB39E4.title: "Summon a Foliot Lumberjack"
 	task.65B2D0E35B083E82.title: "Survival of the Fittest"
 	task.66A70863F595A874.title: "Ritual of Harvest"
 	task.66BF2FED6B091A68.title: "Exploration!"
+	task.679E70ACE99A0E3B.title: "Any sourcelink"
+	task.6862E824175C374A.title: "Set a valid faction home"
 	task.68AA0F8A3FADC35E.title: "Perfect Gems"
 	task.691E6AA922761E29.title: "Hooks"
+	task.69BBE07E1ECE0EA8.title: "Any Sophisticated Backpack"
 	task.6BDAFFD29A7695BF.title: "Obtain a Rare Affix Item"
+	task.6C273DC00A6DBAD3.title: "Defeat the Ender Dragon"
 	task.6C6C366D034AF5C7.title: "Summon an Otherworld Sapling Trader"
+	task.6EC14221CA553AE5.title: "Defeat Scylla"
 	task.6F144EF786A94E4E.title: "Obtain a Spawner"
 	task.6FB11D0A0557436E.title: "Leggings Tome"
+	task.7044D6518C918E18.title: "Enter Eternal Starlight"
 	task.708EE345AEBB270B.title: "Make ShadowPulse Soil"
 	task.7206B162C5B4E0B8.title: "Ores at Tier 1"
 	task.72F89F43852EBF65.title: "Crystal Clusters"
@@ -8855,21 +10028,28 @@
 	task.73B852C41DE1F864.title: "Any #c:crops/rice"
 	task.73DFBACC98E080BC.title: "Any Knife"
 	task.741F21CA04FBCB90.title: "Logistical Transporters"
+	task.744281A75F518F9D.title: "Belong to the Mechanists"
+	task.747C657B7E3FB05F.title: "Defeat the Naga"
 	task.74C6D98426025A18.title: "Summon a Guardian Familiar"
 	task.74EA288EED7CCE71.title: "Reinforced Runes"
 	task.7537E40C4FAB6D5C.title: "Welcome To Powah"
 	task.753B3D09A302E973.title: "Raw Spiritus Crystals"
+	task.75D473B522F1E0EA.title: "Any Fusion Shrine"
 	task.7617B5CAABCD437A.title: "Bloodstones"
 	task.77E3B3D6695EEA80.title: "Obtain a Spawn Range Spawner Rune"
 	task.780048015B8387EE.title: "Flawless Gems"
+	task.79C3FD8B3C3045B9.title: "Any Sophisticated Backpack"
 	task.79D7E3E9EA637474.title: "Obtain an Ignore Light Spawner Rune"
 	task.7A0371393E813129.title: "Observe: &2Any Certus Budding&r"
+	task.7A2076FDEB45E598.title: "Any Artifact"
+	task.7A598B8EA57D25A9.title: "Defeat the Void Blossom"
 	task.7AB3BAEAA2E50F06.title: "Archevoker"
 	task.7C14A87514F74DF9.title: "Make VoidShimmer Soil"
 	task.7CE607F3982231BE.title: "Obtain an Infused Spawner Rune"
 	task.7D142E8CAEC8F089.title: "Obtain a Burning Spawner Rune"
 	task.7DFBA79EE9616973.title: "Mechanical Pipes"
 	task.7E36340AFD8F91C6.title: "Summon a Greedy Familiar"
+	task.7FC8C217891147D4.title: "Set a valid faction home"
 	task.7FEC3AD51BEF4E49.title: "Obtain a Redstone Control Spawner Rune"
 	task.84EB28F1381349B8.title: "Crystalline Seashelf"
 	task.895E2F9BAA454807.title: "Dormant Deepshelf"

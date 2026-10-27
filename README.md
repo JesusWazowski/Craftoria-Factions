@@ -268,6 +268,7 @@ a missing mapped party is an error and is not silently recreated.
 | --- | --- | --- |
 | `/faction choose` | Unaffiliated players | Redisplays the selection prompt and blue, underlined `[Faction Name]` links. |
 | `/faction join <id>` | Unaffiliated players | Joins the selected faction as an ordinary member, even if invite-only. |
+| `/faction claims` | Everyone | Shows the party's claimed chunks and its milestone claim allowance. |
 | `/ftbteams party transfer_ownership_for <party> <player>` | Operator/console | Appoints an existing member as party owner using native FTB completion. |
 | `/faction assign <id> <player>` | Operator/console | Moves an online player to a faction; validates its home first while locked. |
 | `/faction remove <player>` | Operator/console | Removes an online player; restores system ownership first if needed. |
@@ -357,18 +358,73 @@ Back up the world and stop the server. Apply the following values under
 The pack defaults are in `config/ftbchunks-world.snbt`:
 
 ```snbt
-max_claimed_chunks: 2147483647
-hard_team_claim_limit: 0
+max_claimed_chunks: 4
+hard_team_claim_limit: 64
 party_limit_mode: "largest"
 max_idle_days_before_unclaim: 0
 ```
 
 Keep all force-loading values unchanged. The script enforces these claim values
-at runtime too, normalizes `ftbchunks.max_claimed` on existing FTB ranks, and
-zeros extra-claim bonuses. Positive bonuses would overflow the maximum integer;
-the admin bonus `set`/`add` commands are disabled. Do not add conflicting rank
-overrides or change claim settings while the server is running. No claim expiry
-or team allowance reduction should remove existing territory.
+at runtime too (taking the base and cap from `kubejs/config/faction_milestones.json`),
+normalizes `ftbchunks.max_claimed` on existing FTB ranks to the base, and manages
+extra-claim bonuses from faction milestones; the admin bonus `set`/`add` commands
+are disabled. Do not add conflicting rank overrides or change claim settings while
+the server is running. Lowering the allowance never unclaims territory: a faction
+already above its allowance keeps its chunks but cannot claim more until it earns
+them. See [Faction milestones](#faction-milestones).
+
+## Faction milestones
+
+Each faction has a milestone chapter in the **Faction Milestones** quest group:
+Stargazers, Mechanists, Spellcasters and Ritualists. A party starts with **4**
+claimable chunks and earns the other **60** (up to **64**) by completing its own
+chapter. Every chapter opens with the same two 1-chunk starters (set a faction
+home with `/sethome`; craft a Sophisticated Backpack) and uses the same chunk
+budget per tier: 10 / 14 / 16 / 14 chunks for tiers I-IV plus a 4-chunk capstone.
+The quests, their rationale and the related mod assignments are in
+[docs/faction-milestones.md](docs/faction-milestones.md); the generated review
+table is [docs/faction-milestone-quests.md](docs/faction-milestone-quests.md).
+
+How it works:
+
+- A hidden **charter** quest completes automatically for members of the matching
+  faction party. Everything else in the chapter depends on it and is hidden until
+  it completes, so each faction only sees its own chapter. In existing unmanaged
+  worlds the charter instead follows an operator-granted AStages faction stage, and
+  the party's faction is the charter it holds.
+- The allowance is **derived from completion**, not from claimed rewards: base +
+  the chunk value of every completed quest in the party's own chapter, capped at 64.
+  The `+N Claimed Chunks` rewards are team rewards that auto-claim to announce the
+  change; a forfeited or unclaimed reward does not change the allowance. Quest
+  progress is per party, so late joiners, ownership transfers and offline owners
+  do not matter.
+- FTB Chunks ignores bonuses stored on a party and uses each member's *personal*
+  bonus (`party_limit_mode: "largest"`). The script therefore gives every member of
+  a party that party's earned chunks as their personal bonus, and 0 to players
+  outside a party, every second and whenever a milestone reward is claimed. A
+  player moved to another faction carries the new faction's value within a second.
+- FTB caches offline members' limits from their last login; the reserved system
+  member is never online. If a party's computed limit is above its allowance (an
+  existing world's cached "unlimited" value, or a quest reset), the script empties
+  that party's member cache once so FTB rebuilds it from the config and personal
+  bonuses. That rebuild also forgets which claims each member originally brought
+  into the party, so a member who later leaves does not take those chunks back.
+- `/faction claims` shows the party's claimed chunks and current allowance.
+- Volume quests (for example 8,192 Fluix Crystals or 4,096 Brass Ingots) consume
+  their items. Submit them from the inventory in batches, or pipe them into an
+  FTB Quests **Task Screen** (craftable; assign it to the task and feed it).
+- Cooperation quests list connector content that needs another faction's
+  materials. They are optional and award no chunks.
+
+Edit `automation/faction-milestones/spec.cjs`, never the generated files, then run
+`node automation/faction-milestones/generate.cjs` from the repository root. It
+rewrites the four `chapters/milestones_*.snbt` files, the milestone entries in
+`lang/en_us.snbt`, the chapter group, `kubejs/config/faction_milestones.json` and
+the review table. Quest, task and reward IDs are hashes of the permanent spec keys,
+so renaming text or moving quests keeps progress; changing a key creates a new
+quest. In-game edits to these chapters are overwritten by the next generation.
+Tests fail when the generated files are stale. Restart the server after
+regenerating: custom tasks are bound when FTB Quests loads its file.
 
 ### Verification and release checks
 

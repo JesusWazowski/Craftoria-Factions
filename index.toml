@@ -4306,7 +4306,7 @@ hash = "7bc481e810c7a677244a46a03ef7a2fd3ea98658ed3f494dc93e7b8cd479d980"
 
 [[files]]
 file = "config/ftbchunks-world.snbt"
-hash = "02ca66b96ba200d209cd25601f30ccbad4b4af66d4ccc85809cd06551291e8fb"
+hash = "5ffbeb133c843286be95e113c70d44905f3577f263bf006d07654c857df45ffb"
 
 [[files]]
 file = "config/ftbessentials.snbt"
@@ -4322,7 +4322,7 @@ hash = "4a5fde899abf8afca1d75fd4ad13946232040f712f6bce8d0f64d37bbbd957f4"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "c06fb95141252ae8034b370ba1d76858838a238c5aac9f3a0a5afcf2ab087eac"
+hash = "18ebd704423f0e06bce12bf6931f2a7ea301a1ba48153bcfe886660e10f38def"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/Completionist.snbt"
@@ -4437,6 +4437,22 @@ file = "config/ftbquests/quests/chapters/mi_steam_age.snbt"
 hash = "14e905eb49057cd18306efe7e42fde3129bd055fdfc50c731e84c182dafddf01"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/milestones_mechanists.snbt"
+hash = "f63d439466f4052a4f743d837d68bfa7586308096f61c69a748495a23216ddf0"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/milestones_ritualists.snbt"
+hash = "2a9e48f6a5d7ad5a88bd46eb2d413be74a4ed8e392ea14e48c5e46c1c3354c94"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/milestones_spellcasters.snbt"
+hash = "dd7de2aeb021311de0a95de3c2e2d6a5cf94f4814d2a6549807929868e63d9cf"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/milestones_stargazers.snbt"
+hash = "6fec5b32b839b5c4cf86d46ad04a6f3c73e1efdc5381cb52584f4ea608645d13"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/monster_mayhem.snbt"
 hash = "2288d186cdaee2d48a22b3ee8d1ffce15da7ab8251fa353735fd27ccb181c6ba"
 
@@ -4458,7 +4474,7 @@ hash = "bd15b9b7cfbf0cbb1f20ab394805f88c23917d9ecf45b47d60271892a35daf2d"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "fe4477d86dce1d4d0e18ef4ce4342e5e42426fe099de6db5a45df3e90804e3ce"
+hash = "5c0f55749778756ec67c343f2a6b587c9443881418c99cb3f619209d479853a0"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
@@ -18745,12 +18761,16 @@ file = "kubejs/config/defaultoptions.txt"
 hash = "d708425ce292448cb2d9a90460a075d4f3f9db2a56a000aea444b4ce686e10c3"
 
 [[files]]
+file = "kubejs/config/faction_milestones.json"
+hash = "98f3c564212af4c94076b060f94618f9d2da052ec9e3f343d1c0ff6c8b4d4d7f"
+
+[[files]]
 file = "kubejs/config/faction_recipe_overrides.json"
 hash = "ca54e842a699965180c7bc0e7c3f5153938c9c27a1ab25f8a84362beed155732"
 
 [[files]]
 file = "kubejs/config/factions.json"
-hash = "676a55eb42280ea50cd9bc248c8cd66cef920b74d8f6c23133e8327792e3ef9d"
+hash = "aa9223573c5e9ce3592ea487237f1bdd998e9c95426fc92153b6ce9139f38e70"
 
 [[files]]
 file = "kubejs/config/web_server.json"
@@ -20029,6 +20049,10 @@ file = "kubejs/server_scripts/faction_definitions.js"
 hash = "e29a5f7d8ed44afd593622971a3cce26943da9c331374faf376b28620b72814e"
 
 [[files]]
+file = "kubejs/server_scripts/faction_milestones.js"
+hash = "b6dccbd71e19ee881d40d52878c0cf348abbc1146d5017fa7f7ad531a57f5692"
+
+[[files]]
 file = "kubejs/server_scripts/faction_parties.js"
 hash = "10ba70c9c353782e963d63a40f63b1eecdb5ad3517e4bc1c9509802232b1a4a3"
 
@@ -20082,7 +20106,7 @@ hash = "b42b7394c74a00ab1a5fc95b184e7baf52e9972699d3cff384f24126de99d36b"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
-hash = "3a932e5838757b8481d87860231cfdb09e55d07b8acd3345d7f3f7d5d1ab141a"
+hash = "bb6cda70fa54039ec79d0fc6abd0f02d17dc846aa1cc6e44db44f38d9bff5e71"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"

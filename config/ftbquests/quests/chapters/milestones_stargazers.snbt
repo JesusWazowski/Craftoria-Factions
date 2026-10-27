@@ -1,0 +1,1688 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "milestones_stargazers"
+	group: "6D3FCD45F0736557"
+	icon: {
+		id: "advanced_ae:quantum_core"
+	}
+	id: "575BCA3102AA8BFF"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "advanced_ae:quantum_core" }
+			id: "52604FC3AFF2CA1C"
+			invisible: true
+			size: 1.0d
+			tasks: [
+				{
+					icon: { id: "advanced_ae:quantum_core" }
+					id: "63BE3E0D4646C90D"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "minecraft:white_banner" }
+			id: "17D0CA70DE5804BA"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "09D567EFEDD2F0B6"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: { id: "minecraft:compass" }
+					id: "450B77BD2ABF9303"
+					type: "custom"
+				}
+			]
+			x: -1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "sophisticatedbackpacks:backpack" }
+			id: "590B5C7C2015131E"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "0B8B57F635F84370"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: { id: "sophisticatedbackpacks:backpack" }
+					id: "29C0EDF97A5CADAA"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(sophisticatedbackpacks:backpack)item(sophisticatedbackpacks:copper_backpack)item(sophisticatedbackpacks:iron_backpack)item(sophisticatedbackpacks:gold_backpack)item(sophisticatedbackpacks:diamond_backpack)item(sophisticatedbackpacks:netherite_backpack))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "ae2:inscriber" }
+			id: "13DAEB6576F5D310"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "31DD963519E2282B"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "1A5AB99A1BE4C9D9"
+					item: { count: 1, id: "ae2:inscriber" }
+					type: "item"
+				}
+				{
+					id: "1BF22EBE0B3694F5"
+					item: { count: 1, id: "ae2:silicon_press" }
+					type: "item"
+				}
+				{
+					id: "47A944940806ACF5"
+					item: { count: 1, id: "ae2:logic_processor_press" }
+					type: "item"
+				}
+				{
+					id: "11936E548F1881FC"
+					item: { count: 1, id: "ae2:calculation_processor_press" }
+					type: "item"
+				}
+				{
+					id: "3E1E5F3031D1F378"
+					item: { count: 1, id: "ae2:engineering_processor_press" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 2.5d
+		}
+		{
+			dependencies: ["13DAEB6576F5D310"]
+			icon: { id: "ae2:controller" }
+			id: "2F73691EBF292AFD"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "6D53FEA06B337160"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "4195BDA0566B2FE0"
+					item: { count: 1, id: "ae2:controller" }
+					type: "item"
+				}
+				{
+					id: "48484EF49B4E5E2A"
+					item: { count: 1, id: "ae2:drive" }
+					type: "item"
+				}
+				{
+					id: "55CAD6524B6250D3"
+					item: { count: 1, id: "ae2:terminal" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "6B881103B4D5B28D"
+					item: { count: 1, id: "ae2:cell_component_4k" }
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "200C4B8F5F63EA89"
+					item: { count: 1, id: "ae2:fluix_smart_cable" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2F73691EBF292AFD"]
+			icon: { id: "ae2:pattern_provider" }
+			id: "73857449FEAE1A2F"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "11493C522EE18D51"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "7845BE9624773655"
+					item: { count: 1, id: "ae2:pattern_encoding_terminal" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "5A403936C8147500"
+					item: { count: 1, id: "ae2:pattern_provider" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "49443F1FA0A1CBCF"
+					item: { count: 1, id: "ae2:molecular_assembler" }
+					type: "item"
+				}
+				{
+					id: "3690A4A7D8877657"
+					item: { count: 1, id: "ae2:1k_crafting_storage" }
+					type: "item"
+				}
+				{
+					id: "67A23D359E285650"
+					item: { count: 1, id: "ae2:crafting_accelerator" }
+					type: "item"
+				}
+				{
+					id: "2DFEDBC300738A35"
+					item: { count: 1, id: "merequester:requester" }
+					type: "item"
+				}
+				{
+					id: "61BB5AD7C6DCEF58"
+					item: { count: 1, id: "ae2importexportcard:import_card" }
+					type: "item"
+				}
+				{
+					id: "058A2F6DCCF445C3"
+					item: { count: 1, id: "ae2importexportcard:export_card" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 5.5d
+		}
+		{
+			dependencies: ["73857449FEAE1A2F"]
+			icon: { id: "ae2:engineering_processor" }
+			id: "407EDA70086E0638"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "18ED64565FADD11C"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: true
+					count: 512L
+					id: "2C68542C364D2332"
+					item: { count: 1, id: "ae2:logic_processor" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 512L
+					id: "495B53413E9BAA6C"
+					item: { count: 1, id: "ae2:calculation_processor" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 256L
+					id: "5A9AEF40BA08435B"
+					item: { count: 1, id: "ae2:engineering_processor" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 7.0d
+		}
+		{
+			dependencies: ["2F73691EBF292AFD"]
+			icon: { id: "ae2:wireless_access_point" }
+			id: "2C848F7D20C46AE5"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "099DFAA1B9E3461E"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "5DB25846BED3D753"
+					item: { count: 1, id: "ae2:wireless_access_point" }
+					type: "item"
+				}
+				{
+					id: "77710D5C1A2DCB81"
+					item: { count: 1, id: "ae2wtlib:wireless_universal_terminal" }
+					type: "item"
+				}
+				{
+					id: "299DBB5335EE7D67"
+					item: { count: 1, id: "wcwt:advanced_coding_card" }
+					type: "item"
+				}
+				{
+					id: "6131A8E0BBC561A3"
+					item: { count: 1, id: "betterp2p:advanced_memory_card" }
+					type: "item"
+				}
+				{
+					id: "0A7051C55D0181FF"
+					item: { count: 1, id: "ae2netanalyser:network_analyser" }
+					type: "item"
+				}
+				{
+					id: "6694ED573D41C4A4"
+					item: { count: 1, id: "ae2tb:terminal_bookmark_interact_card" }
+					type: "item"
+				}
+				{
+					id: "46D59635D4962D8C"
+					item: { count: 1, id: "enderdrives:ender_disk_16k" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 8.5d
+		}
+		{
+			dependencies: ["73857449FEAE1A2F"]
+			icon: { id: "extendedae:assembler_matrix_frame" }
+			id: "6A76C66E05911799"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "55A40C86A446E39A"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "332BD22658978B36"
+					item: { count: 1, id: "extendedae:ex_pattern_provider" }
+					type: "item"
+				}
+				{
+					id: "02342308532D1E6A"
+					item: { count: 1, id: "extendedae:crystal_assembler" }
+					type: "item"
+				}
+				{
+					id: "22D4D0C9253F8790"
+					item: { count: 1, id: "extendedae:circuit_cutter" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "0536E08AF59E5D96"
+					item: { count: 1, id: "extendedae:assembler_matrix_frame" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "175EFEEAF439BB93"
+					item: { count: 1, id: "extendedae:assembler_matrix_crafter" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "0CABEF32392B6BDD"
+					item: { count: 1, id: "extendedae:assembler_matrix_pattern" }
+					type: "item"
+				}
+				{
+					id: "6C5618E01D0BC6BD"
+					item: { count: 1, id: "extendedae_plus:assembler_matrix_crafter_plus" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 10.0d
+		}
+		{
+			dependencies: ["6A76C66E05911799"]
+			icon: { id: "advanced_ae:quantum_core" }
+			id: "5F54FAC0CBA280B3"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "1C490C90E1F0075E"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "76CEAB568DF90981"
+					item: { count: 1, id: "advanced_ae:quantum_core" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7849DDBB07987363"
+					item: { count: 1, id: "advanced_ae:quantum_structure" }
+					type: "item"
+				}
+				{
+					id: "7D1E161FFA568A05"
+					item: { count: 1, id: "advanced_ae:quantum_accelerator" }
+					type: "item"
+				}
+				{
+					id: "10DCC06BBC9A5A7D"
+					item: { count: 1, id: "advanced_ae:quantum_multi_threader" }
+					type: "item"
+				}
+				{
+					id: "746EB81C9CE5062F"
+					item: { count: 1, id: "advanced_ae:reaction_chamber" }
+					type: "item"
+				}
+				{
+					id: "0BD8B4B794FA33DB"
+					item: { count: 1, id: "advanced_ae:data_entangler" }
+					type: "item"
+				}
+				{
+					id: "29143F60AB81C26A"
+					item: { count: 1, id: "bigger_ae2:1024_core_crafting_accelerator" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 11.5d
+		}
+		{
+			dependencies: ["2F73691EBF292AFD"]
+			icon: { id: "ae2:fluix_crystal" }
+			id: "47F950C786A48F67"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3543C359DBFC376F"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: true
+					count: 8192L
+					id: "19A475D37AF43D87"
+					item: { count: 1, id: "ae2:fluix_crystal" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 13.0d
+		}
+		{
+			dependencies: ["5F54FAC0CBA280B3"]
+			icon: { id: "megacells:mega_item_cell_housing" }
+			id: "2EAE435D466419DB"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7081F8A43E4BCE0D"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 2L
+					id: "408E9D2093FE0A42"
+					item: { count: 1, id: "megacells:cell_component_256m" }
+					type: "item"
+				}
+				{
+					id: "627EE76A5A609037"
+					item: { count: 1, id: "megacells:mega_item_cell_housing" }
+					type: "item"
+				}
+				{
+					id: "00D43B48FE0784E9"
+					item: { count: 1, id: "megacells:bulk_item_cell" }
+					type: "item"
+				}
+				{
+					id: "05C7D9F709C388E5"
+					item: { count: 1, id: "megacells:mega_energy_cell" }
+					type: "item"
+				}
+				{
+					id: "6EB1D88056203F78"
+					item: { count: 1, id: "appflux:core_256k" }
+					type: "item"
+				}
+				{
+					id: "2A69183477C9FBE1"
+					item: { count: 1, id: "appmek:chemical_cell_housing" }
+					type: "item"
+				}
+				{
+					id: "5AFEC1BA501372F9"
+					item: { count: 1, id: "apprep:matter_cell_16k" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 14.5d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "mekanism:metallurgic_infuser" }
+			id: "0B929B7024E16BBB"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "17F0194068ED578B"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "346AEECB50741708"
+					item: { count: 1, id: "mekanism:metallurgic_infuser" }
+					type: "item"
+				}
+				{
+					id: "51BFE4109F786146"
+					item: { count: 1, id: "mekanism:enrichment_chamber" }
+					type: "item"
+				}
+				{
+					id: "087072C49C9E8737"
+					item: { count: 1, id: "mekanismgenerators:heat_generator" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6BB88C8133210D70"
+					item: { count: 1, id: "mekanism:basic_control_circuit" }
+					type: "item"
+				}
+				{
+					id: "37B36229B38D3063"
+					item: { count: 1, id: "mekanism:steel_casing" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0B929B7024E16BBB"]
+			icon: { id: "mekanism:jetpack" }
+			id: "5630EB6A484E8190"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "32E4DB39C18B3F85"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "554E372A2BAA0010"
+					item: { count: 1, id: "mekanism:electrolytic_separator" }
+					type: "item"
+				}
+				{
+					id: "7CEA0FEC81C9EDDD"
+					item: { count: 1, id: "mekanism:jetpack" }
+					type: "item"
+				}
+				{
+					id: "566A46324426B55E"
+					item: { count: 1, id: "mekanismtools:steel_pickaxe" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0B929B7024E16BBB"]
+			icon: { id: "mekanism:chemical_crystallizer" }
+			id: "595822C88F32AA23"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "26EC26E2BB7C9312"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "0FE7FF0099EA0C95"
+					item: { count: 1, id: "mekanism:purification_chamber" }
+					type: "item"
+				}
+				{
+					id: "10D55D790683B4BA"
+					item: { count: 1, id: "mekanism:chemical_injection_chamber" }
+					type: "item"
+				}
+				{
+					id: "3D5641FD26E4749E"
+					item: { count: 1, id: "mekanism:chemical_dissolution_chamber" }
+					type: "item"
+				}
+				{
+					id: "4BDFF552EBC5D6DF"
+					item: { count: 1, id: "mekanism:chemical_washer" }
+					type: "item"
+				}
+				{
+					id: "65E10EF7D8EA7E8D"
+					item: { count: 1, id: "mekanism:chemical_crystallizer" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "14EE43FB2ACAAB1C"
+					item: { count: 1, id: "mekanism:elite_control_circuit" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "47B32DA277826022"
+					item: { count: 1, id: "moremekanismprocessing:crystal_nickel" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 5.5d
+		}
+		{
+			dependencies: ["0B929B7024E16BBB"]
+			icon: { id: "mekanism:induction_port" }
+			id: "52D5BD8A6C419838"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "56F1DDCDBB6A03CE"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 16L
+					id: "5D62C679367EA869"
+					item: { count: 1, id: "mekanism:induction_casing" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "672BC67693BC6D34"
+					item: { count: 1, id: "mekanism:induction_port" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "049ED9394E5B72C9"
+					item: { count: 1, id: "mekanism:basic_induction_cell" }
+					type: "item"
+				}
+				{
+					id: "140F31A1EA6DD49D"
+					item: { count: 1, id: "mekanism:basic_induction_provider" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "562B95316FA9BA0D"
+					item: { count: 1, id: "mekanism:dynamic_tank" }
+					type: "item"
+				}
+				{
+					id: "20BD746B660226C0"
+					item: { count: 1, id: "mekanism:dynamic_valve" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 7.0d
+		}
+		{
+			dependencies: ["595822C88F32AA23"]
+			icon: { id: "mekanismgenerators:fission_fuel_assembly" }
+			id: "3E3C2FDE1002182B"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4F3E11B74B4A2E04"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 32L
+					id: "06E0D80C3B273334"
+					item: { count: 1, id: "mekanismgenerators:fission_reactor_casing" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "2369E6F002495AE5"
+					item: { count: 1, id: "mekanismgenerators:fission_reactor_port" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "448A932ED4A072D1"
+					item: { count: 1, id: "mekanismgenerators:reactor_glass" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "52E537F6BE148DF2"
+					item: { count: 1, id: "mekanismgenerators:fission_fuel_assembly" }
+					type: "item"
+				}
+				{
+					id: "695D99380A2D5505"
+					item: { count: 1, id: "mekanismgenerators:control_rod_assembly" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "3D7DDB3E3894D68B"
+					item: { count: 1, id: "mekanism:pellet_plutonium" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 8.5d
+		}
+		{
+			dependencies: ["3E3C2FDE1002182B"]
+			icon: { id: "mekanismgenerators:turbine_rotor" }
+			id: "4601CFB75AD2350A"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "6FC2CD5BB74DCAA0"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 32L
+					id: "403C9902B68B0126"
+					item: { count: 1, id: "mekanismgenerators:turbine_casing" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7089EEF03AE41AD0"
+					item: { count: 1, id: "mekanismgenerators:turbine_rotor" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "0D372B58292B1184"
+					item: { count: 1, id: "mekanismgenerators:turbine_blade" }
+					type: "item"
+				}
+				{
+					id: "059EBB034338CB94"
+					item: { count: 1, id: "mekanismgenerators:rotational_complex" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "286F3F2B72D5DC59"
+					item: { count: 1, id: "mekanismgenerators:electromagnetic_coil" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "749388A79EDF107E"
+					item: { count: 1, id: "mekanismgenerators:saturating_condenser" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "604093DB72B0CBF2"
+					item: { count: 1, id: "mekanismgenerators:turbine_vent" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "292474850BBC685F"
+					item: { count: 1, id: "mekanism:boiler_casing" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "330843D7244C363A"
+					item: { count: 1, id: "mekanism:superheating_element" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 10.0d
+		}
+		{
+			dependencies: ["4601CFB75AD2350A"]
+			icon: { id: "mekanismgenerators:fusion_reactor_controller" }
+			id: "0DFEFC11D3E99018"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7ACFED3253B8E3D2"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "57AAA81E75032CC4"
+					item: { count: 1, id: "mekanismgenerators:fusion_reactor_controller" }
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "167FEF126438C60B"
+					item: { count: 1, id: "mekanismgenerators:fusion_reactor_frame" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "71FD1FFE2AED2B4C"
+					item: { count: 1, id: "mekanismgenerators:fusion_reactor_port" }
+					type: "item"
+				}
+				{
+					id: "4C8436F4BE33ECEE"
+					item: { count: 1, id: "mekanismgenerators:laser_focus_matrix" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "62D5B22BC517A20A"
+					item: { count: 1, id: "mekanism:laser" }
+					type: "item"
+				}
+				{
+					id: "6335E002BCB0FA3D"
+					item: { count: 1, id: "mekanism:laser_amplifier" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 11.5d
+		}
+		{
+			dependencies: ["3E3C2FDE1002182B"]
+			icon: { id: "mekanism:pellet_antimatter" }
+			id: "7DBA9410064FF5B1"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "039E9B1B0E72EE7D"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 32L
+					id: "5CB47DEF46E35F25"
+					item: { count: 1, id: "mekanism:sps_casing" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3BAA5334E6035EA6"
+					item: { count: 1, id: "mekanism:sps_port" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "56E9DAE7FA4B613A"
+					item: { count: 1, id: "mekanism:supercharged_coil" }
+					type: "item"
+				}
+				{
+					id: "23C27B170C233F83"
+					item: { count: 1, id: "mekanism:antiprotonic_nucleosynthesizer" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7EA054FBB38D8D79"
+					item: { count: 1, id: "mekanism:pellet_antimatter" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 13.0d
+		}
+		{
+			dependencies: ["7DBA9410064FF5B1"]
+			icon: { id: "mekanism:mekasuit_bodyarmor" }
+			id: "4E31039C2886006F"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "71B72D74D2D8E117"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "53372FC25DD4B471"
+					item: { count: 1, id: "mekanism:mekasuit_helmet" }
+					type: "item"
+				}
+				{
+					id: "2F61C9EF36E473D8"
+					item: { count: 1, id: "mekanism:mekasuit_bodyarmor" }
+					type: "item"
+				}
+				{
+					id: "4446CDB959F5F641"
+					item: { count: 1, id: "mekanism:mekasuit_pants" }
+					type: "item"
+				}
+				{
+					id: "482A8FC39421299F"
+					item: { count: 1, id: "mekanism:mekasuit_boots" }
+					type: "item"
+				}
+				{
+					id: "1818EA1E4A5ED9A3"
+					item: { count: 1, id: "mekanism:meka_tool" }
+					type: "item"
+				}
+				{
+					id: "5D8BB5DDF0169304"
+					item: { count: 1, id: "mekaweapons:meka_tana" }
+					type: "item"
+				}
+				{
+					id: "780E6D6FBB0F8180"
+					item: { count: 1, id: "gmut:module_gravitational_modulating_additional_unit" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 14.5d
+		}
+		{
+			dependencies: ["7DBA9410064FF5B1"]
+			icon: { id: "mekanism_extras:infinite_control_circuit" }
+			id: "67C6F77DFA8D8021"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "43C87AB2AF4C33F5"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 4L
+					id: "5D8C1AE38549284C"
+					item: { count: 1, id: "mekanism_extras:cosmic_control_circuit" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "4CF3F93A3EF58D29"
+					item: { count: 1, id: "mekanism_extras:infinite_control_circuit" }
+					type: "item"
+				}
+				{
+					id: "7645779CB9CD60E3"
+					item: { count: 1, id: "mekanism_extras:infinite_tier_installer" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "78A18DB0C14F0050"
+					item: { count: 1, id: "mekmm:uu_matter" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 16.0d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "powah:energizing_orb" }
+			id: "1BF5D6C35C09ABE3"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "79F0F36EAF53DAA4"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "1180CFAA957190D4"
+					item: { count: 1, id: "powah:energizing_orb" }
+					type: "item"
+				}
+				{
+					id: "0E06AA1BEED9476A"
+					item: { count: 1, id: "powah:furnator_basic" }
+					type: "item"
+				}
+				{
+					id: "481434FCE8CBBA21"
+					item: { count: 1, id: "powah:energy_cell_basic" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "04E5B34059ABD120"
+					item: { count: 1, id: "powah:energy_cable_basic" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1BF5D6C35C09ABE3"]
+			icon: { id: "powah:reactor_starter" }
+			id: "3DAC233354BF020D"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "23EDAAA554669D9A"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 36L
+					id: "5FB7BF448700079F"
+					item: { count: 1, id: "powah:reactor_starter" }
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "4DE0A51ACB492B52"
+					item: { count: 1, id: "powah:uraninite" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3DAC233354BF020D"]
+			icon: { id: "powah:reactor_nitro" }
+			id: "3AC015EB06B325BB"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7A93892A62F0D6CA"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 36L
+					id: "6AAD4D65771DAB45"
+					item: { count: 1, id: "powah:reactor_nitro" }
+					type: "item"
+				}
+				{
+					id: "77E217EAF77F2FFC"
+					item: { count: 1, id: "powah:solar_panel_nitro" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7FBBCDA1051C167A"
+					item: { count: 1, id: "powah:crystal_nitro" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 5.5d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "justdirethings:gooblock_tier1" }
+			id: "7BAB26E761C7E472"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "52E4997A394EDD04"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "5FCAE1AFA290D3E4"
+					item: { count: 1, id: "justdirethings:gooblock_tier1" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "3A33F2D7B83483C0"
+					item: { count: 1, id: "justdirethings:ferricore_ingot" }
+					type: "item"
+				}
+				{
+					id: "3FA289D51FF98576"
+					item: { count: 1, id: "justdirethings:ferricore_pickaxe" }
+					type: "item"
+				}
+				{
+					id: "264BE3A28713B71F"
+					item: { count: 1, id: "justdirethings:generatort1" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 7.0d
+		}
+		{
+			dependencies: ["7BAB26E761C7E472"]
+			icon: { id: "justdirethings:blazegold_ingot" }
+			id: "7E8020DE8FF24B74"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "6E2A71FB7D672F80"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "7951D0504F06AAD6"
+					item: { count: 1, id: "justdirethings:gooblock_tier2" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "066146AC6B51A6EF"
+					item: { count: 1, id: "justdirethings:blazegold_ingot" }
+					type: "item"
+				}
+				{
+					id: "54C73CDA81F8E869"
+					item: { count: 1, id: "justdirethings:blazejet_wand" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 8.5d
+		}
+		{
+			dependencies: ["7E8020DE8FF24B74"]
+			icon: { id: "justdirethings:celestigem" }
+			id: "4DE27A0E64D98A08"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "5EBBADB9B3AC22E8"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "0BCAF88EBEB51C82"
+					item: { count: 1, id: "justdirethings:gooblock_tier3" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "488703167BBC663C"
+					item: { count: 1, id: "justdirethings:celestigem" }
+					type: "item"
+				}
+				{
+					id: "7307B613FA47F2A4"
+					item: { count: 1, id: "justdirethings:celestigem_paxel" }
+					type: "item"
+				}
+				{
+					id: "3FD28237F0A793D1"
+					item: { count: 1, id: "justdirethings:voidshift_wand" }
+					type: "item"
+				}
+				{
+					id: "0FA34186FFC5F977"
+					item: { count: 1, id: "justdirethings:blockswappert2" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 10.0d
+		}
+		{
+			dependencies: ["4DE27A0E64D98A08"]
+			icon: { id: "justdirethings:eclipsealloy_ingot" }
+			id: "511ED78EF19BA40A"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4666B497A8209ABD"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "38FD712D7DCE0452"
+					item: { count: 1, id: "justdirethings:gooblock_tier4" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "77822EC1CF775741"
+					item: { count: 1, id: "justdirethings:eclipsealloy_ingot" }
+					type: "item"
+				}
+				{
+					id: "4CAA21AC27D38563"
+					item: { count: 1, id: "justdirethings:eclipsealloy_paxel" }
+					type: "item"
+				}
+				{
+					id: "79BF86FC187E1D8E"
+					item: { count: 1, id: "justdirethings:eclipsegate_wand" }
+					type: "item"
+				}
+				{
+					id: "4CE9A6925D899075"
+					item: { count: 1, id: "justdirethings:refined_t4_fluid_bucket" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 11.5d
+		}
+		{
+			dependencies: ["1BF5D6C35C09ABE3"]
+			icon: { id: "mininggadgets:mininggadget" }
+			id: "755079B52E3A6C86"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7FE2DF73C37A48C9"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "1D0E9AB628604454"
+					item: { count: 1, id: "mininggadgets:modificationtable" }
+					type: "item"
+				}
+				{
+					id: "01C84867F4193E42"
+					item: { count: 1, id: "mininggadgets:mininggadget" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "02029E9CA71A0EB9"
+					item: { count: 1, id: "mininggadgets:upgrade_empty" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 13.0d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "modularrouters:modular_router" }
+			id: "17B98A2AC380259B"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "2719CCB6D2931599"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 2L
+					id: "67C4FA22F5AC4983"
+					item: { count: 1, id: "modularrouters:modular_router" }
+					type: "item"
+				}
+				{
+					id: "32A97752C066166C"
+					item: { count: 1, id: "modularrouters:sender_module_1" }
+					type: "item"
+				}
+				{
+					id: "13786DD6634C49D6"
+					item: { count: 1, id: "mekanisticrouters:chemical_module_mk1" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7580453012A2FB0E"
+					item: { count: 1, id: "pipez:item_pipe" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7152387F36E7CDA8"
+					item: { count: 1, id: "pipez:fluid_pipe" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "64029EF4A5A57DD0"
+					item: { count: 1, id: "pipez:energy_pipe" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 2.5d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "xycraft_world:xychorium_gem_blue" }
+			id: "6045D4F2F6056195"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "200442245D43DD3C"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 16L
+					id: "4C4788D6F9F214D6"
+					item: { count: 1, id: "xycraft_world:xychorium_gem_blue" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "00B034FD80E5F497"
+					item: { count: 1, id: "xycraft_world:xychorium_gem_red" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "5BD6BBBC2EA6BB2F"
+					item: { count: 1, id: "xycraft_world:xychorium_gem_green" }
+					type: "item"
+				}
+				{
+					id: "3EB3AD6453DA067C"
+					item: { count: 1, id: "xycraft_machines:extractor" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "66D056ABE6A6B9A8"
+					item: { count: 1, id: "xycraft_override:bricks_blue" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 4.0d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "hostilenetworks:sim_chamber" }
+			id: "1F42C6440FF17A48"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "2EEBB0FC315E4BC0"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "25480E007E9EBC17"
+					item: { count: 1, id: "hostilenetworks:deep_learner" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "6EDCBD18068E175C"
+					item: { count: 1, id: "hostilenetworks:sim_chamber" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "177AFBA5FDB828F0"
+					item: { count: 1, id: "hostilenetworks:loot_fabricator" }
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "6D241D913AFCEDCC"
+					item: { count: 1, id: "hostilenetworks:prediction_matrix" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 5.5d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "actuallyadditions:empowerer" }
+			id: "1CAE0733E1A5C95E"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7D7F3D0F63CA36DA"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "385E6E686501B96E"
+					item: { count: 1, id: "industrialforegoing:machine_frame_simple" }
+					type: "item"
+				}
+				{
+					id: "022FB68F02D662BF"
+					item: { count: 1, id: "industrialforegoing:mob_crusher" }
+					type: "item"
+				}
+				{
+					id: "2B1955FDE12D1EA6"
+					item: { count: 1, id: "industrialforegoing:laser_drill" }
+					type: "item"
+				}
+				{
+					id: "6E5F12EBAFF7AB44"
+					item: { count: 1, id: "mifa:speed_addon_3" }
+					type: "item"
+				}
+				{
+					id: "642FBE66BA30031B"
+					item: { count: 1, id: "actuallyadditions:empowerer" }
+					type: "item"
+				}
+				{
+					id: "65239F0DA3061DC0"
+					item: { count: 1, id: "actuallyadditions:atomic_reconstructor" }
+					type: "item"
+				}
+				{
+					id: "553BD6AB13BF3C27"
+					item: { count: 1, id: "tempad:tempad" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 7.0d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "replication:replicator" }
+			id: "727140CA51AC8F1F"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "648C7E68AD6343DF"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "73D7FAE99995806E"
+					item: { count: 1, id: "replication:identification_chamber" }
+					type: "item"
+				}
+				{
+					id: "7D68E41292BF0EB5"
+					item: { count: 1, id: "replication:disintegrator" }
+					type: "item"
+				}
+				{
+					id: "4058FA544C9935C3"
+					item: { count: 1, id: "replication:replicator" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "237FED6BE9D089D0"
+					item: { count: 1, id: "replication:matter_tank" }
+					type: "item"
+				}
+				{
+					id: "38E3E7B41D8089A9"
+					item: { count: 1, id: "replication:chip_storage" }
+					type: "item"
+				}
+				{
+					id: "53651C72809AAEA6"
+					item: { count: 1, id: "replication:replication_terminal" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "0A8E5799BB98F202"
+					item: { count: 1, id: "replication:replica_ingot" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 8.5d
+		}
+		{
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "createstockbridge:ae_bridge" }
+			id: "0E723ECF544C9151"
+			optional: true
+			size: 1.0d
+			tasks: [
+				{
+					id: "5A26CBF3A2C3770C"
+					item: { count: 1, id: "createstockbridge:ae_bridge" }
+					type: "item"
+				}
+				{
+					id: "4BD8F1652AF0718A"
+					item: { count: 1, id: "appliedpneumatics:amadron_wireless_terminal" }
+					type: "item"
+				}
+				{
+					id: "183D7B5FB5A5FBEC"
+					item: { count: 1, id: "arseng:cable_source_acceptor" }
+					type: "item"
+				}
+				{
+					id: "0598D9B71EA3CC66"
+					item: { count: 1, id: "schematicenergistics:cannon_interface" }
+					type: "item"
+				}
+			]
+			x: 6.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2EAE435D466419DB", "4E31039C2886006F", "67C6F77DFA8D8021", "0DFEFC11D3E99018", "727140CA51AC8F1F", "47F950C786A48F67"]
+			icon: { id: "advanced_ae:quantum_chestplate" }
+			id: "3FAFE0B6BD0B697D"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "5A67D40083407884"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					id: "5EB17AE223B2BB2A"
+					item: { count: 1, id: "advanced_ae:quantum_helmet" }
+					type: "item"
+				}
+				{
+					id: "0A1A7C6DA5D61EF1"
+					item: { count: 1, id: "advanced_ae:quantum_chestplate" }
+					type: "item"
+				}
+				{
+					id: "5F3213707D0AC8C9"
+					item: { count: 1, id: "advanced_ae:quantum_leggings" }
+					type: "item"
+				}
+				{
+					id: "6EB16581164F9352"
+					item: { count: 1, id: "advanced_ae:quantum_boots" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 19.0d
+		}
+	]
+}

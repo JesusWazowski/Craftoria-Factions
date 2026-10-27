@@ -1,0 +1,1681 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "milestones_ritualists"
+	group: "6D3FCD45F0736557"
+	icon: {
+		id: "occultism:golden_sacrificial_bowl"
+	}
+	id: "1E829EEE0692CBA2"
+	images: [ ]
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "occultism:golden_sacrificial_bowl" }
+			id: "53DB455C7C3D44C6"
+			invisible: true
+			size: 1.0d
+			tasks: [
+				{
+					icon: { id: "occultism:golden_sacrificial_bowl" }
+					id: "48D46696E1F536D6"
+					type: "custom"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "minecraft:white_banner" }
+			id: "59C10AB88A73B0B7"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "0004B35B7EC022D7"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: { id: "minecraft:compass" }
+					id: "7FC8C217891147D4"
+					type: "custom"
+				}
+			]
+			x: -1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "sophisticatedbackpacks:backpack" }
+			id: "683934EAD368DEC1"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7EFB6D0C31055EA8"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					icon: { id: "sophisticatedbackpacks:backpack" }
+					id: "79C3FD8B3C3045B9"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(sophisticatedbackpacks:backpack)item(sophisticatedbackpacks:copper_backpack)item(sophisticatedbackpacks:iron_backpack)item(sophisticatedbackpacks:gold_backpack)item(sophisticatedbackpacks:diamond_backpack)item(sophisticatedbackpacks:netherite_backpack))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 1.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "occultism:dictionary_of_spirits" }
+			id: "2F5527B3F3B1FE54"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "6B8F3E1D9DE64942"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "1A91EA9B78A5BA2F"
+					item: { count: 1, id: "occultism:dictionary_of_spirits" }
+					type: "item"
+				}
+				{
+					id: "5BF712E47DA744FB"
+					item: { count: 1, id: "occultism:spirit_attuned_gem" }
+					type: "item"
+				}
+				{
+					id: "682C2CED5B51E01C"
+					item: { count: 1, id: "occultism:golden_sacrificial_bowl" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "17AADC8F54BDF6F2"
+					item: { count: 1, id: "occultism:sacrificial_bowl" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "12618325195FF627"
+					item: { count: 1, id: "occultism:chalk_white" }
+					type: "item"
+				}
+				{
+					advancement: "occultism:occultism/summon_foliot_crusher"
+					criterion: ""
+					icon: { id: "occultism:book_of_binding_bound_foliot" }
+					id: "2604C4619FDA8E12"
+					type: "advancement"
+				}
+			]
+			x: -6.25d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2F5527B3F3B1FE54"]
+			icon: { id: "occultism:dimensional_mineshaft" }
+			id: "64ADCD62903182EB"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "515559982D95B35A"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 8L
+					id: "639E9ED1634E2A93"
+					item: { count: 1, id: "occultism:iesnium_ingot" }
+					type: "item"
+				}
+				{
+					id: "19FCA96E876F7686"
+					item: { count: 1, id: "occultism:dimensional_mineshaft" }
+					type: "item"
+				}
+				{
+					id: "72DB733E0E998AB8"
+					item: { count: 1, id: "occultism:miner_djinni_ores" }
+					type: "item"
+				}
+				{
+					id: "0B67D7B000DB6A26"
+					item: { count: 1, id: "occultism:storage_controller" }
+					type: "item"
+				}
+				{
+					id: "5E3444981F2B848A"
+					item: { count: 1, id: "occultism:storage_stabilizer_tier1" }
+					type: "item"
+				}
+			]
+			x: -6.25d
+			y: 4.0d
+		}
+		{
+			dependencies: ["64ADCD62903182EB"]
+			icon: { id: "occultism:miner_marid_master" }
+			id: "4959C1CAB135E543"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "61C9EDCF72607187"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "5B2B95061C2BA001"
+					item: { count: 1, id: "occultism:miner_marid_master" }
+					type: "item"
+				}
+				{
+					id: "4861D1F13F02ECE3"
+					item: { count: 1, id: "occultism:storage_stabilizer_tier3" }
+					type: "item"
+				}
+			]
+			x: -6.25d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4959C1CAB135E543"]
+			icon: { id: "occultism:miner_ancient_eldritch" }
+			id: "62D4F700B75CE743"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4F81052CDA177373"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "006ED6F03E25D407"
+					item: { count: 1, id: "occultism:miner_ancient_eldritch" }
+					type: "item"
+				}
+				{
+					id: "25F84FCE1C4BB92D"
+					item: { count: 1, id: "occultism:storage_stabilizer_tier4" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "75B4F3CA6824F871"
+					item: { count: 1, id: "occultism:stable_wormhole" }
+					type: "item"
+				}
+			]
+			x: -6.25d
+			y: 7.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "neovitae:ara_vitae" }
+			id: "3FECE5A691420AFF"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "07D9EF83D4D9DFFD"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "26A1DFA36BFF533D"
+					item: { count: 1, id: "neovitae:ara_vitae" }
+					type: "item"
+				}
+				{
+					id: "12DC23B2C3CA0750"
+					item: { count: 1, id: "neovitae:blood_orb_weak" }
+					type: "item"
+				}
+				{
+					id: "756763B3EBC223A6"
+					item: { count: 1, id: "neovitae:hellfire_forge" }
+					type: "item"
+				}
+				{
+					id: "009BABB69E00D62F"
+					item: { count: 1, id: "neovitae:lex_vitae" }
+					type: "item"
+				}
+			]
+			x: -6.25d
+			y: 8.5d
+		}
+		{
+			dependencies: ["3FECE5A691420AFF"]
+			icon: { id: "neovitae:master_ritual_stone" }
+			id: "7BD02D9D2047A1E7"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7C3C498118056CF3"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "1564748BBAC9FCD2"
+					item: { count: 1, id: "neovitae:blood_orb_apprentice" }
+					type: "item"
+				}
+				{
+					id: "48040EEC5A681763"
+					item: { count: 1, id: "neovitae:master_ritual_stone" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "177017B1EEB74601"
+					item: { count: 1, id: "neovitae:ritual_stone" }
+					type: "item"
+				}
+				{
+					id: "086412EBEFD0E7F1"
+					item: { count: 1, id: "neovitae:ritual_diviner" }
+					type: "item"
+				}
+				{
+					id: "4D8A128B1ECF9C5E"
+					item: { count: 1, id: "neovitae:sigil_holding" }
+					type: "item"
+				}
+				{
+					id: "0B79A1AAA29638B0"
+					item: { count: 1, id: "animusnv:sigil_builder" }
+					type: "item"
+				}
+			]
+			x: -6.25d
+			y: 10.0d
+		}
+		{
+			dependencies: ["7BD02D9D2047A1E7"]
+			icon: { id: "neovitae:sentient_plate" }
+			id: "55F701778D57D188"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "0BDE7BBBB487B89D"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "2147156E40DE52C1"
+					item: { count: 1, id: "neovitae:blood_orb_master" }
+					type: "item"
+				}
+				{
+					id: "7D43B537A8F1F335"
+					item: { count: 1, id: "neovitae:sentient_sword" }
+					type: "item"
+				}
+				{
+					id: "72E3F5C0EECB8FDB"
+					item: { count: 1, id: "neovitae:sentient_helmet" }
+					type: "item"
+				}
+				{
+					id: "4332565278F1B30A"
+					item: { count: 1, id: "neovitae:sentient_plate" }
+					type: "item"
+				}
+				{
+					id: "2CA7F48A1A2F645A"
+					item: { count: 1, id: "neovitae:sentient_leggings" }
+					type: "item"
+				}
+				{
+					id: "5B816B0F7398A783"
+					item: { count: 1, id: "neovitae:sentient_boots" }
+					type: "item"
+				}
+			]
+			x: -6.25d
+			y: 11.5d
+		}
+		{
+			dependencies: ["55F701778D57D188"]
+			icon: { id: "neovitae:blood_orb_transcendent" }
+			id: "00587E79E0F2BBB2"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "1A42CDA7EB16D2DA"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "0422437569932F64"
+					item: { count: 1, id: "neovitae:blood_orb_archmage" }
+					type: "item"
+				}
+				{
+					id: "65A35AC285D4D45E"
+					item: { count: 1, id: "neovitae:blood_orb_transcendent" }
+					type: "item"
+				}
+			]
+			x: -6.25d
+			y: 13.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "apotheosis:salvaging_table" }
+			id: "293446C57B82E2B6"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7C43D51940089495"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					advancement: "apotheosis:progression/frontier"
+					criterion: ""
+					icon: { id: "apotheosis:gem" }
+					id: "5B1E4E1E9A9FD01D"
+					type: "advancement"
+				}
+				{
+					id: "4C7B0BF7357A0C94"
+					item: { count: 1, id: "apotheosis:salvaging_table" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 2.5d
+		}
+		{
+			dependencies: ["293446C57B82E2B6"]
+			icon: { id: "apotheosis:gem_cutting_table" }
+			id: "21BF8E78D80F38D9"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "73F51F3133EDC9DA"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					advancement: "apotheosis:progression/ascent"
+					criterion: ""
+					icon: { id: "apotheosis:gem" }
+					id: "58EEADE224391A47"
+					type: "advancement"
+				}
+				{
+					id: "40D7EF5688A4CCD4"
+					item: { count: 1, id: "apotheosis:gem_cutting_table" }
+					type: "item"
+				}
+				{
+					id: "6830EB04EE4C49A8"
+					item: { count: 1, id: "apotheosis:reforging_table" }
+					type: "item"
+				}
+				{
+					icon: { id: "gateways:gate_pearl" }
+					id: "0C2003FA46286DB0"
+					stat: "gateways:gates_defeated"
+					type: "stat"
+					value: 3
+				}
+			]
+			x: -3.75d
+			y: 4.0d
+		}
+		{
+			dependencies: ["293446C57B82E2B6"]
+			icon: { id: "apothic_enchanting:ender_library" }
+			id: "49E593EC5C0E4586"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7C1A99BB7EF958E1"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "293D2350369CAAFB"
+					item: { count: 1, id: "apothic_enchanting:apothic_enchanting_table" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "25ACA17BEA7A54F3"
+					item: { count: 1, id: "apothic_enchanting:hellshelf" }
+					type: "item"
+				}
+				{
+					id: "6DE38B7DA6EA60AC"
+					item: { count: 1, id: "apothic_enchanting:library" }
+					type: "item"
+				}
+				{
+					id: "1803337597FD24E3"
+					item: { count: 1, id: "apothic_enchanting:ender_library" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 5.5d
+		}
+		{
+			dependencies: ["21BF8E78D80F38D9"]
+			icon: { id: "minecraft:nether_star" }
+			id: "2910BAB7D08B6097"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "20649943B19638DC"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					advancement: "apotheosis:progression/summit"
+					criterion: ""
+					icon: { id: "apotheosis:gem" }
+					id: "5DFA52D697F2D8A1"
+					type: "advancement"
+				}
+				{
+					entity: "minecraft:wither"
+					id: "5E7D2A303CE0CFC0"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: -3.75d
+			y: 7.0d
+		}
+		{
+			dependencies: ["2910BAB7D08B6097"]
+			icon: { id: "minecraft:dragon_head" }
+			id: "4EB1F717290307F4"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7FEABF6EBEF17244"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					advancement: "apotheosis:progression/pinnacle"
+					criterion: ""
+					icon: { id: "apotheosis:gem" }
+					id: "64D153317F4EE252"
+					type: "advancement"
+				}
+				{
+					entity: "minecraft:ender_dragon"
+					id: "6C273DC00A6DBAD3"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: -3.75d
+			y: 8.5d
+		}
+		{
+			dependencies: ["4EB1F717290307F4"]
+			icon: { id: "apotheosis:arcane_sands" }
+			id: "67914208BF084A41"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "26BA692C726FBC59"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: true
+					count: 512L
+					id: "2306A11DABCADD6A"
+					item: { count: 1, id: "apotheosis:luminous_crystal_shard" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 256L
+					id: "28A1FA95925CA55F"
+					item: { count: 1, id: "apotheosis:arcane_sands" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "152FBF87F70B581A"
+					item: { count: 1, id: "apotheosis:godforged_pearl" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 10.0d
+		}
+		{
+			dependencies: ["293446C57B82E2B6"]
+			icon: { id: "mob_grinding_utils:saw" }
+			id: "302D45F79151A78C"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3BBE24911C9AAB01"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 16L
+					id: "559AAC4208B64375"
+					item: { count: 1, id: "cursedearth:cursed_earth" }
+					type: "item"
+				}
+				{
+					id: "66F7DA89663261F0"
+					item: { count: 1, id: "mob_grinding_utils:fan" }
+					type: "item"
+				}
+				{
+					id: "3D7B72244CD68FAD"
+					item: { count: 1, id: "mob_grinding_utils:saw" }
+					type: "item"
+				}
+				{
+					id: "2D4A5D03D2CCF36E"
+					item: { count: 1, id: "mob_grinding_utils:absorption_hopper" }
+					type: "item"
+				}
+				{
+					id: "7973C60DCCC1CDFE"
+					item: { count: 1, id: "mob_grinding_utils:tank" }
+					type: "item"
+				}
+				{
+					id: "6CC2A752C6716885"
+					item: { count: 1, id: "cognition:experience_obelisk" }
+					type: "item"
+				}
+				{
+					id: "448412D1FFE1566C"
+					item: { count: 1, id: "apotheosis:spawner_rune" }
+					type: "item"
+				}
+			]
+			x: -3.75d
+			y: 11.5d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "malum:spirit_altar" }
+			id: "4A09E37591428D43"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "75C3903A756DAFEB"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "0546609F5653CFDA"
+					item: { count: 1, id: "malum:crude_scythe" }
+					type: "item"
+				}
+				{
+					id: "10884CE80286CC3B"
+					item: { count: 1, id: "malum:spirit_altar" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "12CC485ECB754827"
+					item: { count: 1, id: "malum:hex_ash" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "61D129BD54183CC8"
+					item: { count: 1, id: "malum:soul_stained_steel_ingot" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4A09E37591428D43"]
+			icon: { id: "malum:arcane_spirit" }
+			id: "147E934448684668"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "58D7512734EB5565"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: true
+					count: 1024L
+					id: "1D50C92AA874DDB6"
+					item: { count: 1, id: "malum:arcane_spirit" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 256L
+					id: "0D79BCE8C0082E7B"
+					item: { count: 1, id: "malum:wicked_spirit" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 256L
+					id: "11380F3F6A268561"
+					item: { count: 1, id: "malum:sacred_spirit" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 4.0d
+		}
+		{
+			dependencies: ["147E934448684668"]
+			icon: { id: "malum:null_slate" }
+			id: "1F9F68C26576C073"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4C49AFBF79A76086"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "2AE12E1AAA8D56A6"
+					item: { count: 1, id: "malum:spirit_crucible" }
+					type: "item"
+				}
+				{
+					id: "5A37C5EEFF9E1ECE"
+					item: { count: 1, id: "malum:spirit_catalyzer" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "353EA4A54441A1B7"
+					item: { count: 1, id: "malum:null_slate" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "101D71E86E664B19"
+					item: { count: 1, id: "malum:malignant_pewter_ingot" }
+					type: "item"
+				}
+				{
+					id: "6DD804ED25F0E573"
+					item: { count: 1, id: "enigmatic_arcana:agroconic_alloy" }
+					type: "item"
+				}
+				{
+					icon: { id: "gaze:spirit_saber" }
+					id: "5BAA0E34D7832856"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(gaze:spirit_saber)item(gaze:soul_rapier)item(gaze:meditation_ring))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 5.5d
+		}
+		{
+			dependencies: ["1F9F68C26576C073"]
+			icon: { id: "malum:malignant_stronghold_chestplate" }
+			id: "0C6E5DF5C27B3F64"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "09D4A90149761FA3"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "61264C3241AEA677"
+					item: { count: 1, id: "malum:malignant_stronghold_helmet" }
+					type: "item"
+				}
+				{
+					id: "4C07A92527025BBE"
+					item: { count: 1, id: "malum:malignant_stronghold_chestplate" }
+					type: "item"
+				}
+				{
+					id: "2C95E2FF777371F1"
+					item: { count: 1, id: "malum:malignant_stronghold_leggings" }
+					type: "item"
+				}
+				{
+					id: "0C211CBB2115BCA3"
+					item: { count: 1, id: "malum:malignant_stronghold_boots" }
+					type: "item"
+				}
+			]
+			x: -1.25d
+			y: 7.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "twilightforest:naga_trophy" }
+			id: "760BD4B838FBF86D"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "18FF0760BA888D18"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					dimension: "twilightforest:twilight_forest"
+					icon: { id: "minecraft:diamond" }
+					id: "25AC66892C35D57B"
+					type: "dimension"
+				}
+				{
+					entity: "twilightforest:naga"
+					id: "747C657B7E3FB05F"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 1.25d
+			y: 2.5d
+		}
+		{
+			dependencies: ["760BD4B838FBF86D"]
+			icon: { id: "twilightforest:hydra_trophy" }
+			id: "0E917634038AAD69"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4162DDD816A2EB3D"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					entity: "twilightforest:lich"
+					id: "0688D374336E3051"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "twilightforest:minoshroom"
+					id: "39E3CA4C436162CE"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "twilightforest:hydra"
+					id: "123ECE7D46B7F895"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 4L
+					id: "4397CB9CE1119E8A"
+					item: { count: 1, id: "twilightforest:fiery_ingot" }
+					type: "item"
+				}
+				{
+					id: "5330FFB9A5A8AFA4"
+					item: { count: 1, id: "twilightdelight:hydra_burger" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0E917634038AAD69"]
+			icon: { id: "twilightforest:snow_queen_trophy" }
+			id: "3D1A975E29156EF6"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "37D26230DA13E1CC"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					entity: "twilightforest:knight_phantom"
+					id: "249F1708054CF440"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "twilightforest:ur_ghast"
+					id: "482A9C94EEA17398"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "twilightforest:alpha_yeti"
+					id: "19D146D8C7E860D4"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "twilightforest:snow_queen"
+					id: "25569F93B0166318"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 1.25d
+			y: 5.5d
+		}
+		{
+			dependencies: ["760BD4B838FBF86D"]
+			icon: { id: "eternal_starlight:orb_of_prophecy" }
+			id: "589BA510EB9C67C8"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "283CD78E87DA243C"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "4822025D80DAEC4C"
+					item: { count: 1, id: "eternal_starlight:orb_of_prophecy" }
+					type: "item"
+				}
+				{
+					dimension: "eternal_starlight:starlight"
+					icon: { id: "eternal_starlight:chiseled_voidstone" }
+					id: "7044D6518C918E18"
+					type: "dimension"
+				}
+				{
+					entity: "eternal_starlight:starlight_golem"
+					id: "2444B3749FF792A4"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 4L
+					id: "104676AB040C7ABC"
+					item: { count: 1, id: "eternal_starlight:golem_steel_ingot" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 7.0d
+		}
+		{
+			dependencies: ["21BF8E78D80F38D9"]
+			icon: { id: "bosses_of_mass_destruction:obsidian_heart" }
+			id: "16F7091EA870E500"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "0420ED106D788927"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					entity: "bosses_of_mass_destruction:lich"
+					id: "0199AE27653C40C0"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "bosses_of_mass_destruction:obsidilith"
+					id: "62EB3B7A813B5FEC"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "bosses_of_mass_destruction:gauntlet"
+					id: "5BFB7F8169B75839"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "bosses_of_mass_destruction:void_blossom"
+					id: "7A598B8EA57D25A9"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 1.25d
+			y: 8.5d
+		}
+		{
+			dependencies: ["21BF8E78D80F38D9"]
+			icon: { id: "cataclysm:flame_eye" }
+			id: "1EE7BF0AF698D413"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "2C053E9266AC686F"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					entity: "cataclysm:ancient_remnant"
+					id: "45B0E028B57843C5"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:the_harbinger"
+					id: "3C893606FB88888F"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:ignis"
+					id: "0610602EE74FD441"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 4L
+					id: "68AC62459FCA3EEE"
+					item: { count: 1, id: "cataclysm:witherite_ingot" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "070C7D97D3FE7FF9"
+					item: { count: 1, id: "cataclysm:ignitium_ingot" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 10.0d
+		}
+		{
+			dependencies: ["1EE7BF0AF698D413", "4EB1F717290307F4"]
+			icon: { id: "cataclysm:abyss_eye" }
+			id: "3F367D8B2A0921FB"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "1CD91971DA09C827"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					entity: "cataclysm:netherite_monstrosity"
+					id: "054202A4C66A857D"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:the_leviathan"
+					id: "3E2651D7894326D2"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:scylla"
+					id: "6EC14221CA553AE5"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:maledictus"
+					id: "1BA2EE0BBC870672"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:ender_guardian"
+					id: "65252EB2D76CEC5A"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 4L
+					id: "75077405C6DAE24D"
+					item: { count: 1, id: "cataclysm:cursium_ingot" }
+					type: "item"
+				}
+			]
+			x: 1.25d
+			y: 11.5d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "naturescompass:naturescompass" }
+			id: "494E34C4F17ED039"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "24325EC6EF23AD82"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "41008930C4685420"
+					item: { count: 1, id: "naturescompass:naturescompass" }
+					type: "item"
+				}
+				{
+					dimension: "jamd:mining"
+					icon: { id: "minecraft:iron_pickaxe" }
+					id: "2B138DB2112E451B"
+					type: "dimension"
+				}
+				{
+					dimension: "javd:void"
+					icon: { id: "minecraft:obsidian" }
+					id: "4273594EC0D1B203"
+					type: "dimension"
+				}
+			]
+			x: 3.75d
+			y: 2.5d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "the_bumblezone:honey_crystal_shield" }
+			id: "699F621D53CD0343"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "05D04D743D24C47F"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					dimension: "the_bumblezone:the_bumblezone"
+					icon: { id: "minecraft:bee_nest" }
+					id: "24A05EE074EDA895"
+					type: "dimension"
+				}
+				{
+					id: "726283315A197ACB"
+					item: { count: 1, id: "the_bumblezone:honey_crystal_shield" }
+					type: "item"
+				}
+				{
+					id: "2C0D41CFD98EE11A"
+					item: { count: 1, id: "the_bumblezone:stinger_spear" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 4.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "minecraft:ominous_trial_key" }
+			id: "1842C75965DE6A28"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "1CB8F05D57CB0556"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 8L
+					id: "3746B52ADEBEFE54"
+					item: { count: 1, id: "minecraft:trial_key" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "39AEF7C517931120"
+					item: { count: 1, id: "minecraft:ominous_trial_key" }
+					type: "item"
+				}
+				{
+					entity: "minecraft:breeze"
+					id: "0A0C43319C6009EF"
+					type: "kill"
+					value: 10L
+				}
+			]
+			x: 3.75d
+			y: 5.5d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "relics:midnight_mantle" }
+			id: "07AF6A7D5AEDEEF9"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7080A97031B1E8CC"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 3L
+					icon: { id: "relics:midnight_mantle" }
+					id: "658DBCAF5F65DCB9"
+					item: {
+						components: { "ftbfiltersystem:filter": "mod(relics)" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					id: "4E9986BE32EC01B4"
+					item: { count: 1, id: "irons_jewelry:jewelcrafting_station" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 7.0d
+		}
+		{
+			dependencies: ["07AF6A7D5AEDEEF9", "2910BAB7D08B6097"]
+			icon: { id: "relics:ring_of_the_seven_deadly_sins" }
+			id: "4C490C9499400B04"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "0A8BE67C8371B46F"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					count: 12L
+					icon: { id: "relics:ring_of_the_seven_deadly_sins" }
+					id: "003F20E04760E4C5"
+					item: {
+						components: { "ftbfiltersystem:filter": "mod(relics)" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					icon: { id: "artifacts:cloud_in_a_bottle" }
+					id: "6279318990C49013"
+					item: {
+						components: { "ftbfiltersystem:filter": "mod(artifacts)" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					icon: { id: "cataclysm:abyss_eye" }
+					id: "2C2B8503ABB4F745"
+					item: {
+						components: { "ftbfiltersystem:filter": "mod(reliquified_lenders_cataclysm)" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "79BD27CFCEB301C2"
+					item: { count: 1, id: "oathboundrelics:oblivion_stone" }
+					type: "item"
+				}
+			]
+			x: 3.75d
+			y: 8.5d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "waystones:waystone" }
+			id: "146B73D64A5E5AD1"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4DD5F4BFCF659B84"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "4DED3C6BB80D58E1"
+					item: { count: 1, id: "waystones:warp_stone" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "74BD46541EDB42C5"
+					item: { count: 1, id: "waystones:waystone" }
+					type: "item"
+				}
+				{
+					id: "07BFC308E47AC789"
+					item: { count: 1, id: "pylons:expulsion_pylon" }
+					type: "item"
+				}
+			]
+			x: 6.25d
+			y: 2.5d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "theurgy:calcination_oven" }
+			id: "72FEACEB64FFF1C8"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3B67BAF81B32F3B6"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "762C1F7BD9CDC996"
+					item: { count: 1, id: "theurgy:pyromantic_brazier" }
+					type: "item"
+				}
+				{
+					id: "154554951016FE8B"
+					item: { count: 1, id: "theurgy:calcination_oven" }
+					type: "item"
+				}
+				{
+					id: "2958EE7E258D424E"
+					item: { count: 1, id: "theurgy:liquefaction_cauldron" }
+					type: "item"
+				}
+				{
+					id: "3068750D405D5D22"
+					item: { count: 1, id: "theurgy:distiller" }
+					type: "item"
+				}
+				{
+					id: "53157706DD65D3B8"
+					item: { count: 1, id: "theurgy:incubator" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "0454C7C0889AC8C0"
+					item: { count: 1, id: "theurgy:mercury_shard" }
+					type: "item"
+				}
+			]
+			x: 6.25d
+			y: 4.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "integrateddynamics:logic_programmer" }
+			id: "1B659D65F61FFA15"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "4D94C4B4861EC713"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "7527007CF13593D3"
+					item: { count: 1, id: "integrateddynamics:squeezer" }
+					type: "item"
+				}
+				{
+					id: "475B1D874A3F9122"
+					item: { count: 1, id: "integrateddynamics:drying_basin" }
+					type: "item"
+				}
+				{
+					id: "1DF0712A97D2B682"
+					item: { count: 1, id: "integrateddynamics:logic_programmer" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "58D5E77ECC72EE3B"
+					item: { count: 1, id: "integrateddynamics:variable_transformer_input" }
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "6AC9EA913B61A16B"
+					item: { count: 1, id: "integrateddynamics:cable" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1E46EA97D94B4F18"
+					item: { count: 1, id: "integratedtunnels:part_interface_item" }
+					type: "item"
+				}
+				{
+					id: "1E54387742D19A1E"
+					item: { count: 1, id: "integratedscripting:scripting_drive" }
+					type: "item"
+				}
+			]
+			x: 6.25d
+			y: 5.5d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "reliquary:alkahestry_tome" }
+			id: "1B55340F748A44E4"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "3AA5810B50CA39B5"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "026E618F1B35904B"
+					item: { count: 1, id: "reliquary:alkahestry_tome" }
+					type: "item"
+				}
+				{
+					id: "57B47253ED73F101"
+					item: { count: 1, id: "reliquary:fortune_coin" }
+					type: "item"
+				}
+				{
+					id: "177B9718157353DD"
+					item: { count: 1, id: "reliquary:rending_gale" }
+					type: "item"
+				}
+				{
+					id: "3C267D829967E15C"
+					item: { count: 1, id: "reliquary:emperor_chalice" }
+					type: "item"
+				}
+			]
+			x: 6.25d
+			y: 7.0d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "theurgy:reformation_source_pedestal" }
+			id: "59A5953B73ADAFC9"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "6DFD399B990ED955"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			size: 1.0d
+			tasks: [
+				{
+					id: "2BF1DE0B6024D4ED"
+					item: { count: 1, id: "theurgy:reformation_source_pedestal" }
+					type: "item"
+				}
+				{
+					id: "4AFA8959BB180418"
+					item: { count: 1, id: "theurgy:reformation_target_pedestal" }
+					type: "item"
+				}
+				{
+					id: "2D99D9B8CF60FA85"
+					item: { count: 1, id: "theurgy:reformation_result_pedestal" }
+					type: "item"
+				}
+				{
+					id: "37C50CC21146A175"
+					item: { count: 1, id: "theurgy:sulfuric_flux_emitter" }
+					type: "item"
+				}
+				{
+					id: "04796C1D14993F2C"
+					item: { count: 1, id: "theurgy:alchemical_sulfur_netherite" }
+					type: "item"
+				}
+			]
+			x: 6.25d
+			y: 8.5d
+		}
+		{
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: { id: "cataclysm_spellbooks:abyss_spell_book" }
+			id: "1D7DD0820FEEF6AB"
+			optional: true
+			size: 1.0d
+			tasks: [
+				{
+					id: "50A8196E6854A95B"
+					item: { count: 1, id: "cataclysm_spellbooks:abyss_spell_book" }
+					type: "item"
+				}
+			]
+			x: 8.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F367D8B2A0921FB", "67914208BF084A41", "4C490C9499400B04", "62D4F700B75CE743", "00587E79E0F2BBB2", "0C6E5DF5C27B3F64", "59A5953B73ADAFC9"]
+			icon: { id: "apotheosis:godforged_pearl" }
+			id: "2C5D41C84861D71C"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: { id: "minecraft:map" }
+					id: "7A3EA64F8C4024AB"
+					team_reward: true
+					type: "custom"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					count: 8L
+					id: "6C6DFE466AB211B2"
+					item: { count: 1, id: "apotheosis:godforged_pearl" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "5243CAE114A79006"
+					item: { count: 1, id: "cataclysm:cursium_ingot" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 16.0d
+		}
+	]
+}
