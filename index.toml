@@ -22440,6 +22440,11 @@ hash = "953d09d685ccde15fd4e1d1dbb756bb267cf7913adc03b9b2896222003e35801"
 metafile = true
 
 [[files]]
+file = "mods/servuxforged.pw.toml"
+hash = "8d8adf5d3ed0d4e9f8a07864f385c8749f63f0df594e92109e3783cf152371dc"
+metafile = true
+
+[[files]]
 file = "mods/shatterbyte-lib.pw.toml"
 hash = "4f38a1932a493c7b100f13356c65bf1cc4d43e4cb3430d428202452d1d5800a0"
 metafile = true

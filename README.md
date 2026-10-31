@@ -465,6 +465,7 @@ The packwiz bootstrap installer offers these client mods, all disabled by defaul
 | BoccHUD | 0.4.1+mc1.21.1 | Client only |
 | Carpet: NeoForged | 1.0.8 | Required |
 | Finally Useful Stonecutter | 1.1 | Client only |
+| ServuxForged | 0.4.1+mc1.21.1 | Required; server only |
 
 Choose **either Bobby or Distant Horizons**, or leave both off. When choosing
 Bobby, also select Bobby Sync if server cache downloads are wanted. Disable
@@ -516,3 +517,37 @@ Minecraft is not launched by the release validation.
 Release validation checked every indexed file and all new artifact hashes,
 compiled NeoForge JAR contents, isolated server installs and repeat updates,
 and client downloads plus persisted-option deselection cleanup.
+
+### Server support for the technical client mods
+
+[ServuxForged](https://modrinth.com/mod/servuxforged) is the native NeoForge
+server companion for all three technical client ports. It installs automatically
+on dedicated servers and is excluded from clients; it is not needed in single
+player. Ordinary client features work without it, but Carpet alone does not
+provide all of these mods' server integrations.
+
+| Client mod | Additional support supplied by ServuxForged |
+| --- | --- |
+| Forgematica (Litematica) | Entity/block-entity data for schematics, schematic transfer and creative-mode server pasting, and accurate Easy Place protocol support |
+| BoccHUD (MiniHUD) | Structure bounding boxes, server HUD and entity data, and optional debug-data integration |
+| Tweakerge (Tweakeroo) | Entity/block-entity data and accurate placement protocol V3; its automatic protocol selection prefers Servux over Carpet's V2 |
+
+Checked the published sources for the exact installed versions: Litematica and
+Tweaks protocols are V1, HUD and Structures V2, and Entities and Debug V1 on
+both client and server. This verifies the protocol versions; connected-client
+acceptance in **Craftoria Factions Test** is still required.
+
+ServuxForged 0.4.1 is the security-fixed Minecraft 1.21.1 release identified in
+the [maintainer's advisory](https://github.com/CagayakeGirls/litematica-neoforge/issues/11).
+The installed Forgematica 0.4.3 is newer than its fixed 0.4.2 release. This
+ServuxForged version has no additional mod dependencies; BadPackets applies to
+older releases and is not required here.
+
+Installing the companion makes the integration available; it does not enable
+every toggle or grant every permission. Upstream defaults enable the normal data
+providers, but disable debug data, seed sharing, weather sharing, HUD loggers,
+and stackable shulkers. Server pasting still requires creative mode and its
+permission check. Player inventory and Ender Chest queries default to permission
+level 2. These defaults are retained; client feature toggles and server settings
+still control access. No extra Carpet extensions are required for these core
+integrations, and no faction travel restrictions are changed.
