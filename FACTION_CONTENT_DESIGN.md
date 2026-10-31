@@ -116,9 +116,11 @@ Assigning a dimension, boss mod, or loot ecosystem to Ritualists identifies its 
 
 ## Shared content and the common baseline
 
+Pipez is available to everyone as common transport infrastructure; it is not faction-gated.
+
 ### Science-shared: Stargazers and Mechanists
 
-`science_shared` supports both scientific approaches without erasing their distinct cores. It currently includes Actually Additions, Hostile Neural Networks, Industrial Foregoing and MIFA, Modular Routers and its Mekanism/MI connectors, Pipez, Replication, Schematic Energistics, Tempad, and the XyCraft family.
+`science_shared` supports both scientific approaches without erasing their distinct cores. It currently includes Actually Additions, Hostile Neural Networks, Industrial Foregoing and MIFA, Modular Routers and its Mekanism/MI connectors, Replication, Schematic Energistics, Tempad, and the XyCraft family.
 
 The final MI/Replication arrangement matters especially:
 
@@ -317,13 +319,13 @@ reliquified_lenders_cataclysm_new_relics_fix, the_bumblezone, twilight_treehouse
 twilightforest, wstweaks
 ```
 
-### science_shared — 14 mod IDs
+### science_shared — 13 mod IDs
 
 Assignment: `science_shared`.
 
 ```text
 actuallyadditions, hostilenetworks, industrialforegoing, mekanisticrouters, mifa,
-modernindustrialrouters, modularrouters, pipez, replication, schematicenergistics, tempad,
+modernindustrialrouters, modularrouters, replication, schematicenergistics, tempad,
 xycraft_machines, xycraft_override, xycraft_world
 ```
 
@@ -336,7 +338,7 @@ artifacts, integrateddynamics, integrateddynamicscompat, integratedscripting, in
 integratedtunnelscompat, irons_jewelry, pylons, reliquary, theurgy, waystones
 ```
 
-### Everyone (explicit unrestricted list) — 107 mod IDs
+### Everyone (explicit unrestricted list) — 108 mod IDs
 
 Assignment: `everyone`.
 
@@ -352,7 +354,7 @@ herbalbrews, irons_lib, kubejs, laserio, little_big_redstone, logisticsnetworks,
 mcwbridges, mcwdoors, mcwfences, mcwholidays, mcwlights, mcwpaths, mcwroofs, mcwstairs, mcwtrpdoors,
 mcwwindows, measurements, mechtrowel, modonomicon, moredelight, morefunctionalstorage, morered,
 moreredxcctcompat, netherdescent, oceansdelight, patchouli, peripheralworks, phantoms_utilities,
-pipe_connector, plushie_buddies, rechiseled, rechiseledae, refurbished_furniture, ribbits,
+pipe_connector, pipez, plushie_buddies, rechiseled, rechiseledae, refurbished_furniture, ribbits,
 rusticdelight, sereneseasons, sfm, shrink, simplemagnets, simplylight, solcarrot,
 sophisticatedstorage, sophisticatedstorageinmotion, starcatcher, storagedelight, supplementaries,
 sushigocrafting, tankstorage, tesseract, thaumon, torchmaster, transfer_labels, transmog, trashcans,

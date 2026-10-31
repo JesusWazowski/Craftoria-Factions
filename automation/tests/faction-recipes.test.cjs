@@ -9,6 +9,12 @@ const overrides = JSON.parse(read('kubejs/config/faction_recipe_overrides.json')
 const config = JSON.parse(read('kubejs/config/factions.json'));
 const audit = JSON.parse(read('automation/faction-recipe-override-audit.json'));
 
+function assertPublicRecipe(gates, id) {
+  const namespace = id.split(':')[0];
+  if (config.unrestrictedMods.includes(namespace)) assert.equal(gates.has(namespace), false, id);
+  else assert.equal(gates.get(namespace).ignored.has(id), true, id);
+}
+
 function setup(data = overrides) {
   const gates = new Map();
   const context = vm.createContext({
@@ -29,7 +35,7 @@ function setup(data = overrides) {
 
 test('public recipe overrides exempt exact recipe IDs while ordinary crafting stays gated', () => {
   const gates = setup();
-  for (const id of overrides.recipeIds) assert.equal(gates.get(id.split(':')[0]).ignored.has(id), true, id);
+  for (const id of overrides.recipeIds) assertPublicRecipe(gates, id);
   assert.equal(gates.get('ae2').ignored.has('ae2:network/blocks/interfaces_interface'), false);
   assert.equal(gates.get('ae2').ignored.has('ae2:network/blocks/pattern_providers_interface'), false);
   assert.equal(gates.get('ae2').ignored.has('ae2:cable_interface'), false, 'item IDs are not recipe IDs');
@@ -53,7 +59,7 @@ test('the conversion expansion matches the approved audit without adding compres
   assert.deepEqual(overrides.publicQuestItems, ['ars_nouveau:experience_gem', 'ars_nouveau:greater_experience_gem',
     'ars_technica:giant_experience_gem', 'ars_technica:gargantuan_experience_gem']);
   const gates = setup();
-  for (const id of audit.stateResetAndDisassembly) assert.equal(gates.get(id.split(':')[0]).ignored.has(id), true, id);
+  for (const id of audit.stateResetAndDisassembly) assertPublicRecipe(gates, id);
 });
 
 test('malformed, duplicate and unsupported override documents fail before gating', () => {
@@ -68,7 +74,7 @@ test('assignment exceptions retain stable factions and explicit everyone access'
   const stages = new Map(config.factions.concat(config.sharedGroups).flatMap(g => g.mods.map(m => [m, g.id])));
   assert.deepEqual(config.factions.map(g => g.id), ['stargazers', 'mechanists', 'spellcasters', 'ritualists']);
   for (const mod of ['computercraft', 'advancedperipherals', 'peripheralworks', 'logisticsnetworks', 'fluxnetworks',
-    'arsdelight', 'farmersdelight', 'rechiseledae', 'compactmachines', 'laserio', 'sfm', 'irons_lib']) {
+    'pipez', 'arsdelight', 'farmersdelight', 'rechiseledae', 'compactmachines', 'laserio', 'sfm', 'irons_lib']) {
     assert.equal(stages.has(mod), false, mod);
     assert.equal(config.unrestrictedMods.includes(mod), true, mod);
   }

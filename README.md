@@ -564,3 +564,13 @@ bundled jar without needing CurseForge API access or a manual download.
 Updates to this bundled mod are manual: replace the jar, update its Git/packwiz
 inclusion rules and this version reference, then run `packwiz refresh`. Do not
 restore the API download entry alongside the bundled jar.
+
+
+## Deferred upstream content
+
+The unfinished Hephaestus addition from upstream commit `bd346b7ad` is reverted:
+its quest chapter, quest text/theme assets, and generated recipe scripts are not
+shipped until that content is ready. Other upstream fixes remain in place.
+
+Pipez is explicitly listed under `unrestrictedMods` in `kubejs/config/factions.json`
+and is available to all factions. Restart after updating faction definitions.
