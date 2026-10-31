@@ -1,0 +1,18 @@
+name = "Finally Useful Stonecutter"
+filename = "finally_useful_stonecutter-1.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/5NpiJR5t/versions/MnubMl02/finally_useful_stonecutter-1.1.jar"
+hash-format = "sha512"
+hash = "726ff9721336e7b6e48a90f7776edc8ba1c19c1ca43f9fdbd85cea2492f0dd75fe164eb5a73d937c0ee7885f5c0b76c133a796423db74ba146a79538b1d717b6"
+
+[update]
+[update.modrinth]
+mod-id = "5NpiJR5t"
+version = "MnubMl02"
+
+[option]
+optional = true
+default = false
+description = "Client stonecutter search, recipe memory, and larger interface."

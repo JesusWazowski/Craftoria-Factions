@@ -449,3 +449,70 @@ of the files being published. The index must not reference local-only or
 Git-ignored files; every indexed file must exist in the repository. Commit
 `index.toml` and the corresponding `pack.toml` hash together, then confirm
 that the Pages build and deployment succeeds after pushing.
+
+
+### Optional technical and distance-rendering mods
+
+The packwiz bootstrap installer offers these client mods, all disabled by default:
+
+| Mod | Selected release | Dedicated server |
+| --- | --- | --- |
+| Distant Horizons | 3.3.3 / Minecraft 1.21.1 | Required |
+| Bobby ReNeoForged | 5.2.4-0.4+mc1.21 | Client only |
+| Bobby Sync | 1.3 | Required |
+| Tweakerge | 0.4.3+mc1.21.1 | Client only |
+| Forgematica | 0.4.3+mc1.21.1 | Client only |
+| BoccHUD | 0.4.1+mc1.21.1 | Client only |
+| Carpet: NeoForged | 1.0.8 | Required |
+| Finally Useful Stonecutter | 1.1 | Client only |
+
+Choose **either Bobby or Distant Horizons**, or leave both off. When choosing
+Bobby, also select Bobby Sync if server cache downloads are wanted. Disable
+Bobby Sync when choosing Distant Horizons. These are pack selection guidelines;
+the standard installer cannot enforce them.
+
+MaFgLib 0.4.3 is required on clients so selecting any of Tweakerge, Forgematica,
+or BoccHUD cannot leave its shared library missing. Bobby's required Cloth Config
+15.0.140 is already required by the pack. Libraries therefore install even when
+the optional features are off. Bobby Sync 1.3 omits Bobby from its dependency
+metadata, but still needs Bobby on the client; select both checkboxes manually.
+
+Stock packwiz's option table supports only optional/default/description, with no
+dependency selection, groups, or mutually exclusive choices. Dependency discovery
+in `packwiz modrinth install` is an authoring feature, not a runtime option resolver.
+Strict radio-button choices or automatic Bobby/Bobby Sync grouping require a
+custom installer/selector, or separately maintained pack profiles.
+Use the graphical bootstrap installer for client selection. In installer 0.5.14,
+headless/CLI mode accepts all newly presented options, ignoring their disabled
+defaults; it will install both distance renderers unless choices were already
+saved in that installation's `packwiz.json`.
+
+Server-capable additions have separate required `side = "server"` metadata;
+their client entries remain optional and `side = "client"`. Run the installer
+with `-s server` for a dedicated server. Server JAR filenames have a `-server`
+suffix so wrong-side cleanup cannot remove the client's optional copy. Use
+separate client and server installation folders. Bobby itself and MaFgLib are
+client only; Bobby Sync's server component does not require Bobby.
+Both entries in each client/server pair are pinned. Update each pair together
+and retain the server filename suffix; ordinary `packwiz update` must not
+silently undo the separate destinations or leave different protocol versions.
+
+Forgematica is explicitly pinned with top-level `pin = true`: Modrinth release
+PFUOWUDF incorrectly marks its sources JAR as primary. The manifest instead uses
+the compiled JAR and its published SHA-512 hash. Keep this pin until the upstream
+artifact selection is corrected and a replacement is audited. This release also
+contains the upstream access-transformer fix. Existing ModernFix, FerriteCore,
+and Packet Fixer remain in the pack. Carpet-Fixes has no native NeoForge 1.21.1
+release; Fabric-only patches are not installed through Connector as a workaround.
+
+Carpet rules retain upstream defaults; no extra travel commands or gameplay
+rules are enabled here. Bobby Sync exposes `/bobbysync sync [radius] [dimension]`,
+`/bobbysync config`, and `/bobbysync cancel`; it transfers server region data
+rather than enforcing faction-claim visibility. Its upstream notes list modded
+dimensions as unsupported. Neither distance renderer expands faction movement
+or interaction permissions. Check rendering, shaders, HUDs, schematics, and
+server cache transfer in **Craftoria Factions Test** before accepting the update.
+Minecraft is not launched by the release validation.
+Release validation checked every indexed file and all new artifact hashes,
+compiled NeoForge JAR contents, isolated server installs and repeat updates,
+and client downloads plus persisted-option deselection cleanup.

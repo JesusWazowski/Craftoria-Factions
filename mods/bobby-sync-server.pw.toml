@@ -1,0 +1,14 @@
+name = "Bobby Sync"
+filename = "bobbysync-1.3-server.jar"
+side = "server"
+pin = true
+
+[download]
+url = "https://cdn.modrinth.com/data/ZUABXAKh/versions/5DkNeOfn/bobbysync-1.3.jar"
+hash-format = "sha512"
+hash = "092d899e4d0d3d60e0237db7e2bc9b8138839f7b7ac3db154dcbd7f8a4cf01dd9580bc59bb62370422d11cbf57d539799f940f3b339f19915d0b104a1a380f61"
+
+[update]
+[update.modrinth]
+mod-id = "ZUABXAKh"
+version = "5DkNeOfn"
