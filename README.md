@@ -551,3 +551,16 @@ permission check. Player inventory and Ender Chest queries default to permission
 level 2. These defaults are retained; client feature toggles and server settings
 still control access. No extra Carpet extensions are required for these core
 integrations, and no faction travel restrictions are changed.
+
+## Bundled Cataclysm: Spellbooks
+
+`mods/cataclysm_spellbooks-1.1.14-1.21.jar` is distributed directly with the pack,
+using author permission reported by the pack maintainer. It is the unchanged
+[CurseForge file 8847070](https://www.curseforge.com/minecraft/mc-mods/cataclysm-spellbooks/files/8847070)
+for NeoForge 1.21.1, verified against the original packwiz SHA-1 before bundling.
+The CurseForge `.pw.toml` download entry has been removed so installs use the
+bundled jar without needing CurseForge API access or a manual download.
+
+Updates to this bundled mod are manual: replace the jar, update its Git/packwiz
+inclusion rules and this version reference, then run `packwiz refresh`. Do not
+restore the API download entry alongside the bundled jar.

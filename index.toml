@@ -20617,9 +20617,8 @@ hash = "26417511c261edad66f06d6c531bf8db132ce0ef911e67b011d9f764993e6071"
 metafile = true
 
 [[files]]
-file = "mods/cataclysm-spellbooks.pw.toml"
-hash = "3f717e3a10929f7a96d08611abc22a3d9a5a8a45a16a31ef7556dd690a26dbe1"
-metafile = true
+file = "mods/cataclysm_spellbooks-1.1.14-1.21.jar"
+hash = "a5a0dcad537954f488c862b3409831e0d12b4dfdc50bbfade298cb3d05dff2cf"
 
 [[files]]
 file = "mods/cc-tweaked-remastered.pw.toml"
