@@ -151,3 +151,6 @@ ModListCreator-5.0.0-fatjar.jar
 
 # Serve packwiz files unchanged through GitHub Pages
 !/.nojekyll
+
+# Author-permitted bundled CurseForge download
+!/mods/cataclysm_spellbooks-1.1.14-1.21.jar
