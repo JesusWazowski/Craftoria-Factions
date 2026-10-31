@@ -4,6 +4,8 @@
 const MilestoneQuestFile = Java.loadClass('dev.ftb.mods.ftbquests.quest.ServerQuestFile');
 const MilestoneTeams = Java.loadClass('dev.ftb.mods.ftbteams.api.FTBTeamsAPI');
 const MilestoneChunks = Java.loadClass('dev.ftb.mods.ftbchunks.api.FTBChunksAPI');
+const MilestonePlayerArgument = Java.loadClass('net.minecraft.commands.arguments.EntityArgument');
+const MilestoneDate = Java.loadClass('java.util.Date');
 
 const factionMilestones = {
   config: (() => {
@@ -34,6 +36,94 @@ const factionMilestones = {
   ready() { return !!this.file(); },
   teams() { return MilestoneTeams.api().getManager(); },
 
+  manualSnapshot(teamId) {
+    let text = this.teams().getExtraData().getCompound('craftoriaManualQuestTeams').getString(String(teamId));
+    return text ? JSON.parse(text) : null;
+  },
+
+  manualQuests(player) {
+    let data = this.ready() ? this.file().getTeamData(player).orElse(null) : null;
+    return !!data && !!this.manualSnapshot(data.getTeamId());
+  },
+
+  charters() {
+    return Object.keys(this.config.factions).map(faction => {
+      let definition = this.config.factions[faction];
+      // Resolve hex IDs through Java; never convert a quest ID to a JS number.
+      let task = this.file().getTask(this.file().getID(definition.charterTask));
+      let quest = this.file().getQuest(this.file().getID(definition.charterQuest));
+      if (!task || !quest) throw new Error('Missing charter objects for ' + faction);
+      return { faction, task, quest };
+    });
+  },
+
+  completeCharter(data, charter) {
+    data.setProgress(charter.task, 1);
+    // Also repair an already-full task whose quest completion flag is missing.
+    if (!data.isCompleted(charter.quest)) data.setCompleted(charter.quest.getId(), new MilestoneDate());
+  },
+
+  questMode(source, player, manual) {
+    if (!source.hasPermission(2)) throw new Error('Only operators can change quest synchronization mode');
+    if (!this.ready()) throw new Error('FTB Quests data is not ready');
+    let data = this.file().getTeamData(player).orElse(null);
+    if (!data) throw new Error('No quest team data is available for ' + player.username);
+    if (data.isLocked()) throw new Error('The quest team data is locked');
+    let charters = this.charters();
+    let state = this.teams().getExtraData();
+    let id = String(data.getTeamId());
+    let snapshot = this.manualSnapshot(id);
+    let dateText = optional => optional.isPresent() ? String(optional.get().getTime()) : '';
+    if (manual && !snapshot) {
+      let party = this.teams().getTeamForPlayer(player).orElse(null);
+      snapshot = { faction: this.factionOf(party), charters: {} };
+      charters.forEach(charter => {
+        snapshot.charters[charter.faction] = {
+          progress: Number(data.getProgress(charter.task)),
+          taskStarted: dateText(data.getStartedTime(charter.task.getId())),
+          taskCompleted: dateText(data.getCompletedTime(charter.task.getId())),
+          questStarted: dateText(data.getStartedTime(charter.quest.getId())),
+          questCompleted: dateText(data.getCompletedTime(charter.quest.getId())),
+        };
+      });
+      if (!state.contains('craftoriaManualQuestTeams')) state.put('craftoriaManualQuestTeams', NBT.compoundTag());
+      state.getCompound('craftoriaManualQuestTeams').putString(id, JSON.stringify(snapshot));
+      // Persist the baseline before changing progress; repeated manual commands retain it.
+      this.teams().markDirty();
+      this.teams().saveNow();
+    }
+    if (manual) charters.forEach(charter => this.completeCharter(data, charter));
+    else {
+      if (snapshot) {
+        charters.forEach(charter => {
+          if (!snapshot.charters[charter.faction]) throw new Error('Missing saved charter for ' + charter.faction);
+        });
+        charters.forEach(charter => {
+          let saved = snapshot.charters[charter.faction];
+          let date = text => text ? new MilestoneDate(Number(text)) : null;
+          // Task-local APIs avoid FTB's recursive quest reset, preserving descendant progress/rewards.
+          data.setProgress(charter.task, saved.progress);
+          data.setStarted(charter.task.getId(), date(saved.taskStarted));
+          data.setCompleted(charter.task.getId(), date(saved.taskCompleted));
+          data.setStarted(charter.quest.getId(), date(saved.questStarted));
+          data.setCompleted(charter.quest.getId(), date(saved.questCompleted));
+        });
+      }
+      let eligible = this.playerFaction(player);
+      charters.filter(charter => charter.faction === eligible).forEach(charter => this.completeCharter(data, charter));
+    }
+    data.saveIfChanged();
+    if (!manual && snapshot) {
+      state.getCompound('craftoriaManualQuestTeams').remove(id);
+      this.teams().markDirty();
+      this.teams().saveNow();
+    }
+    source.sendSuccess(Text.of('Quest synchronization for the entire quest team of ' + player.username + ': '
+      + (manual ? 'manual testing mode. All faction charters granted; automatic charter checks paused.'
+        : 'automatic mode. Saved charter gates restored and current faction reconciled.')), false);
+    return 1;
+  },
+
   // Quest IDs exceed JS number precision, so they are only ever compared as FTB's hex strings.
   chapterQuests(faction) {
     let wanted = this.config.factions[faction].chapter;
@@ -55,6 +145,9 @@ const factionMilestones = {
       let faction = factionParties.faction(team);
       return faction && this.config.factions[faction.id] ? faction.id : null;
     }
+    // All-access testing must not change legacy parties' charter-based claim allowance.
+    let snapshot = this.manualSnapshot(team.getId());
+    if (snapshot) return snapshot.faction;
     let data = this.ready() ? this.file().getNullableTeamData(team.getId()) : null;
     if (!data) return null;
     return Object.keys(this.config.factions).find(id => this.completed(data, id, this.config.factions[id].charterQuest)) || null;
@@ -117,6 +210,7 @@ Object.keys(factionMilestones.config.factions).forEach(faction => {
   FTBQuestsEvents.customTask(definition.charterTask, event => {
     event.setCheckTimer(20);
     event.setCheck((task, player) => {
+      if (factionMilestones.manualQuests(player)) return;
       if (factionMilestones.playerFaction(player) === faction) task.setProgress(1);
     });
   });
@@ -144,6 +238,14 @@ Object.keys(factionMilestones.config.rewards).forEach(id => {
 
 ServerEvents.commandRegistry(event => {
   let commands = event.commands;
+  let mode = (name, manual) => commands.literal(name)
+    .executes(context => factionSession.command(context.source,
+      () => factionMilestones.questMode(context.source, context.source.getPlayerOrException(), manual)))
+    .then(commands.argument('player', MilestonePlayerArgument.player())
+      .executes(context => factionSession.command(context.source,
+        () => factionMilestones.questMode(context.source, MilestonePlayerArgument.getPlayer(context, 'player'), manual))));
+  event.register(commands.literal('faction').then(commands.literal('quests').requires(source => source.hasPermission(2))
+    .then(mode('manual', true)).then(mode('auto', false))));
   event.register(commands.literal('faction').then(commands.literal('claims')
     .executes(context => factionSession.command(context.source, () => factionMilestones.status(context.source)))));
 });

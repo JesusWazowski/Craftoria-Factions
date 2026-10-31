@@ -321,16 +321,65 @@ AStages commands are normally replaced on rejoin; unrelated stages are preserved
 
 Operators can pause that synchronization for an individual online player:
 
-- `/faction stages manual [player]`: preserve that player's current stages and let
-  native AStages commands control them, including after rejoin/reload/restart.
-- `/faction stages auto [player]`: immediately restore normal party-based stages.
+- `/faction stages manual [player]`: grant every faction/shared access stage in
+  `factions.json`, then let native AStages commands control them, including after
+  rejoin/reload/restart. Repeating manual grants all configured access stages again.
+- `/faction stages auto [player]`: immediately restore normal party-based stages,
+  even when already in auto mode. Unrelated stages are preserved.
 
-Omit the player to target yourself; console must specify a player. Enable manual
-mode before granting testing stages. The mode is saved by player UUID in the
+Omit the player to target yourself; console must specify an online player. These
+commands require operator permission level 2 and a managed faction world.
+The mode is saved by player UUID in the
 world's FTB Teams manager data, and membership changes do not clear it. It does
-not grant stages itself or bypass session locks, faction selection, or membership-
+not bypass session locks, faction selection, or membership-
 based quest rewards. Other players retain automatic synchronization. Fully restart
 or reload server scripts to register the new commands.
+
+### Manual quest charters for testing
+
+- `/faction quests manual [player]`: save the quest team's original charter gates,
+  grant all four faction charters, and pause that team's automatic charter checks.
+  This exposes every faction chapter for review; ordinary quest objectives stay active.
+- `/faction quests auto [player]`: restore the saved charter task progress and
+  task/quest completion timestamps, then immediately complete the currently eligible
+  faction charter and resume normal checks. Ordinary quest progress and reward state
+  are retained, including progress earned while testing. Without a saved override,
+  auto simply reconciles the eligible charter without resetting progress.
+
+These commands require operator permission level 2. Omit the player to target
+yourself; console must specify an online player. Quest data must be loaded and
+unlocked. The override affects **everyone sharing that quest team**, persists by
+quest-team UUID across reconnects/reloads/restarts, and follows the team rather
+than a developer who changes teams. Repeating manual reasserts all charters without
+replacing the original snapshot. Run auto for the original team to restore it.
+
+Quest mode and stage mode are independent: use both manual commands to inspect
+all chapters and unlock all faction recipes. Neither changes faction membership,
+reward eligibility, or the faction used to calculate claim allowances. In legacy
+worlds, manual quest mode retains the original charter-derived faction for claims.
+This is a developer workflow; return both modes to auto after review.
+
+### Local quest backups before testing updates
+
+The local test client in Prism's `Craftoria Factions` instance runs
+`automation/quest-prelaunch.ps1` from this repository before its existing localhost
+packwiz installer. Every launch archives that client's entire
+`config/ftbquests/quests` folder, including language files, into this repository's
+`quest-backups/` folder. Each UTC-timestamped ZIP is verified against source SHA-256
+hashes before packwiz starts. Backup errors or an empty/missing quest folder stop
+the pre-launch command. Backups are retained without automatic deletion and are
+excluded from Git and packwiz; keep the hook script available at its configured path.
+
+To take a backup without running packwiz or Minecraft:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File automation/quest-prelaunch.ps1 -GameDirectory '..\Craftoria Factions\minecraft' -BackupOnly
+```
+
+ZIP contents are relative to the quest folder. To recover an edit, close Minecraft,
+extract a selected archive into a separate folder, and copy the desired files back
+into the client's `config/ftbquests/quests` folder. Backups protect in-game edits;
+they do not update the JavaScript definitions or change generation behavior.
 
 ### Quest rewards and faction access
 
@@ -416,13 +465,25 @@ How it works:
 - Cooperation quests list connector content that needs another faction's
   materials. They are optional and award no chunks.
 
-Edit `automation/faction-milestones/spec.cjs`, never the generated files, then run
+Edit the definitions under `automation/faction-milestones/`, never the generated files:
+
+- `stages/stargazers.cjs`, `mechanists.cjs`, `spellcasters.cjs`, and `ritualists.cjs`
+  contain the four faction definitions and their progression pillars.
+- `stages/science_shared.cjs` and `magic_shared.cjs` contain reusable shared-access
+  quests. Science variants take the faction's router connector as an argument.
+- `helpers.cjs` defines task constructors; `starters.cjs` defines shared starter quests.
+- `spec.cjs` assembles these definitions in explicit faction order and sets the
+  global claim budget and chapter group. Access stages are distinct from tiers I-IV.
+
+Then run
 `node automation/faction-milestones/generate.cjs` from the repository root. It
 rewrites the four `chapters/milestones_*.snbt` files, the milestone entries in
 `lang/en_us.snbt`, the chapter group, `kubejs/config/faction_milestones.json` and
 the review table. Quest, task and reward IDs are hashes of the permanent spec keys,
 so renaming text or moving quests keeps progress; changing a key creates a new
-quest. In-game edits to these chapters are overwritten by the next generation.
+quest. Task IDs also depend on task-list position, so keep task order stable when
+preserving task progress matters. In-game edits to these chapters are overwritten
+by the next generation. Each generator invocation reloads the stage modules and helpers.
 Tests fail when the generated files are stale. Restart the server after
 regenerating: custom tasks are bound when FTB Quests loads its file.
 

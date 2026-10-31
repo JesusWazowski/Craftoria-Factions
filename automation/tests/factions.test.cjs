@@ -292,7 +292,7 @@ test('manual testing preserves command-added and removed faction stages across l
   s.handlers.players.logout({ player: p });
   s.handlers.players.login({ player: p, server: s.server });
   s.subject.lastTeams.clear(); s.handlers.tick({ server: s.server });
-  assert.deepEqual([...p.astages].sort(), ['first_join', 'ritualists', 'science_shared', 'unrelated_progression']);
+  assert.deepEqual([...p.astages].sort(), ['first_join', 'magic_shared', 'mechanists', 'ritualists', 'science_shared', 'spellcasters', 'unrelated_progression']);
   assert.equal(s.subject.lastTeams.get(p.uuid), s.subject.party(p).getId());
   // A new script context reads the same saved world data, without an in-memory flag.
   const reloaded = setup({ persisted: s.persisted }); const reconnect = reloaded.player();
@@ -307,7 +307,7 @@ test('manual mode survives membership changes; automatic mode immediately restor
   s.subject.stageMode(operatorSource(s.server), p, true);
   p.astages.add('spellcasters'); p.astages.add('first_join');
   s.subject.join(p, 'mechanists', false);
-  assert.deepEqual([...p.astages].sort(), ['first_join', 'spellcasters', 'unrelated_progression']);
+  assert.deepEqual([...p.astages].sort(), ['first_join', 'magic_shared', 'mechanists', 'ritualists', 'science_shared', 'spellcasters', 'stargazers', 'unrelated_progression']);
   s.subject.remove(p); assert.equal(p.astages.has('spellcasters'), true);
   s.subject.join(p, 'mechanists', false);
   s.subject.stageMode(operatorSource(s.server), p, false);
@@ -316,11 +316,11 @@ test('manual mode survives membership changes; automatic mode immediately restor
   assert.deepEqual([...p.astages].sort(), ['first_join', 'unrelated_progression']);
 });
 
-test('testing mode is per-player and operator-only; enabling it grants no stages', () => {
+test('testing mode is per-player and operator-only; enabling it grants every configured stage', () => {
   const s = setup(); s.subject.initialize(s.server); const p = s.player('tester'); const other = s.player('member');
   assert.throws(() => s.subject.stageMode({ hasPermission: () => false }, p, true), /Only operators/);
   s.subject.stageMode(operatorSource(s.server), p, true);
-  assert.deepEqual([...p.astages], ['unrelated_progression']);
+  assert.deepEqual([...p.astages].sort(), ['magic_shared', 'mechanists', 'ritualists', 'science_shared', 'spellcasters', 'stargazers', 'unrelated_progression']);
   other.astages.add('ritualists'); s.subject.stages(other);
   assert.deepEqual([...other.astages], ['unrelated_progression']);
   assert.equal(s.subject.manualStages(other), false);
@@ -329,4 +329,15 @@ test('testing mode is per-player and operator-only; enabling it grants no stages
   for (const mode of modes.children) {
     assert.equal(typeof mode.execute, 'function'); assert.equal(mode.children[0].name, 'player');
   }
+});
+
+
+test('auto refreshes expected stages even when already automatic; unmanaged worlds reject overrides', () => {
+  const s = setup(); s.subject.initialize(s.server); const p = s.player();
+  s.subject.join(p, 'mechanists', false);
+  p.astages.add('ritualists'); p.astages.delete('science_shared');
+  s.subject.stageMode(operatorSource(s.server), p, false);
+  assert.deepEqual([...p.astages].sort(), ['mechanists', 'science_shared', 'unrelated_progression']);
+  const legacy = setup({ age: 20 }); legacy.subject.initialize(legacy.server);
+  assert.throws(() => legacy.subject.stageMode(operatorSource(legacy.server), legacy.player(), true), /not enabled/);
 });

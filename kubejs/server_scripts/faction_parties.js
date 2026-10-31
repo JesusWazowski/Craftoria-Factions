@@ -135,9 +135,12 @@ const factionParties = {
     state.getCompound('craftoriaManualStagePlayers').putBoolean(String(player.uuid), manual);
     this.manager().markDirty();
     this.manager().saveNow();
+    if (manual) factionDefinitions.stages.forEach(stage => {
+      if (!AStages.playerHasStage(player, stage)) AStages.addStageToPlayer(player, stage, false, false, false);
+    });
     this.stages(player);
     source.sendSuccess(Text.of('Faction stage synchronization for ' + player.username + ': '
-      + (manual ? 'manual testing mode. AStages commands now control your stages.' : 'automatic party mode.')), false);
+      + (manual ? 'manual testing mode. All faction/shared stages granted; AStages commands now control your stages.' : 'automatic party mode.')), false);
     return 1;
   },
 

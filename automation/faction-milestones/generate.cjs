@@ -255,7 +255,9 @@ function questTables(spec) {
 }
 
 function outputs() {
-  delete require.cache[require.resolve('./spec.cjs')];
+  // Reload the complete authoring tree, including stage modules and shared helpers.
+  Object.keys(require.cache).filter(file => file.startsWith(__dirname + path.sep) && file !== __filename)
+    .forEach(file => { delete require.cache[file]; });
   let spec = require('./spec.cjs');
   let result = build(spec);
   let previous = existsSync(files.runtime) ? JSON.parse(readFileSync(files.runtime, 'utf8')).generatedIds || [] : [];
