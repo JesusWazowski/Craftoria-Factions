@@ -20458,7 +20458,7 @@ metafile = true
 
 [[files]]
 file = "mods/astages.pw.toml"
-hash = "0f398f2ee5153364cac42fc4c26ce0305f69406922d23c192c96c3a2f958a736"
+hash = "60132fa6dfdc391be06ba14d5ea2423b7da19c1e685e2f2d6b61b27207655cd0"
 metafile = true
 
 [[files]]
@@ -21281,7 +21281,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-quests-forge.pw.toml"
-hash = "8aeda4d5e60e51432ad309717ecfb1345951b2e5b79ecdc29c80d6910e83adc2"
+hash = "ab51e3a38c5081efca5bb0791b5c8316d4e70d73c6ea5936f2b8eed04aa03216"
 metafile = true
 
 [[files]]
@@ -21296,7 +21296,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-teams-forge.pw.toml"
-hash = "dfa89323f0fd64655c73063134f2fed4307d50cf1de2a3372dec87a80a1d3978"
+hash = "0330fb0c2995d14abb4757e0f13dcad2912dfcec0f35d8e33f3925aa3a57a9fd"
 metafile = true
 
 [[files]]
