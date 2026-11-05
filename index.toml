@@ -5322,7 +5322,7 @@ hash = "12ab2405750d10b8c2a8c8a36f524699417ab1b019ec834af1d6118586ae93a5"
 
 [[files]]
 file = "config/lambdynlights.toml"
-hash = "d1ae4beac961c61355c23391cd9a993c56b9523d7e75a396471398a20ba9bd14"
+hash = "44ca6ba612443d1bd2bffbc79ab36a81c6cb08340b815d15674290564d39e8df"
 
 [[files]]
 file = "config/laserio-common.toml"

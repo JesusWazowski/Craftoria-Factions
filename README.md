@@ -1,5 +1,7 @@
 # Craftoria - 1.21
 
+LambDynamicLights defaults to off to reduce client performance overhead. Players can enable it in the mod settings.
+
 ## Faction content design handoff
 
 [FACTION_CONTENT_DESIGN.md](FACTION_CONTENT_DESIGN.md) records the faction
