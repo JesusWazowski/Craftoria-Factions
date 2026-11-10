@@ -20621,9 +20621,8 @@ hash = "26417511c261edad66f06d6c531bf8db132ce0ef911e67b011d9f764993e6071"
 metafile = true
 
 [[files]]
-file = "mods/cataclysm-spellbooks.pw.toml"
-hash = "3f717e3a10929f7a96d08611abc22a3d9a5a8a45a16a31ef7556dd690a26dbe1"
-metafile = true
+file = "mods/cataclysm_spellbooks-1.1.14-1.21.jar"
+hash = "a5a0dcad537954f488c862b3409831e0d12b4dfdc50bbfade298cb3d05dff2cf"
 
 [[files]]
 file = "mods/cc-tweaked-remastered.pw.toml"
@@ -22266,6 +22265,11 @@ metafile = true
 [[files]]
 file = "mods/pylons.pw.toml"
 hash = "82acd60100d09ee3b5ba08a4da07ae2c733e10493682ce30a4b044577d7ab43f"
+metafile = true
+
+[[files]]
+file = "mods/quest-enhance.pw.toml"
+hash = "6d3a547da2ab8ead22bb67286443485b191a25edf914e3aeea2c09ce76298035"
 metafile = true
 
 [[files]]
