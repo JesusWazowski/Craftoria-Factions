@@ -16,4 +16,4 @@ version = "9w34y8ai"
 [option]
 optional = true
 default = false
-description = "Distant terrain LODs. Choose this OR Bobby ReNeoForged, never both. Leave Bobby Sync disabled when using this option."
+description = "Optional LOD rendering mod. Allows for enormous render distances even on servers. INCOMPATIBLE WITH BOBBY!"

@@ -16,4 +16,4 @@ version = "5DkNeOfn"
 [option]
 optional = true
 default = false
-description = "Enable only with Bobby ReNeoForged; leave disabled with Distant Horizons. Downloads server region files into the Bobby cache. Bobby must also be selected manually."
+description = "Caches chunks generated server side locally to increase render distance without additional strain on the server. REQUIRES BOBBY TO BE ENABLED!"

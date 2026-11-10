@@ -15,4 +15,4 @@ version = "tOP74nwE"
 [option]
 optional = true
 default = false
-description = "Technical HUD and overlays. Required MaFgLib is included automatically."
+description = "MiniHUD for Neoforge. Adds a configurable sort of lite F3 screen, and togglable overlays."

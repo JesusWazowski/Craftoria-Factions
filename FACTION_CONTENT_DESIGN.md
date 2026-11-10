@@ -218,6 +218,12 @@ For evidence, prioritize the exact pack versions, KubeJS changes, datapacks, con
 | Powah | Stargazers | Consider Mechanists if MI is moved away from them in a later review. |
 | MI / Mekanism / Replication / HNN relationship | MI Mechanists, Mekanism Stargazers, Replication and HNN science-shared | Investigate actual progression timing and high-throughput dependencies before proposing further changes. The current MI decision is settled. |
 
+## Future recipe work
+
+- Rebalance Create Big Cannons: Advanced Technologies so advanced shells and
+  autocannons require components or processes from Modern Industrialization's
+  progression.
+
 ## Using these distinctions to classify future accomplishments
 
 Attribute an accomplishment by the distinctive capability it demonstrates. An integrated on-demand scientific production system points toward Stargazers; a functioning engineered production/transport installation toward Mechanists; a creative or advanced magical application toward Spellcasters; and a consequential discovery, encounter, ritual, enchanting, or loot-development achievement toward Ritualists.

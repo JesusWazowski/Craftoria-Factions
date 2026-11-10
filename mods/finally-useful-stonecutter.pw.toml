@@ -15,4 +15,4 @@ version = "MnubMl02"
 [option]
 optional = true
 default = false
-description = "Client stonecutter search, recipe memory, and larger interface."
+description = "Stonecutter UI overhaul"

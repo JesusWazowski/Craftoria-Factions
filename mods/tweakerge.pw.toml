@@ -15,4 +15,4 @@ version = "701i2Xre"
 [option]
 optional = true
 default = false
-description = "Client tweaks and placement helpers. Required MaFgLib is included automatically."
+description = "Tweakeroo for Neoforge. Includes useful technical features, like assisted placement and freecam."

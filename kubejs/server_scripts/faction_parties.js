@@ -75,7 +75,7 @@ const factionParties = {
       if (complete) throw new Error('Faction IDs changed in an existing managed world: ' + faction.id);
       let system = FactionGuard.systemId('craftoria:faction:' + manager.getId() + ':' + faction.id);
       // Resume safely if creation completed but the mapping was not saved yet.
-      manager.playerLoggedIn(null, system, 'Faction System');
+      manager.playerLoggedIn(null, system, faction.name);
       let team = manager.getTeamForPlayerID(system).orElse(null);
       if (!team.isPartyTeam()) team = manager.createParty(system, null, faction.name, '', null);
       team.getExtraData().putString('craftoriaFactionSystem', String(system));
@@ -128,16 +128,16 @@ const factionParties = {
   },
 
   stageMode(source, player, manual) {
-    if (!source.hasPermission(2)) throw new Error('Only operators can change stage synchronization mode');
-    if (!this.active()) throw new Error('Faction stage synchronization is not enabled in this world; AStages commands already persist normally');
+    if (!source.hasPermission(2)) throw new Error('You do not have permission to change testing mode!');
+    if (!this.active()) throw new Error('Faction stages are not applied automatically in this world. Use commands to change stages manually.');
     let state = this.state();
     if (!state.contains('craftoriaManualStagePlayers')) state.put('craftoriaManualStagePlayers', NBT.compoundTag());
     state.getCompound('craftoriaManualStagePlayers').putBoolean(String(player.uuid), manual);
     this.manager().markDirty();
     this.manager().saveNow();
     this.stages(player);
-    source.sendSuccess(Text.of('Faction stage synchronization for ' + player.username + ': '
-      + (manual ? 'manual testing mode. AStages commands now control your stages.' : 'automatic party mode.')), false);
+    source.sendSuccess(Text.of('Faction stages for ' + player.username + 'are '
+      + (manual ? 'no longer automatic.' : 'automatically synced.')), false);
     return 1;
   },
 
@@ -159,7 +159,7 @@ const factionParties = {
 
   choose(player) {
     if (!this.active() || this.party(player)) return 0;
-    player.tell(Text.of('Click to join a faction:'));
+    player.tell(Text.of('Click to join your faction:'));
     factionDefinitions.factions.forEach(faction => {
       player.tell(Text.of({ text: '[' + faction.name + ']', color: 'blue', underlined: true }).clickRunCommand('/faction join ' + faction.id));
     });
@@ -190,7 +190,7 @@ const factionParties = {
   },
 
   join(player, id, transfer) {
-    if (!this.active()) throw new Error('Faction selection is only enabled in newly created faction worlds');
+    if (!this.active()) throw new Error('Factions are not present in this world! Please create or new world.');
     let definition = this.definition(id);
     let target = this.team(id);
     if (!definition || !target) throw new Error('Unknown faction: ' + id);
@@ -199,7 +199,7 @@ const factionParties = {
     if (previous && !transfer) throw new Error('Ask an operator to change your faction');
     factionSession.homeCache.clear();
     let home = factionSession.locked(player.server) ? factionSession.home(player.server, target) : null;
-    if (factionSession.locked(player.server) && !home) throw new Error('This faction needs a valid home before joining during a locked session');
+    if (factionSession.locked(player.server) && !home) throw new Error('This faction needs a valid home! Alert their team captain or an operator ASAP.');
     FactionGuard.checkJoinable(target);
     if (previous) {
       // Assignment briefly removes membership; do not prompt during that transition.
@@ -227,8 +227,8 @@ const factionParties = {
     if (!team) return 0;
     if (team.isOwner(player.uuid)) {
       let system = this.system(team);
-      if (!system) throw new Error('Appoint a replacement owner before removing the owner of this non-faction party');
-      FactionGuard.appointOwner(team, player.server.createCommandSourceStack(), new FactionProfile(FactionUUID.fromString(system), 'Faction System'));
+      if (!system) throw new Error('Attempted action would leave a party with no owner. Check the list of teams for non-faction parties!');
+      FactionGuard.appointOwner(team, player.server.createCommandSourceStack(), new FactionProfile(FactionUUID.fromString(system), team.getName().getString()));
     }
     FactionGuard.leaveAuthorized(team, player.uuid);
     this.stages(player);

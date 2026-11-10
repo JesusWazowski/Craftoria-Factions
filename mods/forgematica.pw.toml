@@ -16,4 +16,4 @@ version = "PFUOWUDF"
 [option]
 optional = true
 default = false
-description = "Client schematics and placement helpers. Required MaFgLib is included automatically. Shader compatibility depends on the shader pack."
+description = "Litematica for Neoforge"

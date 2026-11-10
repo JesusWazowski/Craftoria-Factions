@@ -221,9 +221,9 @@ test('actual fast client movement across a gap returns to the previous claim eve
 
 test('leaving/disbanding a faction or losing its home disconnects instead of guessing a destination', () => {
   const s = ready(); s.p.party = null; s.subject.enforce(s.p);
-  assert.match(s.p.disconnected, /join an FTB Teams faction/);
+  assert.match(s.p.disconnected, /No Factions are in place/);
   s.p.party = s.owner; s.claims.clear(); s.subject.homeCache.clear(); s.subject.enforce(s.p);
-  assert.match(s.p.disconnected, /no valid home/); assert.equal(s.p.returned, undefined);
+  assert.match(s.p.disconnected, /Faction home was invalidated/); assert.equal(s.p.returned, undefined);
 });
 
 test('native pearls reject wilderness while cross-dimension command teleports defer to the tick check', () => {

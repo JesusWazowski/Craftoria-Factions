@@ -15,4 +15,4 @@ version = "ohyA90nX"
 [option]
 optional = true
 default = false
-description = "Cached full-detail chunks. Choose this OR Distant Horizons, never both. Enable Bobby Sync too if you want server cache downloads. Cloth Config is included automatically."
+description = "Optional full-detail rendering mod. Requires a beefy computer. Install Bobby Sync to cache chunks from server side, or pregenerate the server seed in a world named bobby-fallback. INCOMPATIBLE WITH DISTANT HORIZONS!"

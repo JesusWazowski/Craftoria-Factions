@@ -4454,7 +4454,7 @@ hash = "bd15b9b7cfbf0cbb1f20ab394805f88c23917d9ecf45b47d60271892a35daf2d"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "64e73c7b75cfb4ecb1e38c43581cec8eeba4d55d74ecbdb2daca02aaab2d38fe"
+hash = "19ed61b71bc0510caf0fcc7260aa41001241849fc382c6bc922864e5634c01ee"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
@@ -4578,7 +4578,7 @@ hash = "8e6e110601eb0e0bb47ac2501f549b2ff0708025d5f332833d4641e1d601d412"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/welcome.snbt"
-hash = "258235dbdba368aafae0c4edc42627ed8e11cdd4d1a9ef4e8861590e116255e7"
+hash = "aaa1b57e78a08501b9dd9bdb140eaf9943c6256e46e23ba683910b06cfd49faf"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/file.snbt"
@@ -18738,7 +18738,7 @@ hash = "ca54e842a699965180c7bc0e7c3f5153938c9c27a1ab25f8a84362beed155732"
 
 [[files]]
 file = "kubejs/config/factions.json"
-hash = "cee58848404f046242ae3915b2981c651f5be830014b9e58d479d9126062b425"
+hash = "170b079ddb70ab1ed598548a5673ff71f1ae28989bbde8c48458a1897209ece0"
 
 [[files]]
 file = "kubejs/config/web_server.json"
@@ -19994,7 +19994,7 @@ hash = "e29a5f7d8ed44afd593622971a3cce26943da9c331374faf376b28620b72814e"
 
 [[files]]
 file = "kubejs/server_scripts/faction_parties.js"
-hash = "10ba70c9c353782e963d63a40f63b1eecdb5ad3517e4bc1c9509802232b1a4a3"
+hash = "e87f0746c616ce4c3992db3040acad5991ef8feda91ad8c0a1b4bbf3f576bacc"
 
 [[files]]
 file = "kubejs/server_scripts/faction_quest_rewards.js"
@@ -20046,7 +20046,7 @@ hash = "b42b7394c74a00ab1a5fc95b184e7baf52e9972699d3cff384f24126de99d36b"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
-hash = "3a932e5838757b8481d87860231cfdb09e55d07b8acd3345d7f3f7d5d1ab141a"
+hash = "9b305854a5b5e6a6178bf1b9e27cf73bad6673c7d2a702b8bf262e6aefb99f22"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"
@@ -20512,7 +20512,7 @@ metafile = true
 
 [[files]]
 file = "mods/bobby-reneoforged.pw.toml"
-hash = "e43aae70927e2a506eff07c021dbb09aeb030f021a57b02b60daf6934a6adc6d"
+hash = "293a0cc110c4ef3798f189a1b141b819003d778c21081ebc8171a8fc1c5935b9"
 metafile = true
 
 [[files]]
@@ -20522,12 +20522,12 @@ metafile = true
 
 [[files]]
 file = "mods/bobby-sync.pw.toml"
-hash = "8943648f78c3658389d3d664f02626432e8f62a1dd9f6afb721e58edf51c43c5"
+hash = "02b2cd1444851217e344aee004c990b7089bb1a125bee995b5864b0f094fd156"
 metafile = true
 
 [[files]]
 file = "mods/bocchud.pw.toml"
-hash = "f8c09160c655d274a4692f8f3874b9812c17f07e01efd1496c698b08ce85437b"
+hash = "77084c36606e1789b43a0dcef507dbf4c343bdd775a97f99e0ca83a823f11a70"
 metafile = true
 
 [[files]]
@@ -20759,6 +20759,11 @@ hash = "6457e8702c7c3d603e1e35252bf2388db4ec44c875209af3c4364a79f4c1709c"
 metafile = true
 
 [[files]]
+file = "mods/create-big-cannons-advanced-technologies.pw.toml"
+hash = "f7066538c0086fca271ddf7d26b223d932a205e80fec08e6c14c9b4c245ed7b5"
+metafile = true
+
+[[files]]
 file = "mods/create-big-cannons.pw.toml"
 hash = "a0e9ff95570cd9af3374ca8b44aa095447baf94e565f46ae99819d52a9b48dc1"
 metafile = true
@@ -20940,7 +20945,7 @@ metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "b1de6b9efc5b3ddf5aede5a1dc07c10dfc2cfd8132497fe99f6dd7baad9d2aed"
+hash = "ddc8e9a82b3880ca7bb6a977174d3f528227172f0dba5b3cc9887c3f88624463"
 metafile = true
 
 [[files]]
@@ -21079,6 +21084,11 @@ hash = "ea10cab55df1871fa566aa64329fef98a1b68c8966d72d6c716c57c394e67bab"
 metafile = true
 
 [[files]]
+file = "mods/ewewukeks-musket-mod.pw.toml"
+hash = "38cbb01723dd65b631c5213b5a8d150bb223b42b4253523d8e1501598ee92a98"
+metafile = true
+
+[[files]]
 file = "mods/ex-pattern-provider.pw.toml"
 hash = "e926d31a8a5e87d5f76945e4e42f01f61bbd99d064efddbc601ca7f065d8da87"
 metafile = true
@@ -21175,7 +21185,7 @@ metafile = true
 
 [[files]]
 file = "mods/finally-useful-stonecutter.pw.toml"
-hash = "197201e17ca631342c609d761d083781b45fbb3542fe8b7dd22206fc6a6c855a"
+hash = "861901ffd39c16e650a522abbab220bb21429870e9c88992800827da8882708a"
 metafile = true
 
 [[files]]
@@ -21200,7 +21210,7 @@ metafile = true
 
 [[files]]
 file = "mods/forgematica.pw.toml"
-hash = "1f780b5a6ae2c299cd90775206bd5755efc47a2715bc129a076820e3d9363f28"
+hash = "bf84909d8fc40334130fcca93821df527fee18a5373744e1217da833eda756b0"
 metafile = true
 
 [[files]]
@@ -21908,6 +21918,16 @@ hash = "490c62f126037c9258c345e3f2a1c523f004179c7026072d9301391f9c5ecf75"
 metafile = true
 
 [[files]]
+file = "mods/mffs.pw.toml"
+hash = "f8bdbf8dc35dc01eaaac39d65ad319fc4b06a687df3a07a5d69dec3bcc685759"
+metafile = true
+
+[[files]]
+file = "mods/mi-nukes.pw.toml"
+hash = "d562d581e5fd9a5337224416ac749551aba5f553a5bd346737bb28c6b5009023"
+metafile = true
+
+[[files]]
 file = "mods/mi-tweaks.pw.toml"
 hash = "ce6bde1511f912c23ff9ea40b193f40584924533d87e4b28256c1464ed386c80"
 metafile = true
@@ -22059,7 +22079,7 @@ metafile = true
 
 [[files]]
 file = "mods/neoforge-carpet.pw.toml"
-hash = "e5128d7b8e71b7a748a828cb9db137e316324359f526824644d39d74a1a888ba"
+hash = "c29808cc386b0359858d980a3c740d717bb309ca28a275f24ff2945e3d8bcdc5"
 metafile = true
 
 [[files]]
@@ -22709,7 +22729,7 @@ metafile = true
 
 [[files]]
 file = "mods/tweakerge.pw.toml"
-hash = "a00b4dbdd9f9738319a5e3a2966e9166c4de00a721ff58b72e04e68055de8c38"
+hash = "4bc21c08f992d427659411c0a2d8c95aea18637e9ef52c26669f9a189904786a"
 metafile = true
 
 [[files]]
@@ -23070,6 +23090,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/fine-armoury.pw.toml"
 hash = "20998808b7d7f81b1f474076798073c8090fc5685f1f9be88c0d13234e84d040"
+metafile = true
+
+[[files]]
+file = "resourcepacks/flintl0cks.pw.toml"
+hash = "b2ee2610e30bd8c62d5048d0166014a0c718560be2c5a07c30fe8f52a0e8b5d2"
 metafile = true
 
 [[files]]

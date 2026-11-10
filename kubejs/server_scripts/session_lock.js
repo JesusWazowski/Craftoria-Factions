@@ -144,7 +144,7 @@ const factionSession = {
     }
     player.setMotion(0, 0, 0);
     player.fallDistance = 0;
-    if (!silent) player.tell('Session is locked. Wilderness travel is disabled; you have been returned to your faction home.');
+    if (!silent) player.tell('You were outside claimed chunks when the session ended! You have been returned to your faction home.');
     this.previous.set(String(player.uuid), this.position(player));
   },
 
@@ -219,10 +219,10 @@ const factionSession = {
     let team = this.party(player);
     if (!team) {
       if (typeof factionParties !== 'undefined' && factionParties.active()) return factionParties.hold(player);
-      return this.rejectPlayer(player, 'join an FTB Teams faction and configure its home first');
+      return this.rejectPlayer(player, 'No Factions are in place to automatically join. Contact an operator.');
     }
     let home = this.home(player.server, team);
-    if (!home) return this.rejectPlayer(player, 'your faction has no valid home inside its own claim');
+    if (!home) return this.rejectPlayer(player, 'Faction home was invalidated after the session was locked. Contact an operator to set a new home.');
     if (!player.isAlive()) return;
     let id = String(player.uuid);
     let now = this.position(player);

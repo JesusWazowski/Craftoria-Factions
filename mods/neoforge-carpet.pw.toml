@@ -16,4 +16,4 @@ version = "lnOeoKcQ"
 [option]
 optional = true
 default = false
-description = "Optional client/integrated-server Carpet support. Dedicated servers always install Carpet. Rules retain upstream defaults."
+description = "Carpet for Neoforge. Useful in singleplayer for designing farms and diagnostics. Also allows you to view TPS"
