@@ -195,9 +195,11 @@ The October 26 conversion expansion additionally exempts the 168 recipe IDs for
 the 85 reviewed one-item-in/one-item-out reversible pairs, plus all 189 entries
 in the reviewed state-reset/disassembly list. The exact groups and prior 12-ID
 baseline are recorded in `automation/faction-recipe-override-audit.json`; the
-runtime document now contains 369 unique recipe IDs. Other compression and
-decompression exceptions were not added. The six existing XP-gem conversion
-exceptions remain as previously approved. Recipe exceptions do not create
+runtime document now contains 375 unique recipe IDs. The six additional dust
+exceptions allow every faction to mix copper and tin into bronze dust at either
+size and convert copper and tin between regular and tiny dust in both directions.
+Converting between regular and tiny bronze dust remains gated. The six existing
+XP-gem conversion exceptions remain as previously approved. Recipe exceptions do not create
 new item-task exemptions for quest rewards.
 
 These reset/disassembly recipes are real recipe-manager definitions, generally

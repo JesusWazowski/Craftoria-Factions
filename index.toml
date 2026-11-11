@@ -18734,7 +18734,7 @@ hash = "d708425ce292448cb2d9a90460a075d4f3f9db2a56a000aea444b4ce686e10c3"
 
 [[files]]
 file = "kubejs/config/faction_recipe_overrides.json"
-hash = "ca54e842a699965180c7bc0e7c3f5153938c9c27a1ab25f8a84362beed155732"
+hash = "26b02fffaf98545848c81ea211ebcdb132727028677a93660ee6aeece3618797"
 
 [[files]]
 file = "kubejs/config/factions.json"

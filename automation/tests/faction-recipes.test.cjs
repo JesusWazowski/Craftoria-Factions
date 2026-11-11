@@ -45,11 +45,12 @@ test('public recipe overrides exempt exact recipe IDs while ordinary crafting st
   assert.equal(gates.get('xycraft').ignored.has('xycraft:shapeless/mekanical_condenser_shift'), true);
 });
 
-test('the conversion expansion matches the approved audit without adding compression exceptions', () => {
+test('public recipes match the approved conversion and shared dust exceptions', () => {
   assert.equal(audit.singleItemConversions.length, 168);
   assert.equal(audit.stateResetAndDisassembly.length, 189);
-  const expected = new Set(audit.previousRecipeIds.concat(audit.singleItemConversions, audit.stateResetAndDisassembly));
-  assert.equal(expected.size, 369);
+  assert.equal(audit.sharedDustRecipes.length, 6);
+  const expected = new Set(audit.previousRecipeIds.concat(audit.singleItemConversions, audit.stateResetAndDisassembly, audit.sharedDustRecipes));
+  assert.equal(expected.size, 375);
   assert.deepEqual([...overrides.recipeIds].sort(), [...expected].sort());
   for (const id of ['ae2:decorative/fluix_block', 'ae2:misc/deconstruction_fluix_block',
     'ae2:decorative/quartz_block', 'ae2:misc/deconstruction_certus_quartz_block']) {
