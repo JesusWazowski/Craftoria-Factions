@@ -4454,7 +4454,7 @@ hash = "bd15b9b7cfbf0cbb1f20ab394805f88c23917d9ecf45b47d60271892a35daf2d"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "19ed61b71bc0510caf0fcc7260aa41001241849fc382c6bc922864e5634c01ee"
+hash = "e857c010d186a9452a1594c8964986ec038332c1d8a8a0675778300d28137725"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
@@ -4578,7 +4578,7 @@ hash = "8e6e110601eb0e0bb47ac2501f549b2ff0708025d5f332833d4641e1d601d412"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/welcome.snbt"
-hash = "aaa1b57e78a08501b9dd9bdb140eaf9943c6256e46e23ba683910b06cfd49faf"
+hash = "9591f65a30bc6a7033613140520c46c3803ca5defd7f69c1178e7b3861f41d8b"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/file.snbt"
@@ -8991,6 +8991,22 @@ hash = "2dd9c5ca9c3262316268eb8c346af30a6339733e12b2f48061189e5aa07d9298"
 [[files]]
 file = "kubejs/assets/craftoria/textures/item/ice_essence.png.mcmeta"
 hash = "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
+
+[[files]]
+file = "kubejs/assets/craftoria/textures/item/incomplete_blunderbuss.png"
+hash = "b2715d114443f0ef20a61aaa1875cd64255f38f6a1350160e293205cf15ebfdc"
+
+[[files]]
+file = "kubejs/assets/craftoria/textures/item/incomplete_cartridge.png"
+hash = "0e0e93ddd8667c6a15d32afa09961f86b28939f47473bae11cf44905d6f707ba"
+
+[[files]]
+file = "kubejs/assets/craftoria/textures/item/incomplete_musket.png"
+hash = "92521c7e0a24bfd575d620ad447ce4853c9461b6c748f37081144b87709b4282"
+
+[[files]]
+file = "kubejs/assets/craftoria/textures/item/incomplete_pistol.png"
+hash = "b617c5eb946cd4ab39850355698e84017cf014af80d1a73cd10d730e3b6abf24"
 
 [[files]]
 file = "kubejs/assets/craftoria/textures/item/infinity_cell_housing.png"
@@ -19517,6 +19533,10 @@ file = "kubejs/data/minecraft/structure/end_city/tower_top.nbt"
 hash = "b44628492e1db358063bbc13e2425b1d67c36e396c862fc25f8de44bec1a2b33"
 
 [[files]]
+file = "kubejs/data/musketmod/recipe/sequenced_assembly/cartridge.json"
+hash = "9816a9b1285880b579fafb5d9bc12da4509037c1bd8ab2ecf41d0788e20a31e5"
+
+[[files]]
 file = "kubejs/data/puffish_skills/puffish_skills/categories/mining/category.json"
 hash = "b96782ac5736760b3f39c2119a856007513220eaea24c712f93bd13a80c285ec"
 
@@ -19749,6 +19769,10 @@ file = "kubejs/server_scripts/Mods/Chipped/Compat.js"
 hash = "0467d7d5e564282ad1b124badce1a49608db9e532b46d426e6a3d44f50ab8553"
 
 [[files]]
+file = "kubejs/server_scripts/Mods/Craftoria/AlloyProgression.js"
+hash = "94a3b061fda60a3d1fe8dd50dd2a4e7dae440004069b4b261c0704f609abb42f"
+
+[[files]]
 file = "kubejs/server_scripts/Mods/Craftoria/Compression.js"
 hash = "e3fbe695da1e32fa8b2e0ef9b284100c03cd79e7e351919fde3278ea318fedc6"
 
@@ -19933,6 +19957,10 @@ file = "kubejs/server_scripts/Mods/ModernIndustrialization/ReplicatorBlacklist.j
 hash = "bbe817a12ae4d850af172c34f37337a7c053e8d45abf1bb64c5917aac808e4a9"
 
 [[files]]
+file = "kubejs/server_scripts/Mods/MusketMod/Assembly.js"
+hash = "3409501e854772268f3d112275945e4339c17b4c27c09e8219bf18f36d295a2d"
+
+[[files]]
 file = "kubejs/server_scripts/Mods/NeoVitae/Recipes.js"
 hash = "62a8a23afbb074f64922f890c137d9e2f6d68e3b8d20ee7b1bbe509475146e4a"
 
@@ -20038,7 +20066,7 @@ hash = "822f62f8838b71c56d980b185266dc8304c150d6e2f283849704d37ff143199d"
 
 [[files]]
 file = "kubejs/server_scripts/mod_gating.js"
-hash = "a002ec394eb0d847aa40af2c6d64bcef3ea5845d76358b5df4e5cf771ae566af"
+hash = "7522f71bea289a82ce191b3fd7d124a6a3ffc840d16e05c5f686395bf4de54b1"
 
 [[files]]
 file = "kubejs/server_scripts/removals.js"
@@ -20143,6 +20171,10 @@ hash = "f2b33885b92c8a0456751f8ece35072de9a60fc38667a4e148284080635492fe"
 [[files]]
 file = "kubejs/startup_scripts/Custom/Modern Industrialization/Replicator.js"
 hash = "80af9dd4d4402a4ca0adc1597d05d80c76e55cb631ee33ce81458edf9d8d91d3"
+
+[[files]]
+file = "kubejs/startup_scripts/Custom/MusketAssemblyItems.js"
+hash = "f00ec01a214257f9c29238bb6fc7059a1ed4a13fb1b05817873d47fb5a441d85"
 
 [[files]]
 file = "kubejs/startup_scripts/Fixes.js"

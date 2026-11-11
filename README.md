@@ -49,6 +49,13 @@ Plushie Buddies introduce no additional plate substitutions; their shared
 materials use the existing global rules. The AdachiRei-nui repair is documented
 above. Source inspection does not confirm the final runtime recipe registry.
 
+MFFS's steel compound and smelting recipes and Big Cannons' standalone steel
+and bronze mixing recipes are disabled to preserve shared alloy progression.
+Big Cannons' Nethersteel recipe requires steel and netherite scrap because the
+cast iron alternative is disabled. Casting and recycling existing metal remain
+available. CBC Advanced Technologies has no standalone alloy recipe in its
+pinned release.
+
 After installing in **Craftoria Factions Test**, check the aircraft propeller,
 hull reinforcement, eco engine, cannon mount, radar dish, and bronze/steel
 processing recipes with the preferred materials. Inspect KubeJS/Almost Unified
@@ -183,11 +190,11 @@ Twilight Delight remains Ritualists. Both Modular Routers connectors follow
 Modular Routers in `science_shared`. Integrated Dynamics and its addons,
 including their compatibility namespaces, use `magic_shared`.
 
-`kubejs/config/faction_recipe_overrides.json` lists recipes available to everyone
-despite their mod's faction assignment. The pinned AStages 2.5.3
-`ARecipeModRestriction.ignoreItems(String...)` method takes **recipe IDs**, not
-item IDs. It excludes only those exact IDs from the matching recipe-namespace
-restriction. The configured exceptions cover both directions of AE2 interface,
+`kubejs/config/faction_recipe_overrides.json` lists exact recipe IDs excluded
+from faction gating. The gate selects recipes with Minecraft's crafting recipe
+type and uses their namespaces to assign faction stages. Smithing, smelting,
+Create assembly, and other recipe types fall outside the gate. The configured
+exceptions cover both directions of AE2 interface,
 pattern-provider and energy-acceptor block/cable-part conversions, and all six
 compression/decompression recipes across Ars experience, greater experience,
 giant experience and gargantuan experience gems. Initial AE2 device crafting,
