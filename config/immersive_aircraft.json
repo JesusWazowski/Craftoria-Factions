@@ -24,7 +24,7 @@
   "acceptVanillaFuel": true,
   "useCustomKeybindSystem": true,
   "showHotbarEngineGauge": true,
-  "weaponsAreDestructive": false,
+  "weaponsAreDestructive": true,
   "dropAircraft": true,
   "dropInventory": true,
   "dropUpgrades": false,
