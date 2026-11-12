@@ -5002,7 +5002,7 @@ hash = "030d7c2c4b33a367d6e0ac009e0c47523c61d38ccb9fb68ea920f773645d6f19"
 
 [[files]]
 file = "config/immersive_aircraft.json"
-hash = "29359a734e72498d11fb5b33d6d8a485bdca866fe8b3631c57f10387ed634313"
+hash = "79457c280f1a14a54383bad417249eb1369c112bd7db5efde58ee3940225ab88"
 
 [[files]]
 file = "config/immersiveengineering-client.toml"
