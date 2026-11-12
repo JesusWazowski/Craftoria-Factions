@@ -17,7 +17,7 @@ packwiz refresh
 ```
 
 The script compiles against Prism's installed libraries and emits
-`mods/craftoria-factions-guard-1.1.1.jar`. Build files go in ignored `.build/`.
+`mods/craftoria-factions-guard-1.1.2.jar`. Build files go in ignored `.build/`.
 Jar timestamps are fixed for reproducible output. Changing FTB Teams requires
 reviewing every transformer descriptor, rebuilding, updating the exact dependency
 in `resources/META-INF/neoforge.mods.toml`, and repeating runtime verification.
@@ -53,3 +53,21 @@ During implementation, isolated fresh-world startup, reload, and restart were
 checked without KubeJS errors, with four stable mapped party UUIDs. The native probe also checks actual reward forfeiture, later access, eligible
 claims, and suppressed item delivery. The policy suites additionally cover the pending selection
 state, stage transitions, home preflight, and restrictions on operator commands.
+
+The 1.1.2 guard adds a notification after accepted FTB Teams GUI claim-settings
+saves while the effective FTB Chunks `disable_protection` switch is true. It does
+not impose settings permissions. The hook targets the pinned Teams 2101.1.11
+packet handler and requires exactly one native update call.
+
+Offline warning verification (no Minecraft launch):
+
+```powershell
+python automation/faction-guard/verify-warning.py `
+  "$env:APPDATA/PrismLauncher" minecraft `
+  --java-bin "$env:APPDATA/PrismLauncher/java/java-runtime-delta/bin"
+```
+
+This runs the actual transformer against the installed Teams packet bytecode,
+checks native authorization branches and ASM stack validity, and exercises the
+production notification method bodies against API fixtures. Connected-client
+acceptance remains necessary for chat rendering and complete gameplay behavior.

@@ -225,14 +225,15 @@ test('join and assign complete partial faction IDs and use faction-first argumen
 });
 
 
-test('travel permissions apply in managed and existing worlds and preserve unrelated nodes', () => {
+test('travel and claim-settings permissions apply in managed and existing worlds and preserve unrelated nodes', () => {
   for (const age of [0, 20]) {
     const s = setup({ age }); s.subject.initialize(s.server);
     const base = s.ranks.get('infrastructure_members'); const ops = s.ranks.get('infrastructure_operators');
     base.values.set('command.warp', true);
     base.values.set('command.spawn', true);
     s.subject.permissions();
-    for (const node of ['command.spawn', 'command.back']) {
+    for (const node of ['command.spawn', 'command.back',
+      'command.ftbteams.party.settings', 'command.ftbteams.party.settings_for']) {
       assert.equal(base.values.get(node), false); assert.equal(ops.values.get(node), true);
     }
     assert.equal(base.values.get('command.warp'), true);

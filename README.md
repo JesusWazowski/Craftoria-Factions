@@ -84,7 +84,7 @@ Official discord server (Team AOF): https://discord.gg/6rkdm48
 
 This feature uses the pack's existing KubeJS, FTB Teams, FTB Chunks, FTB Ranks,
 and FTB XMod Compat, plus pinned AStages 2.5.3 and the bundled faction permission
-guard. FTB Chunks owns all claim data, map display, and protection. The existing
+guard. FTB Chunks owns all claim data and map display; claim protections are globally disabled. The existing
 faction IDs and mod assignments are preserved in the shared document below.
 
 Verified against Minecraft 1.21.1 / NeoForge 21.1.249, KubeJS
@@ -204,9 +204,11 @@ The October 26 conversion expansion additionally exempts the 168 recipe IDs for
 the 85 reviewed one-item-in/one-item-out reversible pairs, plus all 189 entries
 in the reviewed state-reset/disassembly list. The exact groups and prior 12-ID
 baseline are recorded in `automation/faction-recipe-override-audit.json`; the
-runtime document now contains 369 unique recipe IDs. Other compression and
-decompression exceptions were not added. The six existing XP-gem conversion
-exceptions remain as previously approved. Recipe exceptions do not create
+runtime document now contains 375 unique recipe IDs. The six additional dust
+exceptions allow every faction to mix copper and tin into bronze dust at either
+size and convert copper and tin between regular and tiny dust in both directions.
+Converting between regular and tiny bronze dust remains gated. The six existing
+XP-gem conversion exceptions remain as previously approved. Recipe exceptions do not create
 new item-task exemptions for quest rewards.
 
 These reset/disassembly recipes are real recipe-manager definitions, generally
@@ -443,7 +445,7 @@ Path checks use accepted client movement to detect skipped wilderness chunks.
 Unhooked mod teleports and unusual server-driven vehicle motion cannot always
 be distinguished by scripts; validate those mods on staging. The full pack's
 GUI, vehicles, and Waystones still need normal-client acceptance testing.
-Existing FTB building, interaction, and PvP permissions continue to apply;
+FTB claim protections are globally disabled;
 enemy players can still meet or fight inside claimed territory.
 
 ### Packwiz hosting on GitHub Pages
@@ -583,3 +585,47 @@ shipped until that content is ready. Other upstream fixes remain in place.
 
 Pipez is explicitly listed under `unrestrictedMods` in `kubejs/config/factions.json`
 and is available to all factions. Restart after updating faction definitions.
+
+### Claims without land protection
+
+`config/ftbchunks-world.snbt` sets `disable_protection: true`. Claims reserve
+ownership and permit force-loading under the existing limits. Session locks and
+faction-home ownership checks still apply. All claim boundary protections are off,
+fake players are allowed, and PvP is always allowed. Pastel/Spectrum claim-based
+decay protection remains disabled. The KubeJS override empties FTB Chunks'
+`entity_mob_griefing_blacklist` entity-type tag: in pinned 2101.1.22, its NeoForge
+Enderman griefing check bypasses the global switch and otherwise honors saved
+team preferences. This override removes that independent claim protection.
+Independent security blocks and grave mechanics
+are unchanged.
+
+FTB Ranks infrastructure ranks deny `command.ftbteams.party.settings` and
+`command.ftbteams.party.settings_for` to non-operators in existing and new worlds,
+with operator overrides. Ranks restricts the whole settings command; use the GUI
+for unrelated party preferences. Owners/officers can still save GUI protection
+preferences, but they cannot override the global protection switch. After an
+accepted GUI save containing protection settings, the saving player alone receives
+red chat text: "Claim protections are disabled on this server!" The guard only
+adds this notification; it does not restrict settings edits. No warning is sent
+for unrelated-only payloads or while `disable_protection` is false.
+
+For an existing world, update its `serverconfig/ftbchunks-world.snbt` override
+before restarting: use the protection policy in
+`defaultconfigs/ftbchunks/ftbchunks-world.snbt`, merging only those keys and keeping
+claim/force-load limits and other overrides. Pack defaults cannot replace an
+existing per-world override. No claim ownership or faction migration is required.
+
+Connected-client acceptance: check enemy block/container/entity access, armor
+stands, explosions (including unknown sources), mob griefing, fake-player
+machines, pistons, fluids, fire, and PvP with restrictive saved team preferences.
+Verify ownership cannot be stolen, existing force-loading limits still apply,
+and session/home rules still work. As member/officer/owner/operator, verify command
+permissions and GUI saves; test repeated saves, unrelated-only saves, unauthorized
+packets, and both values of `disable_protection`. Each qualifying save must send
+exactly one red message only to the saving player.
+
+Upstream references: [FTB Chunks configuration](https://github.com/FTBTeam/FTB-Chunks/blob/1.21.1/main/common/src/main/java/dev/ftb/mods/ftbchunks/FTBChunksWorldConfig.java),
+[NeoForge mob-griefing handler](https://github.com/FTBTeam/FTB-Chunks/blob/1.21.1/main/neoforge/src/main/java/dev/ftb/mods/ftbchunks/neoforge/FTBChunksForge.java),
+and [FTB Ranks command nodes](https://docs.feed-the-beast.com/mod-docs/mods/suite/Ranks/Configuration/).
+The policy and notification hook were checked against the installed pinned jars;
+upstream branches may change.

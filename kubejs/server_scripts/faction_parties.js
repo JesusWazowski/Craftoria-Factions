@@ -104,7 +104,9 @@ const factionParties = {
       || manager.createRank('infrastructure_operators', 'Infrastructure Operators', 1000003);
     if (!(travel.getCondition() instanceof FactionAlways)) travel.setCondition(FactionAlways.INSTANCE);
     if (!(travelOP.getCondition() instanceof FactionOP)) travelOP.setCondition(new FactionOP());
-    for (let node of ['command.spawn', 'command.back']) {
+    // FTB Ranks controls the settings command as a whole; unrelated GUI settings remain available.
+    for (let node of ['command.spawn', 'command.back',
+      'command.ftbteams.party.settings', 'command.ftbteams.party.settings_for']) {
       if (travel.getPermission(node).asBoolean().orElse(true)) travel.setPermission(node, FactionRanks.getInstance().parsePermissionValue('false'));
       if (!travelOP.getPermission(node).asBoolean().orElse(false)) travelOP.setPermission(node, FactionRanks.getInstance().parsePermissionValue('true'));
     }

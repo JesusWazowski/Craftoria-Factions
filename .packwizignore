@@ -104,12 +104,13 @@
 !/resourcepacks/villagers-refrehsed+FA-v1.0.zip
 /config/fancymenu
 
-!/mods/craftoria-factions-guard-1.1.1.jar
+!/mods/craftoria-factions-guard-1.1.2.jar
 
 # Author-permitted bundled CurseForge download
 !/mods/cataclysm_spellbooks-1.1.14-1.21.jar
 
 # Generated local files already excluded from Git
+/kubejs/server_scripts/*.code-workspace
 /config/almostunified/debug.json
 /config/embeddium-fingerprint.json
 /config/ftbquests/quests/lang/**/*.snbt_merged

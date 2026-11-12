@@ -28,7 +28,7 @@ args.write_text('--release\n21\n-proc:none\n-classpath\n"' + classpath.replace('
     + '"\n-d\n"' + str(classes).replace('\\', '/') + '"\n"'
     + str(root / 'src/craftoria/factions/FactionGuard.java').replace('\\', '/') + '"\n', encoding='utf-8')
 subprocess.run([str(a.java_bin / 'javac.exe'), '@' + str(args)], check=True)
-output = root.parents[1] / 'mods/craftoria-factions-guard-1.1.1.jar'
+output = root.parents[1] / 'mods/craftoria-factions-guard-1.1.2.jar'
 with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED) as jar:
     for directory in [classes, root / 'resources']:
         for file in sorted(directory.rglob('*')):
