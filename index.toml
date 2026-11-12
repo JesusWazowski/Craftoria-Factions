@@ -4306,7 +4306,7 @@ hash = "7bc481e810c7a677244a46a03ef7a2fd3ea98658ed3f494dc93e7b8cd479d980"
 
 [[files]]
 file = "config/ftbchunks-world.snbt"
-hash = "a2345b7264b7dd8eb738f6969004e2a0567628b549ab6e2d65c7ee18cb2e5af2"
+hash = "e024699cc364176c28f836f387780384d034049201c3c4b871cab1e774650e45"
 
 [[files]]
 file = "config/ftbessentials.snbt"
@@ -4454,7 +4454,7 @@ hash = "bd15b9b7cfbf0cbb1f20ab394805f88c23917d9ecf45b47d60271892a35daf2d"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "19ed61b71bc0510caf0fcc7260aa41001241849fc382c6bc922864e5634c01ee"
+hash = "e857c010d186a9452a1594c8964986ec038332c1d8a8a0675778300d28137725"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
@@ -4578,7 +4578,7 @@ hash = "8e6e110601eb0e0bb47ac2501f549b2ff0708025d5f332833d4641e1d601d412"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/welcome.snbt"
-hash = "aaa1b57e78a08501b9dd9bdb140eaf9943c6256e46e23ba683910b06cfd49faf"
+hash = "9591f65a30bc6a7033613140520c46c3803ca5defd7f69c1178e7b3861f41d8b"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/file.snbt"
@@ -7074,7 +7074,7 @@ hash = "890dd889f9eee5aca5ab51d74bb67f030633cef2c9da4e49eb23c54eaa6faa75"
 
 [[files]]
 file = "defaultconfigs/ftbchunks/ftbchunks-world.snbt"
-hash = "d2ae102c53b4bea5c46d6f0a51ab3b89da79564fb4f1b6eadebaada5b6729be2"
+hash = "7d44212d76d464d89422bf1533cf63b85e53b85772896290ee218e3aa5f8f041"
 
 [[files]]
 file = "defaultconfigs/ftbessentials-server.snbt"
