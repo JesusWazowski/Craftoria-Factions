@@ -156,9 +156,9 @@ test('earned chunks count only completed quests in the party\'s own faction chap
   const s = setup({ completed, mapping: { party: 'stargazers' } });
   const expected = value(sg, 3).reduce((sum, id) => sum + sg.quests[id], 0);
   assert.equal(s.subject.earned(s.teams.party), expected);
-  assert.equal(s.subject.bonusFor({ getOwner: () => 'member' }, new Map()), expected);
-  assert.equal(s.subject.bonusFor({ getOwner: () => 'loner' }, new Map()), 0);
-  assert.equal(s.subject.bonusFor({ getOwner: () => 'nobody' }, new Map()), 0);
+  assert.equal(s.subject.bonusFor({ getId: () => 'member', getOwner: () => 'nil-uuid' }, new Map()), expected);
+  assert.equal(s.subject.bonusFor({ getId: () => 'loner', getOwner: () => 'nil-uuid' }, new Map()), 0);
+  assert.equal(s.subject.bonusFor({ getId: () => 'nobody', getOwner: () => 'nil-uuid' }, new Map()), 0);
 });
 
 test('all milestones together reach the cap, and unmapped parties earn nothing', () => {

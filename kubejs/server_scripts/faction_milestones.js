@@ -179,7 +179,8 @@ const factionMilestones = {
   // FTB Chunks only counts personal bonuses, so every member carries the party's value.
   bonusFor(team, cache) {
     if (!this.ready()) return null;
-    let party = this.teams().getTeamForPlayerID(team.getOwner()).orElse(null);
+    // FTB personal teams use the player UUID as their ID; getOwner() is the nil UUID.
+    let party = this.teams().getTeamForPlayerID(team.getId()).orElse(null);
     return party && party.isPartyTeam() ? this.partyBonus(party, cache) : 0;
   },
 

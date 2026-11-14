@@ -4306,7 +4306,7 @@ hash = "7bc481e810c7a677244a46a03ef7a2fd3ea98658ed3f494dc93e7b8cd479d980"
 
 [[files]]
 file = "config/ftbchunks-world.snbt"
-hash = "d0334e9a3ef422ce7e49cf3bd06a28a267b2ddfa386851085670065634c51023"
+hash = "7c526a9c05c8b8ebda1b145b22c68d05479c40fd2b8b8914f297bb5ce2aa7862"
 
 [[files]]
 file = "config/ftbessentials.snbt"
@@ -20046,7 +20046,7 @@ hash = "e29a5f7d8ed44afd593622971a3cce26943da9c331374faf376b28620b72814e"
 
 [[files]]
 file = "kubejs/server_scripts/faction_milestones.js"
-hash = "d7a893bb44af3e63ba1ac14b351333b169016bdb4f9310913f6cc10afd30ba14"
+hash = "a28d2e53fcbca3ef474a873061e21e84e8ba4c2976d730b85560cdab6b6c3097"
 
 [[files]]
 file = "kubejs/server_scripts/faction_parties.js"

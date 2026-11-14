@@ -424,7 +424,9 @@ party_limit_mode: "largest"
 max_idle_days_before_unclaim: 0
 ```
 
-Keep all force-loading values unchanged. The script enforces these claim values
+The pack default for `max_force_loaded_chunks` is 64. Force loading uses its own
+limit and remains subject to the number of chunks the faction can claim.
+The script enforces these claim values
 at runtime too (taking the base and cap from `kubejs/config/faction_milestones.json`),
 normalizes `ftbchunks.max_claimed` on existing FTB ranks to the base, and manages
 extra-claim bonuses from faction milestones; the admin bonus `set`/`add` commands
