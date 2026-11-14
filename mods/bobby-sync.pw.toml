@@ -12,8 +12,3 @@ hash = "092d899e4d0d3d60e0237db7e2bc9b8138839f7b7ac3db154dcbd7f8a4cf01dd9580bc59
 [update.modrinth]
 mod-id = "ZUABXAKh"
 version = "5DkNeOfn"
-
-[option]
-optional = true
-default = false
-description = "Caches chunks generated server side locally to increase render distance without additional strain on the server. REQUIRES BOBBY TO BE ENABLED!"

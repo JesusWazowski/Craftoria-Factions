@@ -598,31 +598,30 @@ The packwiz bootstrap installer offers these client mods, all disabled by defaul
 | Finally Useful Stonecutter | 1.1 | Client only |
 | ServuxForged | 0.4.1+mc1.21.1 | Required; server only |
 
-Choose **either Bobby or Distant Horizons**, or leave both off. When choosing
-Bobby, also select Bobby Sync if server cache downloads are wanted. Disable
-Bobby Sync when choosing Distant Horizons. These are pack selection guidelines;
-the standard installer cannot enforce them.
+Choose **either Bobby or Distant Horizons**, or leave both off. The
+standard installer cannot enforce that choice. Bobby Sync is always installed
+so the client can join servers running its required network channel. Only
+Bobby uses the region cache downloaded by Bobby Sync.
 
 MaFgLib 0.4.3 is required on clients so selecting any of Tweakerge, Forgematica,
 or BoccHUD cannot leave its shared library missing. Bobby's required Cloth Config
 15.0.140 is already required by the pack. Libraries therefore install even when
-the optional features are off. Bobby Sync 1.3 omits Bobby from its dependency
-metadata, but still needs Bobby on the client; select both checkboxes manually.
+the optional features are off.
 
 Stock packwiz's option table supports only optional/default/description, with no
 dependency selection, groups, or mutually exclusive choices. Dependency discovery
 in `packwiz modrinth install` is an authoring feature, not a runtime option resolver.
-Strict radio-button choices or automatic Bobby/Bobby Sync grouping require a
-custom installer/selector, or separately maintained pack profiles.
+Strict radio-button choices require a custom installer/selector or separately
+maintained pack profiles.
 Use the graphical bootstrap installer for client selection. In installer 0.5.14,
 headless/CLI mode accepts all newly presented options, ignoring their disabled
 defaults; it will install both distance renderers unless choices were already
 saved in that installation's `packwiz.json`.
 
 Server-capable additions have separate required `side = "server"` metadata;
-their client entries remain optional and `side = "client"`. Run the installer
+their client entries use `side = "client"`. Bobby Sync is required on both sides. Run the installer
 with `-s server` for a dedicated server. Server JAR filenames have a `-server`
-suffix so wrong-side cleanup cannot remove the client's optional copy. Use
+suffix so wrong-side cleanup cannot remove the client's copy. Use
 separate client and server installation folders. Bobby itself and MaFgLib are
 client only; Bobby Sync's server component does not require Bobby.
 Both entries in each client/server pair are pinned. Update each pair together
