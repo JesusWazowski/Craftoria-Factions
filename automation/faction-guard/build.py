@@ -1,6 +1,7 @@
 """Build the tiny guard using a Prism 1.21.1 instance's installed libraries (Java 21)."""
 import argparse
 import pathlib
+import shutil
 import subprocess
 import zipfile
 
@@ -12,6 +13,8 @@ a = p.parse_args()
 root = pathlib.Path(__file__).resolve().parent
 build = root / '.build'
 classes = build / 'classes'
+if classes.exists():
+    shutil.rmtree(classes)
 classes.mkdir(parents=True, exist_ok=True)
 jars = sorted((a.prism_root / 'libraries').rglob('*.jar'))
 # A single pinned mapped Minecraft jar avoids accidentally compiling against another MC release.
@@ -26,9 +29,10 @@ classpath = os.pathsep.join(str(jar.resolve()) for jar in jars)
 args = build / 'javac.args'
 args.write_text('--release\n21\n-proc:none\n-classpath\n"' + classpath.replace('\\', '/')
     + '"\n-d\n"' + str(classes).replace('\\', '/') + '"\n"'
-    + str(root / 'src/craftoria/factions/FactionGuard.java').replace('\\', '/') + '"\n', encoding='utf-8')
+    + '\n'.join('"' + source.as_posix() + '"' for source in sorted((root / 'src').rglob('*.java')))
+    + '\n', encoding='utf-8')
 subprocess.run([str(a.java_bin / 'javac.exe'), '@' + str(args)], check=True)
-output = root.parents[1] / 'mods/craftoria-factions-guard-1.1.2.jar'
+output = root.parents[1] / 'mods/craftoria-factions-guard-1.1.3.jar'
 with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED) as jar:
     for directory in [classes, root / 'resources']:
         for file in sorted(directory.rglob('*')):

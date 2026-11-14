@@ -1,6 +1,6 @@
 # Faction permission guard
 
-Original server-side guard for Minecraft 1.21.1 / NeoForge 21.1.249 and **FTB Teams
+Faction integration for Minecraft 1.21.1 / NeoForge 21.1.249 and **FTB Teams
 2101.1.11** and **FTB Quests 2101.1.36**. The lowcode mod injects small checks at the native party methods used
 by FTB GUI packets. It includes no faction definitions or modified FTB classes.
 The bundled jar is distributed directly by packwiz; install AStages from its
@@ -17,7 +17,7 @@ packwiz refresh
 ```
 
 The script compiles against Prism's installed libraries and emits
-`mods/craftoria-factions-guard-1.1.2.jar`. Build files go in ignored `.build/`.
+`mods/craftoria-factions-guard-1.1.3.jar`. Build files go in ignored `.build/`.
 Jar timestamps are fixed for reproducible output. Changing FTB Teams requires
 reviewing every transformer descriptor, rebuilding, updating the exact dependency
 in `resources/META-INF/neoforge.mods.toml`, and repeating runtime verification.
@@ -71,3 +71,7 @@ This runs the actual transformer against the installed Teams packet bytecode,
 checks native authorization branches and ASM stack validity, and exercises the
 production notification method bodies against API fixtures. Connected-client
 acceptance remains necessary for chat rendering and complete gameplay behavior.
+
+The client-only EMI plugin uses the synced AStages Create namespace rule to
+hide Automated Shaped Crafting from players missing its configured stage.
+Build with EMI 1.1.24 and AStages 2.5.3 present in the Prism instance.

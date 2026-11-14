@@ -20797,8 +20797,8 @@ hash = "ce99acf7b15a1927e38364aa02bb4ed0ad7583ab12f3351cb3161fdd2e160b49"
 metafile = true
 
 [[files]]
-file = "mods/craftoria-factions-guard-1.1.2.jar"
-hash = "2860e678a54cb0949f533f49ecbaee10a9821edcb8515ac14f5b89a30accc263"
+file = "mods/craftoria-factions-guard-1.1.3.jar"
+hash = "7f6a46036f6fe55e6f28a308d815d2a40762031ef7a4bf4e2a0fbd0c708ee360"
 
 [[files]]
 file = "mods/crash-assistant.pw.toml"
