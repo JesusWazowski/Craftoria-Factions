@@ -1,0 +1,25 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": { "item": "minecraft:paper" },
+  "transitional_item": { "id": "craftoria:incomplete_cartridge" },
+  "loops": 1,
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        { "item": "craftoria:incomplete_cartridge" },
+        { "item": "minecraft:gunpowder" }
+      ],
+      "results": [{ "id": "craftoria:incomplete_cartridge" }]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        { "item": "craftoria:incomplete_cartridge" },
+        { "tag": "c:nuggets/iron" }
+      ],
+      "results": [{ "id": "craftoria:incomplete_cartridge" }]
+    }
+  ],
+  "results": [{ "id": "musketmod:cartridge", "count": 3 }]
+}

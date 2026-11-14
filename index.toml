@@ -4306,7 +4306,7 @@ hash = "7bc481e810c7a677244a46a03ef7a2fd3ea98658ed3f494dc93e7b8cd479d980"
 
 [[files]]
 file = "config/ftbchunks-world.snbt"
-hash = "5ffbeb133c843286be95e113c70d44905f3577f263bf006d07654c857df45ffb"
+hash = "d0334e9a3ef422ce7e49cf3bd06a28a267b2ddfa386851085670065634c51023"
 
 [[files]]
 file = "config/ftbessentials.snbt"
@@ -4322,7 +4322,7 @@ hash = "4a5fde899abf8afca1d75fd4ad13946232040f712f6bce8d0f64d37bbbd957f4"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "18ebd704423f0e06bce12bf6931f2a7ea301a1ba48153bcfe886660e10f38def"
+hash = "96c124fa10ddf1f40bfada63642d4433fd346005ad8727deaf02db2259298959"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/Completionist.snbt"
@@ -4401,10 +4401,6 @@ file = "config/ftbquests/quests/chapters/harvest_and_hearth.snbt"
 hash = "e29635e46394b042af1ad4a1ebce0475652d303f0c3d163a14f807d66e77f4f1"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/hephaestus.snbt"
-hash = "4d3c448688a15d537c6606d6b47499b37754d363eddea0f0556e998ec23e8114"
-
-[[files]]
 file = "config/ftbquests/quests/chapters/immersive_aircraft.snbt"
 hash = "ac4732462bb5c858bd30a75d2b904f5b46f256b26f68a4c64fa928358a67a095"
 
@@ -4426,7 +4422,7 @@ hash = "0615d82712f691e0bb58d08a55cd98881dc0e3894cfa9815913a0258da0e1567"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/mi_electric_age.snbt"
-hash = "327fb74966d23bfec87a13f129ee15c5fa022a3fd349941606b9ad780ff96922"
+hash = "71d79f6061a8b30e0063b83d489b0b9bab6928c62af6b0967c37c70919e261a4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/mi_quantum_age.snbt"
@@ -4474,7 +4470,7 @@ hash = "bd15b9b7cfbf0cbb1f20ab394805f88c23917d9ecf45b47d60271892a35daf2d"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "5c0f55749778756ec67c343f2a6b587c9443881418c99cb3f619209d479853a0"
+hash = "7de23782678b9345e250e595940470ea791c88b34deb003d05b3b3649e892db5"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
@@ -4598,7 +4594,7 @@ hash = "8e6e110601eb0e0bb47ac2501f549b2ff0708025d5f332833d4641e1d601d412"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/welcome.snbt"
-hash = "258235dbdba368aafae0c4edc42627ed8e11cdd4d1a9ef4e8861590e116255e7"
+hash = "9591f65a30bc6a7033613140520c46c3803ca5defd7f69c1178e7b3861f41d8b"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/file.snbt"
@@ -5022,7 +5018,7 @@ hash = "030d7c2c4b33a367d6e0ac009e0c47523c61d38ccb9fb68ea920f773645d6f19"
 
 [[files]]
 file = "config/immersive_aircraft.json"
-hash = "aa7502a833b2ddaffe31b6a6419872da4be669f2df965f2606b1ada187a42799"
+hash = "79457c280f1a14a54383bad417249eb1369c112bd7db5efde58ee3940225ab88"
 
 [[files]]
 file = "config/immersiveengineering-client.toml"
@@ -5342,7 +5338,7 @@ hash = "12ab2405750d10b8c2a8c8a36f524699417ab1b019ec834af1d6118586ae93a5"
 
 [[files]]
 file = "config/lambdynlights.toml"
-hash = "d1ae4beac961c61355c23391cd9a993c56b9523d7e75a396471398a20ba9bd14"
+hash = "44ca6ba612443d1bd2bffbc79ab36a81c6cb08340b815d15674290564d39e8df"
 
 [[files]]
 file = "config/laserio-common.toml"
@@ -7094,7 +7090,7 @@ hash = "890dd889f9eee5aca5ab51d74bb67f030633cef2c9da4e49eb23c54eaa6faa75"
 
 [[files]]
 file = "defaultconfigs/ftbchunks/ftbchunks-world.snbt"
-hash = "a9937d9ca25ce9ec55c67f0be78c2f60db3f4aad21d2a66abd41e60c2c981d43"
+hash = "7d44212d76d464d89422bf1533cf63b85e53b85772896290ee218e3aa5f8f041"
 
 [[files]]
 file = "defaultconfigs/ftbessentials-server.snbt"
@@ -9013,6 +9009,22 @@ file = "kubejs/assets/craftoria/textures/item/ice_essence.png.mcmeta"
 hash = "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
 
 [[files]]
+file = "kubejs/assets/craftoria/textures/item/incomplete_blunderbuss.png"
+hash = "b2715d114443f0ef20a61aaa1875cd64255f38f6a1350160e293205cf15ebfdc"
+
+[[files]]
+file = "kubejs/assets/craftoria/textures/item/incomplete_cartridge.png"
+hash = "0e0e93ddd8667c6a15d32afa09961f86b28939f47473bae11cf44905d6f707ba"
+
+[[files]]
+file = "kubejs/assets/craftoria/textures/item/incomplete_musket.png"
+hash = "92521c7e0a24bfd575d620ad447ce4853c9461b6c748f37081144b87709b4282"
+
+[[files]]
+file = "kubejs/assets/craftoria/textures/item/incomplete_pistol.png"
+hash = "b617c5eb946cd4ab39850355698e84017cf014af80d1a73cd10d730e3b6abf24"
+
+[[files]]
 file = "kubejs/assets/craftoria/textures/item/infinity_cell_housing.png"
 hash = "dbc2b32a1725de1d688a302e35be096915f6b74bfeea4b965f832e7ae1ddeae6"
 
@@ -10034,7 +10046,7 @@ hash = "105511c01906ae54f1696072c24cfb419f0f3847253830ce12d11905ef4ffbfb"
 
 [[files]]
 file = "kubejs/assets/ftbquests/ftb_quests_theme.txt"
-hash = "3af51c4817594a334a6dc1a8b2ff5af65f1116cbfd8714115bb38a5e42749535"
+hash = "2f2ad9a6e60bc47265bfd5659be3a458cb3138a71317068286d8ff01285d6f6f"
 
 [[files]]
 file = "kubejs/assets/ftbquests/textures/block/water_still_opaque.png"
@@ -10161,10 +10173,6 @@ file = "kubejs/assets/ftbquests/textures/gui/flowing_mekanism.png"
 hash = "b9b4795fff323a75871cfdad13e73a5430699dd3f9c3b4f9657270d7387961ed"
 
 [[files]]
-file = "kubejs/assets/ftbquests/textures/gui/forge.png"
-hash = "0aba646c62dcb2885a2c5d54da00ed3f034d0febb31766c1baaf1db47b192a19"
-
-[[files]]
 file = "kubejs/assets/ftbquests/textures/gui/gadgets.png"
 hash = "9e82df988ec89558905116ec7bbbdafbef313b03dfd1c6c008f248317a39a874"
 
@@ -10239,10 +10247,6 @@ hash = "8b8d4ea7f4cf442368b9d81f718e60e1a1816ca7db19f80e66ae0649c241e4bd"
 [[files]]
 file = "kubejs/assets/ftbquests/textures/gui/replication.png"
 hash = "d30c9a652d1622d57f2cfc8b969551bed7f99a58a613cbd91fae39cde8035554"
-
-[[files]]
-file = "kubejs/assets/ftbquests/textures/gui/the_forge.png"
-hash = "6bc29b3b5e0b2ddaab4cbb7536694409e6340f960106052e1c9f6ffb6a6e845c"
 
 [[files]]
 file = "kubejs/assets/ftbquests/textures/gui/title_ae2.png"
@@ -18766,11 +18770,11 @@ hash = "98f3c564212af4c94076b060f94618f9d2da052ec9e3f343d1c0ff6c8b4d4d7f"
 
 [[files]]
 file = "kubejs/config/faction_recipe_overrides.json"
-hash = "ca54e842a699965180c7bc0e7c3f5153938c9c27a1ab25f8a84362beed155732"
+hash = "26b02fffaf98545848c81ea211ebcdb132727028677a93660ee6aeece3618797"
 
 [[files]]
 file = "kubejs/config/factions.json"
-hash = "aa9223573c5e9ce3592ea487237f1bdd998e9c95426fc92153b6ce9139f38e70"
+hash = "a002d94563913cbc9004b0a0e42562b693f0f6200f999e996756a19320ced8eb"
 
 [[files]]
 file = "kubejs/config/web_server.json"
@@ -19453,6 +19457,10 @@ file = "kubejs/data/dungeons_arise/tags/worldgen/biome/has_structure/small_blimp
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
+file = "kubejs/data/ftbchunks/tags/entity_type/entity_mob_griefing_blacklist.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
 file = "kubejs/data/mekanism/recipe/compat/biomeswevegone/crushing/dacite/conversion_dacite_cobblestone.json"
 hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
 
@@ -19547,6 +19555,10 @@ hash = "223b69f5ec9ad7327ed1acdbc28d8a6733ea8d1f6d0c6cd07192c9871081b6b1"
 [[files]]
 file = "kubejs/data/minecraft/structure/end_city/tower_top.nbt"
 hash = "b44628492e1db358063bbc13e2425b1d67c36e396c862fc25f8de44bec1a2b33"
+
+[[files]]
+file = "kubejs/data/musketmod/recipe/sequenced_assembly/cartridge.json"
+hash = "9816a9b1285880b579fafb5d9bc12da4509037c1bd8ab2ecf41d0788e20a31e5"
 
 [[files]]
 file = "kubejs/data/puffish_skills/puffish_skills/categories/mining/category.json"
@@ -19781,6 +19793,10 @@ file = "kubejs/server_scripts/Mods/Chipped/Compat.js"
 hash = "0467d7d5e564282ad1b124badce1a49608db9e532b46d426e6a3d44f50ab8553"
 
 [[files]]
+file = "kubejs/server_scripts/Mods/Craftoria/AlloyProgression.js"
+hash = "94a3b061fda60a3d1fe8dd50dd2a4e7dae440004069b4b261c0704f609abb42f"
+
+[[files]]
 file = "kubejs/server_scripts/Mods/Craftoria/Compression.js"
 hash = "e3fbe695da1e32fa8b2e0ef9b284100c03cd79e7e351919fde3278ea318fedc6"
 
@@ -19855,30 +19871,6 @@ hash = "515a156617f735aee3db580b5ef0381e1b987a8b3ab717f003ea1a9556e286ac"
 [[files]]
 file = "kubejs/server_scripts/Mods/GatewaysToEternity/Events.js"
 hash = "fb5864b71a79281bd798bf70de4d357b03b4739cdecc20dc6317dc42512d9794"
-
-[[files]]
-file = "kubejs/server_scripts/Mods/Hephaestus/alloying.js"
-hash = "bab61ee0c04d12018fec4c2234ca660da9c14637a07b0040a33e50253f6c4531"
-
-[[files]]
-file = "kubejs/server_scripts/Mods/Hephaestus/casting_basin.js"
-hash = "47ee603d90132627c60adcd6d132c8a18057893ce813627d988a55ccea5914fa"
-
-[[files]]
-file = "kubejs/server_scripts/Mods/Hephaestus/casting_table.js"
-hash = "67d7e83dc3090640ad138c540ceef10ac0031218fc6bde6f75821e418464513d"
-
-[[files]]
-file = "kubejs/server_scripts/Mods/Hephaestus/entity_melting.js"
-hash = "cd01071786e2198c74bf7e7fe71e79139dd3ed21beacfa3a9f462bdfeb5a0ba7"
-
-[[files]]
-file = "kubejs/server_scripts/Mods/Hephaestus/materials.js"
-hash = "536348feb8b1e390e2296562481f13986cbf5a46ac368a00430fc91838d43ee8"
-
-[[files]]
-file = "kubejs/server_scripts/Mods/Hephaestus/melting.js"
-hash = "f143276bb8cb0d2b87ffaa2c919a33d9002dcfd48a1c120728be3e63ed3fac70"
 
 [[files]]
 file = "kubejs/server_scripts/Mods/HostileNeuralNetworks/DataModels.js"
@@ -19989,6 +19981,10 @@ file = "kubejs/server_scripts/Mods/ModernIndustrialization/ReplicatorBlacklist.j
 hash = "bbe817a12ae4d850af172c34f37337a7c053e8d45abf1bb64c5917aac808e4a9"
 
 [[files]]
+file = "kubejs/server_scripts/Mods/MusketMod/Assembly.js"
+hash = "3409501e854772268f3d112275945e4339c17b4c27c09e8219bf18f36d295a2d"
+
+[[files]]
 file = "kubejs/server_scripts/Mods/NeoVitae/Recipes.js"
 hash = "62a8a23afbb074f64922f890c137d9e2f6d68e3b8d20ee7b1bbe509475146e4a"
 
@@ -20054,7 +20050,7 @@ hash = "d7a893bb44af3e63ba1ac14b351333b169016bdb4f9310913f6cc10afd30ba14"
 
 [[files]]
 file = "kubejs/server_scripts/faction_parties.js"
-hash = "349da21091b465ba8466f81239090cf0eb2b0b691717209a7078c77621816b98"
+hash = "a1fe225b8b7b5115dacb71ee825e8b762ba3a036e3cfa666eb7e69f5d4bf8fbc"
 
 [[files]]
 file = "kubejs/server_scripts/faction_quest_rewards.js"
@@ -20098,7 +20094,7 @@ hash = "822f62f8838b71c56d980b185266dc8304c150d6e2f283849704d37ff143199d"
 
 [[files]]
 file = "kubejs/server_scripts/mod_gating.js"
-hash = "a002ec394eb0d847aa40af2c6d64bcef3ea5845d76358b5df4e5cf771ae566af"
+hash = "7522f71bea289a82ce191b3fd7d124a6a3ffc840d16e05c5f686395bf4de54b1"
 
 [[files]]
 file = "kubejs/server_scripts/removals.js"
@@ -20106,7 +20102,7 @@ hash = "b42b7394c74a00ab1a5fc95b184e7baf52e9972699d3cff384f24126de99d36b"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
-hash = "bb6cda70fa54039ec79d0fc6abd0f02d17dc846aa1cc6e44db44f38d9bff5e71"
+hash = "d4d9894b5e895b5262c5cda0e6023ad7e5d393c5cf3b7649c830e7aa0416cd69"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"
@@ -20203,6 +20199,10 @@ hash = "f2b33885b92c8a0456751f8ece35072de9a60fc38667a4e148284080635492fe"
 [[files]]
 file = "kubejs/startup_scripts/Custom/Modern Industrialization/Replicator.js"
 hash = "80af9dd4d4402a4ca0adc1597d05d80c76e55cb631ee33ce81458edf9d8d91d3"
+
+[[files]]
+file = "kubejs/startup_scripts/Custom/MusketAssemblyItems.js"
+hash = "f00ec01a214257f9c29238bb6fc7059a1ed4a13fb1b05817873d47fb5a441d85"
 
 [[files]]
 file = "kubejs/startup_scripts/Fixes.js"
@@ -20482,7 +20482,7 @@ metafile = true
 
 [[files]]
 file = "mods/astages.pw.toml"
-hash = "0f398f2ee5153364cac42fc4c26ce0305f69406922d23c192c96c3a2f958a736"
+hash = "60132fa6dfdc391be06ba14d5ea2423b7da19c1e685e2f2d6b61b27207655cd0"
 metafile = true
 
 [[files]]
@@ -20568,6 +20568,26 @@ metafile = true
 [[files]]
 file = "mods/biolith.pw.toml"
 hash = "f53d98dc09fb5abb52798e5dfd25297d85a290e1e4874d8208b981654799121e"
+metafile = true
+
+[[files]]
+file = "mods/bobby-reneoforged.pw.toml"
+hash = "293a0cc110c4ef3798f189a1b141b819003d778c21081ebc8171a8fc1c5935b9"
+metafile = true
+
+[[files]]
+file = "mods/bobby-sync-server.pw.toml"
+hash = "251f3302a73abb2f6d6fae2d0591d84570b3769f01a188eaf889f5daf85896d4"
+metafile = true
+
+[[files]]
+file = "mods/bobby-sync.pw.toml"
+hash = "02b2cd1444851217e344aee004c990b7089bb1a125bee995b5864b0f094fd156"
+metafile = true
+
+[[files]]
+file = "mods/bocchud.pw.toml"
+hash = "77084c36606e1789b43a0dcef507dbf4c343bdd775a97f99e0ca83a823f11a70"
 metafile = true
 
 [[files]]
@@ -20785,8 +20805,8 @@ hash = "ce99acf7b15a1927e38364aa02bb4ed0ad7583ab12f3351cb3161fdd2e160b49"
 metafile = true
 
 [[files]]
-file = "mods/craftoria-factions-guard-1.1.1.jar"
-hash = "6b0241ce4e25eb4694801ef6b8182bf29ecbfd145284c7dc98220161a36a5af9"
+file = "mods/craftoria-factions-guard-1.1.2.jar"
+hash = "2860e678a54cb0949f533f49ecbaee10a9821edcb8515ac14f5b89a30accc263"
 
 [[files]]
 file = "mods/crash-assistant.pw.toml"
@@ -20796,6 +20816,11 @@ metafile = true
 [[files]]
 file = "mods/crash-utilities.pw.toml"
 hash = "6457e8702c7c3d603e1e35252bf2388db4ec44c875209af3c4364a79f4c1709c"
+metafile = true
+
+[[files]]
+file = "mods/create-big-cannons-advanced-technologies.pw.toml"
+hash = "f7066538c0086fca271ddf7d26b223d932a205e80fec08e6c14c9b4c245ed7b5"
 metafile = true
 
 [[files]]
@@ -20974,6 +20999,16 @@ hash = "4bf529c0b36ea0e8e01dc12e80f69a703948d28f7587460526ff0a1330f9e891"
 metafile = true
 
 [[files]]
+file = "mods/distanthorizons-server.pw.toml"
+hash = "145e22ef1b8f17ce6d5986fdd8765e1b2dfb5e75681589e42ca31231d0091d6e"
+metafile = true
+
+[[files]]
+file = "mods/distanthorizons.pw.toml"
+hash = "ddc8e9a82b3880ca7bb6a977174d3f528227172f0dba5b3cc9887c3f88624463"
+metafile = true
+
+[[files]]
 file = "mods/do-api.pw.toml"
 hash = "488c916a519935ea70a04ae507400bfcaf794cbbf108acb1a3e213db2a15058b"
 metafile = true
@@ -21109,6 +21144,11 @@ hash = "ea10cab55df1871fa566aa64329fef98a1b68c8966d72d6c716c57c394e67bab"
 metafile = true
 
 [[files]]
+file = "mods/ewewukeks-musket-mod.pw.toml"
+hash = "38cbb01723dd65b631c5213b5a8d150bb223b42b4253523d8e1501598ee92a98"
+metafile = true
+
+[[files]]
 file = "mods/ex-pattern-provider.pw.toml"
 hash = "e926d31a8a5e87d5f76945e4e42f01f61bbd99d064efddbc601ca7f065d8da87"
 metafile = true
@@ -21204,6 +21244,11 @@ hash = "dff824171060c79b327a4880c2f0546c727a041a489ef3af643ec2dcd9cd0c48"
 metafile = true
 
 [[files]]
+file = "mods/finally-useful-stonecutter.pw.toml"
+hash = "861901ffd39c16e650a522abbab220bb21429870e9c88992800827da8882708a"
+metafile = true
+
+[[files]]
 file = "mods/findme.pw.toml"
 hash = "fd9e5d44cdbaea98173dfbdd5be9b7f27b940dbb788481a6450432e74cc0815e"
 metafile = true
@@ -21221,6 +21266,11 @@ metafile = true
 [[files]]
 file = "mods/forgedpaginatedadvancements.pw.toml"
 hash = "3551b67f9cb57fcc7755d263ef1a2a7e02e94420f0ae16e511ab95b01c9b22d9"
+metafile = true
+
+[[files]]
+file = "mods/forgematica.pw.toml"
+hash = "bf84909d8fc40334130fcca93821df527fee18a5373744e1217da833eda756b0"
 metafile = true
 
 [[files]]
@@ -21264,7 +21314,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-quests-forge.pw.toml"
-hash = "8aeda4d5e60e51432ad309717ecfb1345951b2e5b79ecdc29c80d6910e83adc2"
+hash = "ab51e3a38c5081efca5bb0791b5c8316d4e70d73c6ea5936f2b8eed04aa03216"
 metafile = true
 
 [[files]]
@@ -21279,7 +21329,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-teams-forge.pw.toml"
-hash = "dfa89323f0fd64655c73063134f2fed4307d50cf1de2a3372dec87a80a1d3978"
+hash = "0330fb0c2995d14abb4757e0f13dcad2912dfcec0f35d8e33f3925aa3a57a9fd"
 metafile = true
 
 [[files]]
@@ -21828,6 +21878,11 @@ hash = "85b0bb55b80d196b879fe6755cd7cc509f6ecd5706bb25acd43826da5335dd57"
 metafile = true
 
 [[files]]
+file = "mods/mafglib.pw.toml"
+hash = "2726c6991c3cc6ee3644725fd98759b6d8b2cfd96d0fcb7ad8e266924f741f52"
+metafile = true
+
+[[files]]
 file = "mods/malum.pw.toml"
 hash = "ce71c31bae3eabed36e3fcec1c7db6b7cb9b3882cdd05ac5b2b518b32109092d"
 metafile = true
@@ -21920,6 +21975,16 @@ metafile = true
 [[files]]
 file = "mods/merequester.pw.toml"
 hash = "490c62f126037c9258c345e3f2a1c523f004179c7026072d9301391f9c5ecf75"
+metafile = true
+
+[[files]]
+file = "mods/mffs.pw.toml"
+hash = "f8bdbf8dc35dc01eaaac39d65ad319fc4b06a687df3a07a5d69dec3bcc685759"
+metafile = true
+
+[[files]]
+file = "mods/mi-nukes.pw.toml"
+hash = "d562d581e5fd9a5337224416ac749551aba5f553a5bd346737bb28c6b5009023"
 metafile = true
 
 [[files]]
@@ -22065,6 +22130,16 @@ metafile = true
 [[files]]
 file = "mods/neo-blahaj.pw.toml"
 hash = "367aa8af482db87d95e212088abc7d48c7872d64c794aa68cba125508454f34f"
+metafile = true
+
+[[files]]
+file = "mods/neoforge-carpet-server.pw.toml"
+hash = "27ca3792e63c60f1eb433026a1a4cf220fa417b413374bfd5fb80389c597d71d"
+metafile = true
+
+[[files]]
+file = "mods/neoforge-carpet.pw.toml"
+hash = "c29808cc386b0359858d980a3c740d717bb309ca28a275f24ff2945e3d8bcdc5"
 metafile = true
 
 [[files]]
@@ -22413,6 +22488,11 @@ hash = "953d09d685ccde15fd4e1d1dbb756bb267cf7913adc03b9b2896222003e35801"
 metafile = true
 
 [[files]]
+file = "mods/servuxforged.pw.toml"
+hash = "8d8adf5d3ed0d4e9f8a07864f385c8749f63f0df594e92109e3783cf152371dc"
+metafile = true
+
+[[files]]
 file = "mods/shatterbyte-lib.pw.toml"
 hash = "4f38a1932a493c7b100f13356c65bf1cc4d43e4cb3430d428202452d1d5800a0"
 metafile = true
@@ -22710,6 +22790,11 @@ metafile = true
 [[files]]
 file = "mods/trofers.pw.toml"
 hash = "bbd075f479192fb0d513907334b6d96db4792006277a3bd6c15627537409f477"
+metafile = true
+
+[[files]]
+file = "mods/tweakerge.pw.toml"
+hash = "4bc21c08f992d427659411c0a2d8c95aea18637e9ef52c26669f9a189904786a"
 metafile = true
 
 [[files]]
@@ -23070,6 +23155,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/fine-armoury.pw.toml"
 hash = "20998808b7d7f81b1f474076798073c8090fc5685f1f9be88c0d13234e84d040"
+metafile = true
+
+[[files]]
+file = "resourcepacks/flintl0cks.pw.toml"
+hash = "b2ee2610e30bd8c62d5048d0166014a0c718560be2c5a07c30fe8f52a0e8b5d2"
 metafile = true
 
 [[files]]

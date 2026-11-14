@@ -1,6 +1,14 @@
 {
   "date": "2026-10-26",
-  "description": "Exact user-approved lists from the static conversion review; no additional compression exemptions.",
+  "description": "Exact user-approved recipes from the conversion and shared dust reviews.",
+  "sharedDustRecipes": [
+    "modern_industrialization:materials/bronze_dust",
+    "modern_industrialization:materials/bronze_tiny_dust",
+    "modern_industrialization:materials/copper/craft/dust_from_tiny_dust",
+    "modern_industrialization:materials/copper/craft/tiny_dust_from_dust",
+    "modern_industrialization:materials/tin/craft/dust_from_tiny_dust",
+    "modern_industrialization:materials/tin/craft/tiny_dust_from_dust"
+  ],
   "previousRecipeIds": [
     "ae2:network/blocks/interfaces_interface_alt",
     "ae2:network/blocks/interfaces_interface_part",

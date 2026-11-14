@@ -25,6 +25,31 @@ function initializeCoreMod() {
     };
   }
   return {
+    claimSettingsWarning: {
+      target: { type: 'METHOD', class: 'dev.ftb.mods.ftbteams.net.UpdatePropertiesRequestMessage',
+        methodName: 'lambda$handle$1', methodDesc: '(' + player
+          + 'Ldev/ftb/mods/ftbteams/net/UpdatePropertiesRequestMessage;Ldev/ftb/mods/ftbteams/api/Team;)V' },
+      transformer: function(node) {
+        var matches = 0;
+        Java.from(node.instructions.toArray()).forEach(function(instruction) {
+          if (instruction.getOpcode() === Opcodes.INVOKEVIRTUAL
+              && instruction.owner === 'dev/ftb/mods/ftbteams/data/AbstractTeam'
+              && instruction.name === 'updatePropertiesFrom'
+              && instruction.desc === '(Ldev/ftb/mods/ftbteams/api/property/TeamPropertyCollection;)V') {
+            var warning = new InsnList();
+            warning.add(new VarInsnNode(Opcodes.ALOAD, 0));
+            warning.add(new VarInsnNode(Opcodes.ALOAD, 1));
+            warning.add(new MethodInsnNode(Opcodes.INVOKESTATIC, 'craftoria/factions/FactionGuard',
+              'claimSettingsSaved', '(' + player + 'Ldev/ftb/mods/ftbteams/net/UpdatePropertiesRequestMessage;)V', false));
+            node.instructions.insert(instruction, warning);
+            matches++;
+          }
+        });
+        if (matches !== 1) throw new Error('Expected exactly one accepted FTB Teams settings save, found ' + matches);
+        node.maxStack = Math.max(node.maxStack, 2);
+        return node;
+      }
+    },
     questReward: {
       target: { type: 'METHOD', class: 'dev.ftb.mods.ftbquests.quest.TeamData', methodName: 'markRewardAsClaimed',
         methodDesc: '(' + uuid + 'Ldev/ftb/mods/ftbquests/quest/reward/Reward;J)Z' },

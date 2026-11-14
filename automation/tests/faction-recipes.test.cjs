@@ -9,41 +9,96 @@ const overrides = JSON.parse(read('kubejs/config/faction_recipe_overrides.json')
 const config = JSON.parse(read('kubejs/config/factions.json'));
 const audit = JSON.parse(read('automation/faction-recipe-override-audit.json'));
 
+const crafting = Symbol('crafting');
+const ordinaryRecipes = [
+  'ae2:network/blocks/interfaces_interface',
+  'ae2:network/blocks/pattern_providers_interface',
+  'ars_nouveau:arcane_pedestal',
+  'modern_industrialization:materials/bronze/craft/tiny_dust_from_dust',
+  'modern_industrialization:materials/bronze/craft/dust_from_tiny_dust',
+  'musketmod:musket_upgrade_smithing_template',
+  'musketmod:cartridge',
+  'xycraft:crafting_example',
+];
+const machineRecipes = [
+  'musketmod:musket_with_bayonet_smithing',
+  'musketmod:musket_with_scope_smithing',
+  'musketmod:sequenced_assembly/musket',
+  'musketmod:sequenced_assembly/cartridge',
+  'musketmod:iron_nugget_from_smelting',
+];
+
 function setup(data = overrides) {
-  const gates = new Map();
+  const gates = new Map([['recipe_gate/crafting/mechanists', {}], ['other_mod_rule', { mod: true }]]);
+  const registry = {
+    getRecipeRestrictions: () => [...gates].filter(([, entry]) => !entry.mod).map(([id]) => ({ getId: () => id })),
+    getModRestrictions: () => [...gates].filter(([, entry]) => entry.mod).map(([id]) => ({ getId: () => id })),
+  };
+  const classes = {
+    RecipeType: { CRAFTING: { equals: type => type === crafting } },
+    ARestrictionManager: { RECIPE_INSTANCE: { getRegistry: () => registry, removeRestriction: id => gates.delete(id) } },
+  };
+  let load, sync;
   const context = vm.createContext({
     JsonIO: { readString: () => JSON.stringify(data) },
+    Java: { loadClass: name => classes[name.split('.').pop()] },
+    AStages: { addRestrictionForModRecipe(id, stage, namespace) {
+      const ignored = new Set();
+      const rule = { mod: true, stage, namespace, ignored, ignoreItems: recipe => ignored.add(recipe), markAsDirty() {} };
+      gates.set(id, rule);
+      return rule;
+    } },
     factionDefinitions: {
       restrictions: Object.fromEntries(config.factions.concat(config.sharedGroups).map(g => [g.id, g.mods])),
       recipeNamespaceAliases: config.recipeNamespaceAliases,
     },
-    AStages: { addRestrictionForModRecipe(id, stage, mod) {
-      const gate = { stage, mod, ignored: new Set(), ignoreItems(recipe) { this.ignored.add(recipe); } };
-      gates.set(mod, gate); return gate;
-    } },
+    ServerEvents: { loaded: fn => { load = fn; } },
+    NativeEvents: { onEvent: (_, fn) => { sync = fn; } },
   });
   vm.runInContext(read('kubejs/server_scripts/faction_recipe_overrides.js'), context);
   vm.runInContext(read('kubejs/server_scripts/mod_gating.js'), context);
-  return gates;
+  let recipes = [...overrides.recipeIds, ...ordinaryRecipes];
+  const server = {
+    getRecipeManager: () => ({
+      getRecipes: () => [...recipes, ...machineRecipes].map(id => ({
+        id: () => ({ getNamespace: () => id.split(':')[0], toString: () => id }),
+        value: () => ({ getType: () => machineRecipes.includes(id) ? Symbol('machine') : crafting }),
+      })),
+    }),
+  };
+  load({ server });
+  return {
+    gates,
+    gatedRecipes: () => new Map([...recipes, ...machineRecipes].flatMap(id => {
+      const gate = gates.get('recipe_gate/' + id.split(':')[0]);
+      return gate && !gate.ignored.has(id) ? [[id, gate.stage]] : [];
+    })),
+    reload: ids => {
+      recipes = ids;
+      sync({ getPlayer: () => null, getPlayerList: () => ({ getServer: () => server }) });
+    },
+  };
 }
 
-test('public recipe overrides exempt exact recipe IDs while ordinary crafting stays gated', () => {
-  const gates = setup();
-  for (const id of overrides.recipeIds) assert.equal(gates.get(id.split(':')[0]).ignored.has(id), true, id);
-  assert.equal(gates.get('ae2').ignored.has('ae2:network/blocks/interfaces_interface'), false);
-  assert.equal(gates.get('ae2').ignored.has('ae2:network/blocks/pattern_providers_interface'), false);
-  assert.equal(gates.get('ae2').ignored.has('ae2:cable_interface'), false, 'item IDs are not recipe IDs');
-  assert.equal(gates.get('ars_nouveau').ignored.has('ars_nouveau:arcane_pedestal'), false);
-  assert.equal(gates.get('mekanism').ignored.has('mekanism:clear_configuration'), true);
-  assert.equal(gates.get('xycraft').stage, 'science_shared');
-  assert.equal(gates.get('xycraft').ignored.has('xycraft:shapeless/mekanical_condenser_shift'), true);
+test('only crafting recipes are gated, with exact exceptions and namespace aliases', () => {
+  const state = setup();
+  const gated = state.gatedRecipes();
+  for (const id of [...overrides.recipeIds, ...machineRecipes]) assert.equal(gated.has(id), false, id);
+  for (const id of ordinaryRecipes) assert.equal(gated.has(id), true, id);
+  assert.equal(gated.get('musketmod:cartridge'), 'mechanists');
+  assert.equal(gated.get('xycraft:crafting_example'), 'science_shared');
+  assert.equal(state.gates.has('recipe_gate/crafting/mechanists'), false);
+  assert.equal(state.gates.has('other_mod_rule'), true);
+  state.reload(['musketmod:new_crafting_recipe']);
+  assert.deepEqual([...state.gatedRecipes()], [['musketmod:new_crafting_recipe', 'mechanists']]);
 });
 
-test('the conversion expansion matches the approved audit without adding compression exceptions', () => {
+test('public recipes match the approved conversion and shared dust exceptions', () => {
   assert.equal(audit.singleItemConversions.length, 168);
   assert.equal(audit.stateResetAndDisassembly.length, 189);
-  const expected = new Set(audit.previousRecipeIds.concat(audit.singleItemConversions, audit.stateResetAndDisassembly));
-  assert.equal(expected.size, 369);
+  assert.equal(audit.sharedDustRecipes.length, 6);
+  const expected = new Set(audit.previousRecipeIds.concat(audit.singleItemConversions, audit.stateResetAndDisassembly, audit.sharedDustRecipes));
+  assert.equal(expected.size, 375);
   assert.deepEqual([...overrides.recipeIds].sort(), [...expected].sort());
   for (const id of ['ae2:decorative/fluix_block', 'ae2:misc/deconstruction_fluix_block',
     'ae2:decorative/quartz_block', 'ae2:misc/deconstruction_certus_quartz_block']) {
@@ -52,8 +107,7 @@ test('the conversion expansion matches the approved audit without adding compres
   // Existing XP-gem compression exceptions remain; new recipe exceptions do not widen quest access.
   assert.deepEqual(overrides.publicQuestItems, ['ars_nouveau:experience_gem', 'ars_nouveau:greater_experience_gem',
     'ars_technica:giant_experience_gem', 'ars_technica:gargantuan_experience_gem']);
-  const gates = setup();
-  for (const id of audit.stateResetAndDisassembly) assert.equal(gates.get(id.split(':')[0]).ignored.has(id), true, id);
+
 });
 
 test('malformed, duplicate and unsupported override documents fail before gating', () => {
@@ -68,7 +122,7 @@ test('assignment exceptions retain stable factions and explicit everyone access'
   const stages = new Map(config.factions.concat(config.sharedGroups).flatMap(g => g.mods.map(m => [m, g.id])));
   assert.deepEqual(config.factions.map(g => g.id), ['stargazers', 'mechanists', 'spellcasters', 'ritualists']);
   for (const mod of ['computercraft', 'advancedperipherals', 'peripheralworks', 'logisticsnetworks', 'fluxnetworks',
-    'arsdelight', 'farmersdelight', 'rechiseledae', 'compactmachines', 'laserio', 'sfm', 'irons_lib']) {
+    'pipez', 'arsdelight', 'farmersdelight', 'rechiseledae', 'compactmachines', 'laserio', 'sfm', 'irons_lib']) {
     assert.equal(stages.has(mod), false, mod);
     assert.equal(config.unrestrictedMods.includes(mod), true, mod);
   }

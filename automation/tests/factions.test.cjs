@@ -62,7 +62,7 @@ function setup({ age = 0, config = data, persisted = new Tag(), existing = false
       const id = 'party-' + teams.size; const extra = new Tag(); const members = new Map([[owner, 'owner']]);
       const properties = new Map();
       const team = {
-        owner, name, members, extra, getId: () => id, isPartyTeam: () => true,
+        owner, name, members, extra, getName: () => ({ getString: () => name }), getId: () => id, isPartyTeam: () => true,
         getExtraData: () => extra, getMembers: () => set([...members.keys()]), markDirty() {},
         setProperty: (key, value) => properties.set(key, value), getProperty: key => properties.get(key),
         addMember: (id, rank) => members.set(id, rank), removeMember: id => members.delete(id),
@@ -154,7 +154,7 @@ test('removed parties and changed faction IDs are rejected rather than recreated
 test('join choices contain only names and commands, and joining grants member rank plus exclusive/shared stages', () => {
   const s = setup(); s.subject.initialize(s.server); const p = s.player();
   s.handlers.players.login({ player: p, server: s.server });
-  assert.equal(p.messages[0].text, 'Click to join a faction:');
+  assert.equal(p.messages[0].text, 'Click to join your faction:');
   assert.deepEqual(p.messages.slice(1).map(m => m.text), data.factions.map(f => '[' + f.name + ']'));
   for (const message of p.messages.slice(1)) { assert.equal(message.color, 'blue'); assert.equal(message.underlined, true); assert.match(message.command, /^\/faction join /); }
   s.subject.join(p, 'stargazers', false); const team = s.subject.party(p);
@@ -225,14 +225,15 @@ test('join and assign complete partial faction IDs and use faction-first argumen
 });
 
 
-test('travel permissions apply in managed and existing worlds and preserve unrelated nodes', () => {
+test('travel and claim-settings permissions apply in managed and existing worlds and preserve unrelated nodes', () => {
   for (const age of [0, 20]) {
     const s = setup({ age }); s.subject.initialize(s.server);
     const base = s.ranks.get('infrastructure_members'); const ops = s.ranks.get('infrastructure_operators');
     base.values.set('command.warp', true);
     base.values.set('command.spawn', true);
     s.subject.permissions();
-    for (const node of ['command.spawn', 'command.back']) {
+    for (const node of ['command.spawn', 'command.back',
+      'command.ftbteams.party.settings', 'command.ftbteams.party.settings_for']) {
       assert.equal(base.values.get(node), false); assert.equal(ops.values.get(node), true);
     }
     assert.equal(base.values.get('command.warp'), true);
@@ -318,7 +319,7 @@ test('manual mode survives membership changes; automatic mode immediately restor
 
 test('testing mode is per-player and operator-only; enabling it grants every configured stage', () => {
   const s = setup(); s.subject.initialize(s.server); const p = s.player('tester'); const other = s.player('member');
-  assert.throws(() => s.subject.stageMode({ hasPermission: () => false }, p, true), /Only operators/);
+  assert.throws(() => s.subject.stageMode({ hasPermission: () => false }, p, true), /permission to change testing mode/);
   s.subject.stageMode(operatorSource(s.server), p, true);
   assert.deepEqual([...p.astages].sort(), ['magic_shared', 'mechanists', 'ritualists', 'science_shared', 'spellcasters', 'stargazers', 'unrelated_progression']);
   other.astages.add('ritualists'); s.subject.stages(other);
@@ -339,5 +340,5 @@ test('auto refreshes expected stages even when already automatic; unmanaged worl
   s.subject.stageMode(operatorSource(s.server), p, false);
   assert.deepEqual([...p.astages].sort(), ['mechanists', 'science_shared', 'unrelated_progression']);
   const legacy = setup({ age: 20 }); legacy.subject.initialize(legacy.server);
-  assert.throws(() => legacy.subject.stageMode(operatorSource(legacy.server), legacy.player(), true), /not enabled/);
+  assert.throws(() => legacy.subject.stageMode(operatorSource(legacy.server), legacy.player(), true), /not applied automatically/);
 });

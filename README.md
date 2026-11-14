@@ -1,5 +1,7 @@
 # Craftoria - 1.21
 
+LambDynamicLights defaults to off to reduce client performance overhead. Players can enable it in the mod settings.
+
 ## Faction content design handoff
 
 [FACTION_CONTENT_DESIGN.md](FACTION_CONTENT_DESIGN.md) records the faction
@@ -47,6 +49,13 @@ Plushie Buddies introduce no additional plate substitutions; their shared
 materials use the existing global rules. The AdachiRei-nui repair is documented
 above. Source inspection does not confirm the final runtime recipe registry.
 
+MFFS's steel compound and smelting recipes and Big Cannons' standalone steel
+and bronze mixing recipes are disabled to preserve shared alloy progression.
+Big Cannons' Nethersteel recipe requires steel and netherite scrap because the
+cast iron alternative is disabled. Casting and recycling existing metal remain
+available. CBC Advanced Technologies has no standalone alloy recipe in its
+pinned release.
+
 After installing in **Craftoria Factions Test**, check the aircraft propeller,
 hull reinforcement, eco engine, cannon mount, radar dish, and bronze/steel
 processing recipes with the preferred materials. Inspect KubeJS/Almost Unified
@@ -75,7 +84,7 @@ Official discord server (Team AOF): https://discord.gg/6rkdm48
 
 This feature uses the pack's existing KubeJS, FTB Teams, FTB Chunks, FTB Ranks,
 and FTB XMod Compat, plus pinned AStages 2.5.3 and the bundled faction permission
-guard. FTB Chunks owns all claim data, map display, and protection. The existing
+guard. FTB Chunks owns all claim data and map display; claim protections are globally disabled. The existing
 faction IDs and mod assignments are preserved in the shared document below.
 
 Verified against Minecraft 1.21.1 / NeoForge 21.1.249, KubeJS
@@ -181,11 +190,11 @@ Twilight Delight remains Ritualists. Both Modular Routers connectors follow
 Modular Routers in `science_shared`. Integrated Dynamics and its addons,
 including their compatibility namespaces, use `magic_shared`.
 
-`kubejs/config/faction_recipe_overrides.json` lists recipes available to everyone
-despite their mod's faction assignment. The pinned AStages 2.5.3
-`ARecipeModRestriction.ignoreItems(String...)` method takes **recipe IDs**, not
-item IDs. It excludes only those exact IDs from the matching recipe-namespace
-restriction. The configured exceptions cover both directions of AE2 interface,
+`kubejs/config/faction_recipe_overrides.json` lists exact recipe IDs excluded
+from faction gating. The gate selects recipes with Minecraft's crafting recipe
+type and uses their namespaces to assign faction stages. Smithing, smelting,
+Create assembly, and other recipe types fall outside the gate. The configured
+exceptions cover both directions of AE2 interface,
 pattern-provider and energy-acceptor block/cable-part conversions, and all six
 compression/decompression recipes across Ars experience, greater experience,
 giant experience and gargantuan experience gems. Initial AE2 device crafting,
@@ -195,9 +204,11 @@ The October 26 conversion expansion additionally exempts the 168 recipe IDs for
 the 85 reviewed one-item-in/one-item-out reversible pairs, plus all 189 entries
 in the reviewed state-reset/disassembly list. The exact groups and prior 12-ID
 baseline are recorded in `automation/faction-recipe-override-audit.json`; the
-runtime document now contains 369 unique recipe IDs. Other compression and
-decompression exceptions were not added. The six existing XP-gem conversion
-exceptions remain as previously approved. Recipe exceptions do not create
+runtime document now contains 375 unique recipe IDs. The six additional dust
+exceptions allow every faction to mix copper and tin into bronze dust at either
+size and convert copper and tin between regular and tiny dust in both directions.
+Converting between regular and tiny bronze dust remains gated. The six existing
+XP-gem conversion exceptions remain as previously approved. Recipe exceptions do not create
 new item-task exemptions for quest rewards.
 
 These reset/disassembly recipes are real recipe-manager definitions, generally
@@ -551,7 +562,7 @@ Path checks use accepted client movement to detect skipped wilderness chunks.
 Unhooked mod teleports and unusual server-driven vehicle motion cannot always
 be distinguished by scripts; validate those mods on staging. The full pack's
 GUI, vehicles, and Waystones still need normal-client acceptance testing.
-Existing FTB building, interaction, and PvP permissions continue to apply;
+FTB claim protections are globally disabled;
 enemy players can still meet or fight inside claimed territory.
 
 ### Packwiz hosting on GitHub Pages
@@ -568,6 +579,107 @@ Git-ignored files; every indexed file must exist in the repository. Commit
 that the Pages build and deployment succeeds after pushing.
 
 
+### Optional technical and distance-rendering mods
+
+The packwiz bootstrap installer offers these client mods, all disabled by default:
+
+| Mod | Selected release | Dedicated server |
+| --- | --- | --- |
+| Distant Horizons | 3.3.3 / Minecraft 1.21.1 | Required |
+| Bobby ReNeoForged | 5.2.4-0.4+mc1.21 | Client only |
+| Bobby Sync | 1.3 | Required |
+| Tweakerge | 0.4.3+mc1.21.1 | Client only |
+| Forgematica | 0.4.3+mc1.21.1 | Client only |
+| BoccHUD | 0.4.1+mc1.21.1 | Client only |
+| Carpet: NeoForged | 1.0.8 | Required |
+| Finally Useful Stonecutter | 1.1 | Client only |
+| ServuxForged | 0.4.1+mc1.21.1 | Required; server only |
+
+Choose **either Bobby or Distant Horizons**, or leave both off. When choosing
+Bobby, also select Bobby Sync if server cache downloads are wanted. Disable
+Bobby Sync when choosing Distant Horizons. These are pack selection guidelines;
+the standard installer cannot enforce them.
+
+MaFgLib 0.4.3 is required on clients so selecting any of Tweakerge, Forgematica,
+or BoccHUD cannot leave its shared library missing. Bobby's required Cloth Config
+15.0.140 is already required by the pack. Libraries therefore install even when
+the optional features are off. Bobby Sync 1.3 omits Bobby from its dependency
+metadata, but still needs Bobby on the client; select both checkboxes manually.
+
+Stock packwiz's option table supports only optional/default/description, with no
+dependency selection, groups, or mutually exclusive choices. Dependency discovery
+in `packwiz modrinth install` is an authoring feature, not a runtime option resolver.
+Strict radio-button choices or automatic Bobby/Bobby Sync grouping require a
+custom installer/selector, or separately maintained pack profiles.
+Use the graphical bootstrap installer for client selection. In installer 0.5.14,
+headless/CLI mode accepts all newly presented options, ignoring their disabled
+defaults; it will install both distance renderers unless choices were already
+saved in that installation's `packwiz.json`.
+
+Server-capable additions have separate required `side = "server"` metadata;
+their client entries remain optional and `side = "client"`. Run the installer
+with `-s server` for a dedicated server. Server JAR filenames have a `-server`
+suffix so wrong-side cleanup cannot remove the client's optional copy. Use
+separate client and server installation folders. Bobby itself and MaFgLib are
+client only; Bobby Sync's server component does not require Bobby.
+Both entries in each client/server pair are pinned. Update each pair together
+and retain the server filename suffix; ordinary `packwiz update` must not
+silently undo the separate destinations or leave different protocol versions.
+
+Forgematica is explicitly pinned with top-level `pin = true`: Modrinth release
+PFUOWUDF incorrectly marks its sources JAR as primary. The manifest instead uses
+the compiled JAR and its published SHA-512 hash. Keep this pin until the upstream
+artifact selection is corrected and a replacement is audited. This release also
+contains the upstream access-transformer fix. Existing ModernFix, FerriteCore,
+and Packet Fixer remain in the pack. Carpet-Fixes has no native NeoForge 1.21.1
+release; Fabric-only patches are not installed through Connector as a workaround.
+
+Carpet rules retain upstream defaults; no extra travel commands or gameplay
+rules are enabled here. Bobby Sync exposes `/bobbysync sync [radius] [dimension]`,
+`/bobbysync config`, and `/bobbysync cancel`; it transfers server region data
+rather than enforcing faction-claim visibility. Its upstream notes list modded
+dimensions as unsupported. Neither distance renderer expands faction movement
+or interaction permissions. Check rendering, shaders, HUDs, schematics, and
+server cache transfer in **Craftoria Factions Test** before accepting the update.
+Minecraft is not launched by the release validation.
+Release validation checked every indexed file and all new artifact hashes,
+compiled NeoForge JAR contents, isolated server installs and repeat updates,
+and client downloads plus persisted-option deselection cleanup.
+
+### Server support for the technical client mods
+
+[ServuxForged](https://modrinth.com/mod/servuxforged) is the native NeoForge
+server companion for all three technical client ports. It installs automatically
+on dedicated servers and is excluded from clients; it is not needed in single
+player. Ordinary client features work without it, but Carpet alone does not
+provide all of these mods' server integrations.
+
+| Client mod | Additional support supplied by ServuxForged |
+| --- | --- |
+| Forgematica (Litematica) | Entity/block-entity data for schematics, schematic transfer and creative-mode server pasting, and accurate Easy Place protocol support |
+| BoccHUD (MiniHUD) | Structure bounding boxes, server HUD and entity data, and optional debug-data integration |
+| Tweakerge (Tweakeroo) | Entity/block-entity data and accurate placement protocol V3; its automatic protocol selection prefers Servux over Carpet's V2 |
+
+Checked the published sources for the exact installed versions: Litematica and
+Tweaks protocols are V1, HUD and Structures V2, and Entities and Debug V1 on
+both client and server. This verifies the protocol versions; connected-client
+acceptance in **Craftoria Factions Test** is still required.
+
+ServuxForged 0.4.1 is the security-fixed Minecraft 1.21.1 release identified in
+the [maintainer's advisory](https://github.com/CagayakeGirls/litematica-neoforge/issues/11).
+The installed Forgematica 0.4.3 is newer than its fixed 0.4.2 release. This
+ServuxForged version has no additional mod dependencies; BadPackets applies to
+older releases and is not required here.
+
+Installing the companion makes the integration available; it does not enable
+every toggle or grant every permission. Upstream defaults enable the normal data
+providers, but disable debug data, seed sharing, weather sharing, HUD loggers,
+and stackable shulkers. Server pasting still requires creative mode and its
+permission check. Player inventory and Ender Chest queries default to permission
+level 2. These defaults are retained; client feature toggles and server settings
+still control access. No extra Carpet extensions are required for these core
+integrations, and no faction travel restrictions are changed.
+
 ## Bundled Cataclysm: Spellbooks
 
 `mods/cataclysm_spellbooks-1.1.14-1.21.jar` is distributed directly with the pack,
@@ -580,3 +692,57 @@ bundled jar without needing CurseForge API access or a manual download.
 Updates to this bundled mod are manual: replace the jar, update its Git/packwiz
 inclusion rules and this version reference, then run `packwiz refresh`. Do not
 restore the API download entry alongside the bundled jar.
+
+
+## Deferred upstream content
+
+The unfinished Hephaestus addition from upstream commit `bd346b7ad` is reverted:
+its quest chapter, quest text/theme assets, and generated recipe scripts are not
+shipped until that content is ready. Other upstream fixes remain in place.
+
+Pipez is explicitly listed under `unrestrictedMods` in `kubejs/config/factions.json`
+and is available to all factions. Restart after updating faction definitions.
+
+### Claims without land protection
+
+`config/ftbchunks-world.snbt` sets `disable_protection: true`. Claims reserve
+ownership and permit force-loading under the existing limits. Session locks and
+faction-home ownership checks still apply. All claim boundary protections are off,
+fake players are allowed, and PvP is always allowed. Pastel/Spectrum claim-based
+decay protection remains disabled. The KubeJS override empties FTB Chunks'
+`entity_mob_griefing_blacklist` entity-type tag: in pinned 2101.1.22, its NeoForge
+Enderman griefing check bypasses the global switch and otherwise honors saved
+team preferences. This override removes that independent claim protection.
+Independent security blocks and grave mechanics
+are unchanged.
+
+FTB Ranks infrastructure ranks deny `command.ftbteams.party.settings` and
+`command.ftbteams.party.settings_for` to non-operators in existing and new worlds,
+with operator overrides. Ranks restricts the whole settings command; use the GUI
+for unrelated party preferences. Owners/officers can still save GUI protection
+preferences, but they cannot override the global protection switch. After an
+accepted GUI save containing protection settings, the saving player alone receives
+red chat text: "Claim protections are disabled on this server!" The guard only
+adds this notification; it does not restrict settings edits. No warning is sent
+for unrelated-only payloads or while `disable_protection` is false.
+
+For an existing world, update its `serverconfig/ftbchunks-world.snbt` override
+before restarting: use the protection policy in
+`defaultconfigs/ftbchunks/ftbchunks-world.snbt`, merging only those keys and keeping
+claim/force-load limits and other overrides. Pack defaults cannot replace an
+existing per-world override. No claim ownership or faction migration is required.
+
+Connected-client acceptance: check enemy block/container/entity access, armor
+stands, explosions (including unknown sources), mob griefing, fake-player
+machines, pistons, fluids, fire, and PvP with restrictive saved team preferences.
+Verify ownership cannot be stolen, existing force-loading limits still apply,
+and session/home rules still work. As member/officer/owner/operator, verify command
+permissions and GUI saves; test repeated saves, unrelated-only saves, unauthorized
+packets, and both values of `disable_protection`. Each qualifying save must send
+exactly one red message only to the saving player.
+
+Upstream references: [FTB Chunks configuration](https://github.com/FTBTeam/FTB-Chunks/blob/1.21.1/main/common/src/main/java/dev/ftb/mods/ftbchunks/FTBChunksWorldConfig.java),
+[NeoForge mob-griefing handler](https://github.com/FTBTeam/FTB-Chunks/blob/1.21.1/main/neoforge/src/main/java/dev/ftb/mods/ftbchunks/neoforge/FTBChunksForge.java),
+and [FTB Ranks command nodes](https://docs.feed-the-beast.com/mod-docs/mods/suite/Ranks/Configuration/).
+The policy and notification hook were checked against the installed pinned jars;
+upstream branches may change.

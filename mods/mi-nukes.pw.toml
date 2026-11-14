@@ -1,0 +1,13 @@
+name = "Modern Nuclearization"
+filename = "modern_nuclearization-2.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/c7oycezb/versions/wwEeuuWd/modern_nuclearization-2.0.jar"
+hash-format = "sha512"
+hash = "a041a180c37aea01d7b3e6c78238759367a7539a19c87db0c012e3f12ad478a2a26947e93d1007ee3bf84f184ed9696d404521e79b754225cd9198fa599c6987"
+
+[update]
+[update.modrinth]
+mod-id = "c7oycezb"
+version = "wwEeuuWd"

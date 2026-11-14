@@ -1,0 +1,13 @@
+name = "ServuxForged"
+filename = "servux-neoforge-0.4.1+mc1.21.1.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/H9LzoDgA/versions/V61U2oNg/servux-neoforge-0.4.1%2Bmc1.21.1.jar"
+hash-format = "sha512"
+hash = "b732882b7f9f471fab69bf21508592e110a481c46dae40889a8a09ddd0c46978e5ecdd5c8dbfbf04ec8b18a10316c98b135df3a3461011204b577f51f5b41313"
+
+[update]
+[update.modrinth]
+mod-id = "H9LzoDgA"
+version = "V61U2oNg"

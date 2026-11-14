@@ -26,6 +26,28 @@ public final class FactionGuard {
         });
     }
     private FactionGuard() {}
+    /** Called only after the native GUI handler accepts and applies the editable payload. */
+    public static void claimSettingsSaved(ServerPlayer player, dev.ftb.mods.ftbteams.net.UpdatePropertiesRequestMessage message) {
+        if (!dev.ftb.mods.ftbchunks.FTBChunksWorldConfig.DISABLE_PROTECTION.get()) return;
+        boolean[] containsProtection = {false};
+        message.properties().forEach((key, value) -> {
+            if (key.isPlayerEditable() && !key.isHidden() && isClaimProtection(key.getId().toString())) {
+                containsProtection[0] = true;
+            }
+        });
+        if (containsProtection[0]) player.sendSystemMessage(Component.literal("Claim protections are disabled on this server!")
+            .withStyle(net.minecraft.ChatFormatting.RED));
+    }
+
+    private static boolean isClaimProtection(String id) {
+        return switch (id) {
+            case "ftbchunks:block_edit_mode", "ftbchunks:block_interact_mode", "ftbchunks:block_edit_and_interact_mode",
+                "ftbchunks:entity_interact_mode", "ftbchunks:nonliving_entity_attack_mode", "ftbchunks:allow_explosions",
+                "ftbchunks:allow_mob_griefing", "ftbchunks:allow_pvp", "ftbchunks:allow_fake_players",
+                "ftbchunks:allow_fake_players_by_id", "ftbchunks:allow_named_fake_players" -> true;
+            default -> false;
+        };
+    }
     public static long gameTime(net.minecraft.server.MinecraftServer server) { return server.overworld().getGameTime(); }
     public static UUID systemId(String value) { return UUID.nameUUIDFromBytes(value.getBytes(java.nio.charset.StandardCharsets.UTF_8)); }
     public static int appointOwner(PartyTeam team, CommandSourceStack source, GameProfile profile) throws CommandSyntaxException {
