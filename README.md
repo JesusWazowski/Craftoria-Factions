@@ -548,11 +548,10 @@ Tweaks protocols are V1, HUD and Structures V2, and Entities and Debug V1 on
 both client and server. This verifies the protocol versions; connected-client
 acceptance in **Craftoria Factions Test** is still required.
 
-ServuxForged 0.4.1 is the security-fixed Minecraft 1.21.1 release identified in
-the [maintainer's advisory](https://github.com/CagayakeGirls/litematica-neoforge/issues/11).
-The installed Forgematica 0.4.3 is newer than its fixed 0.4.2 release. This
-ServuxForged version has no additional mod dependencies; BadPackets applies to
-older releases and is not required here.
+ServuxForged 0.4.2 for Minecraft 1.21.1 fixes the dedicated-server bootstrap
+crash in 0.4.1. The server uses the publisher’s 1.21.1 NeoForge artifact. The
+installed Forgematica 0.4.3 is newer than its security-fixed 0.4.2 release.
+This ServuxForged version requires no additional mods.
 
 Installing the companion makes the integration available; it does not enable
 every toggle or grant every permission. Upstream defaults enable the normal data
@@ -562,6 +561,26 @@ permission check. Player inventory and Ender Chest queries default to permission
 level 2. These defaults are retained; client feature toggles and server settings
 still control access. No extra Carpet extensions are required for these core
 integrations, and no faction travel restrictions are changed.
+
+## Dedicated server packwiz compatibility
+
+Use the packwiz installer with the server side selected. That selection skips
+client UI, renderer, and particle mods and installs the dedicated server build
+of AdachiRei-nui v1.1.5. The build keeps the original blocks, items, and registry
+IDs and removes client GUI and rendering references from the server entry
+point. Clients still install the upstream build. The existing four KubeJS
+recipe corrections still apply.
+
+The patched build, MIT license, and patch source are in
+`server_files/third-party/adachirei-nui/`. To rebuild, use Java 21 or later and
+put ASM and ASM Tree on the classpath. Run `java -cp "<ASM classpath>"
+PatchAdachiServer.java <upstream-jar> <output-jar>` with a new output path.
+The audited input JAR has SHA-256
+`3f3a99489058937a706faf26fd5fad60b8cefb0505a241d181e702cf93b58b4e`.
+Include the upstream MIT license in the JAR under
+`META-INF/LICENSE-AdachiRei-nui.txt` and refresh the server metafile hash and
+packwiz index before publishing. Retest all four vendor recipes on a version
+change before removing any KubeJS correction.
 
 ## Bundled Cataclysm: Spellbooks
 
