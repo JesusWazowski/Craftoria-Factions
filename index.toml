@@ -5797,10 +5797,6 @@ file = "config/openloader/packs/Compact_Machines.zip"
 hash = "48b8da7fa52ff00c52f167ed35163be59599777882cec9a689bea21f89fe0f7c"
 
 [[files]]
-file = "config/openloader/packs/Create Immersive Aircrafts Datapack 1.21.1 - 3.0.zip"
-hash = "b1c687cbc53d85aa5ed12b1efc2d2312d256381f63c03412daa8bfc6b8934537"
-
-[[files]]
 file = "config/openloader/packs/Create Man of Many Planes Recipe Datapack v1.0.zip"
 hash = "22ed3e130f0574a1e4ccbf2db9bb3920098c63bfdbc25069d16fa237073a988d"
 
@@ -6370,7 +6366,7 @@ hash = "e2142707d353f2620cde4a8c92ac811a33c2244039d6a2548d005411afd6d73d"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "a1c00154b5c67902b2fe312208b62afe12365bfce8cef9e8493bb246dde13090"
+hash = "f44429f6d69348075694b9778303dcd7547ac5b141cf188e5b79b46e586ed538"
 
 [[files]]
 file = "config/rftoolsbase-server.toml"
@@ -18758,7 +18754,7 @@ hash = "352178ca399b170d61f9d07036fc6b7be8f1d7281e666ceff7dd1d12c167febb"
 
 [[files]]
 file = "kubejs/config/defaultoptions.txt"
-hash = "d708425ce292448cb2d9a90460a075d4f3f9db2a56a000aea444b4ce686e10c3"
+hash = "4e110bfab57c7b0c78e6bf48775afa841f42552746c0f7e23d05cd5872c2c82a"
 
 [[files]]
 file = "kubejs/config/faction_milestones.json"
