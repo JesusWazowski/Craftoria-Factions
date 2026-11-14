@@ -16,13 +16,16 @@ const SessionFakePlayer = Java.loadClass('net.neoforged.neoforge.common.util.Fak
 const SessionTeleportCommand = Java.loadClass('net.neoforged.neoforge.event.entity.EntityTeleportEvent$TeleportCommand');
 
 const factionSession = {
-  maxClaims: 2147483647,
+  // Fallbacks; faction_milestones.json supplies the configured base allowance and cap.
+  baseClaims: 4,
+  maxClaims: 64,
   initialized: false,
   tick: 0,
   previous: new Map(),
   teleportUntil: new Map(),
   homeCache: new Map(),
   alerts: new Map(),
+  limitResets: new Map(),
 
   locked(server) {
     return server.persistentData.getBoolean('sessionLocked');
@@ -48,27 +51,59 @@ const factionSession = {
   },
 
   // Only this node and extra-claim bonuses are normalized. Force loading is untouched.
+  // Every player gets the base; faction_milestones.js supplies each player's bonus from their party's milestones.
   normalizeLimits() {
-    let value = SessionRanks.getInstance().parsePermissionValue(String(this.maxClaims));
+    let milestones = typeof factionMilestones !== 'undefined' ? factionMilestones : null;
+    if (milestones) {
+      this.baseClaims = milestones.config.baseClaims;
+      this.maxClaims = milestones.config.maxClaims;
+    }
+    let value = SessionRanks.getInstance().parsePermissionValue(String(this.baseClaims));
     SessionRanks.manager().getAllRanks().forEach(rank => {
-      if (rank.getPermission('ftbchunks.max_claimed').asInteger().orElse(-1) !== this.maxClaims) {
+      if (rank.getPermission('ftbchunks.max_claimed').asInteger().orElse(-1) !== this.baseClaims) {
         rank.setPermission('ftbchunks.max_claimed', value);
       }
     });
-    SessionConfig.MAX_CLAIMED_CHUNKS.set(this.maxClaims);
-    SessionConfig.HARD_TEAM_CLAIM_LIMIT.set(0);
+    SessionConfig.MAX_CLAIMED_CHUNKS.set(this.baseClaims);
+    SessionConfig.HARD_TEAM_CLAIM_LIMIT.set(this.maxClaims);
     SessionConfig.PARTY_LIMIT_MODE.set(SessionPartyLimit.LARGEST);
     SessionConfig.MAX_IDLE_DAYS_BEFORE_UNCLAIM.set(0);
     let manager = SessionChunks.api().getManager();
     let teams = SessionTeams.api().getManager().getTeams();
-    // Clear every bonus before updating any party: FTB transfers party bonuses to owners.
+    let earned = new Map();
+    // Clear party bonuses before updating any party: FTB transfers party bonuses to owners.
+    // Do not read getExtraClaimChunks() on a party for the same reason.
+    teams.forEach(team => { if (team.isPartyTeam()) manager.getOrCreateData(team).setExtraClaimChunks(0); });
+    // FTB Chunks only counts personal bonuses, so each member carries their party's milestone chunks.
     teams.forEach(team => {
+      if (!team.isPlayerTeam()) return;
+      let bonus = milestones ? milestones.bonusFor(team, earned) : 0;
+      // Quest data is not loaded yet: keep the saved bonus rather than briefly lowering it.
+      if (bonus === null) return;
       let data = manager.getOrCreateData(team);
-      // Do not read getExtraClaimChunks(): on a party it transfers bonuses to its owner.
-      data.setExtraClaimChunks(0);
-      data.markDirty();
+      if (data.getExtraClaimChunks() !== bonus) {
+        data.setExtraClaimChunks(bonus);
+        data.markDirty();
+      }
     });
     teams.forEach(team => manager.getOrCreateData(team).updateLimits());
+    // FTB keeps offline members' limits from their last login (including the reserved system member),
+    // so a cached value from an older, higher allowance would hold the party above its milestones.
+    // An emptied member cache is rebuilt from config plus personal bonuses for online and offline members.
+    teams.forEach(team => {
+      if (!team.isPartyTeam()) return;
+      let bonus = milestones ? milestones.partyBonus(team, earned) : 0;
+      if (bonus === null) return;
+      let data = manager.getOrCreateData(team);
+      let allowance = Math.min(this.baseClaims + bonus, this.maxClaims);
+      let id = String(team.getId());
+      // A rebuild drops FTB's record of claims members brought in; never repeat one that did not help.
+      if (data.getMaxClaimChunks() <= allowance || this.tick - (this.limitResets.has(id) ? this.limitResets.get(id) : -1200) < 1200) return;
+      this.limitResets.set(id, this.tick);
+      team.getMembers().forEach(member => data.deleteMemberData(member));
+      data.updateLimits();
+      console.info('[Faction session] Rebuilt cached claim limits for ' + team.getName().getString() + ': ' + data.getMaxClaimChunks());
+    });
     this.initialized = true;
   },
 
@@ -395,7 +430,7 @@ PlayerEvents.loggedOut(event => {
   factionSession.teleportUntil.delete(id);
 });
 
-// A positive extra allowance overflows MAX_VALUE before the next normalization tick.
+// Bonuses are derived from faction milestones and would be overwritten on the next normalization tick.
 // Inspect Brigadier nodes so aliases and /execute cannot bypass this guard.
 NativeEvents.onEvent('net.neoforged.neoforge.event.CommandEvent', event => {
   let context = event.getParseResults().getContext();
@@ -414,7 +449,7 @@ NativeEvents.onEvent('net.neoforged.neoforge.event.CommandEvent', event => {
   }
   if (ftb && bonus && mutation) {
     event.setCanceled(true);
-    source.sendFailure(Text.of('Claim allowance is already unlimited. Extra claim bonuses are disabled to prevent integer overflow.'));
+    source.sendFailure(Text.of('Claim allowances come from faction milestone quests. Extra claim bonuses are managed automatically; use /faction claims.'));
   }
 });
 

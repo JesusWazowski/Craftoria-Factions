@@ -279,6 +279,7 @@ a missing mapped party is an error and is not silently recreated.
 | --- | --- | --- |
 | `/faction choose` | Unaffiliated players | Redisplays the selection prompt and blue, underlined `[Faction Name]` links. |
 | `/faction join <id>` | Unaffiliated players | Joins the selected faction as an ordinary member, even if invite-only. |
+| `/faction claims` | Everyone | Shows the party's claimed chunks and its milestone claim allowance. |
 | `/ftbteams party transfer_ownership_for <party> <player>` | Operator/console | Appoints an existing member as party owner using native FTB completion. |
 | `/faction assign <id> <player>` | Operator/console | Moves an online player to a faction; validates its home first while locked. |
 | `/faction remove <player>` | Operator/console | Removes an online player; restores system ownership first if needed. |
@@ -331,16 +332,65 @@ AStages commands are normally replaced on rejoin; unrelated stages are preserved
 
 Operators can pause that synchronization for an individual online player:
 
-- `/faction stages manual [player]`: preserve that player's current stages and let
-  native AStages commands control them, including after rejoin/reload/restart.
-- `/faction stages auto [player]`: immediately restore normal party-based stages.
+- `/faction stages manual [player]`: grant every faction/shared access stage in
+  `factions.json`, then let native AStages commands control them, including after
+  rejoin/reload/restart. Repeating manual grants all configured access stages again.
+- `/faction stages auto [player]`: immediately restore normal party-based stages,
+  even when already in auto mode. Unrelated stages are preserved.
 
-Omit the player to target yourself; console must specify a player. Enable manual
-mode before granting testing stages. The mode is saved by player UUID in the
+Omit the player to target yourself; console must specify an online player. These
+commands require operator permission level 2 and a managed faction world.
+The mode is saved by player UUID in the
 world's FTB Teams manager data, and membership changes do not clear it. It does
-not grant stages itself or bypass session locks, faction selection, or membership-
+not bypass session locks, faction selection, or membership-
 based quest rewards. Other players retain automatic synchronization. Fully restart
 or reload server scripts to register the new commands.
+
+### Manual quest charters for testing
+
+- `/faction quests manual [player]`: save the quest team's original charter gates,
+  grant all four faction charters, and pause that team's automatic charter checks.
+  This exposes every faction chapter for review; ordinary quest objectives stay active.
+- `/faction quests auto [player]`: restore the saved charter task progress and
+  task/quest completion timestamps, then immediately complete the currently eligible
+  faction charter and resume normal checks. Ordinary quest progress and reward state
+  are retained, including progress earned while testing. Without a saved override,
+  auto simply reconciles the eligible charter without resetting progress.
+
+These commands require operator permission level 2. Omit the player to target
+yourself; console must specify an online player. Quest data must be loaded and
+unlocked. The override affects **everyone sharing that quest team**, persists by
+quest-team UUID across reconnects/reloads/restarts, and follows the team rather
+than a developer who changes teams. Repeating manual reasserts all charters without
+replacing the original snapshot. Run auto for the original team to restore it.
+
+Quest mode and stage mode are independent: use both manual commands to inspect
+all chapters and unlock all faction recipes. Neither changes faction membership,
+reward eligibility, or the faction used to calculate claim allowances. In legacy
+worlds, manual quest mode retains the original charter-derived faction for claims.
+This is a developer workflow; return both modes to auto after review.
+
+### Local quest backups before testing updates
+
+The local test client in Prism's `Craftoria Factions` instance runs
+`automation/quest-prelaunch.ps1` from this repository before its existing localhost
+packwiz installer. Every launch archives that client's entire
+`config/ftbquests/quests` folder, including language files, into this repository's
+`quest-backups/` folder. Each UTC-timestamped ZIP is verified against source SHA-256
+hashes before packwiz starts. Backup errors or an empty/missing quest folder stop
+the pre-launch command. Backups are retained without automatic deletion and are
+excluded from Git and packwiz; keep the hook script available at its configured path.
+
+To take a backup without running packwiz or Minecraft:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File automation/quest-prelaunch.ps1 -GameDirectory '..\Craftoria Factions\minecraft' -BackupOnly
+```
+
+ZIP contents are relative to the quest folder. To recover an edit, close Minecraft,
+extract a selected archive into a separate folder, and copy the desired files back
+into the client's `config/ftbquests/quests` folder. Backups protect in-game edits;
+they do not update the JavaScript definitions or change generation behavior.
 
 ### Quest rewards and faction access
 
@@ -368,18 +418,88 @@ Back up the world and stop the server. Apply the following values under
 The pack defaults are in `config/ftbchunks-world.snbt`:
 
 ```snbt
-max_claimed_chunks: 2147483647
-hard_team_claim_limit: 0
+max_claimed_chunks: 4
+hard_team_claim_limit: 64
 party_limit_mode: "largest"
 max_idle_days_before_unclaim: 0
 ```
 
-Keep all force-loading values unchanged. The script enforces these claim values
-at runtime too, normalizes `ftbchunks.max_claimed` on existing FTB ranks, and
-zeros extra-claim bonuses. Positive bonuses would overflow the maximum integer;
-the admin bonus `set`/`add` commands are disabled. Do not add conflicting rank
-overrides or change claim settings while the server is running. No claim expiry
-or team allowance reduction should remove existing territory.
+The pack default for `max_force_loaded_chunks` is 64. Force loading uses its own
+limit and remains subject to the number of chunks the faction can claim.
+The script enforces these claim values
+at runtime too (taking the base and cap from `kubejs/config/faction_milestones.json`),
+normalizes `ftbchunks.max_claimed` on existing FTB ranks to the base, and manages
+extra-claim bonuses from faction milestones; the admin bonus `set`/`add` commands
+are disabled. Do not add conflicting rank overrides or change claim settings while
+the server is running. Lowering the allowance never unclaims territory: a faction
+already above its allowance keeps its chunks but cannot claim more until it earns
+them. See [Faction milestones](#faction-milestones).
+
+## Faction milestones
+
+Each faction has a milestone chapter in the **Faction Milestones** quest group:
+Stargazers, Mechanists, Spellcasters and Ritualists. A party starts with **4**
+claimable chunks and earns the other **60** (up to **64**) by completing its own
+chapter. Every chapter opens with the same two 1-chunk starters (set a faction
+home with `/sethome`; craft a Sophisticated Backpack) and uses the same chunk
+budget per tier: 10 / 14 / 16 / 14 chunks for tiers I-IV plus a 4-chunk capstone.
+The quests, their rationale and the related mod assignments are in
+[docs/faction-milestones.md](docs/faction-milestones.md); the generated review
+table is [docs/faction-milestone-quests.md](docs/faction-milestone-quests.md).
+
+How it works:
+
+- A hidden **charter** quest completes automatically for members of the matching
+  faction party. Everything else in the chapter depends on it and is hidden until
+  it completes, so each faction only sees its own chapter. In existing unmanaged
+  worlds the charter instead follows an operator-granted AStages faction stage, and
+  the party's faction is the charter it holds.
+- The allowance is **derived from completion**, not from claimed rewards: base +
+  the chunk value of every completed quest in the party's own chapter, capped at 64.
+  The `+N Claimed Chunks` rewards are team rewards that auto-claim to announce the
+  change; a forfeited or unclaimed reward does not change the allowance. Quest
+  progress is per party, so late joiners, ownership transfers and offline owners
+  do not matter.
+- FTB Chunks ignores bonuses stored on a party and uses each member's *personal*
+  bonus (`party_limit_mode: "largest"`). The script therefore gives every member of
+  a party that party's earned chunks as their personal bonus, and 0 to players
+  outside a party, every second and whenever a milestone reward is claimed. A
+  player moved to another faction carries the new faction's value within a second.
+- FTB caches offline members' limits from their last login; the reserved system
+  member is never online. If a party's computed limit is above its allowance (an
+  existing world's cached "unlimited" value, or a quest reset), the script empties
+  that party's member cache once so FTB rebuilds it from the config and personal
+  bonuses. That rebuild also forgets which claims each member originally brought
+  into the party, so a member who later leaves does not take those chunks back.
+- `/faction claims` shows the party's claimed chunks and current allowance.
+- Volume quests (for example 8,192 Fluix Crystals or 4,096 Brass Ingots) consume
+  their items. Submit them from the inventory in batches, or pipe them into an
+  FTB Quests **Task Screen** (craftable; assign it to the task and feed it).
+- Cooperation quests list connector content that needs another faction's
+  materials. They are optional and award no chunks.
+
+Edit the definitions under `automation/faction-milestones/`, never the generated files:
+
+- `stages/stargazers.cjs`, `mechanists.cjs`, `spellcasters.cjs`, and `ritualists.cjs`
+  contain the four faction definitions and their progression pillars.
+- `stages/science_shared.cjs` and `magic_shared.cjs` contain reusable shared-access
+  quests. The Modular Routers quest accepts any installed router upgrade in the mod's upgrade tag.
+- `layout.json` stores the four milestone chapter layouts exported from the in-game editor.
+- `helpers.cjs` defines task constructors; `starters.cjs` defines shared starter quests.
+- `spec.cjs` assembles these definitions in explicit faction order and sets the
+  global claim budget and chapter group. Access stages are distinct from tiers I-IV.
+
+Then run
+`node automation/faction-milestones/generate.cjs` from the repository root. It
+rewrites the four `chapters/milestones_*.snbt` files, the milestone entries in
+`lang/en_us.snbt`, the chapter group, `kubejs/config/faction_milestones.json` and
+the review table. Quest, task and reward IDs are hashes of the permanent spec keys,
+so renaming text or moving quests keeps progress; changing a key creates a new
+quest. Task IDs also depend on task-list position, so keep task order stable when
+preserving task progress matters. Import in-game layout edits into `layout.json` before regenerating.
+Each generator invocation reloads the stage modules and helpers.
+Tests fail when the generated files are stale. Restart the server after
+regenerating: custom tasks are bound when FTB Quests loads its file.
 
 ### Verification and release checks
 

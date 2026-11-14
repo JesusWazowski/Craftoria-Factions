@@ -23,7 +23,7 @@ function rebuildCraftingGate(server) {
   server.getRecipeManager().getRecipes().forEach(holder => {
     const id = holder.id();
     const ignored = exceptions.get(String(id.getNamespace()));
-    if (ignored && !GateRecipeType.CRAFTING.equals(holder.value().getType())) ignored.add(String(id));
+    if (ignored && String(holder.value().getType()) !== String(GateRecipeType.CRAFTING)) ignored.add(String(id));
   });
 
   const manager = GateRestrictionManager.RECIPE_INSTANCE;

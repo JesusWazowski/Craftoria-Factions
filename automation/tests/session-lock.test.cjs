@@ -36,7 +36,7 @@ class Command {
   executes(handler) { this.handler = handler; return this; }
 }
 
-function setup(data = new Tag()) {
+function setup(data = new Tag(), globals = {}) {
   const handlers = { before: {}, native: {}, player: {} };
   const claims = new Map();
   const teams = [];
@@ -57,7 +57,12 @@ function setup(data = new Tag()) {
     getOrCreateData: team => ({
       getExtraClaimChunks: () => team.bonus || 0,
       setExtraClaimChunks: value => { team.bonus = value; }, markDirty() {},
-      updateLimits: () => { updates.push(teams.map(t => t.bonus || 0)); },
+      getMaxClaimChunks: () => team.limit || 0,
+      deleteMemberData: id => { (team.deleted = team.deleted || []).push(id); },
+      updateLimits: () => {
+        updates.push(teams.map(t => t.bonus || 0));
+        if (team.deleted) team.limit = team.rebuilt;
+      },
     }) };
   const teamManager = { getTeams: () => teams, getTeamForPlayer: p => ({ orElse: () => p.party || null }) };
   const api = manager => ({ api: () => ({ getManager: () => manager }) });
@@ -75,7 +80,7 @@ function setup(data = new Tag()) {
     'EntityTeleportEvent$TeleportCommand': TeleportCommand,
   };
   const context = vm.createContext({ Java: { loadClass: name => classes[name.split('.').pop()] },
-    NBT: { compoundTag: () => new Tag() }, Text: { of: text => text }, console: { error() {} },
+    NBT: { compoundTag: () => new Tag() }, Text: { of: text => text }, console: { error() {}, info() {} }, ...globals,
     ServerEvents: { commandRegistry: handler => { handlers.registry = handler; }, tick: handler => { handlers.tick = handler; } },
     PlayerEvents: Object.fromEntries(['loggedIn', 'loggedOut', 'respawned'].map(key => [key, handler => { handlers.player[key] = handler; }])),
     FTBChunksEvents: { before: (operation, handler) => { handlers.before[operation] = handler; } },
@@ -84,8 +89,8 @@ function setup(data = new Tag()) {
   vm.runInContext(source + '\nglobalThis.subject = factionSession;', context);
   const subject = context.subject;
   function team(id = 'party', party = true) {
-    const value = { getId: () => id, isPartyTeam: () => party,
-      getMembers: () => ({ isEmpty: () => false }), getName: () => ({ getString: () => id }),
+    const value = { getId: () => id, isPartyTeam: () => party, isPlayerTeam: () => !party, getOwner: () => id,
+      getMembers: () => Object.assign(['member', 'system'], { isEmpty: () => false }), getName: () => ({ getString: () => id }),
       getRankForPlayer: () => ({ isAtLeast: () => true }) };
     teams.push(value); return value;
   }
@@ -145,16 +150,40 @@ test('both inactive claim hooks set a failure and cancel, without operator bypas
 });
 
 test('normalization clears all bonuses before limits update and leaves force loading alone', () => {
-  const s = setup(); s.team().bonus = 100; s.team('other').bonus = 200;
+  const s = setup(); s.team().bonus = 100; s.team('other').bonus = 200; s.team('solo', false).bonus = 50;
   s.ranks.push({ getPermission: () => ({ asInteger: () => ({ orElse: () => 500 }) }),
-    setPermission: (key, value) => { assert.equal(key, 'ftbchunks.max_claimed'); assert.equal(value, '2147483647'); } });
+    setPermission: (key, value) => { assert.equal(key, 'ftbchunks.max_claimed'); assert.equal(value, '4'); } });
   s.subject.normalizeLimits();
-  assert.deepEqual(s.updates, [[0, 0], [0, 0]]);
-  assert.equal(s.configs.MAX_CLAIMED_CHUNKS, 2147483647);
-  assert.equal(s.configs.HARD_TEAM_CLAIM_LIMIT, 0);
+  assert.deepEqual(s.updates, [[0, 0, 0], [0, 0, 0], [0, 0, 0]]);
+  assert.equal(s.configs.MAX_CLAIMED_CHUNKS, 4);
+  assert.equal(s.configs.HARD_TEAM_CLAIM_LIMIT, 64);
   assert.equal(s.configs.PARTY_LIMIT_MODE, 'largest');
   assert.equal(s.configs.MAX_IDLE_DAYS_BEFORE_UNCLAIM, 0);
   assert.equal(Object.keys(s.configs).some(key => key.includes('FORCE')), false);
+});
+
+test('milestone bonuses go to every member personally; stale offline caches are rebuilt once', () => {
+  const party = { isPartyTeam: () => true };
+  const factionMilestones = { config: { baseClaims: 4, maxClaims: 64 },
+    bonusFor: (team, cache) => team.getOwner() === 'loading' ? null : team.getOwner() === 'member' ? factionMilestones.partyBonus(party, cache) : 0,
+    partyBonus: (team, cache) => { cache.set('calls', (cache.get('calls') || 0) + 1); return 10; } };
+  const s = setup(new Tag(), { factionMilestones });
+  const faction = s.team('faction'); faction.bonus = 7; faction.limit = 64; faction.rebuilt = 14;
+  const member = s.team('member', false); const loner = s.team('loner', false); loner.bonus = 3;
+  const loading = s.team('loading', false); loading.bonus = 9;
+  s.subject.normalizeLimits();
+  assert.equal(faction.bonus, 0);
+  assert.equal(member.bonus, 10);
+  assert.equal(loner.bonus, 0);
+  assert.equal(loading.bonus, 9, 'unknown quest progress leaves the saved bonus alone');
+  assert.deepEqual(faction.deleted, ['member', 'system']);
+  assert.equal(faction.limit, 14);
+  faction.limit = 64; delete faction.deleted;
+  s.subject.normalizeLimits();
+  assert.equal(faction.deleted, undefined, 'a rebuild is not repeated within a minute');
+  const fresh = setup(new Tag(), { factionMilestones }); const fit = fresh.team('fit'); fit.limit = 14;
+  fresh.subject.normalizeLimits();
+  assert.equal(fit.deleted, undefined, 'a party within its allowance keeps its member cache');
 });
 
 test('adjacent claims of any owner connect, negative coordinates and dimensions stay distinct', () => {
