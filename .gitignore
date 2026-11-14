@@ -154,3 +154,9 @@ ModListCreator-5.0.0-fatjar.jar
 
 # Author-permitted bundled CurseForge download
 !/mods/cataclysm_spellbooks-1.1.14-1.21.jar
+
+# Local editor workspace and per-world trading history
+/kubejs/server_scripts/*.code-workspace
+/config/inventoryprofilesnext/**/villager-trading-config-v2.json
+/config/inventoryprofilesnext/**/prev-villager-trading-config-v2.json
+/config/almostunified/debug.json

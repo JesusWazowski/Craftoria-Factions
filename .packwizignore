@@ -115,3 +115,9 @@
 /config/embeddium-fingerprint.json
 /config/ftbquests/quests/lang/**/*.snbt_merged
 /config/ftbquests/quests/lang/recovery/*.snbt
+
+# Repository metadata and local development tooling
+.gitignore
+/kubejs/probe/
+/kubejs/config/probejs.json
+.probe
