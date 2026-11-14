@@ -49,11 +49,20 @@ test('runtime rewards and quest values agree, and IDs are unique uppercase hex',
 test('quests outside the charter chain stay hidden from other factions', () => {
   const { result } = generator.outputs();
   result.chapters.forEach(text => {
-    const quests = text.split('\n\t\t{').slice(1);
+    const questList = text.split('\n\tquests: [')[1];
+    const quests = questList.split('\n\t\t{').slice(1);
+    const byId = new Map(quests.map(quest => [quest.match(/^	{3}id: "([0-9A-F]{16})"/m)[1], quest]));
     const charter = quests.find(quest => quest.includes('invisible: true'));
-    assert.ok(charter && !charter.includes('dependencies'));
-    quests.filter(quest => quest !== charter).forEach(quest => assert.match(quest, /dependencies: \[/));
-    quests.filter(quest => quest.includes('hide_until_deps_complete: true')).forEach(root => assert.ok(root.includes('dependencies: ["' + charter.match(/id: "([0-9A-F]{16})"/)[1] + '"]')));
+    assert.ok(charter && !charter.includes('dependencies:'));
+    const leadsToCharter = (quest, visited = new Set()) => {
+      if (quest === charter) return true;
+      assert.ok(quest && !visited.has(quest), 'quest dependency must exist and be acyclic');
+      const deps = quest.match(/dependencies: \[([^\]]+)\]/);
+      assert.ok(deps, 'every player quest must have a dependency');
+      const ids = [...deps[1].matchAll(/"([0-9A-F]{16})"/g)].map(match => match[1]);
+      return ids.length > 0 && ids.every(id => leadsToCharter(byId.get(id), new Set([...visited, quest])));
+    };
+    quests.forEach(quest => assert.ok(leadsToCharter(quest)));
   });
 });
 

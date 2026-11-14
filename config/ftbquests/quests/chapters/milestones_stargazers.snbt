@@ -128,7 +128,7 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
+			x: 0.0d
 			y: 2.5d
 		}
 		{
@@ -174,8 +174,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 4.0d
+			x: 0.0d
+			y: 3.75d
 		}
 		{
 			dependencies: ["2F73691EBF292AFD"]
@@ -235,8 +235,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 5.5d
+			x: 0.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["73857449FEAE1A2F"]
@@ -275,8 +275,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 7.0d
+			x: -1.25d
+			y: 5.0d
 		}
 		{
 			dependencies: ["2F73691EBF292AFD"]
@@ -329,8 +329,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 8.5d
+			x: -1.25d
+			y: 3.75d
 		}
 		{
 			dependencies: ["73857449FEAE1A2F"]
@@ -363,31 +363,40 @@
 					type: "item"
 				}
 				{
-					count: 8L
+					count: 24L
 					id: "0536E08AF59E5D96"
 					item: { count: 1, id: "extendedae:assembler_matrix_frame" }
 					type: "item"
 				}
 				{
-					count: 2L
+					count: 10L
+					icon: { id: "extendedae:assembler_matrix_wall" }
 					id: "175EFEEAF439BB93"
-					item: { count: 1, id: "extendedae:assembler_matrix_crafter" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(extendedae:assembler_matrix_wall)item(extendedae:assembler_matrix_glass))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
-					count: 2L
+					icon: { id: "extendedae:assembler_matrix_crafter" }
 					id: "0CABEF32392B6BDD"
-					item: { count: 1, id: "extendedae:assembler_matrix_pattern" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(extendedae:assembler_matrix_crafter)item(extendedae_plus:assembler_matrix_crafter_plus))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
 					id: "6C5618E01D0BC6BD"
-					item: { count: 1, id: "extendedae_plus:assembler_matrix_crafter_plus" }
+					item: { count: 1, id: "extendedae:assembler_matrix_pattern" }
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 10.0d
+			x: 0.0d
+			y: 6.25d
 		}
 		{
 			dependencies: ["6A76C66E05911799"]
@@ -410,39 +419,23 @@
 					type: "item"
 				}
 				{
-					count: 16L
 					id: "7849DDBB07987363"
-					item: { count: 1, id: "advanced_ae:quantum_structure" }
-					type: "item"
-				}
-				{
-					id: "7D1E161FFA568A05"
-					item: { count: 1, id: "advanced_ae:quantum_accelerator" }
-					type: "item"
-				}
-				{
-					id: "10DCC06BBC9A5A7D"
-					item: { count: 1, id: "advanced_ae:quantum_multi_threader" }
-					type: "item"
-				}
-				{
-					id: "746EB81C9CE5062F"
 					item: { count: 1, id: "advanced_ae:reaction_chamber" }
 					type: "item"
 				}
 				{
-					id: "0BD8B4B794FA33DB"
+					id: "7D1E161FFA568A05"
 					item: { count: 1, id: "advanced_ae:data_entangler" }
 					type: "item"
 				}
 				{
-					id: "29143F60AB81C26A"
+					id: "10DCC06BBC9A5A7D"
 					item: { count: 1, id: "bigger_ae2:1024_core_crafting_accelerator" }
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 11.5d
+			x: 0.0d
+			y: 7.5d
 		}
 		{
 			dependencies: ["2F73691EBF292AFD"]
@@ -467,8 +460,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 13.0d
+			x: 1.25d
+			y: 3.75d
 		}
 		{
 			dependencies: ["5F54FAC0CBA280B3"]
@@ -522,8 +515,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 14.5d
+			x: 0.0d
+			y: 8.75d
 		}
 		{
 			dependencies: ["52604FC3AFF2CA1C"]
@@ -569,7 +562,7 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
+			x: -4.0d
 			y: 2.5d
 		}
 		{
@@ -603,8 +596,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 4.0d
+			x: -5.25d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0B929B7024E16BBB"]
@@ -659,8 +652,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 5.5d
+			x: -4.0d
+			y: 3.75d
 		}
 		{
 			dependencies: ["0B929B7024E16BBB"]
@@ -678,7 +671,7 @@
 			size: 1.0d
 			tasks: [
 				{
-					count: 16L
+					count: 24L
 					id: "5D62C679367EA869"
 					item: { count: 1, id: "mekanism:induction_casing" }
 					type: "item"
@@ -690,30 +683,61 @@
 					type: "item"
 				}
 				{
-					count: 2L
+					count: 34L
+					icon: { id: "mekanism:induction_casing" }
 					id: "049ED9394E5B72C9"
-					item: { count: 1, id: "mekanism:basic_induction_cell" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanism:induction_casing)item(mekanism:structural_glass)item(mekanism:induction_port))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
+					icon: { id: "mekanism:basic_induction_cell" }
 					id: "140F31A1EA6DD49D"
-					item: { count: 1, id: "mekanism:basic_induction_provider" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_induction_cell)item(mekanism:advanced_induction_cell)item(mekanism:elite_induction_cell)item(mekanism:ultimate_induction_cell))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
-					count: 16L
+					icon: { id: "mekanism:basic_induction_provider" }
 					id: "562B95316FA9BA0D"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanism:basic_induction_provider)item(mekanism:advanced_induction_provider)item(mekanism:elite_induction_provider)item(mekanism:ultimate_induction_provider))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					count: 20L
+					id: "20BD746B660226C0"
 					item: { count: 1, id: "mekanism:dynamic_tank" }
 					type: "item"
 				}
 				{
-					id: "20BD746B660226C0"
+					id: "244BF94FD2D2F66C"
 					item: { count: 1, id: "mekanism:dynamic_valve" }
 					type: "item"
 				}
+				{
+					count: 26L
+					icon: { id: "mekanism:dynamic_tank" }
+					id: "30DD274D0182509A"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanism:dynamic_tank)item(mekanism:structural_glass)item(mekanism:dynamic_valve))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
 			]
-			x: -1.25d
-			y: 7.0d
+			x: -2.75d
+			y: 2.5d
 		}
 		{
 			dependencies: ["595822C88F32AA23"]
@@ -731,25 +755,29 @@
 			size: 1.0d
 			tasks: [
 				{
-					count: 32L
+					count: 24L
 					id: "06E0D80C3B273334"
 					item: { count: 1, id: "mekanismgenerators:fission_reactor_casing" }
 					type: "item"
 				}
 				{
-					count: 3L
+					count: 4L
 					id: "2369E6F002495AE5"
 					item: { count: 1, id: "mekanismgenerators:fission_reactor_port" }
 					type: "item"
 				}
 				{
-					count: 8L
+					count: 34L
+					icon: { id: "mekanismgenerators:fission_reactor_casing" }
 					id: "448A932ED4A072D1"
-					item: { count: 1, id: "mekanismgenerators:reactor_glass" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanismgenerators:fission_reactor_casing)item(mekanismgenerators:reactor_glass)item(mekanismgenerators:fission_reactor_port)item(mekanismgenerators:fission_reactor_logic_adapter))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
-					count: 4L
 					id: "52E537F6BE148DF2"
 					item: { count: 1, id: "mekanismgenerators:fission_fuel_assembly" }
 					type: "item"
@@ -766,8 +794,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 8.5d
+			x: -4.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3E3C2FDE1002182B"]
@@ -785,19 +813,18 @@
 			size: 1.0d
 			tasks: [
 				{
-					count: 32L
+					count: 44L
 					id: "403C9902B68B0126"
 					item: { count: 1, id: "mekanismgenerators:turbine_casing" }
 					type: "item"
 				}
 				{
-					count: 4L
 					id: "7089EEF03AE41AD0"
 					item: { count: 1, id: "mekanismgenerators:turbine_rotor" }
 					type: "item"
 				}
 				{
-					count: 8L
+					count: 2L
 					id: "0D372B58292B1184"
 					item: { count: 1, id: "mekanismgenerators:turbine_blade" }
 					type: "item"
@@ -808,38 +835,69 @@
 					type: "item"
 				}
 				{
-					count: 4L
 					id: "286F3F2B72D5DC59"
 					item: { count: 1, id: "mekanismgenerators:electromagnetic_coil" }
 					type: "item"
 				}
 				{
-					count: 8L
 					id: "749388A79EDF107E"
-					item: { count: 1, id: "mekanismgenerators:saturating_condenser" }
-					type: "item"
-				}
-				{
-					count: 8L
-					id: "604093DB72B0CBF2"
 					item: { count: 1, id: "mekanismgenerators:turbine_vent" }
 					type: "item"
 				}
 				{
-					count: 16L
+					count: 2L
+					id: "604093DB72B0CBF2"
+					item: { count: 1, id: "mekanismgenerators:turbine_valve" }
+					type: "item"
+				}
+				{
+					count: 98L
+					icon: { id: "mekanismgenerators:turbine_casing" }
 					id: "292474850BBC685F"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanismgenerators:turbine_casing)item(mekanism:structural_glass)item(mekanismgenerators:turbine_valve)item(mekanismgenerators:turbine_vent))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "330843D7244C363A"
 					item: { count: 1, id: "mekanism:boiler_casing" }
 					type: "item"
 				}
 				{
-					count: 4L
-					id: "330843D7244C363A"
+					id: "19BBF9B209EF1D89"
 					item: { count: 1, id: "mekanism:superheating_element" }
 					type: "item"
 				}
+				{
+					count: 9L
+					id: "3602E5B276008AEE"
+					item: { count: 1, id: "mekanism:pressure_disperser" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "0B0A6C1AA312F206"
+					item: { count: 1, id: "mekanism:boiler_valve" }
+					type: "item"
+				}
+				{
+					count: 34L
+					icon: { id: "mekanism:boiler_casing" }
+					id: "5DFD530669C3740C"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanism:boiler_casing)item(mekanism:structural_glass)item(mekanism:boiler_valve))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
 			]
-			x: -1.25d
-			y: 10.0d
+			x: -5.25d
+			y: 5.0d
 		}
 		{
 			dependencies: ["4601CFB75AD2350A"]
@@ -862,36 +920,31 @@
 					type: "item"
 				}
 				{
-					count: 32L
+					count: 36L
 					id: "167FEF126438C60B"
 					item: { count: 1, id: "mekanismgenerators:fusion_reactor_frame" }
 					type: "item"
 				}
 				{
-					count: 4L
+					count: 2L
 					id: "71FD1FFE2AED2B4C"
 					item: { count: 1, id: "mekanismgenerators:fusion_reactor_port" }
 					type: "item"
 				}
 				{
+					count: 65L
+					icon: { id: "mekanismgenerators:fusion_reactor_frame" }
 					id: "4C8436F4BE33ECEE"
-					item: { count: 1, id: "mekanismgenerators:laser_focus_matrix" }
-					type: "item"
-				}
-				{
-					count: 2L
-					id: "62D5B22BC517A20A"
-					item: { count: 1, id: "mekanism:laser" }
-					type: "item"
-				}
-				{
-					id: "6335E002BCB0FA3D"
-					item: { count: 1, id: "mekanism:laser_amplifier" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanismgenerators:fusion_reactor_frame)item(mekanismgenerators:reactor_glass)item(mekanismgenerators:fusion_reactor_port)item(mekanismgenerators:fusion_reactor_logic_adapter)item(mekanismgenerators:laser_focus_matrix))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 11.5d
+			x: -5.25d
+			y: 6.25d
 		}
 		{
 			dependencies: ["3E3C2FDE1002182B"]
@@ -909,19 +962,18 @@
 			size: 1.0d
 			tasks: [
 				{
-					count: 32L
+					count: 60L
 					id: "5CB47DEF46E35F25"
 					item: { count: 1, id: "mekanism:sps_casing" }
 					type: "item"
 				}
 				{
-					count: 2L
+					count: 3L
 					id: "3BAA5334E6035EA6"
 					item: { count: 1, id: "mekanism:sps_port" }
 					type: "item"
 				}
 				{
-					count: 2L
 					id: "56E9DAE7FA4B613A"
 					item: { count: 1, id: "mekanism:supercharged_coil" }
 					type: "item"
@@ -937,9 +989,20 @@
 					item: { count: 1, id: "mekanism:pellet_antimatter" }
 					type: "item"
 				}
+				{
+					count: 186L
+					icon: { id: "mekanism:sps_casing" }
+					id: "75ED13B997E3CD94"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(mekanism:sps_casing)item(mekanism:sps_port)item(mekanismgenerators:reactor_glass)item(mekanism:structural_glass))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
 			]
-			x: -1.25d
-			y: 13.0d
+			x: -2.75d
+			y: 5.0d
 		}
 		{
 			dependencies: ["7DBA9410064FF5B1"]
@@ -992,8 +1055,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 14.5d
+			x: -2.75d
+			y: 6.25d
 		}
 		{
 			dependencies: ["7DBA9410064FF5B1"]
@@ -1034,8 +1097,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 16.0d
+			x: -4.0d
+			y: 6.25d
 		}
 		{
 			dependencies: ["52604FC3AFF2CA1C"]
@@ -1076,7 +1139,7 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
+			x: 5.25d
 			y: 2.5d
 		}
 		{
@@ -1107,7 +1170,7 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
+			x: 5.25d
 			y: 4.0d
 		}
 		{
@@ -1143,7 +1206,7 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
+			x: 5.25d
 			y: 5.5d
 		}
 		{
@@ -1185,8 +1248,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 7.0d
+			x: 2.75d
+			y: 2.5d
 		}
 		{
 			dependencies: ["7BAB26E761C7E472"]
@@ -1220,8 +1283,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 8.5d
+			x: 2.75d
+			y: 4.0d
 		}
 		{
 			dependencies: ["7E8020DE8FF24B74"]
@@ -1265,8 +1328,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 10.0d
+			x: 2.75d
+			y: 5.5d
 		}
 		{
 			dependencies: ["4DE27A0E64D98A08"]
@@ -1310,11 +1373,12 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 11.5d
+			x: 2.75d
+			y: 7.0d
 		}
 		{
-			dependencies: ["1BF5D6C35C09ABE3"]
+			dependencies: ["52604FC3AFF2CA1C"]
+			hide_dependency_lines: true
 			icon: { id: "mininggadgets:mininggadget" }
 			id: "755079B52E3A6C86"
 			rewards: [
@@ -1345,8 +1409,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 13.0d
+			x: 1.5d
+			y: 2.25d
 		}
 		{
 			dependencies: ["52604FC3AFF2CA1C"]
@@ -1372,36 +1436,18 @@
 					type: "item"
 				}
 				{
+					icon: { id: "modularrouters:speed_upgrade" }
 					id: "32A97752C066166C"
-					item: { count: 1, id: "modularrouters:sender_module_1" }
-					type: "item"
-				}
-				{
-					id: "13786DD6634C49D6"
-					item: { count: 1, id: "mekanisticrouters:chemical_module_mk1" }
-					type: "item"
-				}
-				{
-					count: 16L
-					id: "7580453012A2FB0E"
-					item: { count: 1, id: "pipez:item_pipe" }
-					type: "item"
-				}
-				{
-					count: 8L
-					id: "7152387F36E7CDA8"
-					item: { count: 1, id: "pipez:fluid_pipe" }
-					type: "item"
-				}
-				{
-					count: 8L
-					id: "64029EF4A5A57DD0"
-					item: { count: 1, id: "pipez:energy_pipe" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item_tag(modularrouters:upgrades))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 2.5d
+			x: -1.5d
+			y: 2.25d
 		}
 		{
 			dependencies: ["52604FC3AFF2CA1C"]
@@ -1443,15 +1489,9 @@
 					item: { count: 1, id: "xycraft_machines:extractor" }
 					type: "item"
 				}
-				{
-					count: 8L
-					id: "66D056ABE6A6B9A8"
-					item: { count: 1, id: "xycraft_override:bricks_blue" }
-					type: "item"
-				}
 			]
-			x: 3.75d
-			y: 4.0d
+			x: 4.0d
+			y: 2.25d
 		}
 		{
 			dependencies: ["52604FC3AFF2CA1C"]
@@ -1494,8 +1534,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 5.5d
+			x: 4.0d
+			y: 4.75d
 		}
 		{
 			dependencies: ["52604FC3AFF2CA1C"]
@@ -1550,8 +1590,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 7.0d
+			x: 4.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["52604FC3AFF2CA1C"]
@@ -1608,8 +1648,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 8.5d
+			x: -6.75d
+			y: 6.25d
 		}
 		{
 			dependencies: ["52604FC3AFF2CA1C"]
@@ -1641,8 +1681,8 @@
 					type: "item"
 				}
 			]
-			x: 6.25d
-			y: 0.0d
+			x: -6.5d
+			y: 2.25d
 		}
 		{
 			dependencies: ["2EAE435D466419DB", "4E31039C2886006F", "67C6F77DFA8D8021", "0DFEFC11D3E99018", "727140CA51AC8F1F", "47F950C786A48F67"]

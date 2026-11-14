@@ -131,8 +131,8 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 2.5d
+			x: -6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["48D4F63AAA736F5B"]
@@ -183,7 +183,7 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
+			x: -6.0d
 			y: 4.0d
 		}
 		{
@@ -231,8 +231,8 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 5.5d
+			x: -8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["4D606CDD124D47BD"]
@@ -282,8 +282,8 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 7.0d
+			x: -4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["4D606CDD124D47BD"]
@@ -359,8 +359,8 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 8.5d
+			x: -6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["4D606CDD124D47BD"]
@@ -385,8 +385,8 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 10.0d
+			x: -8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0DD00E44A884D417"]
@@ -456,8 +456,8 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 11.5d
+			x: -6.0d
+			y: 7.75d
 		}
 		{
 			dependencies: ["0DD00E44A884D417"]
@@ -482,11 +482,12 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 13.0d
+			x: -8.0d
+			y: 7.75d
 		}
 		{
 			dependencies: ["4D606CDD124D47BD"]
+			dependency_requirement: "one_completed"
 			icon: { id: "create:schematicannon" }
 			id: "111C700822136518"
 			rewards: [
@@ -527,8 +528,8 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 14.5d
+			x: -4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -553,8 +554,8 @@
 					type: "item"
 				}
 			]
-			x: -2.5d
-			y: 2.5d
+			x: -2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -595,8 +596,8 @@
 					type: "item"
 				}
 			]
-			x: -2.5d
-			y: 4.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["48D4F63AAA736F5B"]
@@ -652,8 +653,8 @@
 					type: "item"
 				}
 			]
-			x: -2.5d
-			y: 5.5d
+			x: -8.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["64EDBC7A8777E0E4", "4D606CDD124D47BD"]
@@ -696,8 +697,8 @@
 					type: "item"
 				}
 			]
-			x: -2.5d
-			y: 7.0d
+			x: -4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["55B17464122E9808", "0DD00E44A884D417"]
@@ -748,8 +749,8 @@
 					type: "item"
 				}
 			]
-			x: -2.5d
-			y: 8.5d
+			x: -10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -780,20 +781,35 @@
 					type: "item"
 				}
 				{
-					count: 20L
+					count: 26L
+					icon: { id: "pneumaticcraft:pressure_chamber_wall" }
 					id: "4EF7C810290A8284"
-					item: { count: 1, id: "pneumaticcraft:pressure_chamber_wall" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(pneumaticcraft:pressure_chamber_wall)item(pneumaticcraft:pressure_chamber_glass)item(pneumaticcraft:pressure_chamber_interface)item(pneumaticcraft:pressure_chamber_valve)item(pneumaticcraft:reinforced_pressure_chamber_valve))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
+					icon: { id: "pneumaticcraft:pressure_chamber_valve" }
 					id: "37C678F456DFF37C"
-					item: { count: 1, id: "pneumaticcraft:pressure_chamber_valve" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(pneumaticcraft:pressure_chamber_valve)item(pneumaticcraft:reinforced_pressure_chamber_valve))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
-					count: 2L
+					count: 20L
+					icon: { id: "pneumaticcraft:pressure_chamber_wall" }
 					id: "3DCC730F02924F18"
-					item: { count: 1, id: "pneumaticcraft:pressure_chamber_interface" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(pneumaticcraft:pressure_chamber_wall)item(pneumaticcraft:pressure_chamber_glass))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
@@ -804,7 +820,7 @@
 				}
 			]
 			x: 0.0d
-			y: 2.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["4A224957EA2EFBBA"]
@@ -827,7 +843,7 @@
 					type: "item"
 				}
 				{
-					count: 3L
+					count: 2L
 					id: "19FA457761F0768D"
 					item: { count: 1, id: "pneumaticcraft:refinery_output" }
 					type: "item"
@@ -905,7 +921,7 @@
 				}
 			]
 			x: 0.0d
-			y: 5.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["715DC979DCE8F7A1"]
@@ -956,7 +972,7 @@
 				}
 			]
 			x: 0.0d
-			y: 7.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["715DC979DCE8F7A1"]
@@ -1004,8 +1020,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 8.5d
+			x: -2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -1061,8 +1077,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 2.5d
+			x: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["35DE2B13A05D08F5"]
@@ -1102,8 +1118,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 4.0d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["35DE2B13A05D08F5"]
@@ -1127,8 +1143,13 @@
 				}
 				{
 					count: 16L
+					icon: { id: "modern_industrialization:cupronickel_coil" }
 					id: "60A7B307D968DDF9"
-					item: { count: 1, id: "modern_industrialization:cupronickel_coil" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(modern_industrialization:cupronickel_coil)item(modern_industrialization:kanthal_coil)item(modern_industrialization:superconductor_coil))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
@@ -1154,8 +1175,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 5.5d
+			x: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["230703DF10F44EDB"]
@@ -1235,8 +1256,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 7.0d
+			x: 4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["230703DF10F44EDB", "7B547EAFE8CC1022"]
@@ -1259,8 +1280,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 8.5d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["6EF240F32BA25500"]
@@ -1283,13 +1304,18 @@
 					type: "item"
 				}
 				{
-					count: 32L
+					count: 77L
+					icon: { id: "modern_industrialization:nuclear_casing" }
 					id: "7BC893550C0A9560"
-					item: { count: 1, id: "modern_industrialization:nuclear_casing" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(modern_industrialization:nuclear_casing)item(modern_industrialization:nuclear_item_hatch)item(modern_industrialization:nuclear_fluid_hatch))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
-					count: 8L
+					count: 27L
 					id: "72FD0472E2716EEF"
 					item: { count: 1, id: "modern_industrialization:nuclear_alloy_machine_casing_pipe" }
 					type: "item"
@@ -1300,9 +1326,13 @@
 					type: "item"
 				}
 				{
-					count: 4L
+					icon: { id: "modern_industrialization:uranium_fuel_rod" }
 					id: "63E1DEA9712DB733"
-					item: { count: 1, id: "modern_industrialization:uranium_fuel_rod_quad" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(modern_industrialization:uranium_fuel_rod)item(modern_industrialization:uranium_fuel_rod_double)item(modern_industrialization:uranium_fuel_rod_quad))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
@@ -1312,8 +1342,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 10.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["4C16F5C27B4941AC"]
@@ -1347,8 +1377,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 11.5d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["4C16F5C27B4941AC"]
@@ -1371,7 +1401,7 @@
 					type: "item"
 				}
 				{
-					count: 8L
+					count: 40L
 					id: "0206C58FE1D1A502"
 					item: { count: 1, id: "modern_industrialization:fusion_chamber" }
 					type: "item"
@@ -1382,9 +1412,14 @@
 					type: "item"
 				}
 				{
-					count: 8L
+					count: 203L
+					icon: { id: "modern_industrialization:highly_advanced_machine_hull" }
 					id: "6B17E7573E0861FE"
-					item: { count: 1, id: "modern_industrialization:highly_advanced_machine_hull" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(modern_industrialization:highly_advanced_machine_hull)item(modern_industrialization:highly_advanced_fluid_input_hatch)item(modern_industrialization:highly_advanced_fluid_output_hatch)item(modern_industrialization:ev_energy_input_hatch))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 				{
@@ -1394,8 +1429,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 13.0d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["6EF240F32BA25500"]
@@ -1427,8 +1462,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 14.5d
+			x: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -1454,36 +1489,18 @@
 					type: "item"
 				}
 				{
+					icon: { id: "modularrouters:speed_upgrade" }
 					id: "24F5884A8A51409B"
-					item: { count: 1, id: "modularrouters:sender_module_1" }
-					type: "item"
-				}
-				{
-					id: "698255179E75534F"
-					item: { count: 1, id: "modernindustrialrouters:lv_upgrade" }
-					type: "item"
-				}
-				{
-					count: 16L
-					id: "479505E5D2E34BED"
-					item: { count: 1, id: "pipez:item_pipe" }
-					type: "item"
-				}
-				{
-					count: 8L
-					id: "009C14F82186CBD9"
-					item: { count: 1, id: "pipez:fluid_pipe" }
-					type: "item"
-				}
-				{
-					count: 8L
-					id: "7981D9D62435BE8F"
-					item: { count: 1, id: "pipez:energy_pipe" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item_tag(modularrouters:upgrades))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: 2.5d
+			x: 8.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -1525,14 +1542,8 @@
 					item: { count: 1, id: "xycraft_machines:extractor" }
 					type: "item"
 				}
-				{
-					count: 8L
-					id: "5BC7440476D90E20"
-					item: { count: 1, id: "xycraft_override:bricks_blue" }
-					type: "item"
-				}
 			]
-			x: 5.0d
+			x: 8.0d
 			y: 4.0d
 		}
 		{
@@ -1576,8 +1587,8 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: 5.5d
+			x: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -1632,8 +1643,8 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: 7.0d
+			x: -2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -1690,8 +1701,8 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: 8.5d
+			x: 8.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["3407B2E127E0D004"]
@@ -1713,8 +1724,8 @@
 					type: "item"
 				}
 			]
-			x: 7.5d
-			y: 0.0d
+			x: -2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["4E9B57A79948967E", "70D000D5A923CF4C", "2C0A6F5996DF2B23", "6BDF94B3CCABE9BE", "3492243E93C89F44", "305773E28DE42E47"]
@@ -1744,8 +1755,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 17.5d
+			x: 4.0d
+			y: 12.0d
 		}
 	]
 }

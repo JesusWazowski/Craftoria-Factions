@@ -10,9 +10,9 @@ mechanics and maintenance are in [README.md](../README.md#faction-milestones).
   Each chapter is visible only to its own faction (a hidden charter quest gates it).
 - Claim allowance: every party starts with **4** claimable chunks. Completing its own
   chapter adds exactly **60**, to **64**. FTB Chunks enforces 64 as a hard team cap.
-- Two identical 1-chunk starters open every chapter: *Plant the Banner* (a valid faction
+- Two identical 1-chunk starters open every chapter: *Set a Faction Home* (a valid faction
   home set with `/sethome`; the description explains how homes and locked sessions work)
-  and *Pack for the Journey* (any Sophisticated Backpack).
+  and *Obtain a Sophisticated Backpack* (any Sophisticated Backpack).
 - Inside a mod, quests follow that mod's own progression. Between mods there is no order:
   every pillar starts from the charter, so a faction can open its chapter anywhere.
 - Each faction also has an optional, chunk-free *Diplomatic Interfaces* quest listing its
@@ -93,12 +93,11 @@ faction's loop:
 | Spellcasters | Wellspring (II) | 2,048 Source Gems |
 | Spellcasters | Chromatic Hoard (III) | 512 each topaz, citrine, amethyst, onyx shards |
 | Spellcasters | Moonstone Hoard (IV) | 512 Moonstone Shards |
-| Ritualists | Spirit Harvest (II) | 1,024 arcane + 256 wicked + 256 sacred spirits |
-| Ritualists | Salvage Hoard (IV) | rare, epic and mythic Apotheosis salvage |
+| Ritualists | Spirit Harvest (II) | 1,024 Malum spirits of any type |
 
 Mechanists carry one extra volume quest because continuous production is their identity.
-Ritualist volume is loot-based (reaped spirits; salvaged affix gear) rather than factory
-output, matching their loop; kill-count grinding was considered and rejected because FTB
+Ritualist volume comes from reaped spirits. Salvage Hoard checks possession of
+Apotheosis salvage without consuming it. Kill-count grinding was considered and rejected because FTB
 does not credit automated (fake-player) kills.
 
 ## Self-sufficiency
@@ -171,10 +170,8 @@ chapter, except content with nothing a quest can check:
   the Iron's dynamic skill tree.
 - World structures without a reliably checkable ID: Twilight Treehouses.
 
-These are named in the relevant quest descriptions instead. Shared mods appear in both
-member factions' chapters with identical chunk values; the Modular Routers connector
-quest asks each science faction for the connector it can build from its own parts
-(Mekanistic Routers for Stargazers, Modern Industrial Routers for Mechanists).
+Shared quests appear in both member factions’ chapters with identical chunk values.
+The Modular Routers quest requires two routers and any upgrade in the mod’s upgrade tag.
 
 ## Verification status
 

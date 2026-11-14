@@ -15,7 +15,8 @@ const files = {
   tables: path.join(root, 'docs/faction-milestone-quests.md'),
   chapter: faction => path.join(quests, `chapters/milestones_${faction}.snbt`),
 };
-const TIERS = ['', 'I', 'II', 'III', 'IV'];
+const layout = require('./layout.json');
+const TIERS = ['0', 'I', 'II', 'III', 'IV'];
 
 function hexId(...parts) {
   let digest = createHash('sha256').update('craftoria-faction-milestones:' + parts.join(':')).digest('hex').toUpperCase();
@@ -71,6 +72,12 @@ function buildTask(task, id) {
   }
 }
 
+// Preserve the editor's SNBT layout values using native FTB Quests fields.
+function savedFields(fields) {
+  return Object.fromEntries(Object.entries(fields || {}).map(([key, value]) =>
+    [key, value === null ? undefined : { snbt: value }]));
+}
+
 function build(spec) {
   let groupId = hexId(spec.group.key);
   let lang = new Map([[`chapter_group.${groupId}.title`, spec.group.title]]);
@@ -95,7 +102,7 @@ function build(spec) {
     };
     let charter = { key: 'charter', title: `${faction.name} Charter`, icon: faction.icon, chunks: 0,
       tasks: [{ type: 'custom', kind: 'charter', title: `Belong to the ${faction.name}`, icon: faction.icon }],
-      desc: [`&7Completed automatically for members of the ${faction.name}. Only your faction can see this chapter.`] };
+    };
     add(charter, { x: 0, y: 0, charter: true });
     faction.starters.forEach((quest, index) => add(quest, { x: index ? 1.75 : -1.75, y: 0, root: true }));
     let width = faction.pillars.length;
@@ -139,12 +146,13 @@ function build(spec) {
       }
       if (entry.charter) def.charterQuest = id;
       lang.set(`quest.${id}.title`, quest.title);
-      let tier = quest.tier ? `Tier ${TIERS[quest.tier]} milestone` : quest.starter ? 'Starter milestone' : quest.optional ? 'Optional cooperation' : entry.charter ? '' : 'Capstone milestone';
-      let reward = quest.chunks ? `: +${quest.chunks} claimed chunk${quest.chunks === 1 ? '' : 's'}` : '';
-      if (quest.subtitle || tier) lang.set(`quest.${id}.quest_subtitle`, quest.subtitle || tier + reward);
-      let desc = quest.desc.slice();
-      if (tier && quest.subtitle) desc.push('', '&8' + tier + reward + '.');
-      lang.set(`quest.${id}.quest_desc`, desc);
+      const tier = TIERS[quest.tier] || (quest.starter || entry.charter ? '0' : quest.optional ? 'I' : 'IV');
+      const chunks = quest.chunks || 0;
+      lang.set(`quest.${id}.quest_subtitle`, `Tier ${tier}: +${chunks} claimed chunk${chunks === 1 ? '' : 's'}`);
+      if (quest.starter && quest.desc) lang.set(`quest.${id}.quest_desc`, quest.desc);
+      else if (quest.tasks.some(task => task.consume)) {
+        lang.set(`quest.${id}.quest_desc`, ['Deliver the required items &lby hand&r or with a &ltask screen&r to complete this quest']);
+      }
       return {
         dependencies: deps.length ? deps : undefined,
         hide_dependency_lines: entry.root ? true : undefined,
@@ -159,6 +167,7 @@ function build(spec) {
         tasks,
         x: D(entry.x),
         y: D(entry.y),
+        ...savedFields(layout[f]?.quests[id]),
       };
     });
     if (def.total !== spec.maxClaims - spec.baseClaims) throw new Error(`${f} awards ${def.total} chunks; expected ${spec.maxClaims - spec.baseClaims}`);
@@ -176,6 +185,7 @@ function build(spec) {
       images: [],
       order_index: order,
       quest_links: [],
+      ...savedFields(layout[f]?.chapter),
       quests: chapterQuests,
     }).map(([key, value]) => `\t${key}: ${snbt(value, '\t')}`).join('\n') + '\n}\n');
   });
@@ -238,7 +248,7 @@ function questTables(spec) {
   let lines = ['# Faction milestone quests', '',
     'Generated from `automation/faction-milestones/spec.cjs` by `generate.cjs`; do not edit by hand.',
     `Each faction starts at ${spec.baseClaims} claimable chunks and can earn ${spec.maxClaims - spec.baseClaims} more, up to ${spec.maxClaims}.`, ''];
-  let tierName = quest => quest.starter ? 'Starter' : quest.tier ? 'T' + quest.tier : quest.optional ? 'Optional' : 'Capstone';
+  let tierName = quest => quest.starter ? 'T0' : quest.tier ? 'T' + quest.tier : quest.optional ? 'T1 (Optional)' : 'T4 (Capstone)';
   spec.factions.forEach(faction => {
     lines.push(`## ${faction.name}`, '', '| Tier | Pillar | Quest | Chunks | After | Requirements |', '|---|---|---|---:|---|---|');
     let rows = faction.starters.map(quest => ['Starts', quest])

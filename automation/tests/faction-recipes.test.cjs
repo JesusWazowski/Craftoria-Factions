@@ -9,7 +9,7 @@ const overrides = JSON.parse(read('kubejs/config/faction_recipe_overrides.json')
 const config = JSON.parse(read('kubejs/config/factions.json'));
 const audit = JSON.parse(read('automation/faction-recipe-override-audit.json'));
 
-const crafting = Symbol('crafting');
+const crafting = 'crafting';
 const ordinaryRecipes = [
   'ae2:network/blocks/interfaces_interface',
   'ae2:network/blocks/pattern_providers_interface',
@@ -35,7 +35,7 @@ function setup(data = overrides) {
     getModRestrictions: () => [...gates].filter(([, entry]) => entry.mod).map(([id]) => ({ getId: () => id })),
   };
   const classes = {
-    RecipeType: { CRAFTING: { equals: type => type === crafting } },
+    RecipeType: { CRAFTING: crafting },
     ARestrictionManager: { RECIPE_INSTANCE: { getRegistry: () => registry, removeRestriction: id => gates.delete(id) } },
   };
   let load, sync;

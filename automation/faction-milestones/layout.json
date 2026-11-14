@@ -1,0 +1,1450 @@
+{
+  "mechanists": {
+    "chapter": {
+      "default_hide_dependency_lines": "false",
+      "default_quest_shape": "\"\"",
+      "images": "[ ]",
+      "order_index": "1",
+      "quest_links": "[ ]"
+    },
+    "quests": {
+      "3407B2E127E0D004": {
+        "x": "0.0d",
+        "y": "0.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "7FE845454BDAFAF4": {
+        "x": "-1.75d",
+        "y": "0.0d",
+        "shape": "\"gear\"",
+        "size": "1.5d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "2EC21AADC76FCBBD": {
+        "x": "1.75d",
+        "y": "0.0d",
+        "shape": "\"gear\"",
+        "size": "1.5d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "48D4F63AAA736F5B": {
+        "x": "-6.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "4D606CDD124D47BD": {
+        "x": "-6.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "0DD00E44A884D417": {
+        "x": "-8.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "244F3B46CE4201F6": {
+        "x": "-4.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "759C5C3C27A5989D": {
+        "x": "-6.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "3203B48698E46780": {
+        "x": "-8.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "281DAEE2E39ACDE0": {
+        "x": "-6.0d",
+        "y": "7.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "6BDF94B3CCABE9BE": {
+        "x": "-8.0d",
+        "y": "7.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "111C700822136518": {
+        "x": "-4.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": "\"one_completed\""
+      },
+      "64EDBC7A8777E0E4": {
+        "x": "-2.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "451878C37B2DCFF1": {
+        "x": "2.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "55B17464122E9808": {
+        "x": "-8.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "630D02F3BCA42A50": {
+        "x": "-4.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "305773E28DE42E47": {
+        "x": "-10.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4A224957EA2EFBBA": {
+        "x": "0.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "08CCF302BE9DCBD2": {
+        "x": "0.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "715DC979DCE8F7A1": {
+        "x": "0.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "3492243E93C89F44": {
+        "x": "0.0d",
+        "y": "8.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2401D1C20BF2C8F3": {
+        "x": "-2.0d",
+        "y": "8.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "35DE2B13A05D08F5": {
+        "x": "4.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "11FF294D090ED9C4": {
+        "x": "6.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "230703DF10F44EDB": {
+        "x": "2.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "6EF240F32BA25500": {
+        "x": "4.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2409D059D2642477": {
+        "x": "2.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4C16F5C27B4941AC": {
+        "x": "6.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4E9B57A79948967E": {
+        "x": "6.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "70D000D5A923CF4C": {
+        "x": "8.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2C0A6F5996DF2B23": {
+        "x": "4.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "3B382CDF1C48AE88": {
+        "x": "8.0d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "1CB028B73E4B4521": {
+        "x": "8.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "7B547EAFE8CC1022": {
+        "x": "2.0d",
+        "y": "8.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "460A3084DAFAF9B1": {
+        "x": "-2.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "587BA4F74A2DF58A": {
+        "x": "8.0d",
+        "y": "8.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "5A7B3EA89B45ABB6": {
+        "x": "-2.0d",
+        "y": "6.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "3B03DC0DBFA1531F": {
+        "x": "4.0d",
+        "y": "12.0d",
+        "shape": "\"hexagon\"",
+        "size": "2.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      }
+    }
+  },
+  "ritualists": {
+    "chapter": {
+      "default_hide_dependency_lines": "false",
+      "default_quest_shape": "\"\"",
+      "images": "[ ]",
+      "order_index": "3",
+      "quest_links": "[ ]"
+    },
+    "quests": {
+      "53DB455C7C3D44C6": {
+        "x": "0.0d",
+        "y": "0.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "59C10AB88A73B0B7": {
+        "x": "-1.75d",
+        "y": "0.0d",
+        "shape": "\"gear\"",
+        "size": "1.5d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "683934EAD368DEC1": {
+        "x": "1.75d",
+        "y": "0.0d",
+        "shape": "\"gear\"",
+        "size": "1.5d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "2F5527B3F3B1FE54": {
+        "x": "-3.0d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "64ADCD62903182EB": {
+        "x": "-3.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4959C1CAB135E543": {
+        "x": "-3.0d",
+        "y": "5.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "62D4F700B75CE743": {
+        "x": "-3.0d",
+        "y": "7.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "3FECE5A691420AFF": {
+        "x": "3.0d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "7BD02D9D2047A1E7": {
+        "x": "3.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "55F701778D57D188": {
+        "x": "3.0d",
+        "y": "5.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "00587E79E0F2BBB2": {
+        "x": "3.0d",
+        "y": "7.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "293446C57B82E2B6": {
+        "x": "0.0d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "21BF8E78D80F38D9": {
+        "x": "0.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "49E593EC5C0E4586": {
+        "x": "1.5d",
+        "y": "3.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2910BAB7D08B6097": {
+        "x": "0.0d",
+        "y": "5.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4EB1F717290307F4": {
+        "x": "0.0d",
+        "y": "7.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "67914208BF084A41": {
+        "x": "0.0d",
+        "y": "8.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "302D45F79151A78C": {
+        "x": "-1.5d",
+        "y": "3.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4A09E37591428D43": {
+        "x": "-4.5d",
+        "y": "3.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "147E934448684668": {
+        "x": "-4.5d",
+        "y": "4.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "1F9F68C26576C073": {
+        "x": "-4.5d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "0C6E5DF5C27B3F64": {
+        "x": "-4.5d",
+        "y": "7.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "760BD4B838FBF86D": {
+        "x": "4.5d",
+        "y": "3.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "0E917634038AAD69": {
+        "x": "4.5d",
+        "y": "4.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "3D1A975E29156EF6": {
+        "x": "4.5d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "589BA510EB9C67C8": {
+        "x": "4.5d",
+        "y": "2.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "16F7091EA870E500": {
+        "x": "1.5d",
+        "y": "4.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "1EE7BF0AF698D413": {
+        "x": "-1.5d",
+        "y": "4.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "3F367D8B2A0921FB": {
+        "x": "-1.5d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "494E34C4F17ED039": {
+        "x": "-6.0d",
+        "y": "7.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "699F621D53CD0343": {
+        "x": "-4.5d",
+        "y": "1.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "1842C75965DE6A28": {
+        "x": "-6.0d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "07AF6A7D5AEDEEF9": {
+        "x": "6.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "4C490C9499400B04": {
+        "x": "1.5d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "146B73D64A5E5AD1": {
+        "x": "6.0d",
+        "y": "7.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "72FEACEB64FFF1C8": {
+        "x": "6.0d",
+        "y": "5.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "1B659D65F61FFA15": {
+        "x": "-6.0d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "1B55340F748A44E4": {
+        "x": "-6.0d",
+        "y": "5.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "59A5953B73ADAFC9": {
+        "x": "4.5d",
+        "y": "7.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "1D7DD0820FEEF6AB": {
+        "x": "6.0d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "2C5D41C84861D71C": {
+        "x": "0.0d",
+        "y": "12.5d",
+        "shape": "\"hexagon\"",
+        "size": "2.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      }
+    }
+  },
+  "spellcasters": {
+    "chapter": {
+      "default_hide_dependency_lines": "false",
+      "default_quest_shape": "\"\"",
+      "images": "[ ]",
+      "order_index": "2",
+      "quest_links": "[ ]"
+    },
+    "quests": {
+      "17952259040FF4A5": {
+        "x": "0.0d",
+        "y": "0.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "1DEE44148A861944": {
+        "x": "-1.75d",
+        "y": "0.0d",
+        "shape": "\"gear\"",
+        "size": "1.5d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "55393F1BE5D37B15": {
+        "x": "1.75d",
+        "y": "0.0d",
+        "shape": "\"gear\"",
+        "size": "1.5d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "19108F89C984E286": {
+        "x": "-4.49d",
+        "y": "4.23d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "068E8FA1F7DB7A28": {
+        "x": "-3.6900000000000004d",
+        "y": "5.720000000000001d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "153D6C564AAC5DD5": {
+        "x": "-3.56d",
+        "y": "3.4000000000000004d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "064FB462479A4487": {
+        "x": "-5.23d",
+        "y": "5.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "167CC36685E48564": {
+        "x": "-4.25d",
+        "y": "6.84d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2600521B7A1A8AD9": {
+        "x": "-1.4400000000000004d",
+        "y": "4.03d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "1744E1FF5D81C07F": {
+        "x": "-2.47d",
+        "y": "2.7699999999999996d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "6FC149C4A6BB9825": {
+        "x": "-2.56d",
+        "y": "4.59d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2F35E280C7B33C63": {
+        "x": "-2.9200000000000004d",
+        "y": "6.62d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "39CB25A772BF2D0C": {
+        "x": "-3.2800000000000002d",
+        "y": "7.71d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "6C5F1EF0B8D472BC": {
+        "x": "-2.0300000000000002d",
+        "y": "7.65d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "685677A1BB5C577B": {
+        "x": "1.38d",
+        "y": "4.03d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "351B076FF5FF2C0D": {
+        "x": "1.2199999999999998d",
+        "y": "2.38d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "59E99F09C02157DA": {
+        "x": "-0.03000000000000025d",
+        "y": "3.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "1B001CD188427C01": {
+        "x": "-1.1100000000000003d",
+        "y": "5.18d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "349E030CD54AEF35": {
+        "x": "-2.2d",
+        "y": "5.720000000000001d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "14A8B1AB171D8AA0": {
+        "x": "-0.03000000000000025d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2DF528BDB1724C4A": {
+        "x": "-0.03000000000000025d",
+        "y": "5.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2AB95D9A871390A1": {
+        "x": "-1.2300000000000004d",
+        "y": "6.65d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4BA2D9A732693352": {
+        "x": "3.5d",
+        "y": "3.4000000000000004d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "0CDC263539BE859A": {
+        "x": "2.41d",
+        "y": "2.7699999999999996d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "69AFCED8DE7EB453": {
+        "x": "4.43d",
+        "y": "4.23d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "41234E23E34872F6": {
+        "x": "3.629999999999999d",
+        "y": "5.720000000000001d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "5031E754DC555928": {
+        "x": "4.1899999999999995d",
+        "y": "6.84d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "7023283C2CA4FC1C": {
+        "x": "2.8599999999999994d",
+        "y": "6.62d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "54C32279787FC543": {
+        "x": "3.219999999999999d",
+        "y": "7.709d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "28D5ABA7D41EB3ED": {
+        "x": "2.5d",
+        "y": "4.59d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "02936F7BA59489E5": {
+        "x": "2.136666666665999d",
+        "y": "5.723d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "6E37250E08195F9E": {
+        "x": "1.17d",
+        "y": "6.65d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "10D9E0560F578D80": {
+        "x": "1.9699999999999998d",
+        "y": "7.65d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "06EF8A00EE25C6C9": {
+        "x": "-6.0d",
+        "y": "6.4d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "24A869F533BB7440": {
+        "x": "5.68d",
+        "y": "6.4d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "7DB8C867357E8257": {
+        "x": "-1.2800000000000002d",
+        "y": "2.38d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "541261343D75C5CE": {
+        "x": "5.17d",
+        "y": "5.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "76A0187154F6666F": {
+        "x": "1.0499999999999998d",
+        "y": "5.18d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "02B4B8CD00566436": {
+        "x": "-0.03000000000000025d",
+        "y": "2.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "5BF0138299B43A12": {
+        "x": "-0.03000000000000025d",
+        "y": "8.25d",
+        "shape": "\"hexagon\"",
+        "size": "2.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      }
+    }
+  },
+  "stargazers": {
+    "chapter": {
+      "default_hide_dependency_lines": "false",
+      "default_quest_shape": "\"\"",
+      "images": "[ ]",
+      "order_index": "0",
+      "quest_links": "[ ]"
+    },
+    "quests": {
+      "52604FC3AFF2CA1C": {
+        "x": "0.0d",
+        "y": "0.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "17D0CA70DE5804BA": {
+        "x": "-1.75d",
+        "y": "0.0d",
+        "shape": "\"gear\"",
+        "size": "1.5d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "590B5C7C2015131E": {
+        "x": "1.75d",
+        "y": "0.0d",
+        "shape": "\"gear\"",
+        "size": "1.5d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "13DAEB6576F5D310": {
+        "x": "0.0d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "2F73691EBF292AFD": {
+        "x": "0.0d",
+        "y": "3.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "73857449FEAE1A2F": {
+        "x": "0.0d",
+        "y": "5.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "407EDA70086E0638": {
+        "x": "-1.25d",
+        "y": "5.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2C848F7D20C46AE5": {
+        "x": "-1.25d",
+        "y": "3.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "6A76C66E05911799": {
+        "x": "0.0d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "5F54FAC0CBA280B3": {
+        "x": "0.0d",
+        "y": "7.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "47F950C786A48F67": {
+        "x": "1.25d",
+        "y": "3.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "2EAE435D466419DB": {
+        "x": "0.0d",
+        "y": "8.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "0B929B7024E16BBB": {
+        "x": "-4.0d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "5630EB6A484E8190": {
+        "x": "-5.25d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "595822C88F32AA23": {
+        "x": "-4.0d",
+        "y": "3.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "52D5BD8A6C419838": {
+        "x": "-2.75d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "3E3C2FDE1002182B": {
+        "x": "-4.0d",
+        "y": "5.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4601CFB75AD2350A": {
+        "x": "-5.25d",
+        "y": "5.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "0DFEFC11D3E99018": {
+        "x": "-5.25d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "7DBA9410064FF5B1": {
+        "x": "-2.75d",
+        "y": "5.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4E31039C2886006F": {
+        "x": "-2.75d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "67C6F77DFA8D8021": {
+        "x": "-4.0d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "1BF5D6C35C09ABE3": {
+        "x": "5.25d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "3DAC233354BF020D": {
+        "x": "5.25d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "3AC015EB06B325BB": {
+        "x": "5.25d",
+        "y": "5.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "7BAB26E761C7E472": {
+        "x": "2.75d",
+        "y": "2.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "7E8020DE8FF24B74": {
+        "x": "2.75d",
+        "y": "4.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "4DE27A0E64D98A08": {
+        "x": "2.75d",
+        "y": "5.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "511ED78EF19BA40A": {
+        "x": "2.75d",
+        "y": "7.0d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "755079B52E3A6C86": {
+        "x": "1.5d",
+        "y": "2.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      },
+      "17B98A2AC380259B": {
+        "x": "-1.5d",
+        "y": "2.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "6045D4F2F6056195": {
+        "x": "4.0d",
+        "y": "2.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "1F42C6440FF17A48": {
+        "x": "4.0d",
+        "y": "4.75d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "1CAE0733E1A5C95E": {
+        "x": "4.0d",
+        "y": "3.5d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "727140CA51AC8F1F": {
+        "x": "-6.75d",
+        "y": "6.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "0E723ECF544C9151": {
+        "x": "-6.5d",
+        "y": "2.25d",
+        "shape": null,
+        "size": "1.0d",
+        "hide_dependency_lines": "true",
+        "hide_until_deps_complete": "true",
+        "dependency_requirement": null
+      },
+      "3FAFE0B6BD0B697D": {
+        "x": "0.0d",
+        "y": "19.0d",
+        "shape": "\"hexagon\"",
+        "size": "2.0d",
+        "hide_dependency_lines": null,
+        "hide_until_deps_complete": null,
+        "dependency_requirement": null
+      }
+    }
+  }
+}

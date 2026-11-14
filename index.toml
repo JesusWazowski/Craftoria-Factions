@@ -4434,19 +4434,19 @@ hash = "14e905eb49057cd18306efe7e42fde3129bd055fdfc50c731e84c182dafddf01"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones_mechanists.snbt"
-hash = "f63d439466f4052a4f743d837d68bfa7586308096f61c69a748495a23216ddf0"
+hash = "06d67a0dfd8185fb7473ba4b3cbea45b274d889fa437d5a39ac2d2838b267c67"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones_ritualists.snbt"
-hash = "2a9e48f6a5d7ad5a88bd46eb2d413be74a4ed8e392ea14e48c5e46c1c3354c94"
+hash = "2883f04bc98e5f2f731e099db0837849dbf40eb19653d7f6c0a7c40d8f397970"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones_spellcasters.snbt"
-hash = "dd7de2aeb021311de0a95de3c2e2d6a5cf94f4814d2a6549807929868e63d9cf"
+hash = "f772032f56c8b735a09ae9e3faa1c25111e1d7f2b8b62d4ec743e964bd004b1b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones_stargazers.snbt"
-hash = "6fec5b32b839b5c4cf86d46ad04a6f3c73e1efdc5381cb52584f4ea608645d13"
+hash = "30e0937dc54488a99bb6b936ab6c08132ea94d5bbbacd480522eb6b1a2ec67bc"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/monster_mayhem.snbt"
@@ -4470,7 +4470,7 @@ hash = "bd15b9b7cfbf0cbb1f20ab394805f88c23917d9ecf45b47d60271892a35daf2d"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "7de23782678b9345e250e595940470ea791c88b34deb003d05b3b3649e892db5"
+hash = "d13c3e625213a53916bf08afd38a6eac6e73e6851574da7f137447847b1d0b58"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
@@ -18766,7 +18766,7 @@ hash = "d708425ce292448cb2d9a90460a075d4f3f9db2a56a000aea444b4ce686e10c3"
 
 [[files]]
 file = "kubejs/config/faction_milestones.json"
-hash = "98f3c564212af4c94076b060f94618f9d2da052ec9e3f343d1c0ff6c8b4d4d7f"
+hash = "296a7d51fcb6088fd19778ddbe7531ca2ad1b307db8d0700af32324e43c53ec0"
 
 [[files]]
 file = "kubejs/config/faction_recipe_overrides.json"
@@ -20094,7 +20094,7 @@ hash = "822f62f8838b71c56d980b185266dc8304c150d6e2f283849704d37ff143199d"
 
 [[files]]
 file = "kubejs/server_scripts/mod_gating.js"
-hash = "7522f71bea289a82ce191b3fd7d124a6a3ffc840d16e05c5f686395bf4de54b1"
+hash = "8207a6bccaaeb2740e5e666e19e3963e1ac1e52eb5ecbf704d7cc509002044db"
 
 [[files]]
 file = "kubejs/server_scripts/removals.js"
@@ -22340,11 +22340,6 @@ metafile = true
 [[files]]
 file = "mods/pylons.pw.toml"
 hash = "82acd60100d09ee3b5ba08a4da07ae2c733e10493682ce30a4b044577d7ab43f"
-metafile = true
-
-[[files]]
-file = "mods/quest-enhance.pw.toml"
-hash = "6d3a547da2ab8ead22bb67286443485b191a25edf914e3aeea2c09ce76298035"
 metafile = true
 
 [[files]]

@@ -483,7 +483,8 @@ Edit the definitions under `automation/faction-milestones/`, never the generated
 - `stages/stargazers.cjs`, `mechanists.cjs`, `spellcasters.cjs`, and `ritualists.cjs`
   contain the four faction definitions and their progression pillars.
 - `stages/science_shared.cjs` and `magic_shared.cjs` contain reusable shared-access
-  quests. Science variants take the faction's router connector as an argument.
+  quests. The Modular Routers quest accepts any installed router upgrade in the mod's upgrade tag.
+- `layout.json` stores the four milestone chapter layouts exported from the in-game editor.
 - `helpers.cjs` defines task constructors; `starters.cjs` defines shared starter quests.
 - `spec.cjs` assembles these definitions in explicit faction order and sets the
   global claim budget and chapter group. Access stages are distinct from tiers I-IV.
@@ -495,8 +496,8 @@ rewrites the four `chapters/milestones_*.snbt` files, the milestone entries in
 the review table. Quest, task and reward IDs are hashes of the permanent spec keys,
 so renaming text or moving quests keeps progress; changing a key creates a new
 quest. Task IDs also depend on task-list position, so keep task order stable when
-preserving task progress matters. In-game edits to these chapters are overwritten
-by the next generation. Each generator invocation reloads the stage modules and helpers.
+preserving task progress matters. Import in-game layout edits into `layout.json` before regenerating.
+Each generator invocation reloads the stage modules and helpers.
 Tests fail when the generated files are stale. Restart the server after
 regenerating: custom tasks are bound when FTB Quests loads its file.
 

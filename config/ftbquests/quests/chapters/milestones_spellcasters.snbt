@@ -140,8 +140,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 2.5d
+			x: -4.49d
+			y: 4.23d
 		}
 		{
 			dependencies: ["19108F89C984E286"]
@@ -189,8 +189,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 4.0d
+			x: -3.6900000000000004d
+			y: 5.720000000000001d
 		}
 		{
 			dependencies: ["19108F89C984E286"]
@@ -218,7 +218,7 @@
 					type: "item"
 				}
 				{
-					count: 4L
+					count: 8L
 					id: "61CDC9CCF99051EE"
 					item: { count: 1, id: "ars_nouveau:arcane_pedestal" }
 					type: "item"
@@ -249,8 +249,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 5.5d
+			x: -3.56d
+			y: 3.4000000000000004d
 		}
 		{
 			dependencies: ["19108F89C984E286"]
@@ -294,8 +294,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 7.0d
+			x: -5.23d
+			y: 5.25d
 		}
 		{
 			dependencies: ["068E8FA1F7DB7A28"]
@@ -343,8 +343,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 8.5d
+			x: -4.25d
+			y: 6.84d
 		}
 		{
 			dependencies: ["153D6C564AAC5DD5"]
@@ -378,8 +378,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 10.0d
+			x: -1.4400000000000004d
+			y: 4.03d
 		}
 		{
 			dependencies: ["153D6C564AAC5DD5"]
@@ -427,8 +427,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 11.5d
+			x: -2.47d
+			y: 2.7699999999999996d
 		}
 		{
 			dependencies: ["19108F89C984E286"]
@@ -453,8 +453,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 13.0d
+			x: -2.56d
+			y: 4.59d
 		}
 		{
 			dependencies: ["167CC36685E48564"]
@@ -489,8 +489,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 14.5d
+			x: -2.9200000000000004d
+			y: 6.62d
 		}
 		{
 			dependencies: ["2F35E280C7B33C63"]
@@ -539,8 +539,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 16.0d
+			x: -3.2800000000000002d
+			y: 7.71d
 		}
 		{
 			dependencies: ["39CB25A772BF2D0C"]
@@ -578,8 +578,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 17.5d
+			x: -2.0300000000000002d
+			y: 7.65d
 		}
 		{
 			dependencies: ["17952259040FF4A5"]
@@ -620,8 +620,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 2.5d
+			x: 1.38d
+			y: 4.03d
 		}
 		{
 			dependencies: ["685677A1BB5C577B"]
@@ -659,8 +659,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 4.0d
+			x: 1.2199999999999998d
+			y: 2.38d
 		}
 		{
 			dependencies: ["685677A1BB5C577B"]
@@ -700,8 +700,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 5.5d
+			x: -0.03000000000000025d
+			y: 3.75d
 		}
 		{
 			dependencies: ["59E99F09C02157DA"]
@@ -742,8 +742,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 7.0d
+			x: -1.1100000000000003d
+			y: 5.18d
 		}
 		{
 			dependencies: ["1B001CD188427C01"]
@@ -783,8 +783,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 8.5d
+			x: -2.2d
+			y: 5.720000000000001d
 		}
 		{
 			dependencies: ["349E030CD54AEF35"]
@@ -819,8 +819,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 10.0d
+			x: -0.03000000000000025d
+			y: 6.25d
 		}
 		{
 			dependencies: ["1B001CD188427C01"]
@@ -868,8 +868,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 11.5d
+			x: -0.03000000000000025d
+			y: 5.0d
 		}
 		{
 			dependencies: ["349E030CD54AEF35"]
@@ -905,8 +905,8 @@
 					type: "dimension"
 				}
 			]
-			x: -1.25d
-			y: 13.0d
+			x: -1.2300000000000004d
+			y: 6.65d
 		}
 		{
 			dependencies: ["17952259040FF4A5"]
@@ -959,8 +959,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 2.5d
+			x: 3.5d
+			y: 3.4000000000000004d
 		}
 		{
 			dependencies: ["4BA2D9A732693352"]
@@ -993,8 +993,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 4.0d
+			x: 2.41d
+			y: 2.7699999999999996d
 		}
 		{
 			dependencies: ["4BA2D9A732693352"]
@@ -1027,8 +1027,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 5.5d
+			x: 4.43d
+			y: 4.23d
 		}
 		{
 			dependencies: ["69AFCED8DE7EB453"]
@@ -1057,8 +1057,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 7.0d
+			x: 3.629999999999999d
+			y: 5.720000000000001d
 		}
 		{
 			dependencies: ["41234E23E34872F6"]
@@ -1091,8 +1091,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 8.5d
+			x: 4.1899999999999995d
+			y: 6.84d
 		}
 		{
 			dependencies: ["5031E754DC555928"]
@@ -1127,8 +1127,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 10.0d
+			x: 2.8599999999999994d
+			y: 6.62d
 		}
 		{
 			dependencies: ["7023283C2CA4FC1C"]
@@ -1171,8 +1171,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 11.5d
+			x: 3.219999999999999d
+			y: 7.709d
 		}
 		{
 			dependencies: ["41234E23E34872F6"]
@@ -1218,8 +1218,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 13.0d
+			x: 2.5d
+			y: 4.59d
 		}
 		{
 			dependencies: ["7023283C2CA4FC1C"]
@@ -1253,8 +1253,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 14.5d
+			x: 2.136666666665999d
+			y: 5.723d
 		}
 		{
 			dependencies: ["02936F7BA59489E5"]
@@ -1292,8 +1292,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 16.0d
+			x: 1.17d
+			y: 6.65d
 		}
 		{
 			dependencies: ["02936F7BA59489E5"]
@@ -1318,8 +1318,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 17.5d
+			x: 1.9699999999999998d
+			y: 7.65d
 		}
 		{
 			dependencies: ["17952259040FF4A5"]
@@ -1355,8 +1355,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 2.5d
+			x: -6.0d
+			y: 6.4d
 		}
 		{
 			dependencies: ["17952259040FF4A5"]
@@ -1407,8 +1407,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 4.0d
+			x: 5.68d
+			y: 6.4d
 		}
 		{
 			dependencies: ["17952259040FF4A5"]
@@ -1466,8 +1466,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 5.5d
+			x: -1.2800000000000002d
+			y: 2.38d
 		}
 		{
 			dependencies: ["17952259040FF4A5"]
@@ -1507,8 +1507,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 7.0d
+			x: 5.17d
+			y: 5.25d
 		}
 		{
 			dependencies: ["17952259040FF4A5"]
@@ -1553,8 +1553,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 8.5d
+			x: 1.0499999999999998d
+			y: 5.18d
 		}
 		{
 			dependencies: ["17952259040FF4A5"]
@@ -1576,8 +1576,8 @@
 					type: "item"
 				}
 			]
-			x: 6.25d
-			y: 0.0d
+			x: -0.03000000000000025d
+			y: 2.25d
 		}
 		{
 			dependencies: ["6C5F1EF0B8D472BC", "2AB95D9A871390A1", "14A8B1AB171D8AA0", "6E37250E08195F9E", "10D9E0560F578D80", "76A0187154F6666F"]
@@ -1617,8 +1617,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 20.5d
+			x: -0.03000000000000025d
+			y: 8.25d
 		}
 	]
 }

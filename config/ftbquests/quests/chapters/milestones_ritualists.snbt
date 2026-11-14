@@ -137,7 +137,7 @@
 					type: "advancement"
 				}
 			]
-			x: -6.25d
+			x: -3.0d
 			y: 2.5d
 		}
 		{
@@ -182,7 +182,7 @@
 					type: "item"
 				}
 			]
-			x: -6.25d
+			x: -3.0d
 			y: 4.0d
 		}
 		{
@@ -211,7 +211,7 @@
 					type: "item"
 				}
 			]
-			x: -6.25d
+			x: -3.0d
 			y: 5.5d
 		}
 		{
@@ -246,7 +246,7 @@
 					type: "item"
 				}
 			]
-			x: -6.25d
+			x: -3.0d
 			y: 7.0d
 		}
 		{
@@ -287,8 +287,8 @@
 					type: "item"
 				}
 			]
-			x: -6.25d
-			y: 8.5d
+			x: 3.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["3FECE5A691420AFF"]
@@ -337,8 +337,8 @@
 					type: "item"
 				}
 			]
-			x: -6.25d
-			y: 10.0d
+			x: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["7BD02D9D2047A1E7"]
@@ -386,8 +386,8 @@
 					type: "item"
 				}
 			]
-			x: -6.25d
-			y: 11.5d
+			x: 3.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["55F701778D57D188"]
@@ -415,8 +415,8 @@
 					type: "item"
 				}
 			]
-			x: -6.25d
-			y: 13.0d
+			x: 3.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -448,7 +448,7 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
+			x: 0.0d
 			y: 2.5d
 		}
 		{
@@ -491,7 +491,7 @@
 					value: 3
 				}
 			]
-			x: -3.75d
+			x: 0.0d
 			y: 4.0d
 		}
 		{
@@ -531,8 +531,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 5.5d
+			x: 1.5d
+			y: 3.25d
 		}
 		{
 			dependencies: ["21BF8E78D80F38D9"]
@@ -563,8 +563,8 @@
 					value: 1L
 				}
 			]
-			x: -3.75d
-			y: 7.0d
+			x: 0.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["2910BAB7D08B6097"]
@@ -595,8 +595,8 @@
 					value: 1L
 				}
 			]
-			x: -3.75d
-			y: 8.5d
+			x: 0.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["4EB1F717290307F4"]
@@ -614,29 +614,26 @@
 			size: 1.0d
 			tasks: [
 				{
-					consume_items: true
 					count: 512L
 					id: "2306A11DABCADD6A"
 					item: { count: 1, id: "apotheosis:luminous_crystal_shard" }
 					type: "item"
 				}
 				{
-					consume_items: true
 					count: 256L
 					id: "28A1FA95925CA55F"
 					item: { count: 1, id: "apotheosis:arcane_sands" }
 					type: "item"
 				}
 				{
-					consume_items: true
 					count: 16L
 					id: "152FBF87F70B581A"
 					item: { count: 1, id: "apotheosis:godforged_pearl" }
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 10.0d
+			x: 0.0d
+			y: 8.5d
 		}
 		{
 			dependencies: ["293446C57B82E2B6"]
@@ -690,8 +687,8 @@
 					type: "item"
 				}
 			]
-			x: -3.75d
-			y: 11.5d
+			x: -1.5d
+			y: 3.25d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -733,8 +730,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 2.5d
+			x: -4.5d
+			y: 3.25d
 		}
 		{
 			dependencies: ["4A09E37591428D43"]
@@ -754,27 +751,18 @@
 				{
 					consume_items: true
 					count: 1024L
+					icon: { id: "malum:arcane_spirit" }
 					id: "1D50C92AA874DDB6"
-					item: { count: 1, id: "malum:arcane_spirit" }
-					type: "item"
-				}
-				{
-					consume_items: true
-					count: 256L
-					id: "0D79BCE8C0082E7B"
-					item: { count: 1, id: "malum:wicked_spirit" }
-					type: "item"
-				}
-				{
-					consume_items: true
-					count: 256L
-					id: "11380F3F6A268561"
-					item: { count: 1, id: "malum:sacred_spirit" }
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item_tag(malum:spirits))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 4.0d
+			x: -4.5d
+			y: 4.75d
 		}
 		{
 			dependencies: ["147E934448684668"]
@@ -829,8 +817,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 5.5d
+			x: -4.5d
+			y: 6.25d
 		}
 		{
 			dependencies: ["1F9F68C26576C073"]
@@ -868,8 +856,8 @@
 					type: "item"
 				}
 			]
-			x: -1.25d
-			y: 7.0d
+			x: -4.5d
+			y: 7.75d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -901,8 +889,8 @@
 					value: 1L
 				}
 			]
-			x: 1.25d
-			y: 2.5d
+			x: 4.5d
+			y: 3.25d
 		}
 		{
 			dependencies: ["760BD4B838FBF86D"]
@@ -949,8 +937,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 4.0d
+			x: 4.5d
+			y: 4.75d
 		}
 		{
 			dependencies: ["0E917634038AAD69"]
@@ -992,11 +980,12 @@
 					value: 1L
 				}
 			]
-			x: 1.25d
-			y: 5.5d
+			x: 4.5d
+			y: 6.25d
 		}
 		{
-			dependencies: ["760BD4B838FBF86D"]
+			dependencies: ["53DB455C7C3D44C6"]
+			hide_dependency_lines: true
 			icon: { id: "eternal_starlight:orb_of_prophecy" }
 			id: "589BA510EB9C67C8"
 			rewards: [
@@ -1034,8 +1023,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 7.0d
+			x: 4.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["21BF8E78D80F38D9"]
@@ -1077,8 +1066,8 @@
 					value: 1L
 				}
 			]
-			x: 1.25d
-			y: 8.5d
+			x: 1.5d
+			y: 4.75d
 		}
 		{
 			dependencies: ["21BF8E78D80F38D9"]
@@ -1126,8 +1115,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 10.0d
+			x: -1.5d
+			y: 4.75d
 		}
 		{
 			dependencies: ["1EE7BF0AF698D413", "4EB1F717290307F4"]
@@ -1181,8 +1170,8 @@
 					type: "item"
 				}
 			]
-			x: 1.25d
-			y: 11.5d
+			x: -1.5d
+			y: 6.25d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1207,20 +1196,23 @@
 					type: "item"
 				}
 				{
-					dimension: "jamd:mining"
-					icon: { id: "minecraft:iron_pickaxe" }
+					icon: { id: "jamd:portal_block" }
 					id: "2B138DB2112E451B"
-					type: "dimension"
+					item: {
+						components: { "ftbfiltersystem:filter": "or(item(jamd:portal_block)item(jamd:nether_portal)item(jamd:end_portal))" }
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
 				}
 				{
-					dimension: "javd:void"
-					icon: { id: "minecraft:obsidian" }
 					id: "4273594EC0D1B203"
-					type: "dimension"
+					item: { count: 1, id: "javd:portal_block" }
+					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 2.5d
+			x: -6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1256,8 +1248,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 4.0d
+			x: -4.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1295,8 +1287,8 @@
 					value: 10L
 				}
 			]
-			x: 3.75d
-			y: 5.5d
+			x: -6.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1332,8 +1324,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 7.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["07AF6A7D5AEDEEF9", "2910BAB7D08B6097"]
@@ -1389,8 +1381,8 @@
 					type: "item"
 				}
 			]
-			x: 3.75d
-			y: 8.5d
+			x: 1.5d
+			y: 6.25d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1426,8 +1418,8 @@
 					type: "item"
 				}
 			]
-			x: 6.25d
-			y: 2.5d
+			x: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1478,8 +1470,8 @@
 					type: "item"
 				}
 			]
-			x: 6.25d
-			y: 4.0d
+			x: 6.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1537,8 +1529,8 @@
 					type: "item"
 				}
 			]
-			x: 6.25d
-			y: 5.5d
+			x: -6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1578,8 +1570,8 @@
 					type: "item"
 				}
 			]
-			x: 6.25d
-			y: 7.0d
+			x: -6.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1624,8 +1616,8 @@
 					type: "item"
 				}
 			]
-			x: 6.25d
-			y: 8.5d
+			x: 4.5d
+			y: 7.75d
 		}
 		{
 			dependencies: ["53DB455C7C3D44C6"]
@@ -1642,8 +1634,8 @@
 					type: "item"
 				}
 			]
-			x: 8.75d
-			y: 0.0d
+			x: 6.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["3F367D8B2A0921FB", "67914208BF084A41", "4C490C9499400B04", "62D4F700B75CE743", "00587E79E0F2BBB2", "0C6E5DF5C27B3F64", "59A5953B73ADAFC9"]
@@ -1675,7 +1667,7 @@
 				}
 			]
 			x: 0.0d
-			y: 16.0d
+			y: 12.5d
 		}
 	]
 }
