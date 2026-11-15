@@ -20054,7 +20054,7 @@ hash = "a1fe225b8b7b5115dacb71ee825e8b762ba3a036e3cfa666eb7e69f5d4bf8fbc"
 
 [[files]]
 file = "kubejs/server_scripts/faction_quest_rewards.js"
-hash = "451b8d7791c256eb2345c8ea55647a73b1458f82d43560320e2cb9561ba2701a"
+hash = "943eb92979ed81525555d833ad6cf2aef9af7c263fbf00f07347f3753df5f55b"
 
 [[files]]
 file = "kubejs/server_scripts/faction_recipe_overrides.js"
