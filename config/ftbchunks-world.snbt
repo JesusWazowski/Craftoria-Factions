@@ -174,7 +174,7 @@
 		# Default claim visibility for claimed chunks
 		# Default: "public"
 		# Valid values: "allies", "private", "public"
-		def_claim_visibility: "public"
+		def_claim_visibility: "private"
 		
 		# Default mode for left-clicking non-living entities (armor stands, item frames...) in claimed chunks
 		# Default: "allies"

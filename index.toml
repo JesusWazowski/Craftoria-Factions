@@ -4302,7 +4302,7 @@ hash = "7bc481e810c7a677244a46a03ef7a2fd3ea98658ed3f494dc93e7b8cd479d980"
 
 [[files]]
 file = "config/ftbchunks-world.snbt"
-hash = "7c526a9c05c8b8ebda1b145b22c68d05479c40fd2b8b8914f297bb5ce2aa7862"
+hash = "7a43fb07767176810dcebc0d9436d83b8d08de32481c3f2dd4dbf628f657a4fa"
 
 [[files]]
 file = "config/ftbessentials.snbt"
@@ -20031,6 +20031,10 @@ hash = "2241fe128b23f1e69a743ca3fc84356b87c44e003c6a350930e8643387795c67"
 [[files]]
 file = "kubejs/server_scripts/Mods/XyCraft/Recipes.js"
 hash = "7b8881ca8bbb426755fd8d5907052713377c87b91b51b3376ba159d9a2570251"
+
+[[files]]
+file = "kubejs/server_scripts/claim_visibility.js"
+hash = "3e482d74a766664f62e288a27f66df9fa10aaf4f90f59182b48370dbc7c9f2bc"
 
 [[files]]
 file = "kubejs/server_scripts/faction_definitions.js"

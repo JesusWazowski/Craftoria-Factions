@@ -707,6 +707,15 @@ and is available to all factions. Restart after updating faction definitions.
 
 ### Claims without land protection
 
+FTB Chunks claim visibility is private. On server startup the pack sets existing
+teams to Private and makes Claim Visibility read-only through FTB Teams. Members
+can still see and manage their own faction's claims in FTB Chunks and Xaero's
+World Map. On a server running the older pack, use the gear in **My Team** to
+set **Claim Visibility** to **Private** for each faction. To set the default,
+open the FTB Chunks fullscreen map and use **Ctrl+S** as an operator, or merge
+`team_prop_defaults.def_claim_visibility: "private"` into the active FTB Chunks config.
+Restart after installing the pack update to enforce the setting.
+
 `config/ftbchunks-world.snbt` sets `disable_protection: true`. Claims reserve
 ownership and permit force-loading under the existing limits. Session locks and
 faction-home ownership checks still apply. All claim boundary protections are off,
