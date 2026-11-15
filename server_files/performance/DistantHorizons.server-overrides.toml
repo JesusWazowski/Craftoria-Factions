@@ -1,0 +1,30 @@
+# Distant Horizons 3.3.x server overrides for the Craftoria Factions server.
+# DH is installed on the server only (it is not part of this pack), so its config lives
+# only on the server at config/DistantHorizons.toml. Edit that file and change ONLY the
+# keys below, keeping everything else DH generated (serverId in particular).
+# Key names match DH 3.3.3's Config.java. Restart the server afterwards.
+
+[common.worldGenerator]
+	# Default SURFACE_THEN_CHUNKS runs the full modded chunk generator for every far LOD,
+	# for every player, competing with real chunk generation on a fresh world.
+	# SURFACE_ONLY keeps distant terrain but skips trees/structures for far LODs.
+	# Use DISABLED instead while the world is new and the server is still lagging.
+	generatorPlan = "SURFACE_ONLY"
+
+[common.multiThreading]
+	# Cap DH's background CPU so it cannot starve C2ME's chunk workers.
+	numberOfThreads = 2
+	threadRunTimeRatio = 0.5
+
+[server]
+	# Default 4096 blocks: each player could request LODs 256 chunks out.
+	maxGenerationRequestDistance = 1024
+	# Default 20 generation requests per second per client.
+	generationRequestRateLimit = 4
+	# Already-generated LODs are cheap to send; keep this >= maxGenerationRequestDistance.
+	maxSyncOnLoadRequestDistance = 1536
+	syncOnLoadRateLimit = 20
+	# Default 256 chunks of live LOD updates around every player.
+	realTimeUpdateDistanceRadiusInChunks = 64
+	# KB/s. Default 0 (unlimited) across all players combined.
+	globalBandwidthLimit = 4000

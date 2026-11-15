@@ -1,0 +1,29 @@
+# Performance-relevant server.properties values for the Craftoria Factions server.
+# This is NOT a full server.properties. Merge these keys into the server's existing
+# server.properties (leave every other key, such as level-seed and motd, as it is),
+# then restart. See server_files/PERFORMANCE.md for why each value is set.
+
+# Chunks sent to each player. 10+ is very expensive in a 500-mod pack; Distant Horizons
+# already covers far terrain for clients that have it.
+view-distance=8
+
+# Chunks around each player that actually tick (mobs, crops, machines, redstone).
+# This is the single biggest per-player tick cost.
+simulation-distance=6
+
+# Write chunks asynchronously instead of blocking the save on every chunk write.
+sync-chunk-writes=false
+
+# Modded flight (jetpacks, spells, elytra-like items) trips vanilla's anti-fly check.
+# One player hit it 519 times in 28 seconds in the crash log; each hit is a check plus a log line.
+allow-flight=true
+
+# Send entity updates only to players reasonably close. 100 is vanilla; 75 cuts packet
+# volume around farms and mob grinders without visible pop-in at view-distance 8.
+entity-broadcast-range-percentage=75
+
+# Compress only packets larger than 256 bytes (vanilla default; listed so it is not lowered).
+network-compression-threshold=256
+
+# Keep the watchdog: it is what forcibly stopped the hung server after the crash.
+max-tick-time=60000

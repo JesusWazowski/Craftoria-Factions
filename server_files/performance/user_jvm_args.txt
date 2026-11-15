@@ -1,0 +1,29 @@
+# JVM arguments for the Craftoria Factions server (Java 21, NeoForge 21.1).
+# NeoForge's run.bat / run.sh read this file. On Crafty, paste the flags (without the
+# comment lines) into the server's "Server Execution Command" / Java arguments instead.
+#
+# Set -Xms and -Xmx to the SAME value, and leave 2-3 GB of the host's RAM for the OS.
+# 10G is the floor for ~10 players in this pack; use 12G if the host has 16 GB or more.
+# Do not go above ~16G: larger G1 heaps mean longer GC pauses, not fewer lag spikes.
+-Xms10G
+-Xmx10G
+
+# G1 tuned for Minecraft (Aikar's flags, large-heap variant).
+-XX:+UseG1GC
+-XX:+ParallelRefProcEnabled
+-XX:MaxGCPauseMillis=200
+-XX:+UnlockExperimentalVMOptions
+-XX:+DisableExplicitGC
+-XX:+AlwaysPreTouch
+-XX:G1NewSizePercent=40
+-XX:G1MaxNewSizePercent=50
+-XX:G1HeapRegionSize=16M
+-XX:G1ReservePercent=15
+-XX:G1HeapWastePercent=5
+-XX:G1MixedGCCountTarget=4
+-XX:InitiatingHeapOccupancyPercent=20
+-XX:G1MixedGCLiveThresholdPercent=90
+-XX:G1RSetUpdatingPauseTimePercent=5
+-XX:SurvivorRatio=32
+-XX:+PerfDisableSharedMem
+-XX:MaxTenuringThreshold=1
