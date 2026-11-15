@@ -4306,7 +4306,7 @@ hash = "7a43fb07767176810dcebc0d9436d83b8d08de32481c3f2dd4dbf628f657a4fa"
 
 [[files]]
 file = "config/ftbessentials.snbt"
-hash = "18d8f8345984fa61119390441ec7d78bb70b7b2ecc75a45c27561ecc43d55160"
+hash = "e7dc6b47b836c4e3e3f04eabda8b59f77031d2b2a4c720a790591d5c1abe4912"
 
 [[files]]
 file = "config/ftblibrary-client.snbt"
@@ -7086,7 +7086,7 @@ hash = "7d44212d76d464d89422bf1533cf63b85e53b85772896290ee218e3aa5f8f041"
 
 [[files]]
 file = "defaultconfigs/ftbessentials-server.snbt"
-hash = "399a9f12e0c30c7c378c1adbbb1ada680466bd087c14752e1188e69a68cfa525"
+hash = "c1c50ad4ff359092ea5f548a01f5bc229e3b04fad8a7938d28fb978da3f61d53"
 
 [[files]]
 file = "defaultconfigs/ftblibrary/ftblibrary-client.snbt"

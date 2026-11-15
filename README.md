@@ -103,9 +103,20 @@ FTB Ranks 2101.1.5, and FTB XMod Compat 21.1.12.
 relies on player-built infrastructure. `/sethome` replaces `/faction home set`;
 `/faction home` and `/factionhome` are removed. Essentials personal-home commands
 are disabled for everyone, including operators. Saved personal-home data is kept
-without migration. Native `/spawn` and `/back` remain operator-only; other travel
-commands retain their existing behavior. **Fully restart after this update** so
-Essentials and KubeJS register the correct commands.
+without migration. FTB Essentials also disables these teleport command groups
+for everyone, including operators:
+
+- Player requests: `/tpa`, `/tpahere`, `/tpaccept`, `/tpdeny`.
+- Travel: `/rtp`, `/back`, `/spawn`, `/playerspawn`, and `/warp`. Disabling
+  warps also removes `/setwarp`, `/delwarp`, and `/listwarps`.
+- Operator utilities: `/jump`, `/tpx`, `/teleport_last` (TPL), and `/tp_offline`.
+
+Vanilla operator teleportation, faction session mechanics, and in-world travel
+such as portals and Waystones keep their usual behavior. **Fully restart after
+this update** so Essentials and KubeJS register the correct commands. The pack
+ships the settings in both `defaultconfigs/ftbessentials-server.snbt` and
+`config/ftbessentials.snbt`. For existing servers that keep their own active FTB
+Essentials config, merge the disabled flags into that file before restarting.
 
 Operators can use `/sethome <party>` to move another party's home
 without joining it or holding an officer rank. The optional argument uses FTB's

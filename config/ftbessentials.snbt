@@ -72,7 +72,7 @@
 		# Allows admins to change the location of offline players.
 		tp_offline: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 	}
 	
@@ -175,7 +175,7 @@
 			cooldown: 30
 			
 			# Default: true
-			enabled: true
+			enabled: false
 			
 			# Max size of the teleport history. This limits how many times you can use /back
 			# You can override this with FTB Ranks using ftbessentials.back.max
@@ -238,7 +238,7 @@
 		# Allows admins to jump (teleport) to the focused block
 		jump: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		playerspawn: {
 			# Cooldown between /playerspawn commands (in seconds)
@@ -248,7 +248,7 @@
 			cooldown: 10
 			
 			# Default: true
-			enabled: true
+			enabled: false
 			
 			# Warm-up time before /playerspawn command executes (in seconds)
 			# You can override this with FTB Ranks using ftbessentials.playerspawn.warmup
@@ -287,7 +287,7 @@
 			dimension_whitelist: [ ]
 			
 			# Default: true
-			enabled: true
+			enabled: false
 			
 			# /rtp max distance from spawn point
 			# Default: 25000
@@ -318,7 +318,7 @@
 			cooldown: 10
 			
 			# Default: true
-			enabled: true
+			enabled: false
 			
 			# Warm-up time before /spawn command executes (in seconds)
 			# You can override this with FTB Ranks using ftbessentials.spawn.warmup
@@ -337,7 +337,7 @@
 			cooldown: 10
 			
 			# Default: true
-			enabled: true
+			enabled: false
 			
 			# Warm-up time before /tpa command executes (in seconds)
 			# You can override this with FTB Ranks using ftbessentials.tpa.warmup
@@ -349,13 +349,13 @@
 		# Allows admins to teleport to the location a user was last seen at
 		tpl: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Allows admins to teleport to dimension
 		tpx: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Allows admins to create 'warps', which are fixed points in the world that users may teleport to using /warp
@@ -367,7 +367,7 @@
 			cooldown: 10
 			
 			# Default: true
-			enabled: true
+			enabled: false
 			
 			# Warm-up time before /warp command executes (in seconds)
 			# You can override this with FTB Ranks using ftbessentials.warp.warmup
