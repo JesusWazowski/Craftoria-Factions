@@ -254,7 +254,7 @@ hash = "dfd2b17e989a99966bad68090a19bdbb2e23a81e94b0921b029d79eca467c7c0"
 
 [[files]]
 file = "config/aiimprovements-common.toml"
-hash = "d65113ea15e814463b1f477b0cebcc98dfe06a5d3f7100e3bacd414c7cb391ec"
+hash = "222de0880c71e9ee5e737c609bf76cf47c6eb4fe6bdd5d6cada29b8118e701a8"
 
 [[files]]
 file = "config/akashictome-common.toml"
@@ -20050,7 +20050,7 @@ hash = "a1fe225b8b7b5115dacb71ee825e8b762ba3a036e3cfa666eb7e69f5d4bf8fbc"
 
 [[files]]
 file = "kubejs/server_scripts/faction_quest_rewards.js"
-hash = "451b8d7791c256eb2345c8ea55647a73b1458f82d43560320e2cb9561ba2701a"
+hash = "943eb92979ed81525555d833ad6cf2aef9af7c263fbf00f07347f3753df5f55b"
 
 [[files]]
 file = "kubejs/server_scripts/faction_recipe_overrides.js"
@@ -20228,8 +20228,13 @@ hash = "7cd6286ad0975cce954e15e6611f4d592672db45fa52603161e8c3a9e338a4d8"
 metafile = true
 
 [[files]]
+file = "mods/adachirei-nui-server.pw.toml"
+hash = "616cead597fae4bbd9602c95103029ee7fd452208c24af157e33ee4b7c3a1f8e"
+metafile = true
+
+[[files]]
 file = "mods/adachirei-nui.pw.toml"
-hash = "426fc1d61c7eeede13f0ba5285238dc7f8e96f02c45220cfe57670725a1c23bc"
+hash = "c7ab9a30d930e24838783c6620528fb07dbece83668021670fbf309f47d5ca56"
 metafile = true
 
 [[files]]
@@ -20677,7 +20682,7 @@ metafile = true
 
 [[files]]
 file = "mods/chattoggle.pw.toml"
-hash = "fa8f2dc33a5f27a5dca4a2f2c9d2f5aac145e56aa3c548e2d27c9ed674d0c7f2"
+hash = "b434e20a24ead24464a0b1e6c96ccc6dec1f12240ec219f22e851ce8a85c6ba7"
 metafile = true
 
 [[files]]
@@ -20737,7 +20742,7 @@ metafile = true
 
 [[files]]
 file = "mods/colorwheel.pw.toml"
-hash = "f4b68affa5de7099764f0a8280836d4f9047e697dba9c320fb9e5ec2ed9638f5"
+hash = "b67c28ecf8abcfbbe4b9f5929df3f7ddbe5c3f8c9cb19d0a73a7bda2dabea062"
 metafile = true
 
 [[files]]
@@ -20961,7 +20966,7 @@ metafile = true
 
 [[files]]
 file = "mods/dark-mode-everywhere.pw.toml"
-hash = "7b551c509b8cc5c7d0cebffe1740a08366923616ba12b0af06f6ad52c3e94f34"
+hash = "07a6a74112480dbfb9b91c47672ae7b39ba3103e8a4cc8915bbd3555c4bb76b2"
 metafile = true
 
 [[files]]
@@ -21096,7 +21101,7 @@ metafile = true
 
 [[files]]
 file = "mods/enhanced-celestials-2-shader-support.pw.toml"
-hash = "09b3f2721c5396c8501b662940065cd23487bf62c35ffd21ce208887f49c9153"
+hash = "8e14ccc2df62fad02daa0dd60291faa502eaf9e98361da07377a89d1af3e0fbb"
 metafile = true
 
 [[files]]
@@ -21191,7 +21196,7 @@ metafile = true
 
 [[files]]
 file = "mods/fancy-toasts.pw.toml"
-hash = "ee614e98c0481871ef58747c2b3bac8b3a73027675db3cd9cb9872144533fc8e"
+hash = "319a195ec43dc73d16946c5c57baf261e81dec60430ead3ba05545a11b5da68b"
 metafile = true
 
 [[files]]
@@ -21530,12 +21535,12 @@ metafile = true
 
 [[files]]
 file = "mods/iris-shader-folder.pw.toml"
-hash = "91584099db41c246d44dafcb4bcc35b58367fa8f9cfb7e5fb94c0e902284b7da"
+hash = "2830ce8541eee4dc43a1bc82808e6a900764eb58d87ae47518e59861ae93d08d"
 metafile = true
 
 [[files]]
 file = "mods/irisshaders.pw.toml"
-hash = "763ed0c115b2b9a1e37e38cb153748c9c3f3c31869fd3d56acfaad54c63e78af"
+hash = "bc0ed43619af3b5e453ccb36412d72aef8d066594946a927155d2fbd440e4b40"
 metafile = true
 
 [[files]]
@@ -21735,7 +21740,7 @@ metafile = true
 
 [[files]]
 file = "mods/lighty.pw.toml"
-hash = "5af0a9561e5ab538be1c7e843b54101852830db48c0dad561965de1bfea9a584"
+hash = "50b406950847be40026ba9191c5e0017ebe9015293b11b7e3ded9cc2ba42da0c"
 metafile = true
 
 [[files]]
@@ -22235,7 +22240,7 @@ metafile = true
 
 [[files]]
 file = "mods/particle-effects-reforged.pw.toml"
-hash = "c31fc3fb801223d731e29f98a3dbb3ddd54b4e55299172dbbb3cbd1df5f1acb0"
+hash = "2aedaca569579c80359fea3a95e895a323e78683623339c4a6dc689cd2faf390"
 metafile = true
 
 [[files]]
@@ -22480,7 +22485,7 @@ metafile = true
 
 [[files]]
 file = "mods/servuxforged.pw.toml"
-hash = "8d8adf5d3ed0d4e9f8a07864f385c8749f63f0df594e92109e3783cf152371dc"
+hash = "3b72239107a72d5ca4616d0fcbe7d2c3a7ea0554915159ec4c102d75929609bf"
 metafile = true
 
 [[files]]
@@ -22545,12 +22550,12 @@ metafile = true
 
 [[files]]
 file = "mods/sodium-extra.pw.toml"
-hash = "1f879739b8ea01784133a004b34d8895c0f18a737501b4d3546bf33673384707"
+hash = "d9e194196e8097ee42b09c5b383977ee28abe4a087c8bdeb11eaea5edee3a04b"
 metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "617ec6e9893d59905035a510fe336addd46a97b6fd28fad88b70713ebf8e69e3"
+hash = "3fc6fd4a464740bd6cfe89571517cfda837dbad69f0218ef1159b527b1be45d6"
 metafile = true
 
 [[files]]

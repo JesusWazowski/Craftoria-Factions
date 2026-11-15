@@ -1,0 +1,9 @@
+name = "AdachiRei-nui (dedicated server)"
+filename = "AdachiRei-nui-server-v1.1.5.jar"
+side = "server"
+pin = true
+
+[download]
+url = "https://raw.githubusercontent.com/JesusWazowski/Craftoria-Factions/main/server_files/third-party/adachirei-nui/AdachiRei-nui-server-v1.1.5.jar"
+hash-format = "sha512"
+hash = "cd0274a2b43a8036904eec7e08d78494b1e26187dd7d802cce5fcb7df54a1e65260dc000d131163663f47b6503e329f53ac3dda80e14a38ed96ca831524c82e1"

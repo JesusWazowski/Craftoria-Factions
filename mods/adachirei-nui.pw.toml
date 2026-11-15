@@ -1,6 +1,6 @@
 name = "AdachiRei-nui"
 filename = "AdachiRei-nui-neoforge-mc1.21.1-v1.1.5.jar"
-side = "both"
+side = "client"
 
 [download]
 url = "https://cdn.modrinth.com/data/zA0tDCfF/versions/ZVtABgtF/AdachiRei-nui-neoforge-mc1.21.1-v1.1.5.jar"
