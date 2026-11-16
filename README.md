@@ -93,11 +93,18 @@ FTB Ranks 2101.1.5, and FTB XMod Compat 21.1.12.
 
 | Command | Who can use it | Effect |
 | --- | --- | --- |
-| `/session unlock` | Permission level 2 or console | Allows exploration and FTB claim/unclaim operations. |
-| `/session lock` | Permission level 2 or console | Freezes claims and confines players to chunks claimed by anyone. |
-| `/session info` | Permission level 2 or console | Shows the persistent session state. |
+| `/session unlock [duration]` | Permission level 2 or console | Allows exploration and FTB claim/unclaim operations. |
+| `/session lock [duration]` | Permission level 2 or console | Freezes claims and confines players to chunks claimed by anyone. |
+| `/session info` | Permission level 2 or console | Shows the session state and any scheduled reversal. |
 | `/sethome [party]` | Own party: owner/officers; explicit party: operators | Sets the selected party's home at your position while unlocked, within world bounds in that party's claim. |
 | `/home` | Party members | Shows the validated home or explains missing setup. |
+
+Use `/session unlock 3h` to open for three hours or `/session lock 70m 10s`
+to close for seventy minutes and ten seconds. The timer uses real time and
+survives a restart. If it expires while the server is stopped, the reversal
+runs on startup. A successful untimed lock or unlock cancels the timer. A new
+timed command replaces it. If an automatic lock fails the usual faction-home
+checks, the server alerts operators and leaves the session open.
 
 `/home` only reports the shared faction checkpoint; it never teleports. Travel
 relies on player-built infrastructure. `/sethome` replaces `/faction home set`;

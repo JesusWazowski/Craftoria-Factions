@@ -1,5 +1,6 @@
 // priority: 5
 // FTB Chunks remains the only claim store. See README.md#faction-sessions.
+const SessionDurationArgument = Java.loadClass('com.mojang.brigadier.arguments.StringArgumentType');
 const SessionChunks = Java.loadClass('dev.ftb.mods.ftbchunks.api.FTBChunksAPI');
 const SessionTeams = Java.loadClass('dev.ftb.mods.ftbteams.api.FTBTeamsAPI');
 const SessionRanks = Java.loadClass('dev.ftb.mods.ftbranks.api.FTBRanksAPI');
@@ -277,6 +278,57 @@ const factionSession = {
     else this.previous.set(id, now);
   },
 
+  reversalDeadline(server) {
+    return server.persistentData.getDouble('sessionReversalDeadline');
+  },
+
+  change(source, locked, duration) {
+    let deadline = 0;
+    if (duration != null) {
+      const input = duration.trim().toLowerCase();
+      const units = { h: 3600, m: 60, s: 1 };
+      if (!/^(?:\d+[hms]\s*)+$/.test(input)) {
+        source.sendFailure(Text.of('Use a positive duration such as 3h or 70m 10s.'));
+        return 0;
+      }
+      let seconds = 0;
+      input.match(/\d+[hms]/g).forEach(part => {
+        seconds += Number(part.slice(0, -1)) * units[part.slice(-1)];
+      });
+      deadline = Date.now() + seconds * 1000;
+      if (seconds <= 0 || !Number.isSafeInteger(deadline)) {
+        source.sendFailure(Text.of('Use a positive duration within the supported range.'));
+        return 0;
+      }
+    }
+
+    const result = this.setLocked(source, locked);
+    if (result) {
+      source.server.persistentData.putDouble('sessionReversalDeadline', deadline);
+      if (deadline) source.sendSuccess(Text.of(this.reversalStatus(source.server).trim()), false);
+    }
+    return result;
+  },
+
+  reversalStatus(server) {
+    const deadline = this.reversalDeadline(server);
+    if (!deadline) return '';
+    const seconds = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+    const time = [Math.floor(seconds / 3600) + 'h', Math.floor(seconds / 60) % 60 + 'm', seconds % 60 + 's'];
+    return ' Scheduled to ' + (this.locked(server) ? 'unlock' : 'lock') + ' in ' + time.join(' ') + '.';
+  },
+
+  reverseIfDue(server) {
+    const deadline = this.reversalDeadline(server);
+    if (!deadline || Date.now() < deadline) return;
+    // Consume the timer once, even if the normal lock preconditions fail.
+    server.persistentData.putDouble('sessionReversalDeadline', 0);
+    const source = server.createCommandSourceStack();
+    if (!this.command(source, () => this.setLocked(source, !this.locked(server)))) {
+      this.alert(server, 'Scheduled session reversal failed. See the server log and run /session after resolving the issue.');
+    }
+  },
+
   setLocked(source, locked) {
     let server = source.server;
     this.homeCache.clear();
@@ -371,13 +423,22 @@ const factionSession = {
 
 ServerEvents.commandRegistry(event => {
   let commands = event.commands;
+  let transition = (name, locked) => {
+    let run = (context, duration) => factionSession.command(context.source,
+      () => factionSession.change(context.source, locked, duration));
+    return commands.literal(name).executes(context => run(context, null))
+      .then(commands.argument('duration', SessionDurationArgument.greedyString())
+        .executes(context => run(context, String(SessionDurationArgument.getString(context, 'duration')))));
+  };
   let info = context => {
-    context.source.sendSuccess(Text.of('Session is ' + (factionSession.locked(context.source.server) ? 'locked' : 'unlocked') + '.'), false);
+    let server = context.source.server;
+    context.source.sendSuccess(Text.of('Session is ' + (factionSession.locked(server) ? 'locked' : 'unlocked')
+      + '.' + factionSession.reversalStatus(server)), false);
     return 1;
   };
   event.register(commands.literal('session').requires(source => source.hasPermission(2))
-    .then(commands.literal('lock').executes(context => factionSession.command(context.source, () => factionSession.setLocked(context.source, true))))
-    .then(commands.literal('unlock').executes(context => factionSession.command(context.source, () => factionSession.setLocked(context.source, false))))
+    .then(transition('lock', true))
+    .then(transition('unlock', false))
     .then(commands.literal('info').executes(info)).executes(info));
   event.register(commands.literal('sethome')
     .executes(context => factionSession.command(context.source, () => factionSession.setHome(context.source)))
@@ -403,6 +464,7 @@ ServerEvents.tick(event => {
   factionSession.homeCache.clear();
   try {
     if (!factionSession.initialized || factionSession.tick % 20 === 0) factionSession.normalizeLimits();
+    if (factionSession.tick % 20 === 1) factionSession.reverseIfDue(event.server);
     factionSession.players(event.server).forEach(player => factionSession.enforce(player));
   } catch (error) {
     factionSession.alert(event.server, 'Session enforcement failed: ' + error);

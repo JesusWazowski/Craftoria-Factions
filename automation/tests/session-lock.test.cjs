@@ -15,7 +15,7 @@ class Tag {
 }
 for (const type of ['Boolean', 'String', 'Double', 'Int', 'Float']) {
   Tag.prototype['put' + type] = Tag.prototype.put;
-  Tag.prototype['get' + type] = function (key) { return this.data.get(key) || (type === 'String' ? '' : 0); };
+  Tag.prototype['get' + type] = function (key) { return this.data.get(key) || (type === 'String' ? '' : type === 'Boolean' ? false : 0); };
 }
 class Player {}
 class FakePlayer extends Player {}
@@ -73,6 +73,7 @@ function setup(data = new Tag(), globals = {}) {
     FTBChunksWorldConfig: Object.fromEntries(['MAX_CLAIMED_CHUNKS', 'HARD_TEAM_CLAIM_LIMIT', 'PARTY_LIMIT_MODE', 'MAX_IDLE_DAYS_BEFORE_UNCLAIM']
       .map(key => [key, { set: value => { configs[key] = value; } }])),
     PartyLimitMode: { LARGEST: 'largest' }, TeamRank: { OFFICER: 'officer' },
+    StringArgumentType: { greedyString: () => 'greedy', getString: context => context.duration },
     TeamArgument: { create: type => type, get: context => context.target }, TeamType: { PARTY: 'party' },
     ChunkDimPos: ChunkPos, BlockPos, AABB: Box, Direction: { UP: 'up' },
     ResourceKey: { create: (_, dimension) => dimension }, ResourceLocation: { parse: value => value },
@@ -116,6 +117,50 @@ function setup(data = new Tag(), globals = {}) {
   }
   return { subject, handlers, claims, teams, players, ranks, configs, updates, level, server, team, claim, player, command, context };
 }
+
+test('timed session commands parse compound durations, persist, and reverse once', () => {
+  let now = 100000;
+  const globals = { Date: { now: () => now } };
+  const s = setup(new Tag(), globals);
+  const commands = [];
+  s.handlers.registry({ commands: { literal: name => new Command(name), argument: name => new Command(name) }, register: node => commands.push(node) });
+  const [lock, unlock, info] = commands[0].children;
+  const source = s.command();
+  assert.equal(lock.children[0].handler({ source, duration: '70m 10s' }), 1);
+  assert.equal(s.subject.reversalDeadline(s.server), now + 4210000);
+  info.handler({ source });
+  assert.match(s.command.success, /unlock in 1h 10m 10s/);
+  assert.equal(unlock.children[0].handler({ source, duration: '0s' }), 0);
+  assert.equal(s.subject.reversalDeadline(s.server), now + 4210000);
+  const reloaded = setup(s.server.persistentData, globals);
+  reloaded.server.createCommandSourceStack = () => reloaded.command();
+  now += 4209999;
+  reloaded.subject.reverseIfDue(reloaded.server);
+  assert.equal(reloaded.subject.locked(reloaded.server), true);
+  now++;
+  reloaded.handlers.tick({ server: reloaded.server });
+  assert.equal(reloaded.subject.locked(reloaded.server), false);
+  assert.equal(reloaded.subject.reversalDeadline(reloaded.server), 0);
+  reloaded.subject.reverseIfDue(reloaded.server);
+  assert.equal(reloaded.subject.locked(reloaded.server), false);
+});
+
+test('a manual transition cancels its timer and a failed scheduled lock is consumed', () => {
+  let now = 1000;
+  const s = setup(new Tag(), { Date: { now: () => now } });
+  const source = s.command();
+  s.server.createCommandSourceStack = () => source;
+  assert.equal(s.subject.change(source, false, '3h'), 1);
+  assert.equal(s.subject.change(source, false, null), 1);
+  assert.equal(s.subject.reversalDeadline(s.server), 0);
+  assert.equal(s.subject.change(source, false, '1s'), 1);
+  s.team('no-home');
+  now += 1000;
+  s.subject.reverseIfDue(s.server);
+  assert.equal(s.subject.locked(s.server), false);
+  assert.equal(s.subject.reversalDeadline(s.server), 0);
+  assert.match(s.command.failure, /Cannot lock/);
+});
 
 test('only lock/unlock/info exist and require operator level 2', () => {
   const s = setup(); const commands = [];
