@@ -340,16 +340,23 @@ for (let name of ['net.neoforged.neoforge.event.entity.player.PlayerInteractEven
   'net.neoforged.neoforge.event.level.BlockEvent$BreakEvent',
   'net.neoforged.neoforge.event.level.BlockEvent$EntityPlaceEvent',
   'net.neoforged.neoforge.event.entity.EntityTeleportEvent',
-  'net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent',
-  'net.neoforged.neoforge.event.entity.item.ItemTossEvent']) {
+  'net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent']) {
   NativeEvents.onEvent(name, event => {
     let player = typeof event.getPlayer === 'function' ? event.getPlayer() : event.getEntity();
     if (player && factionParties.waiting(player) && event instanceof FactionCancelable) {
-      if (name === 'net.neoforged.neoforge.event.entity.item.ItemTossEvent') player.give(event.getEntity().getItem());
       event.setCanceled(true);
     }
   });
 }
+
+// A canceled toss needs its own refund. Other entity events do not carry an item stack.
+NativeEvents.onEvent('net.neoforged.neoforge.event.entity.item.ItemTossEvent', event => {
+  const player = event.getPlayer();
+  if (event.isCanceled() || !factionParties.waiting(player)) return;
+  const stack = event.getEntity().getItem();
+  event.setCanceled(true);
+  if (stack && !stack.isEmpty()) player.give(stack);
+});
 
 NativeEvents.onEvent('net.neoforged.neoforge.event.entity.player.ItemEntityPickupEvent$Pre', event => {
   if (factionParties.waiting(event.getPlayer())) event.setCanPickup(Java.loadClass('net.neoforged.neoforge.common.util.TriState').FALSE);
