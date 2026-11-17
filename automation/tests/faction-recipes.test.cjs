@@ -14,6 +14,8 @@ const ordinaryRecipes = [
   'ae2:network/blocks/interfaces_interface',
   'ae2:network/blocks/pattern_providers_interface',
   'ars_nouveau:arcane_pedestal',
+  'cognition:enchanted_bookshelf',
+  'twilightforest:sticky_piston_maze_ver',
   'modern_industrialization:materials/bronze/craft/tiny_dust_from_dust',
   'modern_industrialization:materials/bronze/craft/dust_from_tiny_dust',
   'musketmod:musket_upgrade_smithing_template',
@@ -97,8 +99,8 @@ test('public recipes match the approved conversion and shared dust exceptions', 
   assert.equal(audit.singleItemConversions.length, 168);
   assert.equal(audit.stateResetAndDisassembly.length, 189);
   assert.equal(audit.sharedDustRecipes.length, 6);
-  const expected = new Set(audit.previousRecipeIds.concat(audit.singleItemConversions, audit.stateResetAndDisassembly, audit.sharedDustRecipes));
-  assert.equal(expected.size, 375);
+  const expected = new Set(audit.previousRecipeIds.concat(audit.singleItemConversions, audit.stateResetAndDisassembly, audit.sharedDustRecipes, audit.vanillaOverlapRecipes));
+  assert.equal(expected.size, 377);
   assert.deepEqual([...overrides.recipeIds].sort(), [...expected].sort());
   for (const id of ['ae2:decorative/fluix_block', 'ae2:misc/deconstruction_fluix_block',
     'ae2:decorative/quartz_block', 'ae2:misc/deconstruction_certus_quartz_block']) {

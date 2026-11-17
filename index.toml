@@ -18762,7 +18762,7 @@ hash = "296a7d51fcb6088fd19778ddbe7531ca2ad1b307db8d0700af32324e43c53ec0"
 
 [[files]]
 file = "kubejs/config/faction_recipe_overrides.json"
-hash = "26b02fffaf98545848c81ea211ebcdb132727028677a93660ee6aeece3618797"
+hash = "8062caf58daf190e6ae9978ac04acee97a75d2f4b4a07e48be1459c1bb293bd5"
 
 [[files]]
 file = "kubejs/config/factions.json"
@@ -19794,7 +19794,7 @@ hash = "e3fbe695da1e32fa8b2e0ef9b284100c03cd79e7e351919fde3278ea318fedc6"
 
 [[files]]
 file = "kubejs/server_scripts/Mods/Craftoria/ConflictFixes.js"
-hash = "2eefad7995943befa6f80646f4040d295fcc5323fd63e752b76921cbacdc5a87"
+hash = "9bdf407a89701eb6c1b33eddf0ef21cbf9cc5a1700d297a798a542452505a66b"
 
 [[files]]
 file = "kubejs/server_scripts/Mods/Craftoria/Curios.js"

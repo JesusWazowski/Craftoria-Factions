@@ -1,6 +1,10 @@
 {
   "date": "2026-10-26",
   "description": "Exact user-approved recipes from the conversion and shared dust reviews.",
+  "vanillaOverlapRecipes": [
+    "cognition:book_from_any_leather",
+    "twilightforest:magma_cream_maze_ver"
+  ],
   "sharedDustRecipes": [
     "modern_industrialization:materials/bronze_dust",
     "modern_industrialization:materials/bronze_tiny_dust",

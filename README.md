@@ -222,12 +222,19 @@ The October 26 conversion expansion additionally exempts the 168 recipe IDs for
 the 85 reviewed one-item-in/one-item-out reversible pairs, plus all 189 entries
 in the reviewed state-reset/disassembly list. The exact groups and prior 12-ID
 baseline are recorded in `automation/faction-recipe-override-audit.json`; the
-runtime document now contains 375 unique recipe IDs. The six additional dust
+runtime document now contains 377 unique recipe IDs. The six additional dust
 exceptions allow every faction to mix copper and tin into bronze dust at either
 size and convert copper and tin between regular and tiny dust in both directions.
 Converting between regular and tiny bronze dust remains gated. The six existing
 XP-gem conversion exceptions remain as previously approved. Recipe exceptions do not create
 new item-task exemptions for quest rewards.
+
+Cognition's book recipe and Twilight Forest's maze slime ball magma cream
+recipe are public because they overlap with public recipes for the same items.
+AStages checks the selected crafting recipe, so a gated match can hide the
+result even when the same grid also matches a public recipe. The pack removes
+XyCraft's duplicate lead and sticky piston recipes so the public recipes handle
+those crafting grids.
 
 These reset/disassembly recipes are real recipe-manager definitions, generally
 loaded from JSON whose `type` selects custom Java matching/result code in the

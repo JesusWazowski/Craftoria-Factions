@@ -112,10 +112,10 @@ ServerEvents.recipes(e => {
     'supplementaries:awnings/awning_dark_gray',
     'refurbished_furniture:dough',
     'actuallyadditions:tagged_sticky_piston',
-    'xycraft_machines:shaped/sticky_piston_tagged',
+    'xycraft:shaped/sticky_piston_tagged',
     'biomeswevegone:pumpkin_pie',
     'duckling:pumpkin_pie',
-    'xycraft_machines:shaped/lead_tagged',
+    'xycraft:shaped/lead_tagged',
   ];
 
   e.shaped('2x minecraft:lead', [
