@@ -315,8 +315,8 @@ const factionSession = {
   },
 
   cancel(source) {
-    var data = source.server.persistentData;
-    var pending = this.reversalDeadline(source.server) || data.getDouble('sessionScheduledStart');
+    let data = source.server.persistentData;
+    let pending = this.reversalDeadline(source.server) || data.getDouble('sessionScheduledStart');
     data.putDouble('sessionScheduledStart', 0);
     data.putDouble('sessionScheduledDuration', 0);
     data.putBoolean('sessionScheduledLocked', false);
