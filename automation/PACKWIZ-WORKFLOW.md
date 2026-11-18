@@ -47,6 +47,16 @@ from each creator. Other locally downloaded JARs and ZIPs remain ignored.
    and `pack.toml` together. Publish those commits through your existing pack
    hosting workflow so clients can receive them.
 
+If an installer reports an invalid hash, pull the latest main first, finish any
+formatting changes, and run `packwiz refresh`. Stage the changed pack files,
+then run `python automation/refresh-staged-packwiz.py` and stage `index.toml`
+and `pack.toml` again before committing and pushing. This final refresh hashes
+the staged Git bytes, including Git's line ending normalization. Wait for the
+hosting deployment to finish before starting the server.
+
+The GitHub lint workflow performs this staged refresh after its automatic
+fixes so its commit includes matching Packwiz manifests.
+
 ## Testing
 
 Run `packwiz serve` in the repository and leave it running. It refreshes the index

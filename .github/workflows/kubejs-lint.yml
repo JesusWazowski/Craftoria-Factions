@@ -46,5 +46,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add kubejs
+          python3 automation/refresh-staged-packwiz.py
+          git add index.toml pack.toml
           git commit -m "style: auto-fix KubeJS lint issues"
           git push
