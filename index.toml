@@ -5934,7 +5934,7 @@ hash = "11874765bd5640d4c6ec93f38b87ff2d13da51c91a134a44b8a1f41eac5a9e0d"
 
 [[files]]
 file = "config/pylons-server.toml"
-hash = "664fa46fd4414265f93956fa6338687a084861315ab2d4fd8fc4211996186ca8"
+hash = "66b1065a107444d4c626b107272fc00232037cbaad40148211c30bae5c4ee9f7"
 
 [[files]]
 file = "config/raided-common.toml"
@@ -18762,7 +18762,7 @@ hash = "296a7d51fcb6088fd19778ddbe7531ca2ad1b307db8d0700af32324e43c53ec0"
 
 [[files]]
 file = "kubejs/config/faction_recipe_overrides.json"
-hash = "8062caf58daf190e6ae9978ac04acee97a75d2f4b4a07e48be1459c1bb293bd5"
+hash = "3ba369c16df7827ca81e985fca18714d1bedd83c92d20712012fac8666a53702"
 
 [[files]]
 file = "kubejs/config/factions.json"

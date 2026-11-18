@@ -10,9 +10,9 @@
 	#This config will only take effect if it is larger than the world spawn radius.
 	# Default: 1
 	# Range: 1 ~ 512
-	expulsionWorldSpawnRadius = 1
+	expulsionWorldSpawnRadius = 0
 	#Whether the Expulsion Pylon can be destroyed with explosions.
-	expulsionPylonCanExplode = false
+	expulsionPylonCanExplode = true
 	#Limit the max radius for expulsion pylons.
 	#Does not include center chunk, so a radius of 2 equals a 5x5 chunk diameter.
 	# Default: 2

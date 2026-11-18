@@ -15,11 +15,13 @@ const ordinaryRecipes = [
   'ae2:network/blocks/pattern_providers_interface',
   'ars_nouveau:arcane_pedestal',
   'cognition:enchanted_bookshelf',
-  'twilightforest:sticky_piston_maze_ver',
+  'modern_industrialization:materials/chromium/craft/block_from_ingot',
+  'modern_industrialization:materials/invar/craft/ingot_from_block',
   'modern_industrialization:materials/bronze/craft/tiny_dust_from_dust',
   'modern_industrialization:materials/bronze/craft/dust_from_tiny_dust',
   'musketmod:musket_upgrade_smithing_template',
   'musketmod:cartridge',
+  'twilightforest:sticky_piston_maze_ver',
   'xycraft:crafting_example',
 ];
 const machineRecipes = [
@@ -95,16 +97,19 @@ test('only crafting recipes are gated, with exact exceptions and namespace alias
   assert.deepEqual([...state.gatedRecipes()], [['musketmod:new_crafting_recipe', 'mechanists']]);
 });
 
-test('public recipes match the approved conversion and shared dust exceptions', () => {
+test('public recipes match the approved conversion, dust, and storage block exceptions', () => {
   assert.equal(audit.singleItemConversions.length, 168);
   assert.equal(audit.stateResetAndDisassembly.length, 189);
   assert.equal(audit.sharedDustRecipes.length, 6);
-  const expected = new Set(audit.previousRecipeIds.concat(audit.singleItemConversions, audit.stateResetAndDisassembly, audit.sharedDustRecipes, audit.vanillaOverlapRecipes));
-  assert.equal(expected.size, 377);
+  assert.equal(audit.sharedStorageBlockRecipes.length, 78);
+  const expected = new Set(audit.previousRecipeIds.concat(audit.singleItemConversions, audit.stateResetAndDisassembly,
+    audit.sharedDustRecipes, audit.sharedStorageBlockRecipes, audit.vanillaOverlapRecipes));
+  assert.equal(expected.size, 455);
   assert.deepEqual([...overrides.recipeIds].sort(), [...expected].sort());
-  for (const id of ['ae2:decorative/fluix_block', 'ae2:misc/deconstruction_fluix_block',
+  for (const id of ['modern_industrialization:materials/steel/craft/block_from_ingot',
+    'modern_industrialization:materials/steel/craft/ingot_from_block',
     'ae2:decorative/quartz_block', 'ae2:misc/deconstruction_certus_quartz_block']) {
-    assert.equal(expected.has(id), false, 'ordinary material compression remains gated: ' + id);
+    assert.equal(expected.has(id), true, 'shared material storage is exempt: ' + id);
   }
   // Existing XP-gem compression exceptions remain; new recipe exceptions do not widen quest access.
   assert.deepEqual(overrides.publicQuestItems, ['ars_nouveau:experience_gem', 'ars_nouveau:greater_experience_gem',

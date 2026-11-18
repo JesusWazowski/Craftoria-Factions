@@ -1,119 +1,163 @@
 // Deployment-only script for DH 3.3.3 / NeoForge 1.21.1. Not part of packwiz.
-// All queue transitions run on the server thread; no credentials or RCON needed.
 const CFP = (() => {
   const Shared = Java.loadClass('com.seibel.distanthorizons.core.api.internal.SharedApi');
   const WG = Java.loadClass('com.seibel.distanthorizons.core.config.Config$Common$WorldGenerator');
   const Mode = Java.loadClass('com.seibel.distanthorizons.api.enums.worldGeneration.EDhApiDistantGeneratorMode');
   const Plan = Java.loadClass('com.seibel.distanthorizons.api.enums.worldGeneration.EDhApiGeneratorPlan');
-  const radiusChunks = 150;
-  const stateKey = 'craftoriaPregenQueueV1';
-  let worldServer;
+  const IdentityHashMap = Java.loadClass('java.util.IdentityHashMap');
+  const radii = [250, 320];
+  const stateKey = 'craftoriaPregenQueueV2';
+  const seed = '-2396434326660347612';
   const order = ['minecraft:overworld', 'minecraft:the_nether',
     'the_bumblezone:the_bumblezone', 'twilightforest:twilight_forest',
     'eternal_starlight:starlight', 'crystal_chronicles:alpha',
     'spectrum:deeper_down', 'spectrum:the_conservatory', 'minecraft:the_end'];
   const excluded = ['jamd:mining', 'jamd:nether', 'jamd:end', 'javd:void',
     'compactmachines:compact_world', 'irons_spellbooks:pocket_dimension', 'neovitae:dungeon', 'ae2:spatial_storage'];
-  let state = null, future = null, ticks = 0, ready = false, fatal = false;
-  function log(s) { console.info('[CFPregen] ' + s); }
+
+  let worldServer, state = null, job = null, idleTicks = 0, ready = false, fatal = false;
+  let waitingForOtherJob = false;
+  // Rhino can reject repeated block-scoped declarations in server callbacks.
+  function log(message) { console.info('[CFPregen] ' + message); }
   function manager() { return Shared.getAbstractDhWorld().getPregenManager(); }
   function save() {
-    state.updated = new Date().toISOString();
     worldServer.persistentData.putString(stateKey, JSON.stringify(state));
-    worldServer.runCommandSilent('save-all flush');
   }
   function load(server) {
-    worldServer = server;
-    const ids = [];
-    server.getAllLevels().forEach(level => ids.push(String(level.dimension)));
-    log('Registered dimensions: ' + ids.join(', '));
-    const unknown = ids.filter(id => order.indexOf(id) < 0 && excluded.indexOf(id) < 0);
-    if (unknown.length) throw new Error('Review unclassified dimensions: ' + unknown.join(', '));
-    if (server.persistentData.contains(stateKey)) {
-      state = JSON.parse(String(server.persistentData.getString(stateKey)));
-      if (state.schema !== 1 || state.seed !== '-2396434326660347612' ||
-          ![radiusChunks, 377].includes(state.radiusChunks) || !Array.isArray(state.tasks) ||
-          !Number.isInteger(state.next) || state.next < 0 || state.next > state.tasks.length ||
-          state.tasks.some(id => order.indexOf(id) < 0 || ids.indexOf(id) < 0))
-        throw new Error('Queue state invalid or dimensions changed; review saved queue state');
-    } else {
-      state = {schema: 1, seed: '-2396434326660347612', radiusChunks: radiusChunks,
-        center: [0, 0], tasks: order.filter(id => ids.indexOf(id) >= 0),
-        next: 0, enabled: false, active: null, error: null};
-      save();
-    }
-    if (Number(server.overworld().getSeed()) !== Number(state.seed))
+    if (Number(server.overworld().getSeed()) !== Number(seed))
       throw new Error('World seed does not match the authorized seed');
-    // Completed jobs at the old radius also cover the smaller target.
-    // Keep the queue paused and verify any unfinished job at the new radius.
-    if (state.radiusChunks === 377) {
-      state.radiusChunks = radiusChunks;
-      state.enabled = false;
-      state.active = null;
-      state.error = null;
+    var ids = [];
+    server.getAllLevels().forEach(level => ids.push(String(level.dimension)));
+    var unknown = ids.filter(id => !order.includes(id) && !excluded.includes(id));
+    if (unknown.length) throw new Error('Review unclassified dimensions: ' + unknown.join(', '));
+    var tasks = order.filter(id => ids.includes(id));
+    worldServer = server;
+    if (server.persistentData.contains(stateKey)) {
+      var saved = JSON.parse(String(server.persistentData.getString(stateKey)));
+      if (saved.schema !== 2 || saved.seed !== seed ||
+          JSON.stringify(saved.radii) !== JSON.stringify(radii) ||
+          JSON.stringify(saved.tasks) !== JSON.stringify(tasks) ||
+          !Number.isInteger(saved.pass) || saved.pass < 0 || saved.pass > radii.length ||
+          !Number.isInteger(saved.next) || saved.next < 0 || saved.next > tasks.length ||
+          (saved.pass === radii.length && saved.next !== 0) ||
+          typeof saved.enabled !== 'boolean') {
+        throw new Error('Saved queue state is invalid or the dimension list has changed');
+      }
+      state = saved;
+    } else {
+      // Older runs used different radii. Keep their world data and track both new passes separately.
+      state = {schema: 2, seed: seed, radii: radii, tasks: tasks, pass: 0,
+        next: 0, enabled: true, error: null};
       save();
     }
-    // The operator verified that the manual 150-chunk Overworld job finished.
-    // Apply that completion and resume once, so later pauses survive reloads.
-    if (!state.resumedAfterManualOverworld150 ||
-        (state.next === 1 && /redeclaration of var (command|dhCommand)\b/.test(String(state.error)))) {
-      if (state.tasks[0] !== 'minecraft:overworld' || manager().getRunningPregen() !== null)
-        throw new Error('Cannot apply the manual Overworld completion while DH is busy or the queue order has changed');
-      if (state.next === 0) state.next = 1;
-      state.active = null;
-      state.error = null;
-      state.enabled = state.next < state.tasks.length;
-      state.resumedAfterManualOverworld150 = true;
-      save();
-      log('Recorded manual Overworld completion at 150 chunks.');
-    }
-    log('Queue loaded: ' + state.tasks.join(' -> '));
     ready = true;
+    log('Queue loaded: ' + tasks.join(' -> '));
   }
   function fail(error) {
     fatal = true;
-    if (state) { state.enabled = false; state.error = String(error); try { save(); } catch (_) {} }
+    if (state) {
+      state.enabled = false;
+      state.error = String(error);
+      try { save(); } catch (_) {}
+    }
     log('HALTED: ' + error);
   }
+  function stopJob() {
+    if (!job || job.stopRequested || job.future.isDone()) return;
+    var running = manager().getRunningPregen();
+    // Rhino hides Object.equals on the DH future. Compare the underlying Java objects by identity.
+    var owned = new IdentityHashMap();
+    owned.put(job.future, true);
+    if (running === null || !owned.containsKey(running))
+      throw new Error('DH no longer identifies the running task as queue-owned');
+    worldServer.runCommandSilent('dh pregen stop');
+    job.stopRequested = true;
+    log('Stopping ' + job.dimension + ' at radius ' + job.radius +
+      '; the queue will retry the same dimension when eligible.');
+  }
+  function updateJob() {
+    if (!job) return;
+    if (!job.future.isDone()) {
+      if (job.stopRequested && ++job.stopWaitTicks >= 200)
+        throw new Error('DH did not finish stopping. Check dh pregen status before resuming.');
+      return;
+    }
+    var finished = job;
+    job = null;
+    if (finished.stopRequested) return;
+    if (finished.future.isCancelled() || finished.future.isCompletedExceptionally())
+      throw new Error('DH task cancelled or failed. Review before resuming.');
+    finished.future.join();
+    state.next++;
+    save();
+    log('Completed ' + finished.dimension + ' at radius ' + finished.radius);
+  }
+  function finishPass() {
+    var size = 2 * radii[state.pass] * 16;
+    // The vanilla border takes the full side length, and the queue generates around 0,0.
+    var border = worldServer.overworld().getWorldBorder();
+    if (border.getSize() > size) {
+      log('Keeping the existing Overworld border width of ' + border.getSize() +
+        ' blocks because the planned ' + size + '-block width would shrink it.');
+    } else {
+      border.setCenter(0, 0);
+      border.setSize(size);
+      if (border.getSize() !== size || border.getCenterX() !== 0 || border.getCenterZ() !== 0)
+        throw new Error('Could not apply the Overworld border');
+      log('Overworld border width is ' + size + ' blocks, centered at 0,0.');
+    }
+    state.pass++;
+    state.next = 0;
+    if (state.pass === radii.length) state.enabled = false;
+    save();
+    log('Finished all dimensions at radius ' + radii[state.pass - 1] + ' chunks.');
+  }
+  function startJob() {
+    WG.generatorPlan.set(Plan.CHUNKS_ONLY);
+    WG.chunkGeneratorMode.set(Mode.INTERNAL_SERVER);
+    if (String(WG.generatorPlan.get()) !== 'CHUNKS_ONLY' ||
+        String(WG.chunkGeneratorMode.get()) !== 'INTERNAL_SERVER')
+      throw new Error('Could not enable Full generation');
+    var dimension = state.tasks[state.next];
+    var radius = radii[state.pass];
+    var start = 'dh pregen start ' + dimension + ' 0 0 ' + radius;
+    log('Starting Full generation: ' + start);
+    worldServer.runCommandSilent(start);
+    var running = manager().getRunningPregen();
+    if (running === null) throw new Error('DH did not provide a running task; completion not assumed');
+    job = {dimension: dimension, radius: radius, future: running,
+      stopRequested: false, stopWaitTicks: 0};
+  }
   function tick(server) {
-    if (++ticks % 100 !== 0 || fatal) return;
+    var occupied = server.getPlayerList().getPlayerCount() > 0;
+    idleTicks = occupied ? 0 : Math.min(100, idleTicks + 1);
     try {
-      if (!ready) load(server);
-      if (future) {
-        if (!future.isDone()) return;
-        if (future.isCancelled() || future.isCompletedExceptionally()) {
-          future = null;
-          throw new Error('DH task cancelled or failed; unfinished dimension retained. Use resume after review.');
+      // Check owned work every tick so a login requests a stop promptly.
+      if (job) {
+        if (fatal) {
+          if (job.future.isDone()) job = null;
+          return;
         }
-        future.join();
-        future = null;
-        log('Completed ' + state.tasks[state.next]);
-        state.next++;
-        state.active = null;
-        save();
+        updateJob();
+        if (job && (occupied || !state.enabled)) stopJob();
       }
-      if (!state.enabled) return;
-      if (state.next === state.tasks.length) {
-        state.enabled = false;
-        save();
-        log('All queued dimensions complete.');
+      if (fatal || job || idleTicks < 100) return;
+      if (!ready) load(server);
+      if (!state.enabled || state.pass === radii.length) return;
+      if (manager().getRunningPregen() !== null) {
+        if (!waitingForOtherJob) log('Waiting for DH to become idle before starting a queued task.');
+        waitingForOtherJob = true;
         return;
       }
-      if (manager().getRunningPregen() !== null)
-        throw new Error('Another DH task is running; queue will not take ownership of it');
-      // Reassert exact mode for each task, including after a process restart.
-      WG.generatorPlan.set(Plan.CHUNKS_ONLY);
-      WG.chunkGeneratorMode.set(Mode.INTERNAL_SERVER);
-      if (String(WG.generatorPlan.get()) !== 'CHUNKS_ONLY' ||
-          String(WG.chunkGeneratorMode.get()) !== 'INTERNAL_SERVER')
-        throw new Error('Could not enable Full generation');
-      state.active = state.tasks[state.next];
-      save();
-      log('Starting Full generation: dh pregen start ' + state.active + ' 0 0 ' + radiusChunks);
-      server.runCommandSilent('dh pregen start ' + state.active + ' 0 0 ' + radiusChunks);
-      future = manager().getRunningPregen();
-      if (future === null) throw new Error('DH did not provide a running task; completion not assumed');
-    } catch (error) { fail(error); }
+      waitingForOtherJob = false;
+      if (state.next === state.tasks.length) {
+        finishPass();
+        return;
+      }
+      startJob();
+    } catch (error) {
+      if (!fatal) fail(error);
+    }
   }
   function command(source, action) {
     try {
@@ -121,28 +165,33 @@ const CFP = (() => {
       if (action === 'pause') {
         state.enabled = false;
         save();
-        if (future && !future.isDone()) future.cancel(true);
-        future = null;
-        log('Paused; current dimension remains unfinished.');
-      } else if (action === 'resume') {
-        if (manager().getRunningPregen() !== null && future === null)
-          throw new Error('Unowned DH task is running; stop it before resuming');
+        updateJob();
+        stopJob();
+      } else if (action === 'resume' && state.pass < radii.length) {
+        if (fatal && job && !job.future.isDone())
+          throw new Error('DH still has the previous task in flight');
+        if (fatal) job = null;
         fatal = false;
         state.error = null;
         state.enabled = true;
         save();
       }
-      log(JSON.stringify(state));
+      log(JSON.stringify({queue: state, players: worldServer.getPlayerList().getPlayerCount(),
+        active: job ? {dimension: job.dimension, radius: job.radius, stopping: job.stopRequested} : null}));
       log('DH: ' + manager().getStatusString());
       return 1;
-    } catch (error) { log('Command failed: ' + error); return 0; }
+    } catch (error) {
+      log('Command failed: ' + error);
+      return 0;
+    }
   }
   return {tick: tick, command: command};
 })();
+
 ServerEvents.tick(event => CFP.tick(event.server));
 ServerEvents.commandRegistry(event => {
-  const c = event.commands;
-  let root = c.literal('cfpregen').requires(source => source.hasPermission(4) && source.getEntity() === null);
+  var c = event.commands;
+  var root = c.literal('cfpregen').requires(source => source.hasPermission(4) && source.getEntity() === null);
   ['status', 'resume', 'pause'].forEach(action => {
     root = root.then(c.literal(action).executes(ctx => CFP.command(ctx.source, action)));
   });

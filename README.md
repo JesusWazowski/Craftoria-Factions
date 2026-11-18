@@ -222,12 +222,19 @@ The October 26 conversion expansion additionally exempts the 168 recipe IDs for
 the 85 reviewed one-item-in/one-item-out reversible pairs, plus all 189 entries
 in the reviewed state-reset/disassembly list. The exact groups and prior 12-ID
 baseline are recorded in `automation/faction-recipe-override-audit.json`; the
-runtime document now contains 377 unique recipe IDs. The six additional dust
+runtime document now contains 455 unique recipe IDs. The six additional dust
 exceptions allow every faction to mix copper and tin into bronze dust at either
 size and convert copper and tin between regular and tiny dust in both directions.
 Converting between regular and tiny bronze dust remains gated. The six existing
 XP-gem conversion exceptions remain as previously approved. Recipe exceptions do not create
 new item-task exemptions for quest rewards.
+
+Shared storage block exceptions cover 25 reversible material pairs (78 exact
+recipe IDs). Every faction can pack and unpack these blocks at a crafting table
+if they have the inputs. Examples include steel, bronze, raw ores, Certus Quartz,
+and Fluix. Equivalent recipes from different mods are included so that the
+exception survives Almost Unified's duplicate removal. Faction-only material
+storage, alloy production, and machine recipes retain their existing behavior.
 
 Cognition's book recipe and Twilight Forest's maze slime ball magma cream
 recipe are public because they overlap with public recipes for the same items.
