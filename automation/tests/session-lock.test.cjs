@@ -124,7 +124,7 @@ test('timed session commands parse compound durations, persist, and reverse once
   const s = setup(new Tag(), globals);
   const commands = [];
   s.handlers.registry({ commands: { literal: name => new Command(name), argument: name => new Command(name) }, register: node => commands.push(node) });
-  const [lock, unlock, info] = commands[0].children;
+  const [lock, unlock, , info] = commands[0].children;
   const source = s.command();
   assert.equal(lock.children[0].handler({ source, duration: '70m10s' }), 1);
   assert.equal(s.subject.reversalDeadline(s.server), now + 4210000);
@@ -162,10 +162,10 @@ test('a manual transition cancels its timer and a failed scheduled lock is consu
   assert.match(s.command.failure, /Cannot lock/);
 });
 
-test('only lock/unlock/info exist and require operator level 2', () => {
+test('lock/unlock/cancel/info require operator level 2', () => {
   const s = setup(); const commands = [];
   s.handlers.registry({ commands: { literal: name => new Command(name), argument: name => new Command(name) }, register: node => commands.push(node) });
-  assert.deepEqual(commands[0].children.map(node => node.name), ['lock', 'unlock', 'info']);
+  assert.deepEqual(commands[0].children.map(node => node.name), ['lock', 'unlock', 'cancel', 'info']);
   assert.equal(commands[0].predicate({ hasPermission: level => level <= 1 }), false);
   assert.equal(commands[0].predicate({ hasPermission: level => level <= 2 }), true);
 });
@@ -466,5 +466,31 @@ test('delayed changes survive reload and duration starts at the scheduled time',
   assert.equal(loaded.subject.locked(loaded.server), true);
   for (const bad of ['1m2h', '1h1h', '1h 2m', '3', '0s', '-2h', '']) {
     assert.throws(() => loaded.subject.parseTime(bad));
+  }
+});
+
+test('cancel clears delayed changes and reversals without changing state, including after reload', () => {
+  let now = 1000;
+  const globals = { Date: { now: () => now } };
+  for (const locked of [true, false]) {
+    for (const delayed of [true, false]) {
+      const s = setup(new Tag(), globals);
+      const commands = [];
+      s.handlers.registry({ commands: { literal: name => new Command(name), argument: name => new Command(name) }, register: node => commands.push(node) });
+      s.subject.change(s.command(), locked, '2h', delayed ? '1h' : null);
+      const current = s.subject.locked(s.server);
+      const cancel = commands[0].children.find(node => node.name === 'cancel');
+      assert.equal(cancel.handler({ source: s.command() }), 1);
+      assert.equal(s.subject.locked(s.server), current);
+      assert.equal(s.subject.reversalStatus(s.server), '');
+      assert.equal(s.server.persistentData.getDouble('sessionScheduledDuration'), 0);
+      const reloaded = setup(s.server.persistentData, globals);
+      reloaded.server.createCommandSourceStack = () => reloaded.command();
+      now += 14400000;
+      reloaded.subject.reverseIfDue(reloaded.server);
+      assert.equal(reloaded.subject.locked(reloaded.server), current);
+      assert.equal(reloaded.subject.cancel(reloaded.command()), 1);
+      assert.match(reloaded.command.success, /No session timer/);
+    }
   }
 });

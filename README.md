@@ -95,6 +95,7 @@ FTB Ranks 2101.1.5, and FTB XMod Compat 21.1.12.
 | --- | --- | --- |
 | `/session unlock [duration] [delay]` | Permission level 2 or console | Allows exploration and FTB claim/unclaim operations. |
 | `/session lock [duration] [delay]` | Permission level 2 or console | Freezes claims and confines players to chunks claimed by anyone. |
+| `/session cancel` | Permission level 2 or console | Cancels a delayed change or reversal while keeping the current session state. |
 | `/session info` | Permission level 2 or console | Shows the session state and any scheduled reversal. |
 | `/sethome [party]` | Own party: owner/officers; explicit party: operators | Sets the selected party's home at your position while unlocked, within world bounds in that party's claim. |
 | `/home` | Party members | Shows the validated home or explains missing setup. |
@@ -702,7 +703,7 @@ both client and server. This verifies the protocol versions; connected-client
 acceptance in **Craftoria Factions Test** is still required.
 
 ServuxForged 0.4.2 for Minecraft 1.21.1 fixes the dedicated-server bootstrap
-crash in 0.4.1. The server uses the publisherâ€™s 1.21.1 NeoForge artifact. The
+crash in 0.4.1. The server uses the publisherÃ¢â‚¬â„¢s 1.21.1 NeoForge artifact. The
 installed Forgematica 0.4.3 is newer than its security-fixed 0.4.2 release.
 This ServuxForged version requires no additional mods.
 

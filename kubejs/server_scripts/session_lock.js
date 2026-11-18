@@ -314,6 +314,17 @@ const factionSession = {
     return result;
   },
 
+  cancel(source) {
+    var data = source.server.persistentData;
+    var pending = this.reversalDeadline(source.server) || data.getDouble('sessionScheduledStart');
+    data.putDouble('sessionScheduledStart', 0);
+    data.putDouble('sessionScheduledDuration', 0);
+    data.putBoolean('sessionScheduledLocked', false);
+    data.putDouble('sessionReversalDeadline', 0);
+    source.sendSuccess(Text.of(pending ? 'Session timer cancelled.' : 'No session timer is pending.'), false);
+    return 1;
+  },
+
   reversalStatus(server) {
     var deadline = this.reversalDeadline(server);
     var start = server.persistentData.getDouble('sessionScheduledStart');
@@ -462,6 +473,8 @@ ServerEvents.commandRegistry(event => {
   event.register(commands.literal('session').requires(source => source.hasPermission(2))
     .then(transition('lock', true))
     .then(transition('unlock', false))
+    .then(commands.literal('cancel').executes(context => factionSession.command(context.source,
+      () => factionSession.cancel(context.source))))
     .then(commands.literal('info').executes(info)).executes(info));
   event.register(commands.literal('sethome')
     .executes(context => factionSession.command(context.source, () => factionSession.setHome(context.source)))
