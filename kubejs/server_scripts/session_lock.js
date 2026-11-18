@@ -282,48 +282,68 @@ const factionSession = {
     return server.persistentData.getDouble('sessionReversalDeadline');
   },
 
-  change(source, locked, duration) {
-    let deadline = 0;
-    if (duration != null) {
-      const input = duration.trim().toLowerCase();
-      const units = { h: 3600, m: 60, s: 1 };
-      if (!/^(?:\d+[hms]\s*)+$/.test(input)) {
-        source.sendFailure(Text.of('Use a positive duration such as 3h or 70m 10s.'));
-        return 0;
-      }
-      let seconds = 0;
-      input.match(/\d+[hms]/g).forEach(part => {
-        seconds += Number(part.slice(0, -1)) * units[part.slice(-1)];
-      });
-      deadline = Date.now() + seconds * 1000;
-      if (seconds <= 0 || !Number.isSafeInteger(deadline)) {
-        source.sendFailure(Text.of('Use a positive duration within the supported range.'));
-        return 0;
-      }
+  parseTime(value) {
+    var match = /^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/.exec(value);
+    if (!match || !value) throw new Error('Use a time such as 2h, 3h20m or 4h5m09s.');
+    var milliseconds = (Number(match[1] || 0) * 3600 + Number(match[2] || 0) * 60 + Number(match[3] || 0)) * 1000;
+    if (milliseconds <= 0 || milliseconds > 9007199254740991 - Date.now()) {
+      throw new Error('Time must be positive and within the supported range.');
     }
+    return milliseconds;
+  },
 
-    const result = this.setLocked(source, locked);
+  change(source, locked, duration, delay) {
+    var length = duration == null ? 0 : this.parseTime(duration);
+    var wait = delay == null ? 0 : this.parseTime(delay);
+    if (length + wait > 9007199254740991 - Date.now()) throw new Error('Combined time is too large.');
+    var data = source.server.persistentData;
+    if (wait) {
+      data.putDouble('sessionScheduledStart', Date.now() + wait);
+      data.putBoolean('sessionScheduledLocked', locked);
+      data.putDouble('sessionScheduledDuration', length);
+      data.putDouble('sessionReversalDeadline', 0);
+      source.sendSuccess(Text.of('Session change scheduled.' + this.reversalStatus(source.server)), false);
+      return 1;
+    }
+    var result = this.setLocked(source, locked);
     if (result) {
-      source.server.persistentData.putDouble('sessionReversalDeadline', deadline);
-      if (deadline) source.sendSuccess(Text.of(this.reversalStatus(source.server).trim()), false);
+      data.putDouble('sessionScheduledStart', 0);
+      data.putDouble('sessionReversalDeadline', length ? Date.now() + length : 0);
+      if (length) source.sendSuccess(Text.of(this.reversalStatus(source.server).trim()), false);
     }
     return result;
   },
 
   reversalStatus(server) {
-    const deadline = this.reversalDeadline(server);
+    var deadline = this.reversalDeadline(server);
+    var start = server.persistentData.getDouble('sessionScheduledStart');
+    if (start) return ' Scheduled to ' + (server.persistentData.getBoolean('sessionScheduledLocked') ? 'lock' : 'unlock')
+      + ' in ' + Math.max(0, Math.ceil((start - Date.now()) / 1000)) + 's for '
+      + Math.ceil(server.persistentData.getDouble('sessionScheduledDuration') / 1000) + 's.';
     if (!deadline) return '';
-    const seconds = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
-    const time = [Math.floor(seconds / 3600) + 'h', Math.floor(seconds / 60) % 60 + 'm', seconds % 60 + 's'];
+    var seconds = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+    var time = [Math.floor(seconds / 3600) + 'h', Math.floor(seconds / 60) % 60 + 'm', seconds % 60 + 's'];
     return ' Scheduled to ' + (this.locked(server) ? 'unlock' : 'lock') + ' in ' + time.join(' ') + '.';
   },
 
   reverseIfDue(server) {
-    const deadline = this.reversalDeadline(server);
+    var data = server.persistentData;
+    var start = data.getDouble('sessionScheduledStart');
+    if (start && Date.now() >= start) {
+      data.putDouble('sessionScheduledStart', 0);
+      var target = data.getBoolean('sessionScheduledLocked');
+      var length = data.getDouble('sessionScheduledDuration');
+      if (this.command(server.createCommandSourceStack(), () => this.setLocked(server.createCommandSourceStack(), target))) {
+        data.putDouble('sessionReversalDeadline', length ? start + length : 0);
+      } else {
+        this.alert(server, 'Scheduled session change failed. Check faction homes before trying again.');
+      }
+    }
+    var deadline = this.reversalDeadline(server);
     if (!deadline || Date.now() < deadline) return;
     // Consume the timer once, even if the normal lock preconditions fail.
     server.persistentData.putDouble('sessionReversalDeadline', 0);
-    const source = server.createCommandSourceStack();
+    var source = server.createCommandSourceStack();
     if (!this.command(source, () => this.setLocked(source, !this.locked(server)))) {
       this.alert(server, 'Scheduled session reversal failed. See the server log and run /session after resolving the issue.');
     }
@@ -424,11 +444,14 @@ const factionSession = {
 ServerEvents.commandRegistry(event => {
   let commands = event.commands;
   let transition = (name, locked) => {
-    let run = (context, duration) => factionSession.command(context.source,
-      () => factionSession.change(context.source, locked, duration));
-    return commands.literal(name).executes(context => run(context, null))
-      .then(commands.argument('duration', SessionDurationArgument.greedyString())
-        .executes(context => run(context, String(SessionDurationArgument.getString(context, 'duration')))));
+    let run = (context, duration, delay) => factionSession.command(context.source,
+      () => factionSession.change(context.source, locked, duration, delay));
+    return commands.literal(name).executes(context => run(context, null, null))
+      .then(commands.argument('duration', SessionDurationArgument.word())
+        .executes(context => run(context, String(SessionDurationArgument.getString(context, 'duration')), null))
+        .then(commands.argument('delay', SessionDurationArgument.word())
+          .executes(context => run(context, String(SessionDurationArgument.getString(context, 'duration')),
+            String(SessionDurationArgument.getString(context, 'delay'))))));
   };
   let info = context => {
     let server = context.source.server;

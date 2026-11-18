@@ -93,24 +93,20 @@ FTB Ranks 2101.1.5, and FTB XMod Compat 21.1.12.
 
 | Command | Who can use it | Effect |
 | --- | --- | --- |
-| `/session unlock [duration]` | Permission level 2 or console | Allows exploration and FTB claim/unclaim operations. |
-| `/session lock [duration]` | Permission level 2 or console | Freezes claims and confines players to chunks claimed by anyone. |
+| `/session unlock [duration] [delay]` | Permission level 2 or console | Allows exploration and FTB claim/unclaim operations. |
+| `/session lock [duration] [delay]` | Permission level 2 or console | Freezes claims and confines players to chunks claimed by anyone. |
 | `/session info` | Permission level 2 or console | Shows the session state and any scheduled reversal. |
 | `/sethome [party]` | Own party: owner/officers; explicit party: operators | Sets the selected party's home at your position while unlocked, within world bounds in that party's claim. |
 | `/home` | Party members | Shows the validated home or explains missing setup. |
 
-Use `/session unlock 3h` to open for three hours or `/session lock 70m 10s`
-to close for seventy minutes and ten seconds. The timer uses real time and
-survives a restart. If it expires while the server is stopped, the reversal
-runs on startup. A successful untimed lock or unlock cancels the timer. A new
-timed command replaces it. If an automatic lock fails the usual faction-home
-checks, the server alerts operators and leaves the session open.
-
-Locked-session faction selection and login send members to their faction home.
-The server verifies arrival in the home's claim chunk after one second and
-retries missed arrivals every two seconds, up to five attempts. Continued
-failure disconnects the player with a reconnect message. Console messages
-prefixed `[Faction arrival]` record confirmations and retries.
+Use `/session unlock 2h` to open for two hours, or
+`/session unlock 3h20m 4h5m09s` to open for three hours and twenty minutes
+after a delay of four hours, five minutes and nine seconds. Each time is one
+word, with optional hours, minutes and seconds in that order. Times must be
+positive. An untimed command takes effect immediately and cancels pending timers.
+A new timed command replaces pending timers. Timers use real time and survive
+restarts, including time spent offline. Overdue transitions run on startup.
+Automatic locks use the usual faction-home checks and alert operators on failure.
 
 `/home` only reports the shared faction checkpoint; it never teleports. Travel
 relies on player-built infrastructure. `/sethome` replaces `/faction home set`;
@@ -706,7 +702,7 @@ both client and server. This verifies the protocol versions; connected-client
 acceptance in **Craftoria Factions Test** is still required.
 
 ServuxForged 0.4.2 for Minecraft 1.21.1 fixes the dedicated-server bootstrap
-crash in 0.4.1. The server uses the publisher’s 1.21.1 NeoForge artifact. The
+crash in 0.4.1. The server uses the publisherâ€™s 1.21.1 NeoForge artifact. The
 installed Forgematica 0.4.3 is newer than its security-fixed 0.4.2 release.
 This ServuxForged version requires no additional mods.
 

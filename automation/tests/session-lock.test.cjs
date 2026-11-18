@@ -73,7 +73,7 @@ function setup(data = new Tag(), globals = {}) {
     FTBChunksWorldConfig: Object.fromEntries(['MAX_CLAIMED_CHUNKS', 'HARD_TEAM_CLAIM_LIMIT', 'PARTY_LIMIT_MODE', 'MAX_IDLE_DAYS_BEFORE_UNCLAIM']
       .map(key => [key, { set: value => { configs[key] = value; } }])),
     PartyLimitMode: { LARGEST: 'largest' }, TeamRank: { OFFICER: 'officer' },
-    StringArgumentType: { greedyString: () => 'greedy', getString: context => context.duration },
+    StringArgumentType: { word: () => 'word', getString: (context, name) => context[name] },
     TeamArgument: { create: type => type, get: context => context.target }, TeamType: { PARTY: 'party' },
     ChunkDimPos: ChunkPos, BlockPos, AABB: Box, Direction: { UP: 'up' },
     ResourceKey: { create: (_, dimension) => dimension }, ResourceLocation: { parse: value => value },
@@ -126,7 +126,7 @@ test('timed session commands parse compound durations, persist, and reverse once
   s.handlers.registry({ commands: { literal: name => new Command(name), argument: name => new Command(name) }, register: node => commands.push(node) });
   const [lock, unlock, info] = commands[0].children;
   const source = s.command();
-  assert.equal(lock.children[0].handler({ source, duration: '70m 10s' }), 1);
+  assert.equal(lock.children[0].handler({ source, duration: '70m10s' }), 1);
   assert.equal(s.subject.reversalDeadline(s.server), now + 4210000);
   info.handler({ source });
   assert.match(s.command.success, /unlock in 1h 10m 10s/);
@@ -446,4 +446,25 @@ test('unaffiliated players still block locking unmanaged worlds', () => {
   assert.equal(s.subject.setLocked(s.command(), true), 0);
   assert.equal(Boolean(s.subject.locked(s.server)), false);
   assert.match(s.command.failure, /must join/);
+});
+
+test('delayed changes survive reload and duration starts at the scheduled time', () => {
+  let now = 1000;
+  const globals = { Date: { now: () => now } };
+  const s = setup(new Tag(), globals);
+  s.subject.setLocked(s.command(), true);
+  assert.equal(s.subject.change(s.command(), false, '3h20m', '4h5m09s'), 1);
+  assert.equal(s.subject.locked(s.server), true);
+  const loaded = setup(s.server.persistentData, globals);
+  loaded.server.createCommandSourceStack = () => loaded.command();
+  now += 14709000;
+  loaded.subject.reverseIfDue(loaded.server);
+  assert.equal(loaded.subject.locked(loaded.server), false);
+  assert.equal(loaded.subject.reversalDeadline(loaded.server), now + 12000000);
+  now += 12000000;
+  loaded.subject.reverseIfDue(loaded.server);
+  assert.equal(loaded.subject.locked(loaded.server), true);
+  for (const bad of ['1m2h', '1h1h', '1h 2m', '3', '0s', '-2h', '']) {
+    assert.throws(() => loaded.subject.parseTime(bad));
+  }
 });
