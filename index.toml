@@ -20046,7 +20046,7 @@ hash = "a28d2e53fcbca3ef474a873061e21e84e8ba4c2976d730b85560cdab6b6c3097"
 
 [[files]]
 file = "kubejs/server_scripts/faction_parties.js"
-hash = "051f5c49ae35f62c65410d63320776091bbb8ae39375ac392085a3ba7f7e0ae8"
+hash = "74486ecbfb06877a97e5c17a0c35d2d85742bb103456796b616321a4731fc33e"
 
 [[files]]
 file = "kubejs/server_scripts/faction_quest_rewards.js"

@@ -106,6 +106,12 @@ runs on startup. A successful untimed lock or unlock cancels the timer. A new
 timed command replaces it. If an automatic lock fails the usual faction-home
 checks, the server alerts operators and leaves the session open.
 
+Locked-session faction selection and login send members to their faction home.
+The server verifies arrival in the home's claim chunk after one second and
+retries missed arrivals every two seconds, up to five attempts. Continued
+failure disconnects the player with a reconnect message. Console messages
+prefixed `[Faction arrival]` record confirmations and retries.
+
 `/home` only reports the shared faction checkpoint; it never teleports. Travel
 relies on player-built infrastructure. `/sethome` replaces `/faction home set`;
 `/faction home` and `/factionhome` are removed. Essentials personal-home commands

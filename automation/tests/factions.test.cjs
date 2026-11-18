@@ -342,3 +342,32 @@ test('auto refreshes expected stages even when already automatic; unmanaged worl
   const legacy = setup({ age: 20 }); legacy.subject.initialize(legacy.server);
   assert.throws(() => legacy.subject.stageMode(operatorSource(legacy.server), legacy.player(), true), /not applied automatically/);
 });
+
+test('locked faction arrival retries a missed teleport and releases after arrival', () => {
+  const s = setup(); s.subject.initialize(s.server); const p = s.player();
+  s.session.isLocked = true;
+  const team = s.subject.team('mechanists');
+  team.home = { dimension: 'minecraft:overworld', x: 100, y: 64, z: 20 };
+  let calls = 0;
+  s.session.returnHome = (player, home) => {
+    calls++;
+    if (calls > 1) Object.assign(player, { x: home.x, y: home.y, z: home.z });
+  };
+  team.join(p);
+  for (let i = 0; i < 20; i++) s.subject.verifyArrival(p);
+  assert.equal(calls, 2);
+  for (let i = 0; i < 40; i++) s.subject.verifyArrival(p);
+  assert.equal(s.subject.arrivals.has(p.uuid), false);
+  assert.equal(calls, 2);
+});
+
+test('locked login schedules home verification and logout clears it', () => {
+  const s = setup(); s.subject.initialize(s.server); const p = s.player();
+  s.subject.join(p, 'mechanists', false);
+  s.session.isLocked = true;
+  s.subject.team('mechanists').home = { dimension: 'minecraft:overworld', x: 100, y: 64, z: 20 };
+  s.handlers.players.login({ player: p, server: s.server });
+  assert.equal(s.subject.arrivals.has(p.uuid), true);
+  s.handlers.players.logout({ player: p });
+  assert.equal(s.subject.arrivals.has(p.uuid), false);
+});

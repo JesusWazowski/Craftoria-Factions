@@ -17,6 +17,7 @@ const FactionCancelable = Java.loadClass('net.neoforged.bus.api.ICancellableEven
 const factionParties = {
   initialized: false,
   pending: new Map(),
+  arrivals: new Map(),
   joining: new Set(),
   lastTeams: new Map(),
   rankTick: 0,
@@ -194,6 +195,48 @@ const factionParties = {
     return this.active() && this.pending.has(String(player.uuid)) && factionSession.locked(player.server) && !this.party(player);
   },
 
+  sendHome(player, home) {
+    factionSession.returnHome(player, home, true);
+    this.pending.delete(String(player.uuid));
+    this.arrivals.set(String(player.uuid), { delay: 20, attempts: 1 });
+  },
+
+  verifyArrival(player) {
+    let id = String(player.uuid);
+    let arrival = this.arrivals.get(id);
+    if (!arrival) return;
+    if (!factionSession.locked(player.server)) {
+      this.arrivals.delete(id);
+      return;
+    }
+    if (--arrival.delay > 0) return;
+    let team = this.party(player);
+    let home = team ? factionSession.home(player.server, team) : null;
+    if (!home) {
+      this.arrivals.delete(id);
+      factionSession.rejectPlayer(player, 'Faction home unavailable during faction arrival');
+      return;
+    }
+    // Allow normal movement after arrival within the faction home's validated claim chunk.
+    if (String(player.level.dimension) === home.dimension &&
+        Math.floor(player.x / 16) === Math.floor(home.x / 16) &&
+        Math.floor(player.z / 16) === Math.floor(home.z / 16)) {
+      this.arrivals.delete(id);
+      console.info('[Faction arrival] Confirmed home arrival for ' + player.username);
+      return;
+    }
+    if (arrival.attempts >= 5) {
+      this.arrivals.delete(id);
+      factionSession.rejectPlayer(player, 'Could not confirm faction home arrival; reconnect to retry');
+      return;
+    }
+    arrival.attempts++;
+    arrival.delay = 40;
+    console.warn('[Faction arrival] Retrying home arrival for ' + player.username +
+      ' (attempt ' + arrival.attempts + ')');
+    factionSession.returnHome(player, home, true);
+  },
+
   join(player, id, transfer) {
     if (!this.active()) throw new Error('Factions are not present in this world! Please create or new world.');
     let definition = this.definition(id);
@@ -220,14 +263,14 @@ const factionParties = {
     finally { this.joining.delete(String(player.uuid)); }
     this.stages(player);
     if (home) {
-      factionSession.returnHome(player, home, true);
-      this.pending.delete(String(player.uuid));
+      this.sendHome(player, home);
     } else this.pending.delete(String(player.uuid));
     this.manager().saveNow();
     return 1;
   },
 
   remove(player) {
+    this.arrivals.delete(String(player.uuid));
     let team = this.party(player);
     if (!team) return 0;
     if (team.isOwner(player.uuid)) {
@@ -263,8 +306,7 @@ const factionMembershipChanged = event => {
     factionSession.homeCache.clear();
     let home = factionSession.home(player.server, team);
     if (home) {
-      factionSession.returnHome(player, home, true);
-      factionParties.pending.delete(String(player.uuid));
+      factionParties.sendHome(player, home);
     }
   }
 };
@@ -284,9 +326,15 @@ ServerEvents.tick(event => {
   event.server.getPlayerList().getPlayers().forEach(player => {
     if (player instanceof FactionFakePlayer) return;
     let party = factionParties.party(player);
+    // Reconcile membership restored after the native join callback or delayed login setup.
+    if (party && factionParties.pending.has(String(player.uuid)) && factionSession.locked(event.server)) {
+      let home = factionSession.home(event.server, party);
+      if (home) factionParties.sendHome(player, home);
+    }
     if (factionParties.lastTeams.get(String(player.uuid)) !== String(party ? party.getId() : '')) factionParties.stages(player);
     if (!party && factionSession.locked(event.server)) factionParties.hold(player);
     else factionParties.pending.delete(String(player.uuid));
+    factionParties.verifyArrival(player);
   });
 });
 
@@ -294,10 +342,16 @@ PlayerEvents.loggedIn(event => {
   event.server.scheduleInTicks(1, () => {
     factionParties.stages(event.player);
     if (!factionSession.locked(event.server)) factionParties.choose(event.player);
+    else {
+      let team = factionParties.party(event.player);
+      let home = team ? factionSession.home(event.server, team) : null;
+      if (home) factionParties.sendHome(event.player, home);
+    }
   });
 });
 PlayerEvents.loggedOut(event => {
   factionParties.pending.delete(String(event.player.uuid));
+  factionParties.arrivals.delete(String(event.player.uuid));
   factionParties.lastTeams.delete(String(event.player.uuid));
 });
 
