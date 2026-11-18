@@ -283,9 +283,9 @@ const factionSession = {
   },
 
   parseTime(value) {
-    var match = /^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/.exec(value);
+    let match = /^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/.exec(value);
     if (!match || !value) throw new Error('Use a time such as 2h, 3h20m or 4h5m09s.');
-    var milliseconds = (Number(match[1] || 0) * 3600 + Number(match[2] || 0) * 60 + Number(match[3] || 0)) * 1000;
+    let milliseconds = (Number(match[1] || 0) * 3600 + Number(match[2] || 0) * 60 + Number(match[3] || 0)) * 1000;
     if (milliseconds <= 0 || milliseconds > 9007199254740991 - Date.now()) {
       throw new Error('Time must be positive and within the supported range.');
     }
@@ -293,10 +293,10 @@ const factionSession = {
   },
 
   change(source, locked, duration, delay) {
-    var length = duration == null ? 0 : this.parseTime(duration);
-    var wait = delay == null ? 0 : this.parseTime(delay);
+    let length = duration == null ? 0 : this.parseTime(duration);
+    let wait = delay == null ? 0 : this.parseTime(delay);
     if (length + wait > 9007199254740991 - Date.now()) throw new Error('Combined time is too large.');
-    var data = source.server.persistentData;
+    let data = source.server.persistentData;
     if (wait) {
       data.putDouble('sessionScheduledStart', Date.now() + wait);
       data.putBoolean('sessionScheduledLocked', locked);
@@ -305,7 +305,7 @@ const factionSession = {
       source.sendSuccess(Text.of('Session change scheduled.' + this.reversalStatus(source.server)), false);
       return 1;
     }
-    var result = this.setLocked(source, locked);
+    let result = this.setLocked(source, locked);
     if (result) {
       data.putDouble('sessionScheduledStart', 0);
       data.putDouble('sessionReversalDeadline', length ? Date.now() + length : 0);
@@ -326,35 +326,35 @@ const factionSession = {
   },
 
   reversalStatus(server) {
-    var deadline = this.reversalDeadline(server);
-    var start = server.persistentData.getDouble('sessionScheduledStart');
+    let deadline = this.reversalDeadline(server);
+    let start = server.persistentData.getDouble('sessionScheduledStart');
     if (start) return ' Scheduled to ' + (server.persistentData.getBoolean('sessionScheduledLocked') ? 'lock' : 'unlock')
       + ' in ' + Math.max(0, Math.ceil((start - Date.now()) / 1000)) + 's for '
       + Math.ceil(server.persistentData.getDouble('sessionScheduledDuration') / 1000) + 's.';
     if (!deadline) return '';
-    var seconds = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
-    var time = [Math.floor(seconds / 3600) + 'h', Math.floor(seconds / 60) % 60 + 'm', seconds % 60 + 's'];
+    let seconds = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+    let time = [Math.floor(seconds / 3600) + 'h', Math.floor(seconds / 60) % 60 + 'm', seconds % 60 + 's'];
     return ' Scheduled to ' + (this.locked(server) ? 'unlock' : 'lock') + ' in ' + time.join(' ') + '.';
   },
 
   reverseIfDue(server) {
-    var data = server.persistentData;
-    var start = data.getDouble('sessionScheduledStart');
+    let data = server.persistentData;
+    let start = data.getDouble('sessionScheduledStart');
     if (start && Date.now() >= start) {
       data.putDouble('sessionScheduledStart', 0);
-      var target = data.getBoolean('sessionScheduledLocked');
-      var length = data.getDouble('sessionScheduledDuration');
+      let target = data.getBoolean('sessionScheduledLocked');
+      let length = data.getDouble('sessionScheduledDuration');
       if (this.command(server.createCommandSourceStack(), () => this.setLocked(server.createCommandSourceStack(), target))) {
         data.putDouble('sessionReversalDeadline', length ? start + length : 0);
       } else {
         this.alert(server, 'Scheduled session change failed. Check faction homes before trying again.');
       }
     }
-    var deadline = this.reversalDeadline(server);
+    let deadline = this.reversalDeadline(server);
     if (!deadline || Date.now() < deadline) return;
     // Consume the timer once, even if the normal lock preconditions fail.
     server.persistentData.putDouble('sessionReversalDeadline', 0);
-    var source = server.createCommandSourceStack();
+    let source = server.createCommandSourceStack();
     if (!this.command(source, () => this.setLocked(source, !this.locked(server)))) {
       this.alert(server, 'Scheduled session reversal failed. See the server log and run /session after resolving the issue.');
     }
