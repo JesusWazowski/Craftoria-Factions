@@ -1,9 +1,9 @@
 const { any, custom, BACKPACKS } = require('./helpers.cjs');
 
-// Identical for every faction: 1 chunk each.
+// Identical for every faction: 2 chunks each.
 const starters = () => [
   {
-    key: 'home', title: 'Set a Faction Home', chunks: 1,
+    key: 'home', title: 'Set a Faction Home', chunks: 2,
     icon: 'minecraft:white_banner', shape: 'gear', size: 1.5, starter: true,
     tasks: [custom('home', 'Set a valid faction home', 'minecraft:compass')],
     desc: [
@@ -20,7 +20,7 @@ const starters = () => [
     ],
   },
   {
-    key: 'backpack', title: 'Obtain a Sophisticated Backpack', chunks: 1,
+    key: 'backpack', title: 'Obtain a Sophisticated Backpack', chunks: 2,
     icon: 'sophisticatedbackpacks:backpack', shape: 'gear', size: 1.5, starter: true,
     tasks: [any(BACKPACKS, 'Any Sophisticated Backpack')],
     desc: [

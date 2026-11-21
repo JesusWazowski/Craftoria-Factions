@@ -4302,7 +4302,7 @@ hash = "7bc481e810c7a677244a46a03ef7a2fd3ea98658ed3f494dc93e7b8cd479d980"
 
 [[files]]
 file = "config/ftbchunks-world.snbt"
-hash = "7a43fb07767176810dcebc0d9436d83b8d08de32481c3f2dd4dbf628f657a4fa"
+hash = "e7ff15cd659f80852a78bbee0190203546c4b5bfee7bf0e5719488e58b79fbfa"
 
 [[files]]
 file = "config/ftbessentials.snbt"
@@ -4466,7 +4466,7 @@ hash = "bd15b9b7cfbf0cbb1f20ab394805f88c23917d9ecf45b47d60271892a35daf2d"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "d13c3e625213a53916bf08afd38a6eac6e73e6851574da7f137447847b1d0b58"
+hash = "90f569ea8364529a70890a21028889a3a345a97be592e6601ac1b9d1d486fd95"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us/chapters/Applied Energistics.snbt"
@@ -18758,7 +18758,7 @@ hash = "4e110bfab57c7b0c78e6bf48775afa841f42552746c0f7e23d05cd5872c2c82a"
 
 [[files]]
 file = "kubejs/config/faction_milestones.json"
-hash = "296a7d51fcb6088fd19778ddbe7531ca2ad1b307db8d0700af32324e43c53ec0"
+hash = "105a8152301a03f1d6708b2dc10e2add167f471a11ac446abce60542c7327251"
 
 [[files]]
 file = "kubejs/config/faction_recipe_overrides.json"
@@ -20098,7 +20098,7 @@ hash = "b42b7394c74a00ab1a5fc95b184e7baf52e9972699d3cff384f24126de99d36b"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
-hash = "c2b7bdca3b53d98c7e62b481e745b10185152ec39c53363c5bc717cea43cd159"
+hash = "9d25287cc0fdcb5d7a7c23644c847dd7976b0fd537c220a863f314b5431355a6"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"

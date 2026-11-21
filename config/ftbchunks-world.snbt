@@ -82,13 +82,13 @@
 		# Default: 0
 		# Range: 0 ~ 2147483647
 		# Faction milestone cap; faction_milestones.json is authoritative and session_lock.js enforces it at runtime.
-		hard_team_claim_limit: 64
+		hard_team_claim_limit: 124
 		
 		# Max claimed chunks.
 		# You can override this with FTB Ranks 'ftbchunks.max_claimed' permission
 		# Default: 500
 		# Range: -∞ ~ +∞
-		# Base allowance; faction milestone quests add up to 60 per faction (see README.md#faction-milestones).
+		# Base allowance; faction milestone quests add up to 120 per faction (see README.md#faction-milestones).
 		max_claimed_chunks: 4
 		
 		# Maximum time (in real-world days) where if no player in a team logs in, the team automatically loses their claims.

@@ -146,12 +146,13 @@ current FTB party UUID, not scoreboard teams or progression-stage names.
 New worlds create the four faction parties automatically; reserved system members
 do not count toward the home-readiness check. Existing worlds retain their parties.
 
-On session closure or login while locked, players in wilderness return home;
-players already in any claim stay there. Later wilderness crossings quietly return
-to the most recent accepted claimed position, usually one tick behind. This keeps
-players near the border instead of sending them across the map. Unsafe, missing,
-or cross-dimension snapshots fall back to home. Snapshots include height and
-facing, allow collision-free airborne positions, and are not saved across restart. Own, allied, enemy, and server claims all count. Adjacent
+During a locked session, players already inside any claim stay in place on
+login. Wilderness crossings try recent valid claimed positions, then nearby
+positions within four blocks, before using the faction home. On login outside
+claims, nearby recovery comes first, followed by the last saved claimed position
+in the same dimension and the faction home. Positions include height and facing,
+and allow collision-free airborne returns. The latest position survives restart.
+Own, allied, enemy, and server claims all count. Adjacent
 claims connect; unclaimed holes and gaps remain wilderness. Teleports to
 disconnected claimed areas are allowed. Operators obey these rules too.
 Members who lose a valid home are disconnected and operators are alerted. In new
@@ -454,7 +455,7 @@ The pack defaults are in `config/ftbchunks-world.snbt`:
 
 ```snbt
 max_claimed_chunks: 4
-hard_team_claim_limit: 64
+hard_team_claim_limit: 124
 party_limit_mode: "largest"
 max_idle_days_before_unclaim: 0
 ```
@@ -474,7 +475,7 @@ them. See [Faction milestones](#faction-milestones).
 
 Each faction has a milestone chapter in the **Faction Milestones** quest group:
 Stargazers, Mechanists, Spellcasters and Ritualists. A party starts with **4**
-claimable chunks and earns the other **60** (up to **64**) by completing its own
+claimable chunks and earns the other **120** (up to **124**) by completing its own
 chapter. Every chapter opens with the same two 1-chunk starters (set a faction
 home with `/sethome`; craft a Sophisticated Backpack) and uses the same chunk
 budget per tier: 10 / 14 / 16 / 14 chunks for tiers I-IV plus a 4-chunk capstone.
@@ -490,7 +491,7 @@ How it works:
   worlds the charter instead follows an operator-granted AStages faction stage, and
   the party's faction is the charter it holds.
 - The allowance is **derived from completion**, not from claimed rewards: base +
-  the chunk value of every completed quest in the party's own chapter, capped at 64.
+  the chunk value of every completed quest in the party's own chapter, capped at 124.
   The `+N Claimed Chunks` rewards are team rewards that auto-claim to announce the
   change; a forfeited or unclaimed reward does not change the allowance. Quest
   progress is per party, so late joiners, ownership transfers and offline owners
@@ -811,3 +812,14 @@ Upstream references: [FTB Chunks configuration](https://github.com/FTBTeam/FTB-C
 and [FTB Ranks command nodes](https://docs.feed-the-beast.com/mod-docs/mods/suite/Ranks/Configuration/).
 The policy and notification hook were checked against the installed pinned jars;
 upstream branches may change.
+
+Completed milestone quests now grant twice their former chunk allowance. Existing
+worlds receive the increase automatically after restart as allowances are rebuilt
+from completed quests. Reward claims and quest progress do not need resetting.
+The base remains four chunks and the maximum is 124.
+
+Locked-session border recovery tries a short history of claimed positions, then
+valid positions within four blocks, before returning a player home. Logging in
+inside claims preserves the logout position. Outside claims, nearby recovery is
+tried before the last persisted claimed position in the same dimension and home.
+Restart the server after installing this update.

@@ -19,10 +19,11 @@ const SessionTeleportCommand = Java.loadClass('net.neoforged.neoforge.event.enti
 const factionSession = {
   // Fallbacks; faction_milestones.json supplies the configured base allowance and cap.
   baseClaims: 4,
-  maxClaims: 64,
+  maxClaims: 124,
   initialized: false,
   tick: 0,
   previous: new Map(),
+  recent: new Map(),
   teleportUntil: new Map(),
   homeCache: new Map(),
   alerts: new Map(),
@@ -181,11 +182,69 @@ const factionSession = {
     player.setMotion(0, 0, 0);
     player.fallDistance = 0;
     if (!silent) player.tell('You were outside claimed chunks when the session ended! You have been returned to your faction home.');
-    this.previous.set(String(player.uuid), this.position(player));
+    this.remember(player);
   },
 
   position(player) {
     return { dimension: String(player.level.dimension), x: player.x, y: player.y, z: player.z, yaw: player.yaw, pitch: player.pitch };
+  },
+
+  remember(player) {
+    let id = String(player.uuid);
+    let point = this.position(player);
+    this.previous.set(id, point);
+    let history = this.recent.get(id) || [];
+    let last = history[0];
+    if (!last || last.dimension !== point.dimension || Math.hypot(last.x - point.x, last.y - point.y, last.z - point.z) >= 0.5) {
+      history.unshift(point);
+      this.recent.set(id, history.slice(0, 20));
+      let data = player.server.persistentData;
+      if (!data.contains('sessionLastClaimed')) data.put('sessionLastClaimed', NBT.compoundTag());
+      let saved = NBT.compoundTag();
+      saved.putString('dimension', point.dimension);
+      for (let field of ['x', 'y', 'z', 'yaw', 'pitch']) saved.putDouble(field, point[field]);
+      data.getCompound('sessionLastClaimed').put(id, saved);
+    }
+  },
+
+  savedPosition(player) {
+    let saved = player.server.persistentData.getCompound('sessionLastClaimed').getCompound(String(player.uuid));
+    if (!saved.contains('dimension')) return null;
+    let point = { dimension: String(saved.getString('dimension')) };
+    for (let field of ['x', 'y', 'z', 'yaw', 'pitch']) point[field] = saved.getDouble(field);
+    return point;
+  },
+
+  nearbyReturn(player) {
+    let point = this.position(player);
+    let candidates = [];
+    for (let dx = -4; dx <= 4; dx++) {
+      for (let dz = -4; dz <= 4; dz++) {
+        if (dx * dx + dz * dz <= 16) candidates.push({ dx, dz });
+      }
+    }
+    candidates.sort((a, b) => a.dx * a.dx + a.dz * a.dz - b.dx * b.dx - b.dz * b.dz);
+    for (let offset of candidates) {
+      for (let dy of [0, 1, -1, 2, -2]) {
+        let candidate = Object.assign({}, point, { x: point.x + offset.dx, y: point.y + dy, z: point.z + offset.dz });
+        if (Math.hypot(offset.dx, dy, offset.dz) <= 4 && this.returnPrevious(player, candidate)) return true;
+      }
+    }
+    return false;
+  },
+
+  recover(player, before) {
+    let id = String(player.uuid);
+    // A fresh login has no live history. Prefer the immediate surroundings.
+    if (!before && this.nearbyReturn(player)) return true;
+    let history = (this.recent.get(id) || []).slice();
+    if (before) history.push(before);
+    let now = this.position(player);
+    history.sort((a, b) => Math.hypot(a.x - now.x, a.y - now.y, a.z - now.z)
+      - Math.hypot(b.x - now.x, b.y - now.y, b.z - now.z));
+    for (let point of history) if (this.returnPrevious(player, point)) return true;
+    if (before && this.nearbyReturn(player)) return true;
+    return this.returnPrevious(player, this.savedPosition(player));
   },
 
   returnPrevious(player, before) {
@@ -212,7 +271,7 @@ const factionSession = {
     if (!player.teleportTo(before.dimension, x, y, z, before.yaw, before.pitch)) return false;
     player.setMotion(0, 0, 0);
     player.fallDistance = 0;
-    this.previous.set(String(player.uuid), this.position(player));
+    this.remember(player);
     return true;
   },
 
@@ -251,7 +310,11 @@ const factionSession = {
   },
 
   enforce(player) {
-    if (!this.locked(player.server) || player instanceof SessionFakePlayer) return;
+    if (player instanceof SessionFakePlayer) return;
+    if (!this.locked(player.server)) {
+      if (player.isAlive() && this.claim(player.level, player.x, player.z)) this.remember(player);
+      return;
+    }
     let team = this.party(player);
     if (!team) {
       if (typeof factionParties !== 'undefined' && factionParties.active()) return factionParties.hold(player);
@@ -273,9 +336,9 @@ const factionSession = {
       if (distance <= physicalRange) outside = !this.claimedPath(player.level, before, now);
     }
     if (outside) {
-      if (!this.returnPrevious(player, before)) this.returnHome(player, home);
+      if (!this.recover(player, before)) this.returnHome(player, home);
     }
-    else this.previous.set(id, now);
+    else this.remember(player);
   },
 
   reversalDeadline(server) {
@@ -386,6 +449,7 @@ const factionSession = {
     }
     server.persistentData.putBoolean('sessionLocked', locked);
     this.previous.clear();
+    this.recent.clear();
     this.teleportUntil.clear();
     if (locked) this.players(server).forEach(player => {
       if (!(player instanceof SessionFakePlayer) && !this.party(player)
@@ -516,6 +580,7 @@ for (let lifecycle of ['loggedIn', 'respawned']) {
     let player = event.player;
     player.server.scheduleInTicks(1, () => {
       factionSession.previous.delete(String(player.uuid));
+      factionSession.recent.delete(String(player.uuid));
       factionSession.homeCache.clear();
       factionSession.enforce(player);
     });
@@ -525,6 +590,7 @@ for (let lifecycle of ['loggedIn', 'respawned']) {
 PlayerEvents.loggedOut(event => {
   let id = String(event.player.uuid);
   factionSession.previous.delete(id);
+  factionSession.recent.delete(id);
   factionSession.teleportUntil.delete(id);
 });
 
@@ -567,6 +633,7 @@ NativeEvents.onEvent('net.neoforged.neoforge.event.entity.EntityTeleportEvent', 
 NativeEvents.onEvent('net.neoforged.neoforge.event.entity.player.PlayerEvent$PlayerChangedDimensionEvent', event => {
   let player = event.getEntity();
   factionSession.previous.delete(String(player.uuid));
+      factionSession.recent.delete(String(player.uuid));
   factionSession.homeCache.clear();
   factionSession.enforce(player);
 });

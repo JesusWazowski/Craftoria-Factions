@@ -1,7 +1,7 @@
 {
   "version": 1,
   "baseClaims": 4,
-  "maxClaims": 64,
+  "maxClaims": 124,
   "factions": {
     "stargazers": {
       "name": "Stargazers",
@@ -10,43 +10,43 @@
       "charterTask": "63BE3E0D4646C90D",
       "homeTask": "450B77BD2ABF9303",
       "quests": {
-        "17D0CA70DE5804BA": 1,
-        "590B5C7C2015131E": 1,
-        "13DAEB6576F5D310": 1,
-        "2F73691EBF292AFD": 2,
-        "73857449FEAE1A2F": 2,
-        "407EDA70086E0638": 2,
-        "2C848F7D20C46AE5": 1,
-        "6A76C66E05911799": 2,
-        "5F54FAC0CBA280B3": 2,
-        "47F950C786A48F67": 2,
-        "2EAE435D466419DB": 2,
-        "0B929B7024E16BBB": 1,
-        "5630EB6A484E8190": 1,
-        "595822C88F32AA23": 2,
-        "52D5BD8A6C419838": 2,
-        "3E3C2FDE1002182B": 3,
-        "4601CFB75AD2350A": 2,
-        "0DFEFC11D3E99018": 3,
-        "7DBA9410064FF5B1": 3,
-        "4E31039C2886006F": 3,
-        "67C6F77DFA8D8021": 3,
-        "1BF5D6C35C09ABE3": 1,
-        "3DAC233354BF020D": 1,
-        "3AC015EB06B325BB": 1,
-        "7BAB26E761C7E472": 1,
-        "7E8020DE8FF24B74": 1,
-        "4DE27A0E64D98A08": 1,
-        "511ED78EF19BA40A": 2,
-        "755079B52E3A6C86": 1,
-        "17B98A2AC380259B": 1,
-        "6045D4F2F6056195": 1,
-        "1F42C6440FF17A48": 1,
-        "1CAE0733E1A5C95E": 1,
-        "727140CA51AC8F1F": 2,
-        "3FAFE0B6BD0B697D": 4
+        "17D0CA70DE5804BA": 2,
+        "590B5C7C2015131E": 2,
+        "13DAEB6576F5D310": 2,
+        "2F73691EBF292AFD": 4,
+        "73857449FEAE1A2F": 4,
+        "407EDA70086E0638": 4,
+        "2C848F7D20C46AE5": 2,
+        "6A76C66E05911799": 4,
+        "5F54FAC0CBA280B3": 4,
+        "47F950C786A48F67": 4,
+        "2EAE435D466419DB": 4,
+        "0B929B7024E16BBB": 2,
+        "5630EB6A484E8190": 2,
+        "595822C88F32AA23": 4,
+        "52D5BD8A6C419838": 4,
+        "3E3C2FDE1002182B": 6,
+        "4601CFB75AD2350A": 4,
+        "0DFEFC11D3E99018": 6,
+        "7DBA9410064FF5B1": 6,
+        "4E31039C2886006F": 6,
+        "67C6F77DFA8D8021": 6,
+        "1BF5D6C35C09ABE3": 2,
+        "3DAC233354BF020D": 2,
+        "3AC015EB06B325BB": 2,
+        "7BAB26E761C7E472": 2,
+        "7E8020DE8FF24B74": 2,
+        "4DE27A0E64D98A08": 2,
+        "511ED78EF19BA40A": 4,
+        "755079B52E3A6C86": 2,
+        "17B98A2AC380259B": 2,
+        "6045D4F2F6056195": 2,
+        "1F42C6440FF17A48": 2,
+        "1CAE0733E1A5C95E": 2,
+        "727140CA51AC8F1F": 4,
+        "3FAFE0B6BD0B697D": 8
       },
-      "total": 60
+      "total": 120
     },
     "mechanists": {
       "name": "Mechanists",
@@ -55,44 +55,44 @@
       "charterTask": "744281A75F518F9D",
       "homeTask": "6862E824175C374A",
       "quests": {
-        "7FE845454BDAFAF4": 1,
-        "2EC21AADC76FCBBD": 1,
-        "48D4F63AAA736F5B": 1,
-        "4D606CDD124D47BD": 2,
-        "0DD00E44A884D417": 1,
-        "244F3B46CE4201F6": 1,
-        "759C5C3C27A5989D": 2,
-        "3203B48698E46780": 2,
-        "281DAEE2E39ACDE0": 1,
-        "6BDF94B3CCABE9BE": 2,
-        "111C700822136518": 1,
-        "64EDBC7A8777E0E4": 1,
-        "451878C37B2DCFF1": 1,
-        "55B17464122E9808": 1,
-        "630D02F3BCA42A50": 1,
-        "305773E28DE42E47": 2,
-        "4A224957EA2EFBBA": 1,
-        "08CCF302BE9DCBD2": 1,
-        "715DC979DCE8F7A1": 1,
-        "3492243E93C89F44": 1,
-        "2401D1C20BF2C8F3": 1,
-        "35DE2B13A05D08F5": 2,
-        "11FF294D090ED9C4": 1,
-        "230703DF10F44EDB": 3,
-        "6EF240F32BA25500": 3,
-        "2409D059D2642477": 1,
-        "4C16F5C27B4941AC": 4,
-        "4E9B57A79948967E": 3,
-        "70D000D5A923CF4C": 4,
-        "2C0A6F5996DF2B23": 3,
-        "3B382CDF1C48AE88": 1,
-        "1CB028B73E4B4521": 1,
-        "7B547EAFE8CC1022": 1,
-        "460A3084DAFAF9B1": 1,
-        "587BA4F74A2DF58A": 2,
-        "3B03DC0DBFA1531F": 4
+        "7FE845454BDAFAF4": 2,
+        "2EC21AADC76FCBBD": 2,
+        "48D4F63AAA736F5B": 2,
+        "4D606CDD124D47BD": 4,
+        "0DD00E44A884D417": 2,
+        "244F3B46CE4201F6": 2,
+        "759C5C3C27A5989D": 4,
+        "3203B48698E46780": 4,
+        "281DAEE2E39ACDE0": 2,
+        "6BDF94B3CCABE9BE": 4,
+        "111C700822136518": 2,
+        "64EDBC7A8777E0E4": 2,
+        "451878C37B2DCFF1": 2,
+        "55B17464122E9808": 2,
+        "630D02F3BCA42A50": 2,
+        "305773E28DE42E47": 4,
+        "4A224957EA2EFBBA": 2,
+        "08CCF302BE9DCBD2": 2,
+        "715DC979DCE8F7A1": 2,
+        "3492243E93C89F44": 2,
+        "2401D1C20BF2C8F3": 2,
+        "35DE2B13A05D08F5": 4,
+        "11FF294D090ED9C4": 2,
+        "230703DF10F44EDB": 6,
+        "6EF240F32BA25500": 6,
+        "2409D059D2642477": 2,
+        "4C16F5C27B4941AC": 8,
+        "4E9B57A79948967E": 6,
+        "70D000D5A923CF4C": 8,
+        "2C0A6F5996DF2B23": 6,
+        "3B382CDF1C48AE88": 2,
+        "1CB028B73E4B4521": 2,
+        "7B547EAFE8CC1022": 2,
+        "460A3084DAFAF9B1": 2,
+        "587BA4F74A2DF58A": 4,
+        "3B03DC0DBFA1531F": 8
       },
-      "total": 60
+      "total": 120
     },
     "spellcasters": {
       "name": "Spellcasters",
@@ -101,46 +101,46 @@
       "charterTask": "37B61F4082B7D9DF",
       "homeTask": "20D4338776CB408E",
       "quests": {
-        "1DEE44148A861944": 1,
-        "55393F1BE5D37B15": 1,
-        "19108F89C984E286": 1,
-        "068E8FA1F7DB7A28": 1,
-        "153D6C564AAC5DD5": 2,
-        "064FB462479A4487": 1,
-        "167CC36685E48564": 2,
-        "2600521B7A1A8AD9": 2,
-        "1744E1FF5D81C07F": 1,
-        "6FC149C4A6BB9825": 2,
-        "2F35E280C7B33C63": 2,
-        "39CB25A772BF2D0C": 1,
-        "6C5F1EF0B8D472BC": 3,
-        "685677A1BB5C577B": 1,
-        "351B076FF5FF2C0D": 1,
-        "59E99F09C02157DA": 1,
-        "1B001CD188427C01": 1,
-        "349E030CD54AEF35": 2,
-        "14A8B1AB171D8AA0": 1,
-        "2DF528BDB1724C4A": 1,
-        "2AB95D9A871390A1": 3,
-        "4BA2D9A732693352": 1,
-        "0CDC263539BE859A": 1,
-        "69AFCED8DE7EB453": 2,
-        "41234E23E34872F6": 1,
-        "5031E754DC555928": 2,
-        "7023283C2CA4FC1C": 1,
-        "54C32279787FC543": 1,
-        "28D5ABA7D41EB3ED": 2,
-        "02936F7BA59489E5": 3,
-        "6E37250E08195F9E": 3,
-        "10D9E0560F578D80": 2,
-        "06EF8A00EE25C6C9": 1,
-        "24A869F533BB7440": 1,
-        "7DB8C867357E8257": 1,
-        "541261343D75C5CE": 1,
-        "76A0187154F6666F": 2,
-        "5BF0138299B43A12": 4
+        "1DEE44148A861944": 2,
+        "55393F1BE5D37B15": 2,
+        "19108F89C984E286": 2,
+        "068E8FA1F7DB7A28": 2,
+        "153D6C564AAC5DD5": 4,
+        "064FB462479A4487": 2,
+        "167CC36685E48564": 4,
+        "2600521B7A1A8AD9": 4,
+        "1744E1FF5D81C07F": 2,
+        "6FC149C4A6BB9825": 4,
+        "2F35E280C7B33C63": 4,
+        "39CB25A772BF2D0C": 2,
+        "6C5F1EF0B8D472BC": 6,
+        "685677A1BB5C577B": 2,
+        "351B076FF5FF2C0D": 2,
+        "59E99F09C02157DA": 2,
+        "1B001CD188427C01": 2,
+        "349E030CD54AEF35": 4,
+        "14A8B1AB171D8AA0": 2,
+        "2DF528BDB1724C4A": 2,
+        "2AB95D9A871390A1": 6,
+        "4BA2D9A732693352": 2,
+        "0CDC263539BE859A": 2,
+        "69AFCED8DE7EB453": 4,
+        "41234E23E34872F6": 2,
+        "5031E754DC555928": 4,
+        "7023283C2CA4FC1C": 2,
+        "54C32279787FC543": 2,
+        "28D5ABA7D41EB3ED": 4,
+        "02936F7BA59489E5": 6,
+        "6E37250E08195F9E": 6,
+        "10D9E0560F578D80": 4,
+        "06EF8A00EE25C6C9": 2,
+        "24A869F533BB7440": 2,
+        "7DB8C867357E8257": 2,
+        "541261343D75C5CE": 2,
+        "76A0187154F6666F": 4,
+        "5BF0138299B43A12": 8
       },
-      "total": 60
+      "total": 120
     },
     "ritualists": {
       "name": "Ritualists",
@@ -149,789 +149,789 @@
       "charterTask": "48D46696E1F536D6",
       "homeTask": "7FC8C217891147D4",
       "quests": {
-        "59C10AB88A73B0B7": 1,
-        "683934EAD368DEC1": 1,
-        "2F5527B3F3B1FE54": 1,
-        "64ADCD62903182EB": 2,
-        "4959C1CAB135E543": 1,
-        "62D4F700B75CE743": 2,
-        "3FECE5A691420AFF": 1,
-        "7BD02D9D2047A1E7": 1,
-        "55F701778D57D188": 1,
-        "00587E79E0F2BBB2": 2,
-        "293446C57B82E2B6": 1,
-        "21BF8E78D80F38D9": 1,
-        "49E593EC5C0E4586": 2,
-        "2910BAB7D08B6097": 1,
-        "4EB1F717290307F4": 2,
-        "67914208BF084A41": 3,
-        "302D45F79151A78C": 1,
-        "4A09E37591428D43": 1,
-        "147E934448684668": 2,
-        "1F9F68C26576C073": 2,
-        "0C6E5DF5C27B3F64": 2,
-        "760BD4B838FBF86D": 1,
-        "0E917634038AAD69": 2,
-        "3D1A975E29156EF6": 2,
-        "589BA510EB9C67C8": 1,
-        "16F7091EA870E500": 2,
-        "1EE7BF0AF698D413": 2,
-        "3F367D8B2A0921FB": 3,
-        "494E34C4F17ED039": 1,
-        "699F621D53CD0343": 1,
-        "1842C75965DE6A28": 1,
-        "07AF6A7D5AEDEEF9": 1,
-        "4C490C9499400B04": 2,
-        "146B73D64A5E5AD1": 1,
-        "72FEACEB64FFF1C8": 1,
-        "1B659D65F61FFA15": 1,
-        "1B55340F748A44E4": 1,
-        "59A5953B73ADAFC9": 2,
-        "2C5D41C84861D71C": 4
+        "59C10AB88A73B0B7": 2,
+        "683934EAD368DEC1": 2,
+        "2F5527B3F3B1FE54": 2,
+        "64ADCD62903182EB": 4,
+        "4959C1CAB135E543": 2,
+        "62D4F700B75CE743": 4,
+        "3FECE5A691420AFF": 2,
+        "7BD02D9D2047A1E7": 2,
+        "55F701778D57D188": 2,
+        "00587E79E0F2BBB2": 4,
+        "293446C57B82E2B6": 2,
+        "21BF8E78D80F38D9": 2,
+        "49E593EC5C0E4586": 4,
+        "2910BAB7D08B6097": 2,
+        "4EB1F717290307F4": 4,
+        "67914208BF084A41": 6,
+        "302D45F79151A78C": 2,
+        "4A09E37591428D43": 2,
+        "147E934448684668": 4,
+        "1F9F68C26576C073": 4,
+        "0C6E5DF5C27B3F64": 4,
+        "760BD4B838FBF86D": 2,
+        "0E917634038AAD69": 4,
+        "3D1A975E29156EF6": 4,
+        "589BA510EB9C67C8": 2,
+        "16F7091EA870E500": 4,
+        "1EE7BF0AF698D413": 4,
+        "3F367D8B2A0921FB": 6,
+        "494E34C4F17ED039": 2,
+        "699F621D53CD0343": 2,
+        "1842C75965DE6A28": 2,
+        "07AF6A7D5AEDEEF9": 2,
+        "4C490C9499400B04": 4,
+        "146B73D64A5E5AD1": 2,
+        "72FEACEB64FFF1C8": 2,
+        "1B659D65F61FFA15": 2,
+        "1B55340F748A44E4": 2,
+        "59A5953B73ADAFC9": 4,
+        "2C5D41C84861D71C": 8
       },
-      "total": 60
+      "total": 120
     }
   },
   "rewards": {
     "09D567EFEDD2F0B6": {
       "faction": "stargazers",
       "quest": "17D0CA70DE5804BA",
-      "chunks": 1
+      "chunks": 2
     },
     "0B8B57F635F84370": {
       "faction": "stargazers",
       "quest": "590B5C7C2015131E",
-      "chunks": 1
+      "chunks": 2
     },
     "31DD963519E2282B": {
       "faction": "stargazers",
       "quest": "13DAEB6576F5D310",
-      "chunks": 1
+      "chunks": 2
     },
     "6D53FEA06B337160": {
       "faction": "stargazers",
       "quest": "2F73691EBF292AFD",
-      "chunks": 2
+      "chunks": 4
     },
     "11493C522EE18D51": {
       "faction": "stargazers",
       "quest": "73857449FEAE1A2F",
-      "chunks": 2
+      "chunks": 4
     },
     "18ED64565FADD11C": {
       "faction": "stargazers",
       "quest": "407EDA70086E0638",
-      "chunks": 2
+      "chunks": 4
     },
     "099DFAA1B9E3461E": {
       "faction": "stargazers",
       "quest": "2C848F7D20C46AE5",
-      "chunks": 1
+      "chunks": 2
     },
     "55A40C86A446E39A": {
       "faction": "stargazers",
       "quest": "6A76C66E05911799",
-      "chunks": 2
+      "chunks": 4
     },
     "1C490C90E1F0075E": {
       "faction": "stargazers",
       "quest": "5F54FAC0CBA280B3",
-      "chunks": 2
+      "chunks": 4
     },
     "3543C359DBFC376F": {
       "faction": "stargazers",
       "quest": "47F950C786A48F67",
-      "chunks": 2
+      "chunks": 4
     },
     "7081F8A43E4BCE0D": {
       "faction": "stargazers",
       "quest": "2EAE435D466419DB",
-      "chunks": 2
+      "chunks": 4
     },
     "17F0194068ED578B": {
       "faction": "stargazers",
       "quest": "0B929B7024E16BBB",
-      "chunks": 1
+      "chunks": 2
     },
     "32E4DB39C18B3F85": {
       "faction": "stargazers",
       "quest": "5630EB6A484E8190",
-      "chunks": 1
+      "chunks": 2
     },
     "26EC26E2BB7C9312": {
       "faction": "stargazers",
       "quest": "595822C88F32AA23",
-      "chunks": 2
+      "chunks": 4
     },
     "56F1DDCDBB6A03CE": {
       "faction": "stargazers",
       "quest": "52D5BD8A6C419838",
-      "chunks": 2
+      "chunks": 4
     },
     "4F3E11B74B4A2E04": {
       "faction": "stargazers",
       "quest": "3E3C2FDE1002182B",
-      "chunks": 3
+      "chunks": 6
     },
     "6FC2CD5BB74DCAA0": {
       "faction": "stargazers",
       "quest": "4601CFB75AD2350A",
-      "chunks": 2
+      "chunks": 4
     },
     "7ACFED3253B8E3D2": {
       "faction": "stargazers",
       "quest": "0DFEFC11D3E99018",
-      "chunks": 3
+      "chunks": 6
     },
     "039E9B1B0E72EE7D": {
       "faction": "stargazers",
       "quest": "7DBA9410064FF5B1",
-      "chunks": 3
+      "chunks": 6
     },
     "71B72D74D2D8E117": {
       "faction": "stargazers",
       "quest": "4E31039C2886006F",
-      "chunks": 3
+      "chunks": 6
     },
     "43C87AB2AF4C33F5": {
       "faction": "stargazers",
       "quest": "67C6F77DFA8D8021",
-      "chunks": 3
+      "chunks": 6
     },
     "79F0F36EAF53DAA4": {
       "faction": "stargazers",
       "quest": "1BF5D6C35C09ABE3",
-      "chunks": 1
+      "chunks": 2
     },
     "23EDAAA554669D9A": {
       "faction": "stargazers",
       "quest": "3DAC233354BF020D",
-      "chunks": 1
+      "chunks": 2
     },
     "7A93892A62F0D6CA": {
       "faction": "stargazers",
       "quest": "3AC015EB06B325BB",
-      "chunks": 1
+      "chunks": 2
     },
     "52E4997A394EDD04": {
       "faction": "stargazers",
       "quest": "7BAB26E761C7E472",
-      "chunks": 1
+      "chunks": 2
     },
     "6E2A71FB7D672F80": {
       "faction": "stargazers",
       "quest": "7E8020DE8FF24B74",
-      "chunks": 1
+      "chunks": 2
     },
     "5EBBADB9B3AC22E8": {
       "faction": "stargazers",
       "quest": "4DE27A0E64D98A08",
-      "chunks": 1
+      "chunks": 2
     },
     "4666B497A8209ABD": {
       "faction": "stargazers",
       "quest": "511ED78EF19BA40A",
-      "chunks": 2
+      "chunks": 4
     },
     "7FE2DF73C37A48C9": {
       "faction": "stargazers",
       "quest": "755079B52E3A6C86",
-      "chunks": 1
+      "chunks": 2
     },
     "2719CCB6D2931599": {
       "faction": "stargazers",
       "quest": "17B98A2AC380259B",
-      "chunks": 1
+      "chunks": 2
     },
     "200442245D43DD3C": {
       "faction": "stargazers",
       "quest": "6045D4F2F6056195",
-      "chunks": 1
+      "chunks": 2
     },
     "2EEBB0FC315E4BC0": {
       "faction": "stargazers",
       "quest": "1F42C6440FF17A48",
-      "chunks": 1
+      "chunks": 2
     },
     "7D7F3D0F63CA36DA": {
       "faction": "stargazers",
       "quest": "1CAE0733E1A5C95E",
-      "chunks": 1
+      "chunks": 2
     },
     "648C7E68AD6343DF": {
       "faction": "stargazers",
       "quest": "727140CA51AC8F1F",
-      "chunks": 2
+      "chunks": 4
     },
     "5A67D40083407884": {
       "faction": "stargazers",
       "quest": "3FAFE0B6BD0B697D",
-      "chunks": 4
+      "chunks": 8
     },
     "0C0C6893A7816499": {
       "faction": "mechanists",
       "quest": "7FE845454BDAFAF4",
-      "chunks": 1
+      "chunks": 2
     },
     "3DA8FE20D5B17BC2": {
       "faction": "mechanists",
       "quest": "2EC21AADC76FCBBD",
-      "chunks": 1
+      "chunks": 2
     },
     "0E8EBEDEBB1C4270": {
       "faction": "mechanists",
       "quest": "48D4F63AAA736F5B",
-      "chunks": 1
+      "chunks": 2
     },
     "4CCC09E237BA601B": {
       "faction": "mechanists",
       "quest": "4D606CDD124D47BD",
-      "chunks": 2
+      "chunks": 4
     },
     "4D6019AAB0DB2DF5": {
       "faction": "mechanists",
       "quest": "0DD00E44A884D417",
-      "chunks": 1
+      "chunks": 2
     },
     "33F11AC81C41E877": {
       "faction": "mechanists",
       "quest": "244F3B46CE4201F6",
-      "chunks": 1
+      "chunks": 2
     },
     "19E195D8188234C2": {
       "faction": "mechanists",
       "quest": "759C5C3C27A5989D",
-      "chunks": 2
+      "chunks": 4
     },
     "4846BC5F6F12C133": {
       "faction": "mechanists",
       "quest": "3203B48698E46780",
-      "chunks": 2
+      "chunks": 4
     },
     "12749940A6D66C30": {
       "faction": "mechanists",
       "quest": "281DAEE2E39ACDE0",
-      "chunks": 1
+      "chunks": 2
     },
     "4905E11C840E2EED": {
       "faction": "mechanists",
       "quest": "6BDF94B3CCABE9BE",
-      "chunks": 2
+      "chunks": 4
     },
     "20895357A8A0B5EA": {
       "faction": "mechanists",
       "quest": "111C700822136518",
-      "chunks": 1
+      "chunks": 2
     },
     "08D0BC13ACE0ADA8": {
       "faction": "mechanists",
       "quest": "64EDBC7A8777E0E4",
-      "chunks": 1
+      "chunks": 2
     },
     "5C617801DD4DE359": {
       "faction": "mechanists",
       "quest": "451878C37B2DCFF1",
-      "chunks": 1
+      "chunks": 2
     },
     "49D98EF0B045A47C": {
       "faction": "mechanists",
       "quest": "55B17464122E9808",
-      "chunks": 1
+      "chunks": 2
     },
     "5C739FF5021E8088": {
       "faction": "mechanists",
       "quest": "630D02F3BCA42A50",
-      "chunks": 1
+      "chunks": 2
     },
     "30061164A018D9CD": {
       "faction": "mechanists",
       "quest": "305773E28DE42E47",
-      "chunks": 2
+      "chunks": 4
     },
     "5D91CCCFE94C54B0": {
       "faction": "mechanists",
       "quest": "4A224957EA2EFBBA",
-      "chunks": 1
+      "chunks": 2
     },
     "53D2C0AFC6050799": {
       "faction": "mechanists",
       "quest": "08CCF302BE9DCBD2",
-      "chunks": 1
+      "chunks": 2
     },
     "7C7DCA8943F61B39": {
       "faction": "mechanists",
       "quest": "715DC979DCE8F7A1",
-      "chunks": 1
+      "chunks": 2
     },
     "05008CC5997C02FF": {
       "faction": "mechanists",
       "quest": "3492243E93C89F44",
-      "chunks": 1
+      "chunks": 2
     },
     "6334118AD7F5ACAC": {
       "faction": "mechanists",
       "quest": "2401D1C20BF2C8F3",
-      "chunks": 1
+      "chunks": 2
     },
     "6C48921CCF8D6E86": {
       "faction": "mechanists",
       "quest": "35DE2B13A05D08F5",
-      "chunks": 2
+      "chunks": 4
     },
     "708610B0A630702C": {
       "faction": "mechanists",
       "quest": "11FF294D090ED9C4",
-      "chunks": 1
+      "chunks": 2
     },
     "0B45B3DB80C2D66A": {
       "faction": "mechanists",
       "quest": "230703DF10F44EDB",
-      "chunks": 3
+      "chunks": 6
     },
     "359AEB76136C922D": {
       "faction": "mechanists",
       "quest": "6EF240F32BA25500",
-      "chunks": 3
+      "chunks": 6
     },
     "7E450282FB8FC83B": {
       "faction": "mechanists",
       "quest": "2409D059D2642477",
-      "chunks": 1
+      "chunks": 2
     },
     "2A324BD591BDEC68": {
       "faction": "mechanists",
       "quest": "4C16F5C27B4941AC",
-      "chunks": 4
+      "chunks": 8
     },
     "1DCA0B04636B46F7": {
       "faction": "mechanists",
       "quest": "4E9B57A79948967E",
-      "chunks": 3
+      "chunks": 6
     },
     "5BC89482DA52614E": {
       "faction": "mechanists",
       "quest": "70D000D5A923CF4C",
-      "chunks": 4
+      "chunks": 8
     },
     "5354FD2C5333CA58": {
       "faction": "mechanists",
       "quest": "2C0A6F5996DF2B23",
-      "chunks": 3
+      "chunks": 6
     },
     "4492F9D32F13D071": {
       "faction": "mechanists",
       "quest": "3B382CDF1C48AE88",
-      "chunks": 1
+      "chunks": 2
     },
     "27F9515F3DDB150C": {
       "faction": "mechanists",
       "quest": "1CB028B73E4B4521",
-      "chunks": 1
+      "chunks": 2
     },
     "4B43CE17CC1289E0": {
       "faction": "mechanists",
       "quest": "7B547EAFE8CC1022",
-      "chunks": 1
+      "chunks": 2
     },
     "1B1BEBA4B52830DB": {
       "faction": "mechanists",
       "quest": "460A3084DAFAF9B1",
-      "chunks": 1
+      "chunks": 2
     },
     "79D9E82B0616031E": {
       "faction": "mechanists",
       "quest": "587BA4F74A2DF58A",
-      "chunks": 2
+      "chunks": 4
     },
     "73B8D57804221027": {
       "faction": "mechanists",
       "quest": "3B03DC0DBFA1531F",
-      "chunks": 4
+      "chunks": 8
     },
     "757BFB503652D36E": {
       "faction": "spellcasters",
       "quest": "1DEE44148A861944",
-      "chunks": 1
+      "chunks": 2
     },
     "64F179DBBB110EA6": {
       "faction": "spellcasters",
       "quest": "55393F1BE5D37B15",
-      "chunks": 1
+      "chunks": 2
     },
     "422FF64DD5F0BEFC": {
       "faction": "spellcasters",
       "quest": "19108F89C984E286",
-      "chunks": 1
+      "chunks": 2
     },
     "5AD08260E2A1B0E2": {
       "faction": "spellcasters",
       "quest": "068E8FA1F7DB7A28",
-      "chunks": 1
+      "chunks": 2
     },
     "4DAAA3CC495F8778": {
       "faction": "spellcasters",
       "quest": "153D6C564AAC5DD5",
-      "chunks": 2
+      "chunks": 4
     },
     "14B1F6ED09240B23": {
       "faction": "spellcasters",
       "quest": "064FB462479A4487",
-      "chunks": 1
+      "chunks": 2
     },
     "6C6A818E7E167049": {
       "faction": "spellcasters",
       "quest": "167CC36685E48564",
-      "chunks": 2
+      "chunks": 4
     },
     "323C0145CF06B031": {
       "faction": "spellcasters",
       "quest": "2600521B7A1A8AD9",
-      "chunks": 2
+      "chunks": 4
     },
     "34C46F5A2C02A284": {
       "faction": "spellcasters",
       "quest": "1744E1FF5D81C07F",
-      "chunks": 1
+      "chunks": 2
     },
     "3C42B11D90C25DA4": {
       "faction": "spellcasters",
       "quest": "6FC149C4A6BB9825",
-      "chunks": 2
+      "chunks": 4
     },
     "3A30E406987A267D": {
       "faction": "spellcasters",
       "quest": "2F35E280C7B33C63",
-      "chunks": 2
+      "chunks": 4
     },
     "1CE8F77569E7964C": {
       "faction": "spellcasters",
       "quest": "39CB25A772BF2D0C",
-      "chunks": 1
+      "chunks": 2
     },
     "68DD702FB19F55F1": {
       "faction": "spellcasters",
       "quest": "6C5F1EF0B8D472BC",
-      "chunks": 3
+      "chunks": 6
     },
     "0958C938DCC420AE": {
       "faction": "spellcasters",
       "quest": "685677A1BB5C577B",
-      "chunks": 1
+      "chunks": 2
     },
     "03E402F272FF2749": {
       "faction": "spellcasters",
       "quest": "351B076FF5FF2C0D",
-      "chunks": 1
+      "chunks": 2
     },
     "21B56FA9AADFD19C": {
       "faction": "spellcasters",
       "quest": "59E99F09C02157DA",
-      "chunks": 1
+      "chunks": 2
     },
     "324EBA826CB5C80F": {
       "faction": "spellcasters",
       "quest": "1B001CD188427C01",
-      "chunks": 1
+      "chunks": 2
     },
     "5833920E5109E09C": {
       "faction": "spellcasters",
       "quest": "349E030CD54AEF35",
-      "chunks": 2
+      "chunks": 4
     },
     "7B6E2304DD3F6D7A": {
       "faction": "spellcasters",
       "quest": "14A8B1AB171D8AA0",
-      "chunks": 1
+      "chunks": 2
     },
     "4B8208EAAF09CBFC": {
       "faction": "spellcasters",
       "quest": "2DF528BDB1724C4A",
-      "chunks": 1
+      "chunks": 2
     },
     "18CEA762B782CFBA": {
       "faction": "spellcasters",
       "quest": "2AB95D9A871390A1",
-      "chunks": 3
+      "chunks": 6
     },
     "3755D7BEF76BEB9D": {
       "faction": "spellcasters",
       "quest": "4BA2D9A732693352",
-      "chunks": 1
+      "chunks": 2
     },
     "12190FB8EA8A57C9": {
       "faction": "spellcasters",
       "quest": "0CDC263539BE859A",
-      "chunks": 1
+      "chunks": 2
     },
     "3A3B6E44CDED9B67": {
       "faction": "spellcasters",
       "quest": "69AFCED8DE7EB453",
-      "chunks": 2
+      "chunks": 4
     },
     "3A4AD5131510D4A2": {
       "faction": "spellcasters",
       "quest": "41234E23E34872F6",
-      "chunks": 1
+      "chunks": 2
     },
     "438A4EE47229CD1C": {
       "faction": "spellcasters",
       "quest": "5031E754DC555928",
-      "chunks": 2
+      "chunks": 4
     },
     "6927594BC2947A72": {
       "faction": "spellcasters",
       "quest": "7023283C2CA4FC1C",
-      "chunks": 1
+      "chunks": 2
     },
     "7C51D64A888EB091": {
       "faction": "spellcasters",
       "quest": "54C32279787FC543",
-      "chunks": 1
+      "chunks": 2
     },
     "2A2F56A82E9F84FF": {
       "faction": "spellcasters",
       "quest": "28D5ABA7D41EB3ED",
-      "chunks": 2
+      "chunks": 4
     },
     "50412CB38E0D9E85": {
       "faction": "spellcasters",
       "quest": "02936F7BA59489E5",
-      "chunks": 3
+      "chunks": 6
     },
     "036060D395A59002": {
       "faction": "spellcasters",
       "quest": "6E37250E08195F9E",
-      "chunks": 3
+      "chunks": 6
     },
     "3CDF8A4007D5B60D": {
       "faction": "spellcasters",
       "quest": "10D9E0560F578D80",
-      "chunks": 2
+      "chunks": 4
     },
     "0E935FF5200CCD8A": {
       "faction": "spellcasters",
       "quest": "06EF8A00EE25C6C9",
-      "chunks": 1
+      "chunks": 2
     },
     "14ED8C5670D3DD3B": {
       "faction": "spellcasters",
       "quest": "24A869F533BB7440",
-      "chunks": 1
+      "chunks": 2
     },
     "5584831681FA08AA": {
       "faction": "spellcasters",
       "quest": "7DB8C867357E8257",
-      "chunks": 1
+      "chunks": 2
     },
     "543501890B3E5ACA": {
       "faction": "spellcasters",
       "quest": "541261343D75C5CE",
-      "chunks": 1
+      "chunks": 2
     },
     "5121FA0DFDA7FE07": {
       "faction": "spellcasters",
       "quest": "76A0187154F6666F",
-      "chunks": 2
+      "chunks": 4
     },
     "45E9B1FD72E67852": {
       "faction": "spellcasters",
       "quest": "5BF0138299B43A12",
-      "chunks": 4
+      "chunks": 8
     },
     "0004B35B7EC022D7": {
       "faction": "ritualists",
       "quest": "59C10AB88A73B0B7",
-      "chunks": 1
+      "chunks": 2
     },
     "7EFB6D0C31055EA8": {
       "faction": "ritualists",
       "quest": "683934EAD368DEC1",
-      "chunks": 1
+      "chunks": 2
     },
     "6B8F3E1D9DE64942": {
       "faction": "ritualists",
       "quest": "2F5527B3F3B1FE54",
-      "chunks": 1
+      "chunks": 2
     },
     "515559982D95B35A": {
       "faction": "ritualists",
       "quest": "64ADCD62903182EB",
-      "chunks": 2
+      "chunks": 4
     },
     "61C9EDCF72607187": {
       "faction": "ritualists",
       "quest": "4959C1CAB135E543",
-      "chunks": 1
+      "chunks": 2
     },
     "4F81052CDA177373": {
       "faction": "ritualists",
       "quest": "62D4F700B75CE743",
-      "chunks": 2
+      "chunks": 4
     },
     "07D9EF83D4D9DFFD": {
       "faction": "ritualists",
       "quest": "3FECE5A691420AFF",
-      "chunks": 1
+      "chunks": 2
     },
     "7C3C498118056CF3": {
       "faction": "ritualists",
       "quest": "7BD02D9D2047A1E7",
-      "chunks": 1
+      "chunks": 2
     },
     "0BDE7BBBB487B89D": {
       "faction": "ritualists",
       "quest": "55F701778D57D188",
-      "chunks": 1
+      "chunks": 2
     },
     "1A42CDA7EB16D2DA": {
       "faction": "ritualists",
       "quest": "00587E79E0F2BBB2",
-      "chunks": 2
+      "chunks": 4
     },
     "7C43D51940089495": {
       "faction": "ritualists",
       "quest": "293446C57B82E2B6",
-      "chunks": 1
+      "chunks": 2
     },
     "73F51F3133EDC9DA": {
       "faction": "ritualists",
       "quest": "21BF8E78D80F38D9",
-      "chunks": 1
+      "chunks": 2
     },
     "7C1A99BB7EF958E1": {
       "faction": "ritualists",
       "quest": "49E593EC5C0E4586",
-      "chunks": 2
+      "chunks": 4
     },
     "20649943B19638DC": {
       "faction": "ritualists",
       "quest": "2910BAB7D08B6097",
-      "chunks": 1
+      "chunks": 2
     },
     "7FEABF6EBEF17244": {
       "faction": "ritualists",
       "quest": "4EB1F717290307F4",
-      "chunks": 2
+      "chunks": 4
     },
     "26BA692C726FBC59": {
       "faction": "ritualists",
       "quest": "67914208BF084A41",
-      "chunks": 3
+      "chunks": 6
     },
     "3BBE24911C9AAB01": {
       "faction": "ritualists",
       "quest": "302D45F79151A78C",
-      "chunks": 1
+      "chunks": 2
     },
     "75C3903A756DAFEB": {
       "faction": "ritualists",
       "quest": "4A09E37591428D43",
-      "chunks": 1
+      "chunks": 2
     },
     "58D7512734EB5565": {
       "faction": "ritualists",
       "quest": "147E934448684668",
-      "chunks": 2
+      "chunks": 4
     },
     "4C49AFBF79A76086": {
       "faction": "ritualists",
       "quest": "1F9F68C26576C073",
-      "chunks": 2
+      "chunks": 4
     },
     "09D4A90149761FA3": {
       "faction": "ritualists",
       "quest": "0C6E5DF5C27B3F64",
-      "chunks": 2
+      "chunks": 4
     },
     "18FF0760BA888D18": {
       "faction": "ritualists",
       "quest": "760BD4B838FBF86D",
-      "chunks": 1
+      "chunks": 2
     },
     "4162DDD816A2EB3D": {
       "faction": "ritualists",
       "quest": "0E917634038AAD69",
-      "chunks": 2
+      "chunks": 4
     },
     "37D26230DA13E1CC": {
       "faction": "ritualists",
       "quest": "3D1A975E29156EF6",
-      "chunks": 2
+      "chunks": 4
     },
     "283CD78E87DA243C": {
       "faction": "ritualists",
       "quest": "589BA510EB9C67C8",
-      "chunks": 1
+      "chunks": 2
     },
     "0420ED106D788927": {
       "faction": "ritualists",
       "quest": "16F7091EA870E500",
-      "chunks": 2
+      "chunks": 4
     },
     "2C053E9266AC686F": {
       "faction": "ritualists",
       "quest": "1EE7BF0AF698D413",
-      "chunks": 2
+      "chunks": 4
     },
     "1CD91971DA09C827": {
       "faction": "ritualists",
       "quest": "3F367D8B2A0921FB",
-      "chunks": 3
+      "chunks": 6
     },
     "24325EC6EF23AD82": {
       "faction": "ritualists",
       "quest": "494E34C4F17ED039",
-      "chunks": 1
+      "chunks": 2
     },
     "05D04D743D24C47F": {
       "faction": "ritualists",
       "quest": "699F621D53CD0343",
-      "chunks": 1
+      "chunks": 2
     },
     "1CB8F05D57CB0556": {
       "faction": "ritualists",
       "quest": "1842C75965DE6A28",
-      "chunks": 1
+      "chunks": 2
     },
     "7080A97031B1E8CC": {
       "faction": "ritualists",
       "quest": "07AF6A7D5AEDEEF9",
-      "chunks": 1
+      "chunks": 2
     },
     "0A8BE67C8371B46F": {
       "faction": "ritualists",
       "quest": "4C490C9499400B04",
-      "chunks": 2
+      "chunks": 4
     },
     "4DD5F4BFCF659B84": {
       "faction": "ritualists",
       "quest": "146B73D64A5E5AD1",
-      "chunks": 1
+      "chunks": 2
     },
     "3B67BAF81B32F3B6": {
       "faction": "ritualists",
       "quest": "72FEACEB64FFF1C8",
-      "chunks": 1
+      "chunks": 2
     },
     "4D94C4B4861EC713": {
       "faction": "ritualists",
       "quest": "1B659D65F61FFA15",
-      "chunks": 1
+      "chunks": 2
     },
     "3AA5810B50CA39B5": {
       "faction": "ritualists",
       "quest": "1B55340F748A44E4",
-      "chunks": 1
+      "chunks": 2
     },
     "6DFD399B990ED955": {
       "faction": "ritualists",
       "quest": "59A5953B73ADAFC9",
-      "chunks": 2
+      "chunks": 4
     },
     "7A3EA64F8C4024AB": {
       "faction": "ritualists",
       "quest": "2C5D41C84861D71C",
-      "chunks": 4
+      "chunks": 8
     }
   },
   "generatedIds": [

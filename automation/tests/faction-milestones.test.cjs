@@ -16,7 +16,7 @@ test('generated chapters, lang, group and runtime config are up to date', () => 
   });
 });
 
-test('every faction earns exactly 60 chunks with the same budget in every tier', () => {
+test('every faction earns exactly 120 chunks with the same budget in every tier', () => {
   const budgets = spec.factions.map(faction => {
     const budget = {};
     const quests = faction.starters.concat(...faction.pillars.map(pillar => pillar.quests), [faction.capstone]);
@@ -24,14 +24,14 @@ test('every faction earns exactly 60 chunks with the same budget in every tier',
       const tier = quest.starter ? 'starter' : quest.tier || 'capstone';
       budget[tier] = (budget[tier] || 0) + quest.chunks;
     });
-    assert.deepEqual(faction.starters.map(quest => [quest.key, quest.chunks]), [['home', 1], ['backpack', 1]]);
+    assert.deepEqual(faction.starters.map(quest => [quest.key, quest.chunks]), [['home', 2], ['backpack', 2]]);
     assert.equal(faction.cooperation.chunks, undefined, 'cooperation quests award nothing');
     assert.equal(runtime.factions[faction.id].total, spec.maxClaims - spec.baseClaims);
     return budget;
   });
   budgets.forEach(budget => assert.deepEqual(budget, budgets[0]));
   assert.equal(spec.baseClaims, 4);
-  assert.equal(spec.maxClaims, 64);
+  assert.equal(spec.maxClaims, 124);
 });
 
 test('runtime rewards and quest values agree, and IDs are unique uppercase hex', () => {

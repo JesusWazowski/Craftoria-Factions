@@ -201,7 +201,7 @@ test('normalization clears all bonuses before limits update and leaves force loa
   s.subject.normalizeLimits();
   assert.deepEqual(s.updates, [[0, 0, 0], [0, 0, 0], [0, 0, 0]]);
   assert.equal(s.configs.MAX_CLAIMED_CHUNKS, 4);
-  assert.equal(s.configs.HARD_TEAM_CLAIM_LIMIT, 64);
+  assert.equal(s.configs.HARD_TEAM_CLAIM_LIMIT, 124);
   assert.equal(s.configs.PARTY_LIMIT_MODE, 'largest');
   assert.equal(s.configs.MAX_IDLE_DAYS_BEFORE_UNCLAIM, 0);
   assert.equal(Object.keys(s.configs).some(key => key.includes('FORCE')), false);
@@ -360,23 +360,27 @@ test('boundary crossings return quietly to the last claimed position instead of 
 });
 test('negative chunk edges are clamped within the previous claimed chunk', () => {
   const s = ready(); s.claim(-1, 0, s.owner); s.p.x = -0.01; s.subject.enforce(s.p);
+  s.subject.recent.set(s.p.uuid, [s.subject.previous.get(s.p.uuid)]);
   s.p.x = 32; s.subject.enforce(s.p); assert.ok(Math.abs(s.p.x + 0.32) < 1e-9);
 });
-test('unsafe, unclaimed or missing snapshots fall back to the faction home', () => {
+test('unusable history and distant recovery fall back to the faction home', () => {
   for (const mode of ['collision', 'hazard', 'missing', 'unclaimed']) {
     const s = ready(); s.p.x = 14; s.subject.enforce(s.p);
     if (mode === 'collision') s.level.noCollision = box => box.values[0] < 10;
     if (mode === 'hazard') s.level.getBlock = pos => ({ id: pos.x > 10 ? 'minecraft:lava' : 'minecraft:air' });
-    if (mode === 'missing') s.subject.previous.clear();
+    if (mode === 'missing' || mode === 'unclaimed') {
+      s.subject.previous.clear(); s.subject.recent.clear();
+      s.server.persistentData.put('sessionLastClaimed', new Tag());
+    }
     if (mode === 'unclaimed') s.subject.previous.set(s.p.uuid, { dimension: s.level.dimension, x: 40, y: 64, z: 8.5, yaw: 0, pitch: 0 });
     s.p.x = 33; s.subject.enforce(s.p); assert.equal(s.p.x, 8.5, mode);
   }
 });
-test('closure and login outside claims use home while subsequent exits use the local snapshot', () => {
+test('distant first arrivals use home and subsequent logins restore saved claimed positions', () => {
   const s = ready(); s.p.x = 40; s.subject.previous.clear(); s.subject.enforce(s.p); assert.equal(s.p.x, 8.5);
   s.p.x = 14; s.subject.enforce(s.p); s.p.x = 17; s.subject.enforce(s.p); assert.equal(s.p.x, 14);
   s.p.x = 40; s.p.server.scheduleInTicks = (_, fn) => fn();
-  s.handlers.player.loggedIn({ player: s.p }); assert.equal(s.p.x, 8.5);
+  s.handlers.player.loggedIn({ player: s.p }); assert.equal(s.p.x, 14);
 });
 
 test('operator can set a different party home without membership, preserving other homes', () => {
@@ -493,4 +497,35 @@ test('cancel clears delayed changes and reversals without changing state, includ
       assert.match(reloaded.command.success, /No session timer/);
     }
   }
+});
+
+test('nearby login recovery and persisted positions avoid home fallback', () => {
+  const s = ready();
+  s.p.x = 14; s.p.y = 75; s.subject.enforce(s.p);
+  s.p.x = 17;
+  s.subject.previous.clear(); s.subject.recent.clear();
+  s.subject.enforce(s.p);
+  assert.ok(s.p.x < 16 && s.p.x >= 13);
+  assert.equal(s.p.y, 75);
+  const reloaded = setup(s.server.persistentData);
+  const owner = reloaded.team(); reloaded.claim(0, 0, owner);
+  const p = reloaded.player(owner); p.x = 50; p.y = 75;
+  reloaded.subject.enforce(p);
+  assert.ok(p.x < 16); assert.equal(p.y, 75);
+});
+
+test('obstructed latest snapshots fall back to an older nearby claimed position', () => {
+  const s = ready();
+  s.p.x = 12; s.p.y = 70; s.subject.enforce(s.p);
+  s.p.x = 15; s.subject.enforce(s.p);
+  s.level.noCollision = box => box.values[0] < 13;
+  s.p.x = 19; s.subject.enforce(s.p);
+  assert.equal(s.p.x, 12); assert.equal(s.p.y, 70);
+});
+
+test('login in claimed territory preserves the logout position', () => {
+  const s = ready(); s.p.x = 15.9; s.p.y = 90;
+  s.p.server.scheduleInTicks = (_, fn) => fn();
+  s.handlers.player.loggedIn({player:s.p});
+  assert.equal(s.p.x, 15.9); assert.equal(s.p.y, 90);
 });
