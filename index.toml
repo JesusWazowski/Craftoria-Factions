@@ -20098,7 +20098,7 @@ hash = "b42b7394c74a00ab1a5fc95b184e7baf52e9972699d3cff384f24126de99d36b"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
-hash = "9d25287cc0fdcb5d7a7c23644c847dd7976b0fd537c220a863f314b5431355a6"
+hash = "a8456c6eca03fdd7173324749b518667d2d72c1b883a26d8ead996a06144c174"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"

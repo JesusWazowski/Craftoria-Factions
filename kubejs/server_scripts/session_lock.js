@@ -633,7 +633,7 @@ NativeEvents.onEvent('net.neoforged.neoforge.event.entity.EntityTeleportEvent', 
 NativeEvents.onEvent('net.neoforged.neoforge.event.entity.player.PlayerEvent$PlayerChangedDimensionEvent', event => {
   let player = event.getEntity();
   factionSession.previous.delete(String(player.uuid));
-      factionSession.recent.delete(String(player.uuid));
+  factionSession.recent.delete(String(player.uuid));
   factionSession.homeCache.clear();
   factionSession.enforce(player);
 });
