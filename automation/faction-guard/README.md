@@ -17,7 +17,7 @@ packwiz refresh
 ```
 
 The script compiles against Prism's installed libraries and emits
-`mods/craftoria-factions-guard-1.1.3.jar`. Build files go in ignored `.build/`.
+`mods/craftoria-factions-guard-1.1.4.jar`. Build files go in ignored `.build/`.
 Jar timestamps are fixed for reproducible output. Changing FTB Teams requires
 reviewing every transformer descriptor, rebuilding, updating the exact dependency
 in `resources/META-INF/neoforge.mods.toml`, and repeating runtime verification.
@@ -75,3 +75,17 @@ acceptance remains necessary for chat rendering and complete gameplay behavior.
 The client-only EMI plugin uses the synced AStages Create namespace rule to
 hide Automated Shaped Crafting from players missing its configured stage.
 Build with EMI 1.1.24 and AStages 2.5.3 present in the Prism instance.
+
+Version 1.1.4 replaces recognized HTML service-error pages in the vanilla
+disconnect screen with a short message before Minecraft lays out its buttons.
+Players can return to the server list and retry while keeping the game open.
+The original response is logged under `Craftoria Connection` (up to 16 KiB),
+and native crash-report links are retained.
+
+Run the classifier and native constructor checks without starting Minecraft:
+
+```powershell
+python automation/faction-guard/verify-disconnect.py `
+  "$env:APPDATA/PrismLauncher" `
+  --java-bin "$env:APPDATA/PrismLauncher/java/java-runtime-delta/bin"
+```

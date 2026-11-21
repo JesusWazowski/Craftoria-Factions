@@ -1,0 +1,20 @@
+modLoader="lowcodefml"
+loaderVersion="[1,)"
+license="MIT"
+[[mods]]
+modId="craftoria_pylons_compat"
+version="1.0.0"
+displayName="Craftoria Pylons Compatibility"
+description="Allows Expulsion Pylons near world spawn without changing the spawnRadius gamerule."
+[[dependencies.craftoria_pylons_compat]]
+modId="pylons"
+type="required"
+versionRange="[5.4.2]"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.craftoria_pylons_compat]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"

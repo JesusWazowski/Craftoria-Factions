@@ -18,8 +18,6 @@ const globalItemRemovals = [
   'industrialforegoing:infinity_nuke',
   'utilitarian:tiny_coal',
   'utilitarian:tiny_charcoal',
-  'pylons:infusion_pylon',
-  'pylons:potion_filter',
   'xycraft_world:raw_aluminum',
   'xycraft_world:raw_aluminum_block',
   'xycraft_world:aluminum_ore_stone',

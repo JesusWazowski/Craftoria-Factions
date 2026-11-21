@@ -146,7 +146,7 @@ ModListCreator-5.0.0-fatjar.jar
 !/resourcepacks/Armors.zip
 !/resourcepacks/villagers-refrehsed+FA-v1.0.zip
 
-!/mods/craftoria-factions-guard-1.1.3.jar
+!/mods/craftoria-factions-guard-1.1.4.jar
 /automation/faction-guard/.build/
 
 # Serve packwiz files unchanged through GitHub Pages
@@ -156,6 +156,8 @@ ModListCreator-5.0.0-fatjar.jar
 !/mods/cataclysm_spellbooks-1.1.14-1.21.jar
 
 # Local editor workspace and per-world trading history
+!/mods/craftoria-pylons-compat-1.0.0.jar
+/automation/pylons-compat/.build/
 /kubejs/server_scripts/*.code-workspace
 /config/inventoryprofilesnext/**/villager-trading-config-v2.json
 /config/inventoryprofilesnext/**/prev-villager-trading-config-v2.json

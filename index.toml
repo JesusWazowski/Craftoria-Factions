@@ -5934,7 +5934,7 @@ hash = "11874765bd5640d4c6ec93f38b87ff2d13da51c91a134a44b8a1f41eac5a9e0d"
 
 [[files]]
 file = "config/pylons-server.toml"
-hash = "66b1065a107444d4c626b107272fc00232037cbaad40148211c30bae5c4ee9f7"
+hash = "a996cec5e007518fb4a758cb26e0da19b73f5d6dc9b292acac041660abe46337"
 
 [[files]]
 file = "config/raided-common.toml"
@@ -20037,6 +20037,10 @@ file = "kubejs/server_scripts/claim_visibility.js"
 hash = "3e482d74a766664f62e288a27f66df9fa10aaf4f90f59182b48370dbc7c9f2bc"
 
 [[files]]
+file = "kubejs/server_scripts/elytra_cancel.js"
+hash = "9dacd5c9377f3b8ecf44627a0d9d70b204d63f2fcf6a56fd27d0d0a05c1b2a0e"
+
+[[files]]
 file = "kubejs/server_scripts/faction_definitions.js"
 hash = "e29a5f7d8ed44afd593622971a3cce26943da9c331374faf376b28620b72814e"
 
@@ -20094,7 +20098,7 @@ hash = "8207a6bccaaeb2740e5e666e19e3963e1ac1e52eb5ecbf704d7cc509002044db"
 
 [[files]]
 file = "kubejs/server_scripts/removals.js"
-hash = "b42b7394c74a00ab1a5fc95b184e7baf52e9972699d3cff384f24126de99d36b"
+hash = "8eac2b787b2cd1bb6133ef08592c099263649f73bbde742149d0a5b656f0189c"
 
 [[files]]
 file = "kubejs/server_scripts/session_lock.js"
@@ -20806,8 +20810,12 @@ hash = "ce99acf7b15a1927e38364aa02bb4ed0ad7583ab12f3351cb3161fdd2e160b49"
 metafile = true
 
 [[files]]
-file = "mods/craftoria-factions-guard-1.1.3.jar"
-hash = "7f6a46036f6fe55e6f28a308d815d2a40762031ef7a4bf4e2a0fbd0c708ee360"
+file = "mods/craftoria-factions-guard-1.1.4.jar"
+hash = "fd881e6650ce7da8edac3044d6a68322a8b5e210be479fda24e4a6db33442c65"
+
+[[files]]
+file = "mods/craftoria-pylons-compat-1.0.0.jar"
+hash = "81f245f2cf04599810f2e4beee4c2926a40ec6ebd0ff680011e57aee26611c21"
 
 [[files]]
 file = "mods/crash-assistant.pw.toml"

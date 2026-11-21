@@ -10,7 +10,9 @@
 	#This config will only take effect if it is larger than the world spawn radius.
 	# Default: 1
 	# Range: 1 ~ 512
-	expulsionWorldSpawnRadius = 0
+	# Craftoria's pinned Pylons compatibility mod bypasses this spawn-area veto.
+	# Keep a valid upstream value here; 0 is invalid and does not disable the check.
+	expulsionWorldSpawnRadius = 1
 	#Whether the Expulsion Pylon can be destroyed with explosions.
 	expulsionPylonCanExplode = true
 	#Limit the max radius for expulsion pylons.
@@ -42,7 +44,7 @@
 	#Effects that may be used in the Infusion Pylon.
 	#List may include either effect IDs (like `minecraft:strength`) or an entire namespace (like `minecraft`).
 	#If the list is empty, then all effects will be allowed except for those specifically denied.
-	infusionAllowedEffects = ["minecraft:glowing"]
+	infusionAllowedEffects = ["minecraft:speed", "minecraft:haste", "minecraft:strength", "minecraft:jump_boost", "minecraft:regeneration", "minecraft:resistance", "minecraft:fire_resistance", "minecraft:water_breathing", "minecraft:invisibility", "minecraft:night_vision", "minecraft:slow_falling", "minecraft:glowing"]
 	#Effects that may not be used in the Infusion Pylon.
 	#This list will override the allowed effect list.
 	#Effects may also be added to the pylons:infusion_banned tag.
@@ -51,7 +53,7 @@
 	#This value is 0-indexed, so a Resistance V potion would be potency 4.
 	# Default: 3
 	# Range: 0 ~ 255
-	infusionMaximumPotency = 0
+	infusionMaximumPotency = 3
 
 [harvester_pylon]
 	#Delay between harvest attempts (in ticks).

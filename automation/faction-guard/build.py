@@ -32,7 +32,7 @@ args.write_text('--release\n21\n-proc:none\n-classpath\n"' + classpath.replace('
     + '\n'.join('"' + source.as_posix() + '"' for source in sorted((root / 'src').rglob('*.java')))
     + '\n', encoding='utf-8')
 subprocess.run([str(a.java_bin / 'javac.exe'), '@' + str(args)], check=True)
-output = root.parents[1] / 'mods/craftoria-factions-guard-1.1.3.jar'
+output = root.parents[1] / 'mods/craftoria-factions-guard-1.1.4.jar'
 with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED) as jar:
     for directory in [classes, root / 'resources']:
         for file in sorted(directory.rglob('*')):

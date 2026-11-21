@@ -2,6 +2,54 @@
 
 LambDynamicLights defaults to off to reduce client performance overhead. Players can enable it in the mod settings.
 
+## Elytra flight cancellation
+
+Sneak while gliding to cancel elytra flight. Holding sneak continues to cancel
+gliding; release it before starting another glide. This does not reset fall
+distance or protect the player from landing damage.
+
+`kubejs/server_scripts/elytra_cancel.js` stops Minecraft's gliding state on the
+server, regardless of the item or effect providing it. This covers chest-slot
+elytra, Elytra Slot/Curios equipment, and effects using the same standard
+fall-flying state. It does not change equipment, durability, attributes, or
+effects, and does not cancel creative flight, hovering, or jetpacks. Providers
+with a separate flight implementation or that force gliding back on may need
+their own integration.
+
+This replaces the proposed Elytra Toggle datapack, whose functions only handle
+vanilla chest-slot elytra by temporarily modifying durability. Do not also install
+that datapack. Packwiz distributes the script; it loads on server/world start
+or `/reload`, including existing worlds. No datapack enable command is needed.
+After updating **Craftoria Factions Test**, check chest-slot and Curios-slot
+elytra, any other gliding providers, resuming flight after releasing sneak, and
+normal sneaking/creative flight. These connected-client checks remain pending.
+
+## Pylons spawn-area compatibility
+
+Expulsion Pylons may operate near world spawn. Pylons 5.4.2 otherwise rejects
+any pylon whose operating area intersects the spawn exclusion area, using the
+larger of its configured radius and the world's `spawnRadius` gamerule. Setting
+`expulsionWorldSpawnRadius` to zero does not disable this: its valid range is
+1–512. The pack keeps a valid value of 1 and supplies
+`mods/craftoria-pylons-compat-1.0.0.jar` to bypass only that intersection veto.
+The spawn gamerule, allowed dimensions, owner/team/player filters, redstone
+controls, and expulsion range are preserved. Apply on the next startup sync.
+
+The compatibility mod is pinned to Pylons 5.4.2 and Minecraft 1.21.1. Build it
+with `python automation/pylons-compat/build.py`, then refresh packwiz. Its source
+and offline bytecode verification are in `automation/pylons-compat/`. Reaudit
+before updating Pylons. Connected-client verification near spawn remains pending.
+
+Infusion Pylons and Potion Filters are craftable again. Upstream Craftoria
+commit `c598f898c` disabled infusion because many mod effects are not designed
+for infinite duration. This pack uses an explicit vanilla-effect allowlist:
+Speed, Haste, Strength, Jump Boost, Regeneration, Resistance, Fire Resistance,
+Water Breathing, Invisibility, Night Vision, Slow Falling, and Glowing.
+Modded effects, instant effects, Absorption, Health Boost, Saturation, and every
+other effect outside this list remain excluded. The potency cap is the upstream
+default of IV (`infusionMaximumPotency = 3`), as requested; automatic chunkloading
+remains off. Filters still require one hour of collected effect duration.
+
 ## Faction content design handoff
 
 [FACTION_CONTENT_DESIGN.md](FACTION_CONTENT_DESIGN.md) records the faction
@@ -346,6 +394,13 @@ forfeiture. It contains no faction names or mod lists and requires exactly FTB
 Teams 2101.1.11 and FTB Quests 2101.1.36. Both are pinned. Rebuild and reverify it
 before updating either mod. Its source and build instructions are in
 `automation/faction-guard/`.
+
+The bundled guard also handles HTML connection errors such as upstream
+"Service unavailable" pages. It displays a short explanation with Minecraft's
+normal return button, so players can go back to the server list and retry
+without restarting the game. It logs the upstream response under
+`Craftoria Connection` for diagnosis. Updating this behavior requires a client
+restart once to load the new guard.
 
 Two additional maintained ranks (`infrastructure_members` and
 `infrastructure_operators`) deny/allow `command.spawn` and `command.back` in
