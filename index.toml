@@ -20810,6 +20810,10 @@ hash = "ce99acf7b15a1927e38364aa02bb4ed0ad7583ab12f3351cb3161fdd2e160b49"
 metafile = true
 
 [[files]]
+file = "mods/craftoria-drone-compat-1.0.0.jar"
+hash = "63b8104547d845564f83642915c668f7d500a588eaa58950cec33c31049735cd"
+
+[[files]]
 file = "mods/craftoria-factions-guard-1.1.4.jar"
 hash = "fd881e6650ce7da8edac3044d6a68322a8b5e210be479fda24e4a6db33442c65"
 

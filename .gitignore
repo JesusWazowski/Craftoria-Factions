@@ -158,6 +158,8 @@ ModListCreator-5.0.0-fatjar.jar
 # Local editor workspace and per-world trading history
 !/mods/craftoria-pylons-compat-1.0.0.jar
 /automation/pylons-compat/.build/
+!/mods/craftoria-drone-compat-1.0.0.jar
+/automation/drone-compat/.build/
 /kubejs/server_scripts/*.code-workspace
 /config/inventoryprofilesnext/**/villager-trading-config-v2.json
 /config/inventoryprofilesnext/**/prev-villager-trading-config-v2.json

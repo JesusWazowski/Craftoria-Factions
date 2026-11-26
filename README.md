@@ -2,6 +2,24 @@
 
 LambDynamicLights defaults to off to reduce client performance overhead. Players can enable it in the mod settings.
 
+## PneumaticCraft drone initialization compatibility
+
+`mods/craftoria-drone-compat-1.0.0.jar` fixes an initialization incompatibility
+between PneumaticCraft 8.2.23 and AStages 2.5.3. AStages can query a drone fake
+player's position during its superclass constructor, before PneumaticCraft has
+assigned its drone reference. This crashed an Amadron Delivery Drone on its first
+tick. While the reference is null, the compatibility mod returns the normal
+entity position through the superclass; initialized drones retain their original
+position logic. AStages restrictions and world entities are preserved.
+
+The resource-only NeoForge coremod is pinned to PneumaticCraft 8.2.23 and checks
+the exact method shape before applying. Reaudit when updating PneumaticCraft.
+Build with `python automation/drone-compat/build.py`, then refresh packwiz.
+Offline verification uses `python automation/drone-compat/verify.py <prism_root>
+<minecraft_instance> --java-bin <java_bin>`; it reproduces the original exception
+with the native constructor and checks the transformed initialization and normal
+position behavior against API fixtures, without launching Minecraft.
+
 ## Elytra flight cancellation
 
 Sneak while gliding to cancel elytra flight. Holding sneak continues to cancel

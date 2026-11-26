@@ -1,0 +1,20 @@
+modLoader="lowcodefml"
+loaderVersion="[1,)"
+license="MIT"
+[[mods]]
+modId="craftoria_drone_compat"
+version="1.0.0"
+displayName="Craftoria Drone Compatibility"
+description="Makes PneumaticCraft drone position queries safe during fake-player construction."
+[[dependencies.craftoria_drone_compat]]
+modId="pneumaticcraft"
+type="required"
+versionRange="[8.2.23]"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.craftoria_drone_compat]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
